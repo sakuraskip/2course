@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Corvette xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>2</Name>
+  <Speed>45</Speed>
+  <Team>105</Team>
+  <Captain>
+    <Age>0</Age>
+  </Captain>
+  <ShipType>Corvette</ShipType>
+</Corvette>

@@ -1,0 +1,9 @@
+список файлов: 
+lab12.sln
+список папок: 
+.vs
+archive
+lab12
+SAVInspect
+source1
+taskC

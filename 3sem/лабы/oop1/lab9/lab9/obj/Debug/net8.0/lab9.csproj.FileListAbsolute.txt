@@ -1,0 +1,15 @@
+C:\Users\леха\Desktop\3sem\лабы\oop\lab9\lab9\bin\Debug\net8.0\lab9.exe
+C:\Users\леха\Desktop\3sem\лабы\oop\lab9\lab9\bin\Debug\net8.0\lab9.deps.json
+C:\Users\леха\Desktop\3sem\лабы\oop\lab9\lab9\bin\Debug\net8.0\lab9.runtimeconfig.json
+C:\Users\леха\Desktop\3sem\лабы\oop\lab9\lab9\bin\Debug\net8.0\lab9.dll
+C:\Users\леха\Desktop\3sem\лабы\oop\lab9\lab9\bin\Debug\net8.0\lab9.pdb
+C:\Users\леха\Desktop\3sem\лабы\oop\lab9\lab9\obj\Debug\net8.0\lab9.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\леха\Desktop\3sem\лабы\oop\lab9\lab9\obj\Debug\net8.0\lab9.AssemblyInfoInputs.cache
+C:\Users\леха\Desktop\3sem\лабы\oop\lab9\lab9\obj\Debug\net8.0\lab9.AssemblyInfo.cs
+C:\Users\леха\Desktop\3sem\лабы\oop\lab9\lab9\obj\Debug\net8.0\lab9.csproj.CoreCompileInputs.cache
+C:\Users\леха\Desktop\3sem\лабы\oop\lab9\lab9\obj\Debug\net8.0\lab9.sourcelink.json
+C:\Users\леха\Desktop\3sem\лабы\oop\lab9\lab9\obj\Debug\net8.0\lab9.dll
+C:\Users\леха\Desktop\3sem\лабы\oop\lab9\lab9\obj\Debug\net8.0\refint\lab9.dll
+C:\Users\леха\Desktop\3sem\лабы\oop\lab9\lab9\obj\Debug\net8.0\lab9.pdb
+C:\Users\леха\Desktop\3sem\лабы\oop\lab9\lab9\obj\Debug\net8.0\lab9.genruntimeconfig.cache
+C:\Users\леха\Desktop\3sem\лабы\oop\lab9\lab9\obj\Debug\net8.0\ref\lab9.dll
