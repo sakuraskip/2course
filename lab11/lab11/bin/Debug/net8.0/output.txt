@@ -1,0 +1,1 @@
+имя класса: lab11.Vector, имя сборки: lab11, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null

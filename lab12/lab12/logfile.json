@@ -1,0 +1,248 @@
+﻿[
+  {
+    "Action": "информация о директории",
+    "Filename": "",
+    "Filepath": "C:\\Users\\леха\\Desktop\\3sem\\лабы\\oop\\lab12",
+    "Date": "2024-11-13T17:01:12.6000701+03:00"
+  },
+  {
+    "Action": "создание архива",
+    "Filename": "test.zip",
+    "Filepath": "C:\\Users\\леха\\Desktop\\3sem\\лабы\\oop\\lab12\\archive",
+    "Date": "2024-11-13T17:01:12.6556771+03:00"
+  },
+  {
+    "Action": "получение файлов и папок",
+    "Filename": "бибос.txt",
+    "Filepath": "C:\\Users\\леха\\Desktop\\3sem\\лабы\\oop\\lab12\\SAVInspect\\dirinfo.txt",
+    "Date": "2024-11-13T17:01:12.6715161+03:00"
+  },
+  {
+    "Action": "Перемещение файлов",
+    "Filename": "savFiles",
+    "Filepath": "C:\\Users\\леха\\Desktop\\3sem\\лабы\\oop\\lab12\\SAVInspect\\savFiles",
+    "Date": "2024-11-13T17:01:12.6835551+03:00"
+  },
+  {
+    "Action": "информация о диске",
+    "Filename": "C:\\",
+    "Filepath": "C:\\",
+    "Date": "2024-11-13T17:05:54.0580898+03:00"
+  },
+  {
+    "Action": "информация о файле",
+    "Filename": "logfile.json",
+    "Filepath": "C:\\Users\\леха\\Desktop\\3sem\\лабы\\oop\\lab12\\lab12\\logfile.json",
+    "Date": "2024-11-13T17:05:54.1292338+03:00"
+  },
+  {
+    "Action": "информация о директории",
+    "Filename": "",
+    "Filepath": "C:\\Users\\леха\\Desktop\\3sem\\лабы\\oop\\lab12",
+    "Date": "2024-11-13T17:05:54.138124+03:00"
+  },
+  {
+    "Action": "создание архива",
+    "Filename": "test.zip",
+    "Filepath": "C:\\Users\\леха\\Desktop\\3sem\\лабы\\oop\\lab12\\archive",
+    "Date": "2024-11-13T17:05:54.1620919+03:00"
+  },
+  {
+    "Action": "получение файлов и папок",
+    "Filename": "бибос.txt",
+    "Filepath": "C:\\Users\\леха\\Desktop\\3sem\\лабы\\oop\\lab12\\SAVInspect\\dirinfo.txt",
+    "Date": "2024-11-13T17:05:54.1844203+03:00"
+  },
+  {
+    "Action": "Перемещение файлов",
+    "Filename": "savFiles",
+    "Filepath": "C:\\Users\\леха\\Desktop\\3sem\\лабы\\oop\\lab12\\SAVInspect\\savFiles",
+    "Date": "2024-11-13T17:05:54.1993753+03:00"
+  },
+  {
+    "Action": "информация о диске",
+    "Filename": "C:\\",
+    "Filepath": "C:\\",
+    "Date": "2024-11-13T17:08:13.4121537+03:00"
+  },
+  {
+    "Action": "информация о файле",
+    "Filename": "logfile.json",
+    "Filepath": "C:\\Users\\леха\\Desktop\\3sem\\лабы\\oop\\lab12\\lab12\\logfile.json",
+    "Date": "2024-11-13T17:08:13.4827308+03:00"
+  },
+  {
+    "Action": "информация о директории",
+    "Filename": "",
+    "Filepath": "C:\\Users\\леха\\Desktop\\3sem\\лабы\\oop\\lab12",
+    "Date": "2024-11-13T17:08:13.4926839+03:00"
+  },
+  {
+    "Action": "создание архива",
+    "Filename": "test.zip",
+    "Filepath": "C:\\Users\\леха\\Desktop\\3sem\\лабы\\oop\\lab12\\archive",
+    "Date": "2024-11-13T17:08:13.5145101+03:00"
+  },
+  {
+    "Action": "получение файлов и папок",
+    "Filename": "бибос.txt",
+    "Filepath": "C:\\Users\\леха\\Desktop\\3sem\\лабы\\oop\\lab12\\SAVInspect\\dirinfo.txt",
+    "Date": "2024-11-13T17:08:13.5280592+03:00"
+  },
+  {
+    "Action": "Перемещение файлов",
+    "Filename": "savFiles",
+    "Filepath": "C:\\Users\\леха\\Desktop\\3sem\\лабы\\oop\\lab12\\SAVInspect\\savFiles",
+    "Date": "2024-11-13T17:08:13.5431699+03:00"
+  },
+  {
+    "Action": "информация о диске",
+    "Filename": "C:\\",
+    "Filepath": "C:\\",
+    "Date": "2024-11-13T17:08:58.2700521+03:00"
+  },
+  {
+    "Action": "информация о диске",
+    "Filename": "C:\\",
+    "Filepath": "C:\\",
+    "Date": "2024-11-13T17:09:11.1811345+03:00"
+  },
+  {
+    "Action": "информация о файле",
+    "Filename": "logfile.json",
+    "Filepath": "C:\\Users\\леха\\Desktop\\3sem\\лабы\\oop\\lab12\\lab12\\logfile.json",
+    "Date": "2024-11-13T17:09:11.9433796+03:00"
+  },
+  {
+    "Action": "информация о директории",
+    "Filename": "",
+    "Filepath": "C:\\Users\\леха\\Desktop\\3sem\\лабы\\oop\\lab12",
+    "Date": "2024-11-13T17:09:12.1342977+03:00"
+  },
+  {
+    "Action": "создание архива",
+    "Filename": "test.zip",
+    "Filepath": "C:\\Users\\леха\\Desktop\\3sem\\лабы\\oop\\lab12\\archive",
+    "Date": "2024-11-13T17:09:12.3402741+03:00"
+  },
+  {
+    "Action": "получение файлов и папок",
+    "Filename": "бибос.txt",
+    "Filepath": "C:\\Users\\леха\\Desktop\\3sem\\лабы\\oop\\lab12\\SAVInspect\\dirinfo.txt",
+    "Date": "2024-11-13T17:09:12.7257233+03:00"
+  },
+  {
+    "Action": "Перемещение файлов",
+    "Filename": "savFiles",
+    "Filepath": "C:\\Users\\леха\\Desktop\\3sem\\лабы\\oop\\lab12\\SAVInspect\\savFiles",
+    "Date": "2024-11-13T17:09:13.4290711+03:00"
+  },
+  {
+    "Action": "информация о диске",
+    "Filename": "C:\\",
+    "Filepath": "C:\\",
+    "Date": "2024-11-13T17:22:08.8564866+03:00"
+  },
+  {
+    "Action": "информация о файле",
+    "Filename": "logfile.json",
+    "Filepath": "C:\\Users\\леха\\Desktop\\3sem\\лабы\\oop\\lab12\\lab12\\logfile.json",
+    "Date": "2024-11-13T17:22:08.932344+03:00"
+  },
+  {
+    "Action": "информация о директории",
+    "Filename": "",
+    "Filepath": "C:\\Users\\леха\\Desktop\\3sem\\лабы\\oop\\lab12",
+    "Date": "2024-11-13T17:22:08.9414847+03:00"
+  },
+  {
+    "Action": "создание архива",
+    "Filename": "test.zip",
+    "Filepath": "C:\\Users\\леха\\Desktop\\3sem\\лабы\\oop\\lab12\\archive",
+    "Date": "2024-11-13T17:22:08.9633432+03:00"
+  },
+  {
+    "Action": "получение файлов и папок",
+    "Filename": "бибос.txt",
+    "Filepath": "C:\\Users\\леха\\Desktop\\3sem\\лабы\\oop\\lab12\\SAVInspect\\dirinfo.txt",
+    "Date": "2024-11-13T17:22:08.9770774+03:00"
+  },
+  {
+    "Action": "Перемещение файлов",
+    "Filename": "savFiles",
+    "Filepath": "C:\\Users\\леха\\Desktop\\3sem\\лабы\\oop\\lab12\\SAVInspect\\savFiles",
+    "Date": "2024-11-13T17:22:08.9918706+03:00"
+  },
+  {
+    "Action": "информация о диске",
+    "Filename": "C:\\",
+    "Filepath": "C:\\",
+    "Date": "2024-11-13T17:23:22.9512095+03:00"
+  },
+  {
+    "Action": "информация о файле",
+    "Filename": "logfile.json",
+    "Filepath": "C:\\Users\\леха\\Desktop\\3sem\\лабы\\oop\\lab12\\lab12\\logfile.json",
+    "Date": "2024-11-13T17:23:23.0232626+03:00"
+  },
+  {
+    "Action": "информация о директории",
+    "Filename": "",
+    "Filepath": "C:\\Users\\леха\\Desktop\\3sem\\лабы\\oop\\lab12",
+    "Date": "2024-11-13T17:23:23.0330035+03:00"
+  },
+  {
+    "Action": "создание архива",
+    "Filename": "test.zip",
+    "Filepath": "C:\\Users\\леха\\Desktop\\3sem\\лабы\\oop\\lab12\\archive",
+    "Date": "2024-11-13T17:23:23.0556881+03:00"
+  },
+  {
+    "Action": "получение файлов и папок",
+    "Filename": "бибос.txt",
+    "Filepath": "C:\\Users\\леха\\Desktop\\3sem\\лабы\\oop\\lab12\\SAVInspect\\dirinfo.txt",
+    "Date": "2024-11-13T17:23:23.0696889+03:00"
+  },
+  {
+    "Action": "Перемещение файлов",
+    "Filename": "savFiles",
+    "Filepath": "C:\\Users\\леха\\Desktop\\3sem\\лабы\\oop\\lab12\\SAVInspect\\savFiles",
+    "Date": "2024-11-13T17:23:23.0851338+03:00"
+  },
+  {
+    "Action": "информация о диске",
+    "Filename": "C:\\",
+    "Filepath": "C:\\",
+    "Date": "2024-11-13T17:24:52.5452016+03:00"
+  },
+  {
+    "Action": "информация о файле",
+    "Filename": "logfile.json",
+    "Filepath": "C:\\Users\\леха\\Desktop\\3sem\\лабы\\oop\\lab12\\lab12\\logfile.json",
+    "Date": "2024-11-13T17:24:52.6168449+03:00"
+  },
+  {
+    "Action": "информация о директории",
+    "Filename": "",
+    "Filepath": "C:\\Users\\леха\\Desktop\\3sem\\лабы\\oop\\lab12",
+    "Date": "2024-11-13T17:24:52.6266643+03:00"
+  },
+  {
+    "Action": "создание архива",
+    "Filename": "test.zip",
+    "Filepath": "C:\\Users\\леха\\Desktop\\3sem\\лабы\\oop\\lab12\\archive",
+    "Date": "2024-11-13T17:24:52.6531735+03:00"
+  },
+  {
+    "Action": "получение файлов и папок",
+    "Filename": "бибос.txt",
+    "Filepath": "C:\\Users\\леха\\Desktop\\3sem\\лабы\\oop\\lab12\\SAVInspect\\dirinfo.txt",
+    "Date": "2024-11-13T17:24:52.6689257+03:00"
+  },
+  {
+    "Action": "Перемещение файлов",
+    "Filename": "savFiles",
+    "Filepath": "C:\\Users\\леха\\Desktop\\3sem\\лабы\\oop\\lab12\\SAVInspect\\savFiles",
+    "Date": "2024-11-13T17:24:52.6845224+03:00"
+  }
+]
