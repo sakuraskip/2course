@@ -1,0 +1,12 @@
+h1 
+{
+    color:green;
+    font-size:40px;
+}
+.mainblock
+{
+    height:fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,17 @@
+﻿Сборка начата 17.11.2024 18:24:10.
+Уровень детализации журнала: Normal.     1>Проект "C:\Users\леха\Desktop\3sem\лабы\kpo\asm1\asm1\asm1.vcxproj" в узле 2 (целевые объекты Build).
+     1>PrepareForBuild:
+         Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
+       InitializeBuildStatus:
+         Создание "Debug\asm1.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
+         Обращение к "Debug\asm1.tlog\unsuccessfulbuild".
+       FinalizeBuildStatus:
+         Файл "Debug\asm1.tlog\unsuccessfulbuild" удаляется.
+         Обращение к "Debug\asm1.tlog\asm1.lastbuildstate".
+     1>Сборка проекта "C:\Users\леха\Desktop\3sem\лабы\kpo\asm1\asm1\asm1.vcxproj" завершена (целевые объекты Build).
+
+Сборка успешно завершена.
+    Предупреждений: 0
+    Ошибок: 0
+
+Прошло времени 00:00:00.17

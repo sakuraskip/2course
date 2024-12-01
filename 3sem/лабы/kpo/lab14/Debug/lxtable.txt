@@ -1,0 +1,20 @@
+
+1.	tfi(ti,ti)
+2.	{
+3.	dti;
+4.	i=iv(ivi);
+5.	ri;
+6.	};
+7.	tfi(ti,ti)
+8.	{
+9.	dti;
+10.	dtfi(ti,ti,ti);
+11.	i=i(i,l,l)vi;
+12.	ri;
+13.	};
+14.	m
+15.	{
+16.	dti;
+17.	dti;
+18.	rl;
+19.	};
