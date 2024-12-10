@@ -228,4 +228,8 @@ user7copy.studies.exams[1].professor.articles[1].pagesNumber = 3;
 storecopy.state.dialogsPage.messages = [{...store.state.dialogsPage.messages[0],message:"hellow"},{...store.state.dialogsPage.messages[1],message:"hellow"},{...store.state.dialogsPage.messages[2],message:"hellow"}]
 console.log(storecopy)
 
+console.log("\n")
+console.log(storecopy.state.dialogsPage.messages[0])
+console.log(store.state.dialogsPage.messages[0])
+
 

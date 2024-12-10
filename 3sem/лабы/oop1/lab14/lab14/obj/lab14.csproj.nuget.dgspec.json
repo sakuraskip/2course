@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\леха\\Desktop\\3sem\\лабы\\oop\\lab14\\lab14\\lab14.csproj": {}
+    "C:\\Users\\леха\\Desktop\\2 курс\\3sem\\лабы\\oop1\\lab14\\lab14\\lab14.csproj": {}
   },
   "projects": {
-    "C:\\Users\\леха\\Desktop\\3sem\\лабы\\oop\\lab14\\lab14\\lab14.csproj": {
+    "C:\\Users\\леха\\Desktop\\2 курс\\3sem\\лабы\\oop1\\lab14\\lab14\\lab14.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\леха\\Desktop\\3sem\\лабы\\oop\\lab14\\lab14\\lab14.csproj",
+        "projectUniqueName": "C:\\Users\\леха\\Desktop\\2 курс\\3sem\\лабы\\oop1\\lab14\\lab14\\lab14.csproj",
         "projectName": "lab14",
-        "projectPath": "C:\\Users\\леха\\Desktop\\3sem\\лабы\\oop\\lab14\\lab14\\lab14.csproj",
+        "projectPath": "C:\\Users\\леха\\Desktop\\2 курс\\3sem\\лабы\\oop1\\lab14\\lab14\\lab14.csproj",
         "packagesPath": "C:\\Users\\леха\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\леха\\Desktop\\3sem\\лабы\\oop\\lab14\\lab14\\obj\\",
+        "outputPath": "C:\\Users\\леха\\Desktop\\2 курс\\3sem\\лабы\\oop1\\lab14\\lab14\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\леха\\AppData\\Roaming\\NuGet\\NuGet.Config",

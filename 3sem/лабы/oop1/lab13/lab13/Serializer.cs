@@ -37,7 +37,7 @@ namespace lab13
     //            Console.WriteLine(ship.ToString());
     //        }
     //    }
-    
+
         public class BinSerializer<T> : ISerialize<T>
         {
 

@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab15\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{EB44A197-02B2-4A1B-9D5C-F5D1C4A8E5E1}|lab15\\lab15.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab15\\lab15\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB44A197-02B2-4A1B-9D5C-F5D1C4A8E5E1}|lab15\\lab15.csproj|solutionrelative:lab15\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EB44A197-02B2-4A1B-9D5C-F5D1C4A8E5E1}|lab15\\lab15.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab15\\lab15\\tpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EB44A197-02B2-4A1B-9D5C-F5D1C4A8E5E1}|lab15\\lab15.csproj|solutionrelative:lab15\\tpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EB44A197-02B2-4A1B-9D5C-F5D1C4A8E5E1}|lab15\\lab15.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab15\\lab15\\parallel1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EB44A197-02B2-4A1B-9D5C-F5D1C4A8E5E1}|lab15\\lab15.csproj|solutionrelative:lab15\\parallel1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB44A197-02B2-4A1B-9D5C-F5D1C4A8E5E1}|lab15\\lab15.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab15\\lab15\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB44A197-02B2-4A1B-9D5C-F5D1C4A8E5E1}|lab15\\lab15.csproj|solutionrelative:lab15\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,17 +22,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 204,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Tpl.cs",
               "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab15\\lab15\\Tpl.cs",
               "RelativeDocumentMoniker": "lab15\\Tpl.cs",
               "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab15\\lab15\\Tpl.cs",
               "RelativeToolTip": "lab15\\Tpl.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAAwEAAAAAbAAAA",
+              "ViewState": "AQIAAI0AAAAAAAAAAAAAwKQAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-26T08:35:05.911Z",
               "IsPinned": true,
@@ -40,27 +40,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Parallel1.cs",
               "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab15\\lab15\\Parallel1.cs",
               "RelativeDocumentMoniker": "lab15\\Parallel1.cs",
               "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab15\\lab15\\Parallel1.cs",
               "RelativeToolTip": "lab15\\Parallel1.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAowBIAAAANAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAswAsAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T12:02:05.951Z"
+              "WhenOpened": "2024-11-27T12:02:05.951Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab15\\lab15\\Program.cs",
               "RelativeDocumentMoniker": "lab15\\Program.cs",
               "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab15\\lab15\\Program.cs",
               "RelativeToolTip": "lab15\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAeAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T21:12:10.192Z"
+              "WhenOpened": "2024-11-25T21:12:10.192Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -1,14 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab8\\",
+  "WorkspaceRootPath": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab8\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BB5646DE-DB90-4239-959B-38847AE469C7}|lab8\\lab8.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab8\\lab8\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB5646DE-DB90-4239-959B-38847AE469C7}|lab8\\lab8.csproj|solutionrelative:lab8\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BB5646DE-DB90-4239-959B-38847AE469C7}|lab8\\lab8.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab8\\lab8\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB5646DE-DB90-4239-959B-38847AE469C7}|lab8\\lab8.csproj|solutionrelative:lab8\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB5646DE-DB90-4239-959B-38847AE469C7}|lab8\\lab8.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab8\\lab8\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB5646DE-DB90-4239-959B-38847AE469C7}|lab8\\lab8.csproj|solutionrelative:lab8\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BB5646DE-DB90-4239-959B-38847AE469C7}|lab8\\lab8.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab8\\lab8\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB5646DE-DB90-4239-959B-38847AE469C7}|lab8\\lab8.csproj|solutionrelative:lab8\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,30 +18,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 204,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab8\\lab8\\User.cs",
+              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab8\\lab8\\User.cs",
               "RelativeDocumentMoniker": "lab8\\User.cs",
-              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab8\\lab8\\User.cs",
+              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab8\\lab8\\User.cs",
               "RelativeToolTip": "lab8\\User.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAACoAAAAJAAAA",
+              "ViewState": "AQIAABYAAAAAAAAAAAA4wCoAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-15T14:13:29.848Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab8\\lab8\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab8\\lab8\\Program.cs",
               "RelativeDocumentMoniker": "lab8\\Program.cs",
-              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab8\\lab8\\Program.cs",
+              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab8\\lab8\\Program.cs",
               "RelativeToolTip": "lab8\\Program.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAuwCcAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-15T14:11:23.234Z",
               "EditorCaption": ""

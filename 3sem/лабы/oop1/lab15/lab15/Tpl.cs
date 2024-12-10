@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -19,14 +21,84 @@ namespace lab15
             }
             return sum;
         }
+        public static void task1()
+        {
+            int size = 1000000;
+
+            int[] vector = new int[size];
+            Random random = new Random();
+            int множитель = 2;
+
+            CancellationTokenSource зомби = new CancellationTokenSource();
+            CancellationToken token = зомби.Token;
+
+            void multiply(int start, int end, int index)
+            {
+                for (int i = start; i < end; i++)
+                {
+                    if (token.IsCancellationRequested)
+                    {
+                        Console.WriteLine("все выключили.....");
+                        return;
+                    }
+                    vector[i] *= множитель;
+                    //Console.SetCursorPosition(0, index+1);
+                    Console.WriteLine($"умножено {vector[i]} ");
+                }
+            }
+
+            for (int i = 0; i < size; i++)
+            {
+                vector[i] = random.Next();
+            }
+
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+
+            Task[] tasks = new Task[4];
+            int partsize = size / tasks.Length;
+            for (int i = 0; i < tasks.Length; i++)
+            {
+                int start = i * partsize;
+                int end;
+
+                if (i == tasks.Length - 1)
+                {
+                    end = size;
+                }
+                else
+                {
+                    end = start + partsize;
+                }
+
+                int taskindex = i;
+                // tasks[i] = new Task(() => multiply(i * partsize, partsize,taskindex));
+                //if(partsize<size)
+                //{
+                //    partsize += partsize;
+                //}
+                tasks[i] = Task.Run(() => multiply(start, end, taskindex), token);
+            }
+           
+
+
+            зомби.CancelAfter(1);
+            Console.WriteLine($"статус: {tasks[0].Status}");
+            зомби.Dispose();
+            //Task.WaitAll(tasks);
+            stopwatch.Stop();
+
+            Console.WriteLine($"время работы: {stopwatch.Elapsed}");
+
+        }
         public static void task3()
         {
-            
+
             Task<int> task1 = Task.Run(() => calcSum(50));
             Task<int> task2 = Task.Run(() => calcSum(35));
             Task<int> task3 = Task.Run(() => calcSum(727));
-            int result = task1.Result+ task2.Result + task3.Result;
-            Task<int>final = Task.Run(() => calcSum(result));
+            int result = task1.Result + task2.Result + task3.Result;
+            Task<int> final = Task.Run(() => calcSum(result));
             Console.WriteLine(final.Result);
         }
         public static void task4_1()
@@ -37,16 +109,15 @@ namespace lab15
             });
             Task task2 = task1.ContinueWith(printsome);
             task1.Start();
-            Thread.Sleep(1000);
             task2.Wait();
             void printsome(Task t)
             {
                 Console.WriteLine($"id: {Task.CurrentId}, предыдущий id: {t.Id}");
-                Thread.Sleep (1000);
+                Thread.Sleep(1000);
                 Console.WriteLine("воооот так");
             }
         }
-        public static async void task4_2(int n)
+        public static async Task task4_2(int n)
         {
             int result = await printsome(n);
             Console.WriteLine(result);
@@ -62,76 +133,66 @@ namespace lab15
             });
             return awaiter.GetResult();
         }
-        public static void task1()
+        
+        public static void task7()
         {
-            int size = 10000000;
-
-            int[] vector = new int[size];
-            Random random = new Random();
-            int множитель = 2;
-
-            CancellationTokenSource зомби = new CancellationTokenSource();
-            CancellationToken token = зомби.Token;
-
-            void multiply(int start, int end,int index)
+            BlockingCollection<string> склад = new BlockingCollection<string>();
+            string[] products = { "пылесос", "тостор", "микроволновка", "духовка", "вытяжка" };
+            Random rand = new Random();
+            Parallel.Invoke(
+                () => printсклад(),
+                () => addproduct(),
+                () => buyproduct()
+            );
+            void addproduct()
             {
-                Thread.Sleep(2000);
-                for(int i = start; i < end; i++)
+                while(склад.IsAddingCompleted == false)
                 {
-                    if(token.IsCancellationRequested)
+                    string product = products[rand.Next(products.Length)];
+                    Thread.Sleep(500 + rand.Next(1000));
+                    Console.WriteLine($"\n{product} добавлен на склад");
+                    склад.Add(product);
+                    printсклад();
+                }
+            }
+            void buyproduct()
+            {
+                while(склад.IsAddingCompleted == false)
+                {
+                    int index = rand.Next(10);
+                    string product = products[rand.Next(products.Length)];
+                    Thread.Sleep(400);
+                    if(склад.TryTake(out product,300))//ждет 700мс прежжде чем расстроится и уйти
                     {
-                        Console.WriteLine("все выключили.....");
-                        return;
+                        Console.WriteLine($"покупатель {index} украл {product}");
+                        printсклад();
                     }
-                    vector[i] *= множитель;
-
-                    //Console.SetCursorPosition(0, index);
-                    //Console.WriteLine($"умножено {vector[i]} ");
+                    else
+                    {
+                        Console.WriteLine($"покупатель {index} расстроился и не купил {product}");
+                    }
                 }
             }
-
-            for(int i=0;i<size;i++)
+            void printсклад()
             {
-                vector[i]= random.Next();
-            }
-
-            Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Start();
-
-            Task[] tasks = new Task[4];
-            int partsize = size/tasks.Length;
-            for(int i=0;i<tasks.Length;i++)
-            {
-                int start = i * partsize;
-                int end;
-
-                if(i == tasks.Length-1)
+                foreach (string product in склад)
                 {
-                    end = size;
+                    if (product == null)
+                    {
+                        Console.Write("склад пустой(");
+                    }
+                    Console.Write(product + ", ");
                 }
-                else
-                {
-                    end = start + partsize;
-                }
-
-                int taskindex = i;
-                // tasks[i] = new Task(() => multiply(i * partsize, partsize,taskindex));
-                //if(partsize<size)
-                //{
-                //    partsize += partsize;
-                //}
-                tasks[i] = new Task(()=> multiply(start,end,taskindex),token);
-                tasks[i].Start();
+                Console.WriteLine();
             }
-            зомби.Cancel();
-            Console.WriteLine($"статус: {tasks[0].Status}");
-            зомби.Dispose();
-            //Task.WaitAll(tasks);
-            stopwatch.Stop();
-
-            Console.WriteLine($"время работы: {stopwatch.Elapsed}");
-           
+            Thread.Sleep(20000);
+            склад.CompleteAdding();
+            //Task.WaitAll(suppliers);
+            //Task.WaitAll(buyers);
         }
+        
+        
+        
 
     }
 }

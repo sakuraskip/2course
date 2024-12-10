@@ -1,34 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab12\\",
+  "WorkspaceRootPath": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab12\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{81AA7662-4F67-4392-8EFE-42DB16A5EE14}|lab12\\lab12.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab12\\lab12\\fileinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81AA7662-4F67-4392-8EFE-42DB16A5EE14}|lab12\\lab12.csproj|solutionrelative:lab12\\fileinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{81AA7662-4F67-4392-8EFE-42DB16A5EE14}|lab12\\lab12.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab12\\lab12\\diskinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81AA7662-4F67-4392-8EFE-42DB16A5EE14}|lab12\\lab12.csproj|solutionrelative:lab12\\diskinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{81AA7662-4F67-4392-8EFE-42DB16A5EE14}|lab12\\lab12.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab12\\lab12\\log.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81AA7662-4F67-4392-8EFE-42DB16A5EE14}|lab12\\lab12.csproj|solutionrelative:lab12\\log.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{81AA7662-4F67-4392-8EFE-42DB16A5EE14}|lab12\\lab12.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab12\\lab12\\filemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{81AA7662-4F67-4392-8EFE-42DB16A5EE14}|lab12\\lab12.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab12\\lab12\\filemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{81AA7662-4F67-4392-8EFE-42DB16A5EE14}|lab12\\lab12.csproj|solutionrelative:lab12\\filemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{81AA7662-4F67-4392-8EFE-42DB16A5EE14}|lab12\\lab12.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab12\\lab12\\logfile.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{81AA7662-4F67-4392-8EFE-42DB16A5EE14}|lab12\\lab12.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab12\\lab12\\log.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AA7662-4F67-4392-8EFE-42DB16A5EE14}|lab12\\lab12.csproj|solutionrelative:lab12\\log.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81AA7662-4F67-4392-8EFE-42DB16A5EE14}|lab12\\lab12.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab12\\lab12\\dirinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AA7662-4F67-4392-8EFE-42DB16A5EE14}|lab12\\lab12.csproj|solutionrelative:lab12\\dirinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81AA7662-4F67-4392-8EFE-42DB16A5EE14}|lab12\\lab12.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab12\\lab12\\fileinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AA7662-4F67-4392-8EFE-42DB16A5EE14}|lab12\\lab12.csproj|solutionrelative:lab12\\fileinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81AA7662-4F67-4392-8EFE-42DB16A5EE14}|lab12\\lab12.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab12\\lab12\\diskinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AA7662-4F67-4392-8EFE-42DB16A5EE14}|lab12\\lab12.csproj|solutionrelative:lab12\\diskinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81AA7662-4F67-4392-8EFE-42DB16A5EE14}|lab12\\lab12.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab12\\lab12\\logfile.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{81AA7662-4F67-4392-8EFE-42DB16A5EE14}|lab12\\lab12.csproj|solutionrelative:lab12\\logfile.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{81AA7662-4F67-4392-8EFE-42DB16A5EE14}|lab12\\lab12.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab12\\lab12\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{81AA7662-4F67-4392-8EFE-42DB16A5EE14}|lab12\\lab12.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab12\\lab12\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{81AA7662-4F67-4392-8EFE-42DB16A5EE14}|lab12\\lab12.csproj|solutionrelative:lab12\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{81AA7662-4F67-4392-8EFE-42DB16A5EE14}|lab12\\lab12.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab12\\lab12\\dirinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81AA7662-4F67-4392-8EFE-42DB16A5EE14}|lab12\\lab12.csproj|solutionrelative:lab12\\dirinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,15 +38,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 204,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "logfile.json",
-              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab12\\lab12\\logfile.json",
+              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab12\\lab12\\logfile.json",
               "RelativeDocumentMoniker": "lab12\\logfile.json",
-              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab12\\lab12\\logfile.json",
+              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab12\\lab12\\logfile.json",
               "RelativeToolTip": "lab12\\logfile.json",
               "ViewState": "AQIAAEsAAAAAAAAAAAAAAAwAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -54,24 +54,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "FileManager.cs",
-              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab12\\lab12\\FileManager.cs",
+              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab12\\lab12\\FileManager.cs",
               "RelativeDocumentMoniker": "lab12\\FileManager.cs",
-              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab12\\lab12\\FileManager.cs",
+              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab12\\lab12\\FileManager.cs",
               "RelativeToolTip": "lab12\\FileManager.cs",
-              "ViewState": "AQIAAD8AAAAAAAAAAAAuwF4AAAAAAAAA",
+              "ViewState": "AQIAACsAAAAAAAAAAAAkwF4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-10T17:04:49.906Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Log.cs",
-              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab12\\lab12\\Log.cs",
+              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab12\\lab12\\Log.cs",
               "RelativeDocumentMoniker": "lab12\\Log.cs",
-              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab12\\lab12\\Log.cs",
+              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab12\\lab12\\Log.cs",
               "RelativeToolTip": "lab12\\Log.cs",
               "ViewState": "AQIAADsAAAAAAAAAAAAcwE0AAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -80,23 +80,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "DirInfo.cs",
-              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab12\\lab12\\DirInfo.cs",
+              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab12\\lab12\\DirInfo.cs",
               "RelativeDocumentMoniker": "lab12\\DirInfo.cs",
-              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab12\\lab12\\DirInfo.cs",
+              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab12\\lab12\\DirInfo.cs",
               "RelativeToolTip": "lab12\\DirInfo.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAAAzwBUAAABBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T17:00:17.013Z"
+              "WhenOpened": "2024-11-10T17:00:17.013Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "FileInfo.cs",
-              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab12\\lab12\\FileInfo.cs",
+              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab12\\lab12\\FileInfo.cs",
               "RelativeDocumentMoniker": "lab12\\FileInfo.cs",
-              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab12\\lab12\\FileInfo.cs",
+              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab12\\lab12\\FileInfo.cs",
               "RelativeToolTip": "lab12\\FileInfo.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -105,24 +106,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "DiskInfo.cs",
-              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab12\\lab12\\DiskInfo.cs",
+              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab12\\lab12\\DiskInfo.cs",
               "RelativeDocumentMoniker": "lab12\\DiskInfo.cs",
-              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab12\\lab12\\DiskInfo.cs",
+              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab12\\lab12\\DiskInfo.cs",
               "RelativeToolTip": "lab12\\DiskInfo.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAABcAAABPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T20:36:55.829Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-09T20:36:55.829Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab12\\lab12\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab12\\lab12\\Program.cs",
               "RelativeDocumentMoniker": "lab12\\Program.cs",
-              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab12\\lab12\\Program.cs",
+              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab12\\lab12\\Program.cs",
               "RelativeToolTip": "lab12\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

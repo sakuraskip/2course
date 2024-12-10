@@ -9,9 +9,21 @@ namespace lab15
 {
     public class Parallel1
     {
+        public static async Task task8_1()
+        {
+            Console.WriteLine("начало асинхронного движа");
+            await task8async();
+            Console.WriteLine("асинхронный движ закончился");
+        }
+         public static async Task task8async()
+        {
+            await Task.Delay(3000);
+            Console.WriteLine("симуляция долгой подгрузки");
+        }
         public static void task5()
         {
-            int[] array = new int[1000000000];
+            int size = 100000000;
+            int[] array = new int[size];
             Random rand = new Random();
             void fillArray(int n)
             {
@@ -19,12 +31,12 @@ namespace lab15
             }
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
-            Parallel.For(0, 1000000000, fillArray);
+            Parallel.For(0, size, fillArray);
 
             Console.WriteLine($"время работы параллельного for: {stopwatch.Elapsed}");
             stopwatch.Start();
 
-            for (int i=0;i< 1000000000;i++)
+            for (int i=0;i< size;i++)
             {
                 array[i] = rand.Next();
             }
@@ -45,7 +57,7 @@ namespace lab15
             {
                 Console.WriteLine("я тону на земле..... рубикон");
             }
-            Parallel.Invoke(PrintFirst, PrintSecond, PrintThird);
+            Parallel.Invoke(PrintFirst, PrintThird, PrintSecond);
         }
     }
 }

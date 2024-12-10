@@ -37,7 +37,10 @@ namespace lab14
             Console.WriteLine($"{Thread.CurrentThread.Name}, {Thread.CurrentThread.ManagedThreadId}" +
                             $"{Thread.CurrentThread.Priority}, {Thread.CurrentThread.ThreadState}");
         }
-        public static void task3(int n)
+
+
+
+        public static void task3(int n)//простые числа
         {
             Thread thread = new Thread(task3output);
             thread.Name = "task3";
@@ -45,15 +48,19 @@ namespace lab14
 
             void task3output()
             {
-                for(int i=0;i < n;i++)
+                List<int> numbers = new List<int>();
+                for(int i=2;i<n;i++)
                 {
-                    if(i%3 == 0)
-                    {
-                        Console.WriteLine("число очень простое");
-                        getinfo();
-                    }
-                    Thread.Sleep(100);
+                    numbers.Add(i);
                 }
+                for(int i=0;i < numbers.Count;i++)
+                {
+                    for(int j=2;j<n;j++)
+                    {
+                        numbers.Remove(numbers[i] * j);
+                    }
+                }
+                Console.WriteLine(string.Join(",", numbers));
             }
         }
         public static void task4(int n)
@@ -84,7 +91,7 @@ namespace lab14
             }
             void task4_2()
             {
-                //thread1.Join(); task b-1
+                //thread1.Join();
                 for (int i = 1; i <= n; i+=2)
                 {
                     while(thread1turn)
@@ -97,6 +104,39 @@ namespace lab14
                     
                     Thread.Sleep(400);
                     thread1turn = true;
+                }
+            }
+        }
+        public static void task4_1_1(int n)
+        {
+            StreamWriter writer = new StreamWriter("file.txt");
+            Thread thread1 = new Thread(task4_1);
+            Thread thread2 = new Thread(task4_2);
+
+            thread1.Priority = ThreadPriority.Highest;
+            thread1.Start();
+            thread2.Start();
+
+            void task4_1()
+            {
+                for (int i = 0; i <= n; i += 2)
+                {
+                    Console.WriteLine(i);
+                    writer.WriteLine(i);
+
+                    Thread.Sleep(100);
+                }
+            }
+            void task4_2()
+            {
+                thread1.Join();
+                for (int i = 1; i <= n; i += 2)
+                {
+                    
+                    Console.WriteLine(i);
+                    writer.WriteLine(i);
+
+                    Thread.Sleep(400);
                 }
             }
         }
