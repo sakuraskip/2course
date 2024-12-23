@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("lab10")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ef154a74b92dab47ed1d80c703dbbc34877b9cd7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+90506d873b5b9107f41ba61b2f7ae29d1031de76")]
 [assembly: System.Reflection.AssemblyProductAttribute("lab10")]
 [assembly: System.Reflection.AssemblyTitleAttribute("lab10")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

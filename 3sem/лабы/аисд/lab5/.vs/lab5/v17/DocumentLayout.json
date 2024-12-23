@@ -1,14 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\aisd\\lab5\\",
+  "WorkspaceRootPath": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\\u0430\u0438\u0441\u0434\\lab5\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0A61BFCA-BF37-4D0E-9155-4C601703880E}|lab5_2\\lab5_2.vcxproj|C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\aisd\\lab5\\lab5_2\\lab5_2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0A61BFCA-BF37-4D0E-9155-4C601703880E}|lab5_2\\lab5_2.vcxproj|solutionrelative:lab5_2\\lab5_2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{AA6EFD11-6A5B-4794-B1EA-91A97D72A955}|lab5\\lab5.vcxproj|C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\\u0430\u0438\u0441\u0434\\lab5\\lab5\\lab5.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AA6EFD11-6A5B-4794-B1EA-91A97D72A955}|lab5\\lab5.vcxproj|solutionrelative:lab5\\lab5.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AA6EFD11-6A5B-4794-B1EA-91A97D72A955}|lab5\\lab5.vcxproj|C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\aisd\\lab5\\lab5\\lab5.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{AA6EFD11-6A5B-4794-B1EA-91A97D72A955}|lab5\\lab5.vcxproj|solutionrelative:lab5\\lab5.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{0A61BFCA-BF37-4D0E-9155-4C601703880E}|lab5_2\\lab5_2.vcxproj|C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\\u0430\u0438\u0441\u0434\\lab5\\lab5_2\\lab5_2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0A61BFCA-BF37-4D0E-9155-4C601703880E}|lab5_2\\lab5_2.vcxproj|solutionrelative:lab5_2\\lab5_2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,30 +18,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 204,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "lab5_2.cpp",
-              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\aisd\\lab5\\lab5_2\\lab5_2.cpp",
+              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\\u0430\u0438\u0441\u0434\\lab5\\lab5_2\\lab5_2.cpp",
               "RelativeDocumentMoniker": "lab5_2\\lab5_2.cpp",
-              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\aisd\\lab5\\lab5_2\\lab5_2.cpp",
+              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\\u0430\u0438\u0441\u0434\\lab5\\lab5_2\\lab5_2.cpp",
               "RelativeToolTip": "lab5_2\\lab5_2.cpp",
-              "ViewState": "AQIAACEAAAAAAAAAAAAAACIAAAANAAAA",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAACIAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-10-24T20:02:34.84Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "lab5.cpp",
-              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\aisd\\lab5\\lab5\\lab5.cpp",
+              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\\u0430\u0438\u0441\u0434\\lab5\\lab5\\lab5.cpp",
               "RelativeDocumentMoniker": "lab5\\lab5.cpp",
-              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\aisd\\lab5\\lab5\\lab5.cpp",
+              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\\u0430\u0438\u0441\u0434\\lab5\\lab5\\lab5.cpp",
               "RelativeToolTip": "lab5\\lab5.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD4AAAAAAAAA",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAAD4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-10-24T17:24:54.196Z",
               "EditorCaption": ""

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\леха\\Desktop\\3sem\\лабы\\oop\\lab10\\lab10\\lab10.csproj",
+      "projectUniqueName": "C:\\Users\\леха\\Desktop\\2 курс\\3sem\\лабы\\oop1\\lab10\\lab10\\lab10.csproj",
       "projectName": "lab10",
-      "projectPath": "C:\\Users\\леха\\Desktop\\3sem\\лабы\\oop\\lab10\\lab10\\lab10.csproj",
+      "projectPath": "C:\\Users\\леха\\Desktop\\2 курс\\3sem\\лабы\\oop1\\lab10\\lab10\\lab10.csproj",
       "packagesPath": "C:\\Users\\леха\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\леха\\Desktop\\3sem\\лабы\\oop\\lab10\\lab10\\obj\\",
+      "outputPath": "C:\\Users\\леха\\Desktop\\2 курс\\3sem\\лабы\\oop1\\lab10\\lab10\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\леха\\AppData\\Roaming\\NuGet\\NuGet.Config",

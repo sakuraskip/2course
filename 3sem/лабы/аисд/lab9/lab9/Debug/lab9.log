@@ -1,4 +1,4 @@
-﻿Сборка начата 06.12.2024 12:58:16.
+﻿Сборка начата 23.12.2024 11:36:34.
 Уровень детализации журнала: Normal.     1>Проект "C:\Users\леха\Desktop\2 курс\3sem\лабы\аисд\lab9\lab9\lab9.vcxproj" в узле 2 (целевые объекты Build).
      1>PrepareForBuild:
          Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
@@ -8,12 +8,11 @@
        ClCompile:
          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\bin\HostX86\x86\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"Debug\\" /Fd"Debug\vc143.pdb" /external:W3 /Gd /TP /analyze- /FC /errorReport:prompt lab9.cpp
          lab9.cpp
-     1>C:\Users\леха\Desktop\2 курс\3sem\лабы\аисд\lab9\lab9\lab9.cpp(35,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-     1>C:\Users\леха\Desktop\2 курс\3sem\лабы\аисд\lab9\lab9\lab9.cpp(52,20): warning C4018: <: несоответствие типов со знаком и без знака
-     1>C:\Users\леха\Desktop\2 курс\3sem\лабы\аисд\lab9\lab9\lab9.cpp(78,20): warning C4018: <: несоответствие типов со знаком и без знака
-     1>C:\Users\леха\Desktop\2 курс\3sem\лабы\аисд\lab9\lab9\lab9.cpp(90,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-     1>C:\Users\леха\Desktop\2 курс\3sem\лабы\аисд\lab9\lab9\lab9.cpp(130,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-     1>C:\Users\леха\Desktop\2 курс\3sem\лабы\аисд\lab9\lab9\lab9.cpp(146,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+     1>C:\Users\леха\Desktop\2 курс\3sem\лабы\аисд\lab9\lab9\lab9.cpp(83,23): warning C4018: <: несоответствие типов со знаком и без знака
+     1>C:\Users\леха\Desktop\2 курс\3sem\лабы\аисд\lab9\lab9\lab9.cpp(112,23): warning C4018: <: несоответствие типов со знаком и без знака
+     1>C:\Users\леха\Desktop\2 курс\3sem\лабы\аисд\lab9\lab9\lab9.cpp(177,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+     1>C:\Users\леха\Desktop\2 курс\3sem\лабы\аисд\lab9\lab9\lab9.cpp(246,27): warning C4018: <: несоответствие типов со знаком и без знака
+     1>C:\Users\леха\Desktop\2 курс\3sem\лабы\аисд\lab9\lab9\lab9.cpp(253,27): warning C4018: <: несоответствие типов со знаком и без знака
        Link:
          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\bin\HostX86\x86\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\леха\Desktop\2 курс\3sem\лабы\аисд\lab9\Debug\lab9.exe" /INCREMENTAL /ILK:"Debug\lab9.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\леха\Desktop\2 курс\3sem\лабы\аисд\lab9\Debug\lab9.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\леха\Desktop\2 курс\3sem\лабы\аисд\lab9\Debug\lab9.lib" /MACHINE:X86 Debug\lab9.obj
          lab9.vcxproj -> C:\Users\леха\Desktop\2 курс\3sem\лабы\аисд\lab9\Debug\lab9.exe
@@ -26,14 +25,13 @@
 
        "C:\Users\леха\Desktop\2 курс\3sem\лабы\аисд\lab9\lab9\lab9.vcxproj" (целевой объект Build ) (1) ->
        (Целевой объект ClCompile) -> 
-         C:\Users\леха\Desktop\2 курс\3sem\лабы\аисд\lab9\lab9\lab9.cpp(35,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-         C:\Users\леха\Desktop\2 курс\3sem\лабы\аисд\lab9\lab9\lab9.cpp(52,20): warning C4018: <: несоответствие типов со знаком и без знака
-         C:\Users\леха\Desktop\2 курс\3sem\лабы\аисд\lab9\lab9\lab9.cpp(78,20): warning C4018: <: несоответствие типов со знаком и без знака
-         C:\Users\леха\Desktop\2 курс\3sem\лабы\аисд\lab9\lab9\lab9.cpp(90,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-         C:\Users\леха\Desktop\2 курс\3sem\лабы\аисд\lab9\lab9\lab9.cpp(130,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-         C:\Users\леха\Desktop\2 курс\3sem\лабы\аисд\lab9\lab9\lab9.cpp(146,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+         C:\Users\леха\Desktop\2 курс\3sem\лабы\аисд\lab9\lab9\lab9.cpp(83,23): warning C4018: <: несоответствие типов со знаком и без знака
+         C:\Users\леха\Desktop\2 курс\3sem\лабы\аисд\lab9\lab9\lab9.cpp(112,23): warning C4018: <: несоответствие типов со знаком и без знака
+         C:\Users\леха\Desktop\2 курс\3sem\лабы\аисд\lab9\lab9\lab9.cpp(177,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+         C:\Users\леха\Desktop\2 курс\3sem\лабы\аисд\lab9\lab9\lab9.cpp(246,27): warning C4018: <: несоответствие типов со знаком и без знака
+         C:\Users\леха\Desktop\2 курс\3sem\лабы\аисд\lab9\lab9\lab9.cpp(253,27): warning C4018: <: несоответствие типов со знаком и без знака
 
-    Предупреждений: 6
+    Предупреждений: 5
     Ошибок: 0
 
-Прошло времени 00:00:02.02
+Прошло времени 00:00:01.70

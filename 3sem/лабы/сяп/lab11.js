@@ -35,6 +35,7 @@ class Todolist
     {
         return this.tasks.filter(task=> task.done === done);
     }
+    
 }
 
 const todo1 = new Todolist(1,"важные дела очень");
@@ -48,3 +49,9 @@ todo1.addTask(task2);
 todo2.addTask(task1);
 
 console.log(todo1.filtertasks(true));
+
+task2.changedone(false);
+console.log(task2);
+
+task2.changename("убрал посуду");
+console.log(task2);

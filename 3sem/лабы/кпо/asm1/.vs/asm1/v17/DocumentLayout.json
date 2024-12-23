@@ -1,18 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\kpo\\asm1\\",
+  "WorkspaceRootPath": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\\u043A\u043F\u043E\\asm1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4962EFFD-1EB5-4340-8E3A-BF6524CFC7A9}|3\\3.vcxproj|C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\kpo\\asm1\\3\\main.asm||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{4962EFFD-1EB5-4340-8E3A-BF6524CFC7A9}|3\\3.vcxproj|solutionrelative:3\\main.asm||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{CA096BD4-1564-4B06-9905-E2D87EF33AB9}|sgdsgd\\sgdsgd.vcxproj|C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\\u043A\u043F\u043E\\asm1\\sgdsgd\\main.asm||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{CA096BD4-1564-4B06-9905-E2D87EF33AB9}|sgdsgd\\sgdsgd.vcxproj|solutionrelative:sgdsgd\\main.asm||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{85907DD5-AFF0-4ACE-87EA-37FD236C1BEE}|1\\1.vcxproj|C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\kpo\\asm1\\1\\main.asm||{8B382828-6202-11D1-8870-0000F87579D2}|",
-      "RelativeMoniker": "D:0:0:{85907DD5-AFF0-4ACE-87EA-37FD236C1BEE}|1\\1.vcxproj|solutionrelative:1\\main.asm||{8B382828-6202-11D1-8870-0000F87579D2}|"
+      "AbsoluteMoniker": "D:0:0:{259B42C5-EE30-49BB-A376-6C169A39CC06}|4\\4.vcxproj|C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\\u043A\u043F\u043E\\asm1\\4\\4.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{259B42C5-EE30-49BB-A376-6C169A39CC06}|4\\4.vcxproj|solutionrelative:4\\4.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38D14F08-208D-48E8-A49C-E2DA41D71236}|2\\2.vcxproj|C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\kpo\\asm1\\2\\main.asm||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{38D14F08-208D-48E8-A49C-E2DA41D71236}|2\\2.vcxproj|solutionrelative:2\\main.asm||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\\u043A\u043F\u043E\\lab14\\stdlib\\lib.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +21,45 @@
       "DocumentGroups": [
         {
           "DockedHeight": 41,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "main.asm",
-              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\kpo\\asm1\\1\\main.asm",
-              "RelativeDocumentMoniker": "1\\main.asm",
-              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\kpo\\asm1\\1\\main.asm",
-              "RelativeToolTip": "1\\main.asm",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-11-28T13:00:03.233Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "main.asm",
-              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\kpo\\asm1\\3\\main.asm",
-              "RelativeDocumentMoniker": "3\\main.asm",
-              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\kpo\\asm1\\3\\main.asm",
-              "RelativeToolTip": "3\\main.asm",
-              "ViewState": "AQIAABIAAAAAAAAAAAAgwDIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-11-28T08:50:08.953Z",
+              "Title": "4.cpp",
+              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\\u043A\u043F\u043E\\asm1\\4\\4.cpp",
+              "RelativeDocumentMoniker": "4\\4.cpp",
+              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\\u043A\u043F\u043E\\asm1\\4\\4.cpp",
+              "RelativeToolTip": "4\\4.cpp",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-18T18:25:01.602Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "lib.cpp",
+              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\\u043A\u043F\u043E\\lab14\\stdlib\\lib.cpp",
+              "RelativeDocumentMoniker": "..\\lab14\\stdlib\\lib.cpp",
+              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\\u043A\u043F\u043E\\lab14\\stdlib\\lib.cpp",
+              "RelativeToolTip": "..\\lab14\\stdlib\\lib.cpp",
+              "ViewState": "AQIAABIAAAAAAAAAAIAwwCsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-17T18:00:27.335Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "main.asm",
-              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\kpo\\asm1\\2\\main.asm",
-              "RelativeDocumentMoniker": "2\\main.asm",
-              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\kpo\\asm1\\2\\main.asm",
-              "RelativeToolTip": "2\\main.asm",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAIwBsAAAAyAAAA",
+              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\\u043A\u043F\u043E\\asm1\\sgdsgd\\main.asm",
+              "RelativeDocumentMoniker": "sgdsgd\\main.asm",
+              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\\u043A\u043F\u043E\\asm1\\sgdsgd\\main.asm",
+              "RelativeToolTip": "sgdsgd\\main.asm",
+              "ViewState": "AQIAABUAAAAAAAAAAAAswCUAAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-11-27T21:53:12.399Z"
+              "WhenOpened": "2024-12-15T09:12:09.175Z",
+              "EditorCaption": ""
             }
           ]
         }
