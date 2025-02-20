@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace lab15
 {
@@ -60,4 +61,5 @@ namespace lab15
             Parallel.Invoke(PrintFirst, PrintThird, PrintSecond);
         }
     }
+   
 }

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lab15.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="container" id="container">
+        <form>
+        <h2>Заполните форму:</h2>
+        <div class="field">
+            <div>
+            <label for="surname">Фамилия</label>
+            <input type="text" name="surname" required id="surname">
+        </div>
+            <div class="error" id="surname_err"></div>
+        </div>
+        <div class="field">
+            <div><label for="name">имя</label>
+            <input type="text" name="name" required id="name">
+        </div>
+            <div class="error" id="name_err">
+        </div>
+
+        </div>
+        <div class="field">
+            <div><label for="email">e-mail</label>
+            <input type="text" name="email" required id="email">
+        </div>
+            <div class="error" id="email_err">
+        </div>
+        </div>
+        <div class="field">
+            
+            <div><label for="phone">телефон</label>
+            <input type="text" name="phone" required id="phone">
+        </div>
+            <div class="error" id="phone_err">
+        </div>
+        </div>
+        <div class="field">
+            <div>
+            <label for="city">город</label>
+           <select name="city" id="city">
+            <option value = "Минск">Минск</option>
+            <option value="Брест">Брест</option>
+            <option value="Гродно">Гродно</option>
+            <option value="Могилев">Могилев</option>
+
+           </select>
+        </div>
+        </div>
+        <div class="fieldbstu">
+            <label for="bstu">я учусь в бгту</label>
+            <input type="checkbox" name="bstu" required id="bstu">
+        </div>
+        <div class="field">
+            <div>
+            <label for="course">на каком курсе вы учитесь</label>
+            <div class="radiocontainer">
+                <input type="radio" name="course" required value="1">
+                <label>1</label>
+                <input type="radio" name="course" required value="2">
+                <label>2</label>
+                <input type="radio" name="course" required value="3">
+                <label>3</label>
+                <input type="radio" name="course" required value="4">
+                <label>4</label>
+            </div>
+            </div>  
+            <div class="error" id="textarea_err"></div>
+
+        </div>
+        
+    </form>
+    <div class="field">
+        <div>
+        <label for="about">расскажите о себе</label>
+        <input type="textarea" name="about" required id="about" maxlength="250">
+    </div>
+        <div class="error" id="textarea_err">
+    </div>
+    </div>
+
+    <button type="submit" id="submitbutton" onclick="validateform()">проверить</button>
+    </div>
+    <script src="lab15.js"></script>
+</body>
+</html>

@@ -1,8 +1,10 @@
-C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab1\lab1\bin\Debug\lab1.dll
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab1\lab1\bin\Debug\lab1.pdb
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab1\lab1\obj\Debug\lab1.csproj.AssemblyReference.cache
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab1\lab1\obj\Debug\lab1.UserControl1.resources
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab1\lab1\obj\Debug\lab1.csproj.GenerateResource.cache
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab1\lab1\obj\Debug\lab1.csproj.CoreCompileInputs.cache
-C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab1\lab1\obj\Debug\lab1.dll
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab1\lab1\obj\Debug\lab1.pdb
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab1\lab1\obj\Debug\lab1.Form1.resources
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab1\lab1\bin\Debug\lab1.exe.config
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab1\lab1\bin\Debug\lab1.exe
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab1\lab1\obj\Debug\lab1.exe

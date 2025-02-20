@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\aisd\\lab6\\",
+  "WorkspaceRootPath": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\\u0430\u0438\u0441\u0434\\lab6\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C593926C-D8ED-455A-A5A1-44F2A6E06253}|lab6\\lab6.vcxproj|C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\aisd\\lab6\\lab6\\lab6.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{C593926C-D8ED-455A-A5A1-44F2A6E06253}|lab6\\lab6.vcxproj|C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\\u0430\u0438\u0441\u0434\\lab6\\lab6\\lab6.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{C593926C-D8ED-455A-A5A1-44F2A6E06253}|lab6\\lab6.vcxproj|solutionrelative:lab6\\lab6.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -14,17 +14,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 204,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "lab6.cpp",
-              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\aisd\\lab6\\lab6\\lab6.cpp",
+              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\\u0430\u0438\u0441\u0434\\lab6\\lab6\\lab6.cpp",
               "RelativeDocumentMoniker": "lab6\\lab6.cpp",
-              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\aisd\\lab6\\lab6\\lab6.cpp",
+              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\\u0430\u0438\u0441\u0434\\lab6\\lab6\\lab6.cpp",
               "RelativeToolTip": "lab6\\lab6.cpp",
-              "ViewState": "AQIAAFwAAAAAAAAAAAAIwG4AAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAG4AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-10-31T18:45:06.43Z",
               "EditorCaption": ""

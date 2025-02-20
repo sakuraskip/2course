@@ -1,12 +1,102 @@
+
+body{
+    background-color: rgba(0, 0, 0, 0.0);
+    font-family: sans-serif;
+}
+.main
+{
+    width:80%;
+    align-items: center;
+    margin: 80px auto;
+    padding-bottom: 100px;
+}
 h1 
 {
     color:green;
-    font-size:40px;
+    text-align: center;
+    font-size:50px;
 }
-.mainblock
+h2
 {
-    height:fit-content;
+    color:darkcyan;
+    font-size:30px;
+    text-align:center;
+}
+.inputTask
+{
+    margin:50px auto;
+    width:80%;
+    margin-right:50px;
     display: flex;
-    justify-content: center;
+}
+#newtask
+{
+    height:35px;
+    width:500px;
+    margin-right:30px;
+    margin-left:75px;
+    border: 2px solid gray;
+}
+#add
+{
+    color:black;
+    background-color:lightgreen;
+    border:1px solid grey;
+    height:35px;
+}
+.Filters
+{
+    display: flex;
+    margin:50px auto;
+    width:70%;
+    justify-content: space-around;
+    font-size:20px;
+}
+.Filters button
+{
+    color:black;
+    background-color: lightgreen;
+    height:50px;
+    width:200px;
+}
+.tasksList
+{
+    background-color: white;
+    width:90%;
+    margin: 10px auto;
+}
+.task{
+    display: inline-flex;
+    flex-flow: row;
+    justify-content: space-between;
+    margin:10px auto;
+    width:90%;
+    border:2px solid black;
     align-items: center;
+    border-radius: 10px;
+    margin-left: 25px;
+}
+.nameandbutton{
+    display: flex;
+}
+.nameandbutton input
+{
+    margin: 25px 30px 0 20px;
+    height:25px;
+    width:25px;
+}
+.nameandbutton p
+{
+    width:500px;
+    margin-right:50px;
+    font-size:25px;
+}
+.buttons button
+{
+    margin: 0px 20px;
+    height:40px;
+    display: inline-flex;
+    align-items: center;
+    padding: 0px 15px;
+    border:1px solid black;
 }

@@ -1,4 +1,4 @@
-﻿Сборка начата 12.12.2024 15:45:14.
+﻿Сборка начата 25.12.2024 23:44:17.
 Уровень детализации журнала: Normal.     1>Проект "C:\Users\леха\Desktop\2 курс\3sem\лабы\кпо\asm1\3\3.vcxproj" в узле 2 (целевые объекты Build).
      1>PrepareForBuild:
          Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
@@ -6,7 +6,9 @@
          Создание "Debug\3.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
          Обращение к "Debug\3.tlog\unsuccessfulbuild".
        _MASM:
-       Целевой объект "_MASM" пропускается, так как все выходные файлы актуальны по отношению к входным.
+         Assembling main.asm...
+         cmd.exe /C "C:\Users\леха\AppData\Local\Temp\tmp1510bec3ff9a400d8871d9de7c67d295.cmd"
+         ml.exe /c /nologo /Zi /Fo"Debug\main.obj" /W3 /errorReport:prompt  /Tamain.asm
        Link:
          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\bin\HostX86\x86\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\леха\Desktop\2 курс\3sem\лабы\кпо\asm1\Debug\3.exe" /INCREMENTAL /ILK:"Debug\3.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\леха\Desktop\2 курс\3sem\лабы\кпо\asm1\Debug\3.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\леха\Desktop\2 курс\3sem\лабы\кпо\asm1\Debug\3.lib" /MACHINE:X86 Debug\main.obj
          3.vcxproj -> C:\Users\леха\Desktop\2 курс\3sem\лабы\кпо\asm1\Debug\3.exe
@@ -19,4 +21,4 @@
     Предупреждений: 0
     Ошибок: 0
 
-Прошло времени 00:00:01.03
+Прошло времени 00:00:01.54

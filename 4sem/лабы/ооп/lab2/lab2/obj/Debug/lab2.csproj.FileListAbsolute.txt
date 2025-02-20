@@ -1,0 +1,16 @@
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab2\lab2\bin\Debug\lab2.exe.config
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab2\lab2\bin\Debug\lab2.exe
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab2\lab2\bin\Debug\lab2.pdb
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab2\lab2\obj\Debug\lab2.csproj.AssemblyReference.cache
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab2\lab2\obj\Debug\lab2.Form1.resources
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab2\lab2\obj\Debug\lab2.Properties.Resources.resources
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab2\lab2\obj\Debug\lab2.csproj.GenerateResource.cache
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab2\lab2\obj\Debug\lab2.csproj.CoreCompileInputs.cache
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab2\lab2\obj\Debug\lab2.exe
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab2\lab2\obj\Debug\lab2.pdb
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab2\lab2\obj\Debug\lab2.UserControl1.resources
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab2\lab2\obj\Debug\lab2.cpuSettings.resources
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab2\lab2\bin\Debug\Newtonsoft.Json.dll
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab2\lab2\bin\Debug\Newtonsoft.Json.xml
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab2\lab2\obj\Debug\lab2.displayComputers.resources
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab2\lab2\obj\Debug\lab2.csproj.Up2Date

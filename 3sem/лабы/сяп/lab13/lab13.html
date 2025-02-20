@@ -3,13 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>html1</title>
     <link rel="stylesheet" href="lab13.css">
+    
 </head>
 <body>
-    <div class="mainblock">
+    
+    
+    <div class="main">
         <h1>список дел</h1>
-        
+        <div class="inputTask">
+            <input type="text" placeholder="введите имя нового дела..." name="newtask" id="newtask">
+            <button id="add">добавить новое дело</button>
+        </div>
+        <div class="Filters">
+            <button id="showall">Показать все</button>
+            <button id="showcompleted">Показать выполненные</button>
+            <button id="showuncompleted">Показать не выполненные</button>
+        </div>
+        <h2>Твой список дел</h2>
+        <div class="tasksList">
+           
+        </div>
     </div>
+    <script src="lab13.js"></script> 
 </body>
+        
 </html>

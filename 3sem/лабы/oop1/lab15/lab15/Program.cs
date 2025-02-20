@@ -12,10 +12,10 @@
             //Parallel1.task5();// параллельный for
             //Parallel1.task6();// parallel invoke
             //Console.WriteLine();
-            //Tpl.task7(); // магаз
+            Tpl.task7(); // магаз
 
 
-             Parallel1.task8_1();
+             //Parallel1.task8_1();
         }
     }
 }

@@ -1,0 +1,4 @@
+SELECT ТОВАРЫ.*
+FROM   ТОВАРЫ
+WHERE (Цена BETWEEN 20 AND 50)
+ORDER BY Цена DESC

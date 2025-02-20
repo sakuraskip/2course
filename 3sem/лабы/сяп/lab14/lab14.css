@@ -1,0 +1,83 @@
+body
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height:100vh;
+}
+h1 
+{
+    color:cornflowerblue;
+    text-align: center;
+}
+.board
+{
+    display: grid;
+    grid-template-columns: repeat(9,1fr);
+    background-color: bisque;
+    align-self: center;
+    width:30vw;    
+}
+.cell 
+{
+    width:50px;
+    height:50px;
+    margin:0;
+    background-color: white;
+    text-align: center;
+    font-size: 18px;
+}
+
+.cell[data-row="0"] {
+    border-top: 4px solid black;
+}
+
+.cell[data-col="0"] {
+    border-left: 4px solid black;
+}
+
+.cell[data-col="8"] {
+    border-right: 4px solid black;
+}
+
+.cell[data-row="2"],
+.cell[data-row="5"] {
+    border-bottom: 3px solid black; 
+}
+
+.cell[data-row="8"] {
+    border-bottom: 4px solid black; 
+}
+
+.cell[data-col="2"],
+.cell[data-col="5"] {
+    border-right: 3px solid black; 
+}
+
+.cell[data-col="8"] {
+    border-right: 4px solid black;
+}
+
+.buttons
+{
+    padding-top:50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#sadmoment
+{
+    background-color: red;
+}
+#good
+{
+    background-color: yellow;
+}
+#placed
+{
+    background-color: lightblue;
+}
+.buttons button
+{
+    margin-left:30px;
+}
