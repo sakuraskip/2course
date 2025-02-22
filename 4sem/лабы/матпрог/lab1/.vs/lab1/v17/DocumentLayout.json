@@ -7,12 +7,16 @@
       "RelativeMoniker": "D:0:0:{920E2B87-4494-465B-A1C3-F03D366AC62E}|lab1\\lab1.vcxproj|solutionrelative:lab1\\lab1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{920E2B87-4494-465B-A1C3-F03D366AC62E}|lab1\\lab1.vcxproj|C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043C\u0430\u0442\u043F\u0440\u043E\u0433\\lab1\\lab1\\fibo.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{920E2B87-4494-465B-A1C3-F03D366AC62E}|lab1\\lab1.vcxproj|solutionrelative:lab1\\fibo.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{920E2B87-4494-465B-A1C3-F03D366AC62E}|lab1\\lab1.vcxproj|C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043C\u0430\u0442\u043F\u0440\u043E\u0433\\lab1\\lab1\\Auxil.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{920E2B87-4494-465B-A1C3-F03D366AC62E}|lab1\\lab1.vcxproj|solutionrelative:lab1\\Auxil.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{920E2B87-4494-465B-A1C3-F03D366AC62E}|lab1\\lab1.vcxproj|C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043C\u0430\u0442\u043F\u0440\u043E\u0433\\lab1\\lab1\\stdafx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{920E2B87-4494-465B-A1C3-F03D366AC62E}|lab1\\lab1.vcxproj|solutionrelative:lab1\\stdafx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{920E2B87-4494-465B-A1C3-F03D366AC62E}|lab1\\lab1.vcxproj|C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043C\u0430\u0442\u043F\u0440\u043E\u0433\\lab1\\lab1\\fibo.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{920E2B87-4494-465B-A1C3-F03D366AC62E}|lab1\\lab1.vcxproj|solutionrelative:lab1\\fibo.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{920E2B87-4494-465B-A1C3-F03D366AC62E}|lab1\\lab1.vcxproj|C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043C\u0430\u0442\u043F\u0440\u043E\u0433\\lab1\\lab1\\auxil.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -21,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{920E2B87-4494-465B-A1C3-F03D366AC62E}|lab1\\lab1.vcxproj|C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043C\u0430\u0442\u043F\u0440\u043E\u0433\\lab1\\lab1\\fibo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{920E2B87-4494-465B-A1C3-F03D366AC62E}|lab1\\lab1.vcxproj|solutionrelative:lab1\\fibo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{920E2B87-4494-465B-A1C3-F03D366AC62E}|lab1\\lab1.vcxproj|C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043C\u0430\u0442\u043F\u0440\u043E\u0433\\lab1\\lab1\\stdafx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{920E2B87-4494-465B-A1C3-F03D366AC62E}|lab1\\lab1.vcxproj|solutionrelative:lab1\\stdafx.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +42,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "fibo.cpp",
               "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043C\u0430\u0442\u043F\u0440\u043E\u0433\\lab1\\lab1\\fibo.cpp",
               "RelativeDocumentMoniker": "lab1\\fibo.cpp",
@@ -54,7 +54,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "fibo.h",
               "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043C\u0430\u0442\u043F\u0440\u043E\u0433\\lab1\\lab1\\fibo.h",
               "RelativeDocumentMoniker": "lab1\\fibo.h",
@@ -67,7 +67,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "stdafx.h",
               "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043C\u0430\u0442\u043F\u0440\u043E\u0433\\lab1\\lab1\\stdafx.h",
               "RelativeDocumentMoniker": "lab1\\stdafx.h",
@@ -75,11 +75,12 @@
               "RelativeToolTip": "lab1\\stdafx.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-02-13T19:05:14.988Z"
+              "WhenOpened": "2025-02-13T19:05:14.988Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "auxil.cpp",
               "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043C\u0430\u0442\u043F\u0440\u043E\u0433\\lab1\\lab1\\auxil.cpp",
               "RelativeDocumentMoniker": "lab1\\auxil.cpp",
@@ -91,7 +92,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Auxil.h",
               "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043C\u0430\u0442\u043F\u0440\u043E\u0433\\lab1\\lab1\\Auxil.h",
               "RelativeDocumentMoniker": "lab1\\Auxil.h",
@@ -110,7 +111,7 @@
               "RelativeDocumentMoniker": "lab1\\lab1.cpp",
               "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043C\u0430\u0442\u043F\u0440\u043E\u0433\\lab1\\lab1\\lab1.cpp",
               "RelativeToolTip": "lab1\\lab1.cpp",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAACcAAAA4AAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAACEAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-02-13T19:03:40.378Z",
               "EditorCaption": ""
