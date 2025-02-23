@@ -291,8 +291,8 @@
             this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.14286F);
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
-            "SSD",
             "HDD 3.5",
+            "SSD",
             "M2 SSD"});
             this.comboBox2.Location = new System.Drawing.Point(267, 665);
             this.comboBox2.Name = "comboBox2";

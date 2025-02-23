@@ -114,12 +114,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\9ba05a238fb745bea6b7c5d9ad7bedda_large.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\gifki-animacziya-s-pashoj-2023-24.gif" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Resources\computers.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

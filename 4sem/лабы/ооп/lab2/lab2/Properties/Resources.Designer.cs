@@ -59,25 +59,5 @@ namespace lab2.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _9ba05a238fb745bea6b7c5d9ad7bedda_large {
-            get {
-                object obj = ResourceManager.GetObject("9ba05a238fb745bea6b7c5d9ad7bedda_large", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap gifki_animacziya_s_pashoj_2023_24 {
-            get {
-                object obj = ResourceManager.GetObject("gifki-animacziya-s-pashoj-2023-24", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }

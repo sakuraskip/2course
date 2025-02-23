@@ -1,29 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Computer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <processor>
-    <производитель>Intel</производитель>
-    <Серия>Core i5</Серия>
-    <Модель>i5-11400</Модель>
-    <количество_ядер>6</количество_ядер>
-    <Frequency>2.6ГГц</Frequency>
-    <Cache>12</Cache>
+    <производитель>AMD</производитель>
+    <Серия>Ryzen 7</Серия>
+    <Модель>r7 5800X</Модель>
+    <количество_ядер>8</количество_ядер>
+    <Frequency>3.8ГГц</Frequency>
+    <Cache>32</Cache>
   </processor>
-  <type>Ноутбук</type>
+  <type>Персональный</type>
   <videocard>Radeon6700xt</videocard>
   <RAM>0</RAM>
   <Memory>0</Memory>
-  <buydate>13.13.1313</buydate>
-<processor>
-    <производитель>Intel</производитель>
-    <Серия>Core i5</Серия>
-    <Модель>i5-11400</Модель>
-    <количество_ядер>6</количество_ядер>
-    <Frequency>2.6ГГц</Frequency>
-    <Cache>12</Cache>
-  </processor>
-  <type>Ноутбук</type>
-  <videocard>Radeon6700xt</videocard>
-  <RAM>0</RAM>
-  <Memory>0</Memory>
-  <buydate>13.13.1313</buydate>
+  <buydate>15.12.2021</buydate>
 </Computer>

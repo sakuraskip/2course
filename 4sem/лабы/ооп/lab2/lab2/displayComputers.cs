@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,8 @@ namespace lab2
 {
     public partial class displayComputers : UserControl
     {
+        public event EventHandler SwitchBack;
+        public string _filepath = "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\ооп\\lab2\\lab2\\computers.json";
         public displayComputers()
         {
             InitializeComponent();
@@ -21,18 +24,26 @@ namespace lab2
 
         private void displayComputers_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = loadFromXML();
+            ComputerList list = loadFromXML(_filepath);
+            dataGridView1.DataSource = list.list;
         }
-        private List<Computer> loadFromXML()
+        public static ComputerList loadFromXML(string _filepath)
         {
-            List<Computer> computers = new List<Computer>();
-            XmlSerializer serializer = new XmlSerializer(typeof(Computer));
-
-            using (StreamReader rd = new StreamReader("computers.xml"))
+            if(File.Exists(_filepath))
             {
-                computers.Add((Computer)serializer.Deserialize(rd));
-            }//СОЗДАТЬ LIST КАК ПОЛЕ В КЛАССЕ, КОМПЬЮТЕРЫ ДОБАВЛЯТЬ УЖЕ В НЕГО, СЕРИАЛИЗОВАТЬ И ДЕСЕРИАЛИЗОВАТЬ НУЖНО ЕГО
-            return computers;
+                string json = File.ReadAllText(_filepath);
+                if(string.IsNullOrEmpty(json)) 
+                {
+                    return new ComputerList();
+                }
+                return JsonConvert.DeserializeObject<ComputerList>(json);
+            }
+            return new ComputerList();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SwitchBack?.Invoke(this, EventArgs.Empty);
         }
     }
 }

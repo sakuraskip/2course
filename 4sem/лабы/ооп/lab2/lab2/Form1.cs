@@ -27,7 +27,7 @@ namespace lab2
             userControl1.Dock = DockStyle.Fill; // Растягиваем на всю форму
             userControl1.ChangeCPU += changeCPU;
             control2.SwitchBack += SwitchBack;
-            //control3.SwitchBack += SwitchBack;
+            control3.SwitchBack += SwitchBack;
             userControl1.DisplayComputers += displayComputers_event;
            
 

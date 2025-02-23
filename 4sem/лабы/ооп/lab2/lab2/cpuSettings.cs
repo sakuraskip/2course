@@ -33,15 +33,15 @@ namespace lab2
             }
             if (radioButton1.Checked)
             {
-                computer.processor.производитель = Processor.Производитель.Intel;
+                computer.processor.производитель = "Intel";
             }
             else if(radioButton2.Checked)
             {
-                computer.processor.производитель = Processor.Производитель.AMD;
+                computer.processor.производитель ="AMD";
             }
             else if(radioButton3.Checked)
             {
-                computer.processor.производитель = Processor.Производитель.Байкал;
+                computer.processor.производитель = "Байкал";
             }
             computer.processor.Серия = comboBox1.SelectedItem.ToString();
             computer.processor.Модель = label8.Text;

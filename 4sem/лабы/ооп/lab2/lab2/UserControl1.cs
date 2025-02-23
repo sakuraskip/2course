@@ -15,6 +15,7 @@ namespace lab2
 {
     public partial class UserControl1 : UserControl
     {
+        private string _filepath = "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\ооп\\lab2\\lab2\\computers.json";
         public Computer computer;
         public event EventHandler ChangeCPU;
         public event EventHandler DisplayComputers;
@@ -54,39 +55,54 @@ namespace lab2
             }
             if (radioButton1.Checked)
             {
-                computer.type = Computer.computerType.Сервер;
+                computer.type = "Сервер";
             }
             else if (radioButton2.Checked)
             {
-                computer.type = Computer.computerType.Персональный;
+                computer.type = "Персональный";
             }
             else if(radioButton3.Checked)
             {
-                computer.type = Computer.computerType.Ноутбук;
+                computer.type = "Ноутбук";
             }
             if(radioButton4.Checked)
             {
-                computer.videocard = Computer.Videocard.IntelArc580;
+                computer.videocard = "IntelArc580";
             }
             else if (radioButton5.Checked)
             {
-                computer.videocard = Computer.Videocard.Radeon6700xt;
+                computer.videocard = "Radeon6700xt";
             }
             else if (radioButton6.Checked)
             {
-                computer.videocard = Computer.Videocard.Gt630;
+                computer.videocard = "Gt630";
             }
+            switch(comboBox1.SelectedIndex)
+            {
+                case 0: computer.ramtype = "ddr3";break;
+                case 1: computer.ramtype = "ddr4";break;
+                case 2: computer.ramtype = "ddr5";break;
+            }
+            switch(comboBox2.SelectedIndex)
+            {
+                case 0: computer.memorytype = "HDD";break;
+                case 1: computer.memorytype = "SSD";break;
+                case 2: computer.memorytype = "M2 SSD";break;
+            }
+            computer.RAM = Convert.ToInt32(numericUpDown2.Value);
+            computer.Memory = Convert.ToInt32(numericUpDown1.Value);
             computer.buydate = maskedTextBox1.Text;
-          saveToXML(computer);
+            saveToXML(computer);
             errorLabel.Text = "Компьютер сохранен";
         }
         private void saveToXML(Computer computer)
         {
-            XmlSerializer serializer = new XmlSerializer(typeof(Computer));
-            using(StreamWriter wr = new StreamWriter("computers.xml"))
-            {
-                serializer.Serialize(wr, computer);
-            }
+            ComputerList pclist = displayComputers.loadFromXML(_filepath);
+            pclist.list.Add(computer);
+
+            string json = JsonConvert.SerializeObject(pclist,Formatting.Indented);
+            File.WriteAllText(_filepath,json);
+            
         }
         private bool checkFields()
         {

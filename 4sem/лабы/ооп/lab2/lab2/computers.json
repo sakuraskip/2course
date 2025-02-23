@@ -1,0 +1,38 @@
+{
+  "list": [
+    {
+      "processor": {
+        "производитель": "AMD",
+        "Серия": "Ryzen 5",
+        "Модель": "r5 5600X",
+        "количество_ядер": 6,
+        "Frequency": "3.7ГГц",
+        "Cache": 32
+      },
+      "type": "Ноутбук",
+      "videocard": "Gt630",
+      "ramtype": "ddr5",
+      "memorytype": "HDD",
+      "RAM": 100,
+      "Memory": 3,
+      "buydate": "12.12.1212"
+    },
+    {
+      "processor": {
+        "производитель": "Intel",
+        "Серия": "Core i5",
+        "Модель": "i5-11400",
+        "количество_ядер": 6,
+        "Frequency": "2.6ГГц",
+        "Cache": 12
+      },
+      "type": "Сервер",
+      "videocard": "IntelArc580",
+      "ramtype": "ddr4",
+      "memorytype": "M2 SSD",
+      "RAM": 12,
+      "Memory": 1222,
+      "buydate": "12.12.1212"
+    }
+  ]
+}

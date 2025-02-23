@@ -9,9 +9,12 @@ namespace lab2
     [Serializable]
     public class Computer
     {
+        
         public Processor processor;
-        public computerType type { get; set; }
-        public Videocard videocard { get; set; }
+        public string type { get; set; }
+        public string videocard { get; set; }
+        public string ramtype { get; set; }
+        public string memorytype { get; set; }
         public enum computerType
         {
             Сервер,
@@ -41,9 +44,15 @@ namespace lab2
         public string buydate { get; set; }
        
     }
+    [Serializable]
+    public class ComputerList
+    {
+        public List<Computer> list { get; set; } = new List<Computer>();
+    }
+    [Serializable]
     public class Processor
     {
-        public Производитель производитель;
+        public string производитель;
         public enum Производитель
         {
             Intel,
