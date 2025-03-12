@@ -59,5 +59,25 @@ namespace lab2.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1c43ec2f_c7a8_44f9_b6b6_522abe004bf0 {
+            get {
+                object obj = ResourceManager.GetObject("1c43ec2f-c7a8-44f9-b6b6-522abe004bf0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Neumann {
+            get {
+                object obj = ResourceManager.GetObject("Neumann", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

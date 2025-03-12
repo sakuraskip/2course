@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "UGu3kSwIh4zj0c/nBgoDMLfHn7KHGtvTo8zXFC0rfU8=",
+  "Source": "lab2-2",
+  "BasePath": "_content/lab2-2",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "lab2-2\\wwwroot",
+      "Source": "lab2-2",
+      "ContentRoot": "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\смелов\\lab2\\lab2-2\\wwwroot\\",
+      "BasePath": "_content/lab2-2",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}

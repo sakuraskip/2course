@@ -8,9 +8,7 @@ abstract class BaseUser
         this.id = id;
         this.name = name;
     }
-    getRole():string{
-        return this.role;
-    }
+    abstract getRole():string
 }
 class Guest extends BaseUser
 {
@@ -18,6 +16,10 @@ class Guest extends BaseUser
     constructor(id:number,name:string)
     {
         super(id,name);
+    }
+    getRole()
+    {
+        return this.role;
     }
     permissions:Array<string> = ["просмотр контента"];
 }
@@ -27,7 +29,10 @@ class User extends BaseUser
     constructor(id:number,name:string)
     {
         super(id,name);
-      
+    }
+    getRole()
+    {
+        return this.role;
     }
     permissions:Array<string> = ["просмотр контента","может оставлять комментарии"];
 
@@ -39,6 +44,10 @@ class Admin extends BaseUser
     {
         super(id,name);
     }
+    getRole()
+    {
+        return this.role;
+    }
     permissions:Array<string> = ["просмотр контента","может оставлять комментарии","удаление комментариев","управление пользователями"];
 }
 //////////////////////////////
@@ -46,7 +55,7 @@ interface IReport
 {
     title:string;
     content:string;
-    generate():string;
+    generate():string|object;
 }
 class HTMLReport implements IReport
 {
@@ -71,9 +80,9 @@ class JSONReport implements IReport
         this.title = title;
         this.content = content;
     }
-    generate():string
+    generate():object
     {
-        return `{title: "${this.title}", content: "${this.content}}"`;
+        return {title: this.title, content: this.content};
     }
 }
 const report1 = new HTMLReport("отчет номер 1","содержание отчета 1");
@@ -113,11 +122,16 @@ class CacheБ<T>
     }
 }
 const cache = new CacheБ<number>();
-cache.add("price",100,5000);
+cache.add("price",100,2000);
 console.log(cache.get("price"));
 setTimeout(() => {
     console.log(cache.get("price"))
 }, 1000);
+
+setTimeout(()=>
+{
+    console.log(cache.get("price"))
+},2000)
 
 function createInstance<T>(cls: new (...args:any[])=>T,...args:any[]):T
 {
@@ -130,12 +144,34 @@ enum LogLevel
 {
     INFO,WARNING,ERROR
 }
-type LogEntry = [Date,LogLevel,string]//псевдоним
+type LogEntry = [Date,LogLevel,string]
 
 function logEvent(event:LogEntry):void
 {
     let [date,loglevel,info] = event;
-    console.log(`${date} [${loglevel.toLocaleString()}]: ${info}`);
+    console.log(`${date} [${LogLevel[loglevel]}]: ${info}`);
 }
 logEvent([new Date(),LogLevel.WARNING,"жееесть"])
 
+enum HttpStatus
+{
+    ok = 200,
+    badRequest = 400,
+    unauthorized = 401,
+    InternalServerError =500
+}
+
+type ApiResponse<T> = [status:HttpStatus,data: T|null,error?:string]
+
+function success<T>(data:T): ApiResponse<T>
+{
+    let response:ApiResponse<T> = [HttpStatus.ok,data];
+    return response;
+}
+function error(message:string,status:HttpStatus):ApiResponse<null>
+{
+    let response:ApiResponse<null> = [status,null,message];
+    return response;
+}
+console.log(success({user:"Андрюха"}));
+console.log(error("не найдено",HttpStatus.badRequest));

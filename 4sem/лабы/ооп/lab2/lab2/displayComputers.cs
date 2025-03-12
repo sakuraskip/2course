@@ -16,6 +16,7 @@ namespace lab2
     public partial class displayComputers : UserControl
     {
         public event EventHandler SwitchBack;
+        public event EventHandler SearchPage;
         public string _filepath = "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\ооп\\lab2\\lab2\\computers.json";
         public displayComputers()
         {
@@ -26,6 +27,7 @@ namespace lab2
         {
             ComputerList list = loadFromXML(_filepath);
             dataGridView1.DataSource = list.list;
+           
         }
         public static ComputerList loadFromXML(string _filepath)
         {
@@ -44,6 +46,41 @@ namespace lab2
         private void button1_Click(object sender, EventArgs e)
         {
             SwitchBack?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SearchPage?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

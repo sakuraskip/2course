@@ -1,18 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab3\\",
+  "WorkspaceRootPath": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{70EC4C48-7C94-4BD8-8708-61B6AA27E29E}|lab3\\lab3.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab3\\lab3\\statisticoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{70EC4C48-7C94-4BD8-8708-61B6AA27E29E}|lab3\\lab3.csproj|solutionrelative:lab3\\statisticoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{70EC4C48-7C94-4BD8-8708-61B6AA27E29E}|lab3\\lab3.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab3\\lab3\\vector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70EC4C48-7C94-4BD8-8708-61B6AA27E29E}|lab3\\lab3.csproj|solutionrelative:lab3\\vector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{70EC4C48-7C94-4BD8-8708-61B6AA27E29E}|lab3\\lab3.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab3\\lab3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{70EC4C48-7C94-4BD8-8708-61B6AA27E29E}|lab3\\lab3.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab3\\lab3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{70EC4C48-7C94-4BD8-8708-61B6AA27E29E}|lab3\\lab3.csproj|solutionrelative:lab3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{70EC4C48-7C94-4BD8-8708-61B6AA27E29E}|lab3\\lab3.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab3\\lab3\\vector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{70EC4C48-7C94-4BD8-8708-61B6AA27E29E}|lab3\\lab3.csproj|solutionrelative:lab3\\vector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{70EC4C48-7C94-4BD8-8708-61B6AA27E29E}|lab3\\lab3.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab3\\lab3\\statisticoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70EC4C48-7C94-4BD8-8708-61B6AA27E29E}|lab3\\lab3.csproj|solutionrelative:lab3\\statisticoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,30 +22,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 204,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "StatisticOperations.cs",
-              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab3\\lab3\\StatisticOperations.cs",
+              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab3\\lab3\\StatisticOperations.cs",
               "RelativeDocumentMoniker": "lab3\\StatisticOperations.cs",
-              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab3\\lab3\\StatisticOperations.cs",
-              "RelativeToolTip": "lab3\\StatisticOperations.cs",
-              "ViewState": "AQIAAB8AAAAAAAAAAAAkwDcAAAAHAAAA",
+              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab3\\lab3\\StatisticOperations.cs*",
+              "RelativeToolTip": "lab3\\StatisticOperations.cs*",
+              "ViewState": "AQIAACwAAAAAAAAAAAAYwAoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-15T16:40:28.804Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Vector.cs",
-              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab3\\lab3\\Vector.cs",
+              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab3\\lab3\\Vector.cs",
               "RelativeDocumentMoniker": "lab3\\Vector.cs",
-              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab3\\lab3\\Vector.cs",
+              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab3\\lab3\\Vector.cs",
               "RelativeToolTip": "lab3\\Vector.cs",
-              "ViewState": "AQIAAIwAAAAAAAAAAAAqwKMAAAAfAAAA",
+              "ViewState": "AQIAAIgAAAAAAAAAAAAxwKMAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-15T12:43:27.775Z",
               "EditorCaption": ""
@@ -54,11 +58,11 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab3\\lab3\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab3\\lab3\\Program.cs",
               "RelativeDocumentMoniker": "lab3\\Program.cs",
-              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\3sem\\\u043B\u0430\u0431\u044B\\oop\\lab3\\lab3\\Program.cs",
+              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\3sem\\\u043B\u0430\u0431\u044B\\oop1\\lab3\\lab3\\Program.cs",
               "RelativeToolTip": "lab3\\Program.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAkwCYAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-15T12:16:40.099Z",
               "EditorCaption": ""

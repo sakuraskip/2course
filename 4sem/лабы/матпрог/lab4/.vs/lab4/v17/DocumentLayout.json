@@ -1,0 +1,91 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043C\u0430\u0442\u043F\u0440\u043E\u0433\\lab4\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3F36641F-8724-4FB9-B15E-3CD671AB1AD3}|levenshtein\\levenshtein.vcxproj|C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043C\u0430\u0442\u043F\u0440\u043E\u0433\\lab4\\levenshtein\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3F36641F-8724-4FB9-B15E-3CD671AB1AD3}|levenshtein\\levenshtein.vcxproj|solutionrelative:levenshtein\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{699D358A-1851-4C8A-BD56-6707164993D2}|lab4\\lab4.vcxproj|C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043C\u0430\u0442\u043F\u0440\u043E\u0433\\lab4\\lab4\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{699D358A-1851-4C8A-BD56-6707164993D2}|lab4\\lab4.vcxproj|solutionrelative:lab4\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61FC1CA2-CC1D-4175-B2E8-41A4701B1A7B}|task2\\task2.vcxproj|C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043C\u0430\u0442\u043F\u0440\u043E\u0433\\lab4\\task2\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{61FC1CA2-CC1D-4175-B2E8-41A4701B1A7B}|task2\\task2.vcxproj|solutionrelative:task2\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F36641F-8724-4FB9-B15E-3CD671AB1AD3}|levenshtein\\levenshtein.vcxproj|C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043C\u0430\u0442\u043F\u0440\u043E\u0433\\lab4\\levenshtein\\levenshtein.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3F36641F-8724-4FB9-B15E-3CD671AB1AD3}|levenshtein\\levenshtein.vcxproj|solutionrelative:levenshtein\\levenshtein.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 397,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043C\u0430\u0442\u043F\u0440\u043E\u0433\\lab4\\levenshtein\\main.cpp",
+              "RelativeDocumentMoniker": "levenshtein\\main.cpp",
+              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043C\u0430\u0442\u043F\u0440\u043E\u0433\\lab4\\levenshtein\\main.cpp",
+              "RelativeToolTip": "levenshtein\\main.cpp",
+              "ViewState": "AQIAABMAAAAAAAAAAAAswB8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-07T13:49:27.45Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043C\u0430\u0442\u043F\u0440\u043E\u0433\\lab4\\lab4\\main.cpp",
+              "RelativeDocumentMoniker": "lab4\\main.cpp",
+              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043C\u0430\u0442\u043F\u0440\u043E\u0433\\lab4\\lab4\\main.cpp",
+              "RelativeToolTip": "lab4\\main.cpp",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-07T13:49:20.968Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "levenshtein.cpp",
+              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043C\u0430\u0442\u043F\u0440\u043E\u0433\\lab4\\levenshtein\\levenshtein.cpp",
+              "RelativeDocumentMoniker": "levenshtein\\levenshtein.cpp",
+              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043C\u0430\u0442\u043F\u0440\u043E\u0433\\lab4\\levenshtein\\levenshtein.cpp",
+              "RelativeToolTip": "levenshtein\\levenshtein.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-06T20:10:30.951Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043C\u0430\u0442\u043F\u0440\u043E\u0433\\lab4\\task2\\main.cpp",
+              "RelativeDocumentMoniker": "task2\\main.cpp",
+              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043C\u0430\u0442\u043F\u0440\u043E\u0433\\lab4\\task2\\main.cpp",
+              "RelativeToolTip": "task2\\main.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-07T08:10:04.849Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

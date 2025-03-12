@@ -1,0 +1,61 @@
+{
+  "list": [
+    {
+      "processor": {
+        "производитель": "AMD",
+        "Серия": "Ryzen 5",
+        "Модель": "r5 5600X",
+        "количество_ядер": 6,
+        "Frequency": "3.7ГГц",
+        "Cache": 32
+      },
+      "name": "sada",
+      "type": "Ноутбук",
+      "videocard": "Gt630",
+      "ramtype": "ddr5",
+      "memorytype": "HDD",
+      "price": 0,
+      "RAM": 100,
+      "Memory": 3,
+      "buydate": "12.12.1212"
+    },
+    {
+      "processor": {
+        "производитель": "Байкал",
+        "Серия": "Байкал-Т",
+        "Модель": "Байкал БТ-1000",
+        "количество_ядер": 4,
+        "Frequency": "1.5ГГц",
+        "Cache": 4
+      },
+      "name": "hhj",
+      "type": "Персональный",
+      "videocard": "IntelArc580",
+      "ramtype": "DDR4",
+      "memorytype": "M2 SSD",
+      "price": 0,
+      "RAM": 1,
+      "Memory": 1,
+      "buydate": "23.12.2213"
+    },
+    {
+      "processor": {
+        "производитель": "Intel",
+        "Серия": "Core i7",
+        "Модель": "i7-11700",
+        "количество_ядер": 8,
+        "Frequency": "3.6ГГц",
+        "Cache": 16
+      },
+      "name": "погамать в дотку",
+      "type": "Ноутбук",
+      "videocard": "Radeon6700xt",
+      "ramtype": "DDR5",
+      "memorytype": "HDD",
+      "price": 0,
+      "RAM": 52,
+      "Memory": 56,
+      "buydate": "18.02.2024"
+    }
+  ]
+}

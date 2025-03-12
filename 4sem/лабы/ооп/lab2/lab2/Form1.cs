@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace lab2
 {
@@ -15,6 +17,7 @@ namespace lab2
         private UserControl1 userControl1;
         private cpuSettings control2;
         private displayComputers control3;
+        private searchform searchform1;
         public Form1()
         {
             InitializeComponent();
@@ -22,6 +25,7 @@ namespace lab2
             userControl1 = new UserControl1();
             control2 = new cpuSettings();
             control3 = new displayComputers();
+            searchform1 = new searchform();
             this.Controls.Add(userControl1);
             
             userControl1.Dock = DockStyle.Fill; // Растягиваем на всю форму
@@ -29,6 +33,9 @@ namespace lab2
             control2.SwitchBack += SwitchBack;
             control3.SwitchBack += SwitchBack;
             userControl1.DisplayComputers += displayComputers_event;
+            searchform1.DisplayComputers += displayComputers_event;
+            control3.SearchPage += SearchPage;
+            userControl1.SearchPage += SearchPage;
            
 
         }
@@ -36,6 +43,7 @@ namespace lab2
         private void displayComputers_event(object sender, EventArgs e)
         {
             userControl1.Hide();
+            searchform1.Hide();
             this.Controls.Add(control3);
             control3.Dock = DockStyle.Fill;
             control3.Show();
@@ -43,9 +51,10 @@ namespace lab2
         }
         private void SwitchBack(object sender, EventArgs e)
         {
-           
+            userControl1.Hide();
             control2.Hide();
             control3.Hide();
+            searchform1.Hide();
             this.Controls.Add(userControl1);
             userControl1.Dock = DockStyle.Fill;
             userControl1.Show();
@@ -59,6 +68,14 @@ namespace lab2
             control2.Show();
             control2.computer = userControl1.computer;
         }
-
+        private void SearchPage(object sender, EventArgs e)
+        {
+            control3.Hide();
+            userControl1.Hide();
+            this.Controls.Add(searchform1);
+            searchform1.Dock = DockStyle.Fill;
+            searchform1.Show();
+        }
+       
     }
 }

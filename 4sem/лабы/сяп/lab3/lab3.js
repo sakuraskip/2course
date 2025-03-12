@@ -4,15 +4,15 @@ class BaseUser {
         this.id = id;
         this.name = name;
     }
-    getRole() {
-        return this.role;
-    }
 }
 class Guest extends BaseUser {
     constructor(id, name) {
         super(id, name);
         this.role = "Guest";
         this.permissions = ["просмотр контента"];
+    }
+    getRole() {
+        return this.role;
     }
 }
 class User extends BaseUser {
@@ -21,12 +21,18 @@ class User extends BaseUser {
         this.role = "User";
         this.permissions = ["просмотр контента", "может оставлять комментарии"];
     }
+    getRole() {
+        return this.role;
+    }
 }
 class Admin extends BaseUser {
     constructor(id, name) {
         super(id, name);
         this.role = "Admin";
         this.permissions = ["просмотр контента", "может оставлять комментарии", "удаление комментариев", "управление пользователями"];
+    }
+    getRole() {
+        return this.role;
     }
 }
 class HTMLReport {
@@ -44,7 +50,7 @@ class JSONReport {
         this.content = content;
     }
     generate() {
-        return `{title: "${this.title}", content: "${this.content}}"`;
+        return { title: this.title, content: this.content };
     }
 }
 const report1 = new HTMLReport("отчет номер 1", "содержание отчета 1");
@@ -76,11 +82,14 @@ class CacheБ {
     }
 }
 const cache = new CacheБ();
-cache.add("price", 100, 5000);
+cache.add("price", 100, 2000);
 console.log(cache.get("price"));
 setTimeout(() => {
     console.log(cache.get("price"));
 }, 1000);
+setTimeout(() => {
+    console.log(cache.get("price"));
+}, 2000);
 function createInstance(cls, ...args) {
     return new cls(...args);
 }
@@ -94,6 +103,23 @@ var LogLevel;
 })(LogLevel || (LogLevel = {}));
 function logEvent(event) {
     let [date, loglevel, info] = event;
-    console.log(`${date} [${loglevel.toLocaleString()}]: ${info}`);
+    console.log(`${date} [${LogLevel[loglevel]}]: ${info}`);
 }
 logEvent([new Date(), LogLevel.WARNING, "жееесть"]);
+var HttpStatus;
+(function (HttpStatus) {
+    HttpStatus[HttpStatus["ok"] = 200] = "ok";
+    HttpStatus[HttpStatus["badRequest"] = 400] = "badRequest";
+    HttpStatus[HttpStatus["unauthorized"] = 401] = "unauthorized";
+    HttpStatus[HttpStatus["InternalServerError"] = 500] = "InternalServerError";
+})(HttpStatus || (HttpStatus = {}));
+function success(data) {
+    let response = [HttpStatus.ok, data];
+    return response;
+}
+function error(message, status) {
+    let response = [status, null, message];
+    return response;
+}
+console.log(success({ user: "Андрюха" }));
+console.log(error("не найдено", HttpStatus.badRequest));

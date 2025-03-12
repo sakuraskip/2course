@@ -8,7 +8,7 @@ namespace lab2
             var app = builder.Build();
             app.UseWelcomePage("/aspnetcore");
             app.UseStaticFiles();
-            app.MapGet("/", () => Results.Redirect("/index.html"));
+            app.MapGet("/", () => Results.Redirect("index.html"));
 
            
 

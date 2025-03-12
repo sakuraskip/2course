@@ -1,0 +1,31 @@
+﻿Сборка начата 06.03.2025 23:20:40.
+Уровень детализации журнала: Normal.     1>Проект "C:\Users\леха\Desktop\2 курс\4sem\лабы\матпрог\lab4\levenshtein\levenshtein.vcxproj" в узле 2 (целевые объекты Build).
+     1>PrepareForBuild:
+         Структурированный вывод включен. Форматирование диагностики компилятора будет отражать иерархию ошибок. Подробнее см. https://aka.ms/cpp/structured-output.
+       InitializeBuildStatus:
+         Обращение к "Debug\levenshtein.tlog\unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\bin\HostX86\x86\CL.exe /c /ZI /JMC /nologo /W3 /WX- /diagnostics:column /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /permissive- /Fo"Debug\\" /Fd"Debug\vc143.pdb" /external:W3 /Gd /TP /analyze- /FC /errorReport:prompt main.cpp
+         main.cpp
+     1>C:\Users\леха\Desktop\2 курс\4sem\лабы\матпрог\lab4\levenshtein\main.cpp(13,26): warning C4018: <: несоответствие типов со знаком и без знака
+     1>C:\Users\леха\Desktop\2 курс\4sem\лабы\матпрог\lab4\levenshtein\main.cpp(23,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+       Link:
+         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\bin\HostX86\x86\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\леха\Desktop\2 курс\4sem\лабы\матпрог\lab4\Debug\levenshtein.exe" /INCREMENTAL /ILK:"Debug\levenshtein.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\леха\Desktop\2 курс\4sem\лабы\матпрог\lab4\Debug\levenshtein.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\леха\Desktop\2 курс\4sem\лабы\матпрог\lab4\Debug\levenshtein.lib" /MACHINE:X86 Debug\levenshtein.obj
+         Debug\main.obj
+         levenshtein.vcxproj -> C:\Users\леха\Desktop\2 курс\4sem\лабы\матпрог\lab4\Debug\levenshtein.exe
+       FinalizeBuildStatus:
+         Файл "Debug\levenshtein.tlog\unsuccessfulbuild" удаляется.
+         Обращение к "Debug\levenshtein.tlog\levenshtein.lastbuildstate".
+     1>Сборка проекта "C:\Users\леха\Desktop\2 курс\4sem\лабы\матпрог\lab4\levenshtein\levenshtein.vcxproj" завершена (целевые объекты Build).
+
+Сборка успешно завершена.
+
+       "C:\Users\леха\Desktop\2 курс\4sem\лабы\матпрог\lab4\levenshtein\levenshtein.vcxproj" (целевой объект Build ) (1) ->
+       (Целевой объект ClCompile) -> 
+         C:\Users\леха\Desktop\2 курс\4sem\лабы\матпрог\lab4\levenshtein\main.cpp(13,26): warning C4018: <: несоответствие типов со знаком и без знака
+         C:\Users\леха\Desktop\2 курс\4sem\лабы\матпрог\lab4\levenshtein\main.cpp(23,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+
+    Предупреждений: 2
+    Ошибок: 0
+
+Прошло времени 00:00:01.57

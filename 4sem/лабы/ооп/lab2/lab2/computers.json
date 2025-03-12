@@ -9,10 +9,12 @@
         "Frequency": "3.7ГГц",
         "Cache": 32
       },
+      "name": "sada",
       "type": "Ноутбук",
       "videocard": "Gt630",
       "ramtype": "ddr5",
       "memorytype": "HDD",
+      "price": 0,
       "RAM": 100,
       "Memory": 3,
       "buydate": "12.12.1212"
@@ -26,13 +28,160 @@
         "Frequency": "2.6ГГц",
         "Cache": 12
       },
+      "name": "dfsd",
       "type": "Сервер",
       "videocard": "IntelArc580",
       "ramtype": "ddr4",
       "memorytype": "M2 SSD",
+      "price": 0,
       "RAM": 12,
       "Memory": 1222,
       "buydate": "12.12.1212"
+    },
+    {
+      "processor": {
+        "производитель": "Байкал",
+        "Серия": "Байкал-Т",
+        "Модель": "Байкал БТ-1000",
+        "количество_ядер": 4,
+        "Frequency": "1.5ГГц",
+        "Cache": 4
+      },
+      "name": "hhj",
+      "type": "Персональный",
+      "videocard": "IntelArc580",
+      "ramtype": "DDR4",
+      "memorytype": "M2 SSD",
+      "price": 0,
+      "RAM": 1,
+      "Memory": 1,
+      "buydate": "23.12.2213"
+    },
+    {
+      "processor": {
+        "производитель": "Intel",
+        "Серия": "Core i7",
+        "Модель": "i7-11700",
+        "количество_ядер": 8,
+        "Frequency": "3.6ГГц",
+        "Cache": 16
+      },
+      "name": "погамать в дотку",
+      "type": "Ноутбук",
+      "videocard": "Radeon6700xt",
+      "ramtype": "DDR5",
+      "memorytype": "HDD",
+      "price": 0,
+      "RAM": 52,
+      "Memory": 56,
+      "buydate": "18.02.2024"
+    },
+    {
+      "processor": null,
+      "name": "dfgfgdfg",
+      "type": "Ноутбук",
+      "videocard": "Radeon6700xt",
+      "ramtype": "DDR5",
+      "memorytype": "HDD",
+      "price": 65000,
+      "RAM": 1,
+      "Memory": 1,
+      "buydate": "  .  ."
+    },
+    {
+      "processor": {
+        "производитель": "Байкал",
+        "Серия": "Байкал-Т",
+        "Модель": "Байкал БТ-1000",
+        "количество_ядер": 4,
+        "Frequency": "1.5ГГц",
+        "Cache": 4
+      },
+      "name": "погамать в тунчики",
+      "type": "Персональный",
+      "videocard": "Radeon6700xt",
+      "ramtype": "DDR5",
+      "memorytype": "M2 SSD",
+      "price": 8045000,
+      "RAM": 64,
+      "Memory": 512,
+      "buydate": "25.12.2012"
+    },
+    {
+      "processor": {
+        "производитель": "Intel",
+        "Серия": "Core i7",
+        "Модель": "i7-11700",
+        "количество_ядер": 8,
+        "Frequency": "3.6ГГц",
+        "Cache": 16
+      },
+      "name": "багажник",
+      "type": "Сервер",
+      "videocard": "Radeon6700xt",
+      "ramtype": "DDR3",
+      "memorytype": "M2 SSD",
+      "price": 61874000,
+      "RAM": 123,
+      "Memory": 4096,
+      "buydate": "12.12.2023"
+    },
+    {
+      "processor": {
+        "производитель": "AMD",
+        "Серия": "Ryzen 5",
+        "Модель": "r5 5600X",
+        "количество_ядер": 6,
+        "Frequency": "3.7ГГц",
+        "Cache": 32
+      },
+      "name": "абырвалг",
+      "type": "Персональный",
+      "videocard": "Radeon6700xt",
+      "ramtype": "DDR5",
+      "memorytype": "SSD",
+      "price": 21995000,
+      "RAM": 128,
+      "Memory": 2131,
+      "buydate": "12.32.122"
+    },
+    {
+      "processor": {
+        "производитель": "AMD",
+        "Серия": "Ryzen 7",
+        "Модель": "r7 5800X",
+        "количество_ядер": 8,
+        "Frequency": "3.8ГГц",
+        "Cache": 32
+      },
+      "name": "аааааа",
+      "type": "Персональный",
+      "videocard": "IntelArc580",
+      "ramtype": "DDR4",
+      "memorytype": "HDD",
+      "price": 3897000,
+      "RAM": 128,
+      "Memory": 667,
+      "buydate": "11.09.2023"
+    },
+    {
+      "processor": {
+        "производитель": "Байкал",
+        "Серия": "Байкал-Т",
+        "Модель": "Байкал БТ-1000",
+        "количество_ядер": 4,
+        "Frequency": "1.5ГГц",
+        "Cache": 4
+      },
+      "name": "уомпьуюкер",
+      "type": "Ноутбук",
+      "videocard": "Radeon6700xt",
+      "ramtype": "DDR4",
+      "memorytype": "SSD",
+      "price": 69000,
+      "RAM": 1,
+      "Memory": 1,
+      "buydate": "10.03.2025"
     }
   ]
 }
