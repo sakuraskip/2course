@@ -2,3 +2,5 @@ ALTER table Ответственные add Пол nchar(7) default 'мужской' check (Пол in('мужс
 
 alter table Ответственные drop column Пол;
 
+--задание 3
+

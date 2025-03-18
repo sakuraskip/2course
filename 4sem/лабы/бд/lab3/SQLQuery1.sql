@@ -12,7 +12,8 @@ size = 10240kb, maxsize = 1Gb, filegrowth = 25%)
 log on
 (name = N'S_MyBase3 log',filename = N'C:\sqltest\S_MyBase3 log.ldf',
 size = 10240kb, maxsize = 2048Gb, filegrowth = 10%)
--- sqlcmd -S название -E
--- primary key, foreign key, alter, update!!!, delete, insert into
+
+--задание 1 и 6
+
 
 

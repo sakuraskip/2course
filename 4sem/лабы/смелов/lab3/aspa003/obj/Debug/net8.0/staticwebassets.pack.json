@@ -1,0 +1,53 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\смелов\\lab3\\aspa003\\wwwroot\\Berners-Lee.jpg",
+      "PackagePath": "staticwebassets\\Berners-Lee.jpg"
+    },
+    {
+      "Id": "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\смелов\\lab3\\aspa003\\wwwroot\\Celebrities.json",
+      "PackagePath": "staticwebassets\\Celebrities.json"
+    },
+    {
+      "Id": "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\смелов\\lab3\\aspa003\\wwwroot\\Chomsky.jpg",
+      "PackagePath": "staticwebassets\\Chomsky.jpg"
+    },
+    {
+      "Id": "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\смелов\\lab3\\aspa003\\wwwroot\\Codd.jpg",
+      "PackagePath": "staticwebassets\\Codd.jpg"
+    },
+    {
+      "Id": "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\смелов\\lab3\\aspa003\\wwwroot\\Dijkstra.jpg",
+      "PackagePath": "staticwebassets\\Dijkstra.jpg"
+    },
+    {
+      "Id": "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\смелов\\lab3\\aspa003\\wwwroot\\Knuth.jpg",
+      "PackagePath": "staticwebassets\\Knuth.jpg"
+    },
+    {
+      "Id": "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\смелов\\lab3\\aspa003\\wwwroot\\Linus.jpg",
+      "PackagePath": "staticwebassets\\Linus.jpg"
+    },
+    {
+      "Id": "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\смелов\\lab3\\aspa003\\wwwroot\\Neumann.jpg",
+      "PackagePath": "staticwebassets\\Neumann.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.aspa003.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.aspa003.props",
+      "PackagePath": "build\\aspa003.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.aspa003.props",
+      "PackagePath": "buildMultiTargeting\\aspa003.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.aspa003.props",
+      "PackagePath": "buildTransitive\\aspa003.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

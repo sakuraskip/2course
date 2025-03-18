@@ -1,0 +1,31 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  background-color: black;
+  height:100vh;
+}
+
+.counter
+{
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  height:200px;
+  width:200px;
+  border:2px solid skyblue;
+  justify-content: space-between;
+}
+.number
+{
+  font-size: 30px;
+  margin-top:50px;
+  color:red
+}
+
+button {
+  width:100px;
+  height:50px;
+}

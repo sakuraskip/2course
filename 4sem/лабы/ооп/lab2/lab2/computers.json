@@ -182,6 +182,44 @@
       "RAM": 1,
       "Memory": 1,
       "buydate": "10.03.2025"
+    },
+    {
+      "processor": {
+        "производитель": "AMD",
+        "Серия": "Ryzen 5",
+        "Модель": "r5 5600X",
+        "количество_ядер": 6,
+        "Frequency": "3.7ГГц",
+        "Cache": 32
+      },
+      "name": "f",
+      "type": "Ноутбук",
+      "videocard": "IntelArc580",
+      "ramtype": "DDR5",
+      "memorytype": "SSD",
+      "price": 75000,
+      "RAM": 1,
+      "Memory": 1,
+      "buydate": "12.12.1212"
+    },
+    {
+      "processor": {
+        "производитель": "Intel",
+        "Серия": "Core i7",
+        "Модель": "i7-11700",
+        "количество_ядер": 8,
+        "Frequency": "3.6ГГц",
+        "Cache": 16
+      },
+      "name": "багажник2",
+      "type": "Сервер",
+      "videocard": "IntelArc580",
+      "ramtype": "DDR5",
+      "memorytype": "M2 SSD",
+      "price": 30950000,
+      "RAM": 32,
+      "Memory": 2048,
+      "buydate": "22.8 .1337"
     }
   ]
 }

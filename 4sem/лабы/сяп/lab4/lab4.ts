@@ -17,7 +17,7 @@ Promise.all([task3(1000),task3(500),task3(2500)]).then((values)=>
 
 let pr = new Promise((res,rej)=>
 {
-    rej('ku')
+    rej('kus')
 })
 pr.
 then (()=>console.log(1))

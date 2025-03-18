@@ -6,7 +6,11 @@
       "esModuleInterop": true
     },
     "include": [
-      "C:/Users/леха/Desktop/2 курс/4sem/лабы/сяп"
+      "C:/Users/леха/Desktop/2 курс/4sem/лабы/сяп/lab1",
+      "C:/Users/леха/Desktop/2 курс/4sem/лабы/сяп/lab2",
+      "C:/Users/леха/Desktop/2 курс/4sem/лабы/сяп/lab3",
+      "C:/Users/леха/Desktop/2 курс/4sem/лабы/сяп/lab1-1",
+      "C:/Users/леха/Desktop/2 курс/4sem/лабы/сяп/lab4"
     ],
     "exclude": ["node_modules"]
   }

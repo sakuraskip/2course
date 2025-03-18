@@ -132,37 +132,11 @@ namespace lab2
                 errorLabel.Text = validationResults[0].ErrorMessage;
                 return false;
             }
-            //RadioButton[] buttons = { radioButton1, radioButton2, radioButton3, radioButton4, radioButton5, radioButton6 };
-            //short radiocounter = 0;
-            //foreach (RadioButton button in buttons)
-            //{
-            //    if (button.Checked)
-            //    {
-            //        radiocounter++;
-            //    }
-            //}
-            //if (radiocounter != 2)
-            //{
-            //    errorLabel.Text = "Не выбран тип компьютера либо видеокарта";
-            //    return false;
-            //}
-            //if (string.IsNullOrEmpty(textBox1.Text))
-            //{
-            //    errorLabel.Text = "Пустое название компьютера";
-            //    return false;
-            //}
+           
             progressBar1.Value = 20;
-            //if(comboBox1.SelectedIndex == -1)
-            //{
-            //    errorLabel.Text = "не выбран тип озу";
-            //    return false;
-            //}
+           
             progressBar1.Value = 40;
-            //if(comboBox2.SelectedIndex == -1)
-            //{
-            //    errorLabel.Text = "не выбран тип диска";
-            //    return false;
-            //}
+         
             progressBar1.Value = 60;
            
             if((computer.processor == null) ||string.IsNullOrEmpty(computer.processor.Модель))
@@ -178,7 +152,7 @@ namespace lab2
         private List<ValidationResult> GetValidationResults(Computer computer)
         {
             var validationResults = new List<ValidationResult>();
-            var validationContext = new ValidationContext(computer, null, null);
+            var validationContext = new ValidationContext(computer);
 
             bool isvalid = Validator.TryValidateObject(computer, validationContext, validationResults, true);
 
@@ -248,7 +222,8 @@ namespace lab2
             var parent = this.FindForm();
             if(parent != null)
             {
-                parent.Location = new Point(parent.Location.X, parent.Location.Y - 10);
+                parent.Location = new Point(parent.Location.X, parent.Location.Y - 30);
+                
 
             }
             updateStatus("переместил окно");
@@ -260,7 +235,7 @@ namespace lab2
             var parent = this.FindForm();
             if (parent != null)
             {
-                parent.Location = new Point(parent.Location.X, parent.Location.Y + 10);
+                parent.Location = new Point(parent.Location.X, parent.Location.Y + 30);
 
             }
             updateStatus("переместил окно");
@@ -270,6 +245,14 @@ namespace lab2
         private void button4_Click(object sender, EventArgs e)
         {
             toolStrip1.Visible = !toolStrip1.Visible;
+            if(toolStrip1.Visible)
+            {
+                button4.Text = "Скрыть";
+            }
+            else
+            {
+                button4.Text = "Показать";
+            }
             updateStatus("скрыл видимость панели инструментов");
 
         }
