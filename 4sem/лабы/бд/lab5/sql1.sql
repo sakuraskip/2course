@@ -1,0 +1,45 @@
+use UNIVER
+--задание 1
+select FACULTY.FACULTY, PULPIT.PULPIT
+from FACULTY,PULPIT,PROFESSION
+where FACULTY.FACULTY = PULPIT.FACULTY and PROFESSION.PROFESSION_NAME in(select PROFESSION.PROFESSION_NAME from PROFESSION
+where (PROFESSION.PROFESSION_NAME like '%технология%' or PROFESSION.PROFESSION_NAME like '%технологии%'))
+
+--задание 2
+
+select FACULTY.FACULTY, PULPIT.PULPIT
+from PROFESSION, FACULTY inner join PULPIT on FACULTY.FACULTY = PULPIT.FACULTY where PROFESSION.PROFESSION_NAME in
+(select PROFESSION.PROFESSION_NAME from PROFESSION where
+(PROFESSION.PROFESSION_NAME like '%технология%' or PROFESSION.PROFESSION_NAME like '%технологии%'))
+
+--задание 3
+select FACULTY.FACULTY, PULPIT.PULPIT
+from FACULTY inner join PULPIT on FACULTY.FACULTY = PULPIT.FACULTY inner join PROFESSION
+on PROFESSION.PROFESSION_NAME like '%технология%' or PROFESSION.PROFESSION_NAME like '%технологии%'
+
+--задание 4
+select * from AUDITORIUM a
+where AUDITORIUM_CAPACITY = (select top(1) AUDITORIUM_CAPACITY from AUDITORIUM aa
+where aa.AUDITORIUM_TYPE = a.AUDITORIUM_TYPE order by AUDITORIUM_CAPACITY desc)
+order by AUDITORIUM_CAPACITY desc
+
+--задание 5
+select FACULTY_NAME from FACULTY f
+where not exists(select * from PULPIT p
+where p.FACULTY = f.FACULTY)
+
+--задание 6
+
+select top 1
+(select avg(NOTE) from PROGRESS where PROGRESS.SUBJECT like 'ОАип')[оаип],
+(select avg(NOTE) from PROGRESS where PROGRESS.SUBJECT like 'БД')[бд],
+(select avg(NOTE) from PROGRESS where progress.SUBJECT like 'СУБД')[субд]
+from PROGRESS
+
+--задание 7
+
+select * from AUDITORIUM
+where AUDITORIUM.AUDITORIUM_CAPACITY >=all (select AUDITORIUM.AUDITORIUM_CAPACITY from AUDITORIUM 
+where AUDITORIUM.AUDITORIUM_CAPACITY <51)
+
+select * from AUDITORIUM

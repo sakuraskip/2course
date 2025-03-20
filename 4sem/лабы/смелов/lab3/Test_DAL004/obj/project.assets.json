@@ -15,24 +15,24 @@
           }
         }
       },
-      "dAL003/1.0.0": {
+      "3dAL003/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "Newtonsoft.Json": "13.0.3"
         },
         "compile": {
-          "bin/placeholder/dAL003.dll": {}
+          "bin/placeholder/3dAL003.dll": {}
         },
         "runtime": {
-          "bin/placeholder/dAL003.dll": {}
+          "bin/placeholder/3dAL003.dll": {}
         }
       },
       "DAL004/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "dAL003": "1.0.0"
+          "3dAL003": "1.0.0"
         },
         "compile": {
           "bin/placeholder/DAL004.dll": {}
@@ -74,10 +74,10 @@
         "packageIcon.png"
       ]
     },
-    "dAL003/1.0.0": {
+    "3dAL003/1.0.0": {
       "type": "project",
-      "path": "../dAL003/dAL003.csproj",
-      "msbuildProject": "../dAL003/dAL003.csproj"
+      "path": "../dAL003/3dAL003.csproj",
+      "msbuildProject": "../dAL003/3dAL003.csproj"
     },
     "DAL004/1.0.0": {
       "type": "project",
@@ -157,5 +157,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Произошла ошибка при получении данных уязвимости пакета: Не удалось загрузить индекс службы для источника https://api.nuget.org/v3/index.json."
+    }
+  ]
 }

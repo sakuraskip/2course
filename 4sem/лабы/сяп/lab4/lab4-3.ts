@@ -14,7 +14,6 @@ let promise2 = new Promise((res,rej)=>
     promise2.then((res)=>
     {
         console.log(res)
-        return res
     })
     .then((res1)=>
     {

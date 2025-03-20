@@ -9,24 +9,21 @@ struct Edge
 	int start;
 	int finish;
 };
-bool visited[10] = {};
+bool visited[7] = {};
 
 vector<Edge>list =
 {
 	{0,1},{0,4},{1,6},{1,7},{2,7},{3,5},{3,8},{4,5},{5,8},{6,7},{8,9}
 };
 vector<vector<int>> adjList(10);
-int graphMatrix[10][10]{
-{0,1,0,0,1,0,0,0,0,0},
-{1,0,0,0,0,0,1,1,0,0},
-{0,0,0,0,0,0,0,1,0,0},
-{0,0,0,0,0,1,0,0,1,0},
-{1,0,0,0,0,1,0,0,0,0},
-{0,0,0,1,1,0,0,0,1,0}, 
-{0,1,0,0,0,0,0,1,0,0},
-{0,1,1,0,0,0,1,0,0,0},
-{0,0,0,1,0,1,0,0,0,1},
-{0,0,0,0,0,0,0,0,1,0},
+int graphMatrix[7][7] = {
+				  {0, 1, 1, 1, 0,0,0},
+				  {0, 0, 0, 0, 0,0,0},
+				  {0, 0, 0, 0, 0,0,0},
+				  {0, 1, 0, 0, 0,1,1},
+				  {0, 1, 0, 0, 0,0,0},
+				{0,0,1,0,0,0,0},
+		{0,0,0,0,1,1,0},
 };
 
 
@@ -45,7 +42,7 @@ void dfSearch(int start)
 			 visited[currentVertex] = true;
 		}
 
-		for (int i = 10 - 1; i >= 0; i--)
+		for (int i = 7 - 1; i >= 0; i--)
 		{
 			if (graphMatrix[currentVertex][i] == true and visited[i] == false)
 			{
@@ -61,7 +58,7 @@ void dfSearch(int start)
 
 void bfSearch(int start)
 {
-	bool visited[10] = {};
+	bool visited[7] = {};
 	queue<int> que;
 
 	visited[start] = true;
@@ -72,7 +69,7 @@ void bfSearch(int start)
 	{
 		current = que.front();
 		que.pop();
-		for (int i = 0; i <10; i++)
+		for (int i = 0; i <7; i++)
 		{
 			if (visited[i] == false and graphMatrix[current][i] == true)
 			{
@@ -92,7 +89,7 @@ int main()
 	int buff;
 	cout << "ввод начальной вершины(от 1 до 10) " << endl;
 	cin >> buff;
-	if (buff > 10 or buff < 1)
+	if (buff > 7 or buff < 1)
 	{
 		cout << "введены неверные данные";
 		return 0;

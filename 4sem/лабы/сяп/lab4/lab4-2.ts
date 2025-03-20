@@ -12,7 +12,7 @@ let pr1 = new Promise<number>((res,rej)=>
     
     async function task6()
     {
-        let num = await return21();
+        let num:number = await return21();
         console.log(num);
         console.log(num*2);
     }

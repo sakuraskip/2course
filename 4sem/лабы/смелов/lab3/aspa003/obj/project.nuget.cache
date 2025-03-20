@@ -1,10 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "Ttz+vkQ4+WE=",
+  "dgSpecHash": "HU8N5G6kUYY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\смелов\\lab3\\aspa003\\aspa003.csproj",
+  "projectFilePath": "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\смелов\\lab3\\aspa003\\3aspa003.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\леха\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Произошла ошибка при получении данных уязвимости пакета: Не удалось загрузить индекс службы для источника https://api.nuget.org/v3/index.json."
+    }
+  ]
 }

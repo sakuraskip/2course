@@ -4,12 +4,12 @@
     "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\смелов\\lab3\\Test_DAL004\\Test_DAL004.csproj": {}
   },
   "projects": {
-    "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\смелов\\lab3\\dAL003\\dAL003.csproj": {
+    "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\смелов\\lab3\\dAL003\\3dAL003.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\смелов\\lab3\\dAL003\\dAL003.csproj",
-        "projectName": "dAL003",
-        "projectPath": "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\смелов\\lab3\\dAL003\\dAL003.csproj",
+        "projectUniqueName": "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\смелов\\lab3\\dAL003\\3dAL003.csproj",
+        "projectName": "3dAL003",
+        "projectPath": "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\смелов\\lab3\\dAL003\\3dAL003.csproj",
         "packagesPath": "C:\\Users\\леха\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\смелов\\lab3\\dAL003\\obj\\",
         "projectStyle": "PackageReference",
@@ -96,8 +96,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\смелов\\lab3\\dAL003\\dAL003.csproj": {
-                "projectPath": "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\смелов\\lab3\\dAL003\\dAL003.csproj"
+              "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\смелов\\lab3\\dAL003\\3dAL003.csproj": {
+                "projectPath": "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\смелов\\lab3\\dAL003\\3dAL003.csproj"
               }
             }
           }

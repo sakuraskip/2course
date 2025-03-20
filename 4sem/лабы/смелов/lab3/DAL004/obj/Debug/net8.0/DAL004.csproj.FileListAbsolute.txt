@@ -1,8 +1,6 @@
 C:\Users\леха\Desktop\2 курс\4sem\лабы\смелов\lab3\DAL004\bin\Debug\net8.0\DAL004.deps.json
 C:\Users\леха\Desktop\2 курс\4sem\лабы\смелов\lab3\DAL004\bin\Debug\net8.0\DAL004.dll
 C:\Users\леха\Desktop\2 курс\4sem\лабы\смелов\lab3\DAL004\bin\Debug\net8.0\DAL004.pdb
-C:\Users\леха\Desktop\2 курс\4sem\лабы\смелов\lab3\DAL004\bin\Debug\net8.0\dAL003.dll
-C:\Users\леха\Desktop\2 курс\4sem\лабы\смелов\lab3\DAL004\bin\Debug\net8.0\dAL003.pdb
 C:\Users\леха\Desktop\2 курс\4sem\лабы\смелов\lab3\DAL004\obj\Debug\net8.0\DAL004.csproj.AssemblyReference.cache
 C:\Users\леха\Desktop\2 курс\4sem\лабы\смелов\lab3\DAL004\obj\Debug\net8.0\DAL004.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\леха\Desktop\2 курс\4sem\лабы\смелов\lab3\DAL004\obj\Debug\net8.0\DAL004.AssemblyInfoInputs.cache
@@ -14,3 +12,5 @@ C:\Users\леха\Desktop\2 курс\4sem\лабы\смелов\lab3\DAL004\obj\
 C:\Users\леха\Desktop\2 курс\4sem\лабы\смелов\lab3\DAL004\obj\Debug\net8.0\refint\DAL004.dll
 C:\Users\леха\Desktop\2 курс\4sem\лабы\смелов\lab3\DAL004\obj\Debug\net8.0\DAL004.pdb
 C:\Users\леха\Desktop\2 курс\4sem\лабы\смелов\lab3\DAL004\obj\Debug\net8.0\ref\DAL004.dll
+C:\Users\леха\Desktop\2 курс\4sem\лабы\смелов\lab3\DAL004\bin\Debug\net8.0\3dAL003.dll
+C:\Users\леха\Desktop\2 курс\4sem\лабы\смелов\lab3\DAL004\bin\Debug\net8.0\3dAL003.pdb

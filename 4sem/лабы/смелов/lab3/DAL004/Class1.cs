@@ -6,7 +6,7 @@ namespace DAL004
     {
         int? addCelebrity(Celebrity celebrity);
         bool delCelebrityById(int id);
-        int? updCelebrity(int id,Celebrity celebrity);
+        int updCelebrity(int id,Celebrity celebrity);
         int SaveChanges();
     }
     public class Repository : dAL003.Repository, IRepository
@@ -31,7 +31,7 @@ namespace DAL004
             }
             return false;
         }
-        public int? updCelebrity(int id,Celebrity celebrity)
+        public int updCelebrity(int id,Celebrity celebrity)
         {
             if(_celebrities.Remove(_celebrities.Find(c=>c.Id == id)))
             {
@@ -39,7 +39,7 @@ namespace DAL004
                 _celebrities.Add(celebrity);
                 return celebrity.Id;
             }
-            return null;
+            return 0;
         }
         public int SaveChanges()
         {

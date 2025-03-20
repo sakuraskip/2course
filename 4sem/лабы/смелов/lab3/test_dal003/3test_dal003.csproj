@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="Photo\Сelebrities.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Photo\Сelebrities.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\dAL003\3dAL003.csproj" />
+  </ItemGroup>
+
+</Project>
