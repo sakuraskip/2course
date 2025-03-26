@@ -11,6 +11,7 @@ namespace DAL004
     }
     public class Repository : dAL003.Repository, IRepository
     {
+        public static string basepath2 { get; set; }
         private static int changeCounter = 0;
         public Repository(string filepath) : base(filepath)
         {
@@ -18,9 +19,15 @@ namespace DAL004
         }
         public int? addCelebrity(Celebrity celebrity)
         {
-            _celebrities.Add(celebrity);
+            int newid =celebrity.Id;
+            if(celebrity.Id == 0)
+            {
+                 newid = _celebrities.Count +1;
+            }
+            var newceleb = new Celebrity(newid, celebrity.Firstname, celebrity.Surname, celebrity.PhotoPath);
+            _celebrities.Add(newceleb);
             changeCounter++;
-            return celebrity.Id;
+            return newid;
         }
         public bool delCelebrityById(int id)
         {
@@ -35,8 +42,14 @@ namespace DAL004
         {
             if(_celebrities.Remove(_celebrities.Find(c=>c.Id == id)))
             {
+                int newid = celebrity.Id;
+                if (celebrity.Id == 0)
+                {
+                    newid = _celebrities.Count + 1;
+                }
+                var newceleb = new Celebrity(newid, celebrity.Firstname, celebrity.Surname, celebrity.PhotoPath);
                 changeCounter++;
-                _celebrities.Add(celebrity);
+                _celebrities.Add(newceleb);
                 return celebrity.Id;
             }
             return 0;

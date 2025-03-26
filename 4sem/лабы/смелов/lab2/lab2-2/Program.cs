@@ -20,7 +20,7 @@ internal class Program
         });
         app.UseRouting();
 
-        app.MapGet("/", () => Results.Redirect("neumann.html"));
+        app.MapGet("/", () => Results.Redirect("neumann.html"));// ne rabotaet pomogite)))))))
 
         app.Map("/static", stapp => stapp.UseStaticFiles());
 

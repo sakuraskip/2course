@@ -42,15 +42,7 @@ namespace _4aspa004_1
                     return Results.Content($"celebrity {id} deleted");
                 });
 
-                app.MapPut("/Celebrities/{id:int}", (int id, Celebrity updatedCelebrity) =>
-                {
-                    int result = repository.updCelebrity(id, updatedCelebrity);
-                    if (result == 0)
-                    {
-                        throw new UpdateCelebrityException($"elebrity {id} not found for update");
-                    }
-                    return Results.Content($"celebrity {id} added");
-                });
+              
                 app.MapFallback((HttpContext ctx) => Results.NotFound(new { error = $"path {ctx.Request.Path} not supported" }));
 
                 app.Map("/Celebrities/Error", (HttpContext ctx) =>

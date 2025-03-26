@@ -32,25 +32,9 @@ namespace _4aspa004_1
                     return new Celebrity((int)id, celebrity.Firstname, celebrity.Surname, celebrity.PhotoPath);
                 });
 
-                app.MapDelete("/Celebrities/{id:int}", (int id) =>
-                {
-                    bool success = repository.delCelebrityById(id);
-                    if (!success)
-                    {
-                        throw new DeleteCelebrityException($"celebrity {id} not found for deletion");
-                    }
-                    return Results.Content($"celebrity {id} deleted");
-                });
+               
 
-                app.MapPut("/Celebrities/{id:int}", (int id, Celebrity updatedCelebrity) =>
-                {
-                    int result = repository.updCelebrity(id, updatedCelebrity);
-                    if (result == 0)
-                    {
-                        throw new UpdateCelebrityException($"elebrity {id} not found for update");
-                    }
-                    return Results.Content($"celebrity {id} added");
-                });
+                
                 app.MapFallback((HttpContext ctx) => Results.NotFound(new { error = $"path {ctx.Request.Path} not supported" }));
 
                 app.Map("/Celebrities/Error", (HttpContext ctx) =>

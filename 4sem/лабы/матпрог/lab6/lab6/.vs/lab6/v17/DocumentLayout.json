@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043C\u0430\u0442\u043F\u0440\u043E\u0433\\lab6\\lab6\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D949CAB3-A77A-4DD6-95E1-3699FA758461}|lab6\\lab6.vcxproj|C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043C\u0430\u0442\u043F\u0440\u043E\u0433\\lab6\\lab6\\lab6\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D949CAB3-A77A-4DD6-95E1-3699FA758461}|lab6\\lab6.vcxproj|solutionrelative:lab6\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D949CAB3-A77A-4DD6-95E1-3699FA758461}|lab6\\lab6.vcxproj|C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043C\u0430\u0442\u043F\u0440\u043E\u0433\\lab6\\lab6\\lab6\\DFS.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D949CAB3-A77A-4DD6-95E1-3699FA758461}|lab6\\lab6.vcxproj|solutionrelative:lab6\\DFS.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D949CAB3-A77A-4DD6-95E1-3699FA758461}|lab6\\lab6.vcxproj|C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043C\u0430\u0442\u043F\u0440\u043E\u0433\\lab6\\lab6\\lab6\\DFS.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D949CAB3-A77A-4DD6-95E1-3699FA758461}|lab6\\lab6.vcxproj|solutionrelative:lab6\\DFS.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D949CAB3-A77A-4DD6-95E1-3699FA758461}|lab6\\lab6.vcxproj|C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043C\u0430\u0442\u043F\u0440\u043E\u0433\\lab6\\lab6\\lab6\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D949CAB3-A77A-4DD6-95E1-3699FA758461}|lab6\\lab6.vcxproj|solutionrelative:lab6\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D949CAB3-A77A-4DD6-95E1-3699FA758461}|lab6\\lab6.vcxproj|C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043C\u0430\u0442\u043F\u0440\u043E\u0433\\lab6\\lab6\\lab6\\BFS.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 397,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,33 +46,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043C\u0430\u0442\u043F\u0440\u043E\u0433\\lab6\\lab6\\lab6\\main.cpp",
               "RelativeDocumentMoniker": "lab6\\main.cpp",
               "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043C\u0430\u0442\u043F\u0440\u043E\u0433\\lab6\\lab6\\lab6\\main.cpp",
               "RelativeToolTip": "lab6\\main.cpp",
-              "ViewState": "AQIAADYAAAAAAAAAAAAAAFgAAAA3AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-19T21:09:21.526Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "DFS.cpp",
               "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043C\u0430\u0442\u043F\u0440\u043E\u0433\\lab6\\lab6\\lab6\\DFS.cpp",
               "RelativeDocumentMoniker": "lab6\\DFS.cpp",
               "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043C\u0430\u0442\u043F\u0440\u043E\u0433\\lab6\\lab6\\lab6\\DFS.cpp",
               "RelativeToolTip": "lab6\\DFS.cpp",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAADoAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-19T21:08:59.219Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "DFS.h",
               "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043C\u0430\u0442\u043F\u0440\u043E\u0433\\lab6\\lab6\\lab6\\DFS.h",
               "RelativeDocumentMoniker": "lab6\\DFS.h",
@@ -80,8 +80,7 @@
               "RelativeToolTip": "lab6\\DFS.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-03-19T21:08:46.475Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-19T21:08:46.475Z"
             },
             {
               "$type": "Document",
@@ -93,8 +92,7 @@
               "RelativeToolTip": "lab6\\BFS.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-19T21:08:26.898Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-19T21:08:26.898Z"
             },
             {
               "$type": "Document",
@@ -106,8 +104,7 @@
               "RelativeToolTip": "lab6\\BFS.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-03-19T21:08:01.058Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-19T21:08:01.058Z"
             },
             {
               "$type": "Document",
@@ -119,8 +116,7 @@
               "RelativeToolTip": "lab6\\Graph.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAEYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-19T21:06:57.99Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-19T21:06:57.99Z"
             },
             {
               "$type": "Document",
@@ -132,8 +128,7 @@
               "RelativeToolTip": "lab6\\Graph.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-03-19T21:06:41.731Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-19T21:06:41.731Z"
             }
           ]
         }
