@@ -28,6 +28,42 @@ namespace _5aspa005_1
                 return await next(context);
             }
         }
+        public class PutFilter : IEndpointFilter
+        {
+            public static DAL004.IRepository repository { get; set; }
+            public async ValueTask<object?> InvokeAsync(EndpointFilterInvocationContext context, EndpointFilterDelegate next)
+            {
+                int id = context.GetArgument<int>(0);
+                Console.WriteLine(id);
+                var celebrity = context.GetArgument<Celebrity>(1);
+                int result = repository.updCelebrity(id, celebrity);
+                if (result == 0)
+                {
+                    return Results.Problem($"Celebrity {id} not found for update", statusCode: 500);
+                }
+               
+                return await next(context);
+            }
+        }
+        public class DeleteFilter : IEndpointFilter
+        {
+            public static DAL004.IRepository repository { get; set; }
+            public async ValueTask<object?> InvokeAsync(EndpointFilterInvocationContext context, EndpointFilterDelegate next)
+            {
+                int id = context.GetArgument<int>(0);
+                Console.WriteLine(id);
+                var success = repository.getCelebrityById(id);
+                Console.WriteLine(success?.ToString());
+                if (success == null)
+                {
+                  return  Results.Problem($"celebrity {id} not found for deletion");
+                }
+                repository.delCelebrityById(id);
+
+                return await next(context);
+            }
+        }
+
         public class PhotoExistFilter : IEndpointFilter
         {
             public static DAL004.IRepository repository { get; set; }
@@ -59,17 +95,18 @@ namespace _5aspa005_1
             var builder = WebApplication.CreateBuilder(args);
 
             builder.Services.AddDirectoryBrowser();
-
             var app = builder.Build();
+            RouteGroupBuilder api = app.MapGroup("/Celebrities");
+
             DAL004.Repository.basepath2 = "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\смелов\\lab3\\5aspa005_1\\celebrities";
             DAL004.Repository.JSONFileName = "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\смелов\\lab3\\4aspa004_1\\wwwroot\\Celebrities.json";
             using (DAL004.IRepository repository = new DAL004.Repository(DAL004.Repository.JSONFileName))
             {
                 
-                app.UseExceptionHandler("/Celebrities/Error");
+                app.UseExceptionHandler("/Error");
 
-                app.MapGet("/Celebrities", () => repository.getAllCelebrities());
-                app.MapGet("/Celebrities/{id:int}", (int id) =>
+                api.MapGet("/", () => repository.getAllCelebrities());
+                api.MapGet("/{id:int}", (int id) =>
                 {
                     Celebrity? celebrity = repository.getCelebrityById(id);
                     if (celebrity == null) throw new FoundByIdException($"Celebrity id = {id}");
@@ -77,8 +114,10 @@ namespace _5aspa005_1
                 });
                 Validation.SurnameFilter.repository = repository;
                 Validation.PhotoExistFilter.repository = repository;
+                Validation.PutFilter.repository = repository;
+                Validation.DeleteFilter.repository = repository;
     
-                app.MapPost("/Celebrities", (Celebrity celebrity) =>
+                api.MapPost("/", (Celebrity celebrity) =>
                 {
                     int? id = repository.addCelebrity(celebrity);
                     if (id == null) throw new AddCelebrityException("/Celebrities error id == null");
@@ -87,30 +126,24 @@ namespace _5aspa005_1
                 })
                 .AddEndpointFilter<Validation.SurnameFilter>()
                 .AddEndpointFilter<Validation.PhotoExistFilter>();
-               
 
-                app.MapDelete("/Celebrities/{id:int}", (int id) =>
+
+                api.MapDelete("/{id:int}", (int id) =>
                 {
-                    bool success = repository.delCelebrityById(id);
-                    if (!success)
-                    {
-                        throw new DeleteCelebrityException($"celebrity {id} not found for deletion");
-                    }
                     return Results.Content($"celebrity {id} deleted");
-                });
+                })
+                .AddEndpointFilter<Validation.DeleteFilter>();
 
-                app.MapPut("/Celebrities/{id:int}", (int id, Celebrity updatedCelebrity) =>
+                api.MapPut("/{id:int}", (int id, Celebrity updatedCelebrity) =>
                 {
                     int result = repository.updCelebrity(id, updatedCelebrity);
-                    if (result == 0)
-                    {
-                        throw new UpdateCelebrityException($"elebrity {id} not found for update");
-                    }
+                   
                     return Results.Content($"celebrity {id} added");
-                });
-                app.MapFallback((HttpContext ctx) => Results.NotFound(new { error = $"path {ctx.Request.Path} not supported" }));
+                })
+                .AddEndpointFilter<Validation.PutFilter>();
+                api.MapFallback((HttpContext ctx) => Results.NotFound(new { error = $"path {ctx.Request.Path} not supported" }));
 
-                app.Map("/Celebrities/Error", (HttpContext ctx) =>
+                api.Map("/Error", (HttpContext ctx) =>
                 {
                     Exception? ex = ctx.Features.Get<IExceptionHandlerFeature>()?.Error;
                     IResult rc = Results.Problem(detail: ex?.Message, instance: app.Environment.EnvironmentName, title: "aspa004", statusCode: 500);

@@ -29,6 +29,10 @@ namespace _4aspa004_1
                     int? id = repository.addCelebrity(celebrity);
                     if (id == null) throw new AddCelebrityException("/Celebrities error id == null");
                     if (repository.SaveChanges() <= 0) throw new SaveException("/celebrities error savechanges<=0");
+                    //if(!File.Exists(Path.Combine("C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\смелов\\lab3\\4aspa004_1\\wwwroot\\",celebrity.PhotoPath)))
+                    //{
+                    //    throw new SaveException("photo does not exists");
+                    //}
                     return new Celebrity((int)id, celebrity.Firstname, celebrity.Surname, celebrity.PhotoPath);
                 });
 

@@ -49,7 +49,7 @@ namespace _4aspa004_1
                     {
                         throw new UpdateCelebrityException($"elebrity {id} not found for update");
                     }
-                    return Results.Content($"celebrity {id} added");
+                    return new Celebrity(id,updatedCelebrity.Firstname,updatedCelebrity.Surname,updatedCelebrity.PhotoPath);
                 });
                 app.MapFallback((HttpContext ctx) => Results.NotFound(new { error = $"path {ctx.Request.Path} not supported" }));
 

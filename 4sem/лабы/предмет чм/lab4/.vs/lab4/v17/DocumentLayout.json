@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043F\u0440\u0435\u0434\u043C\u0435\u0442 \u0447\u043C\\lab4\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{52A6D204-E325-401F-827D-B2AF18F9A28D}|lab4\\lab4.pyproj|C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043F\u0440\u0435\u0434\u043C\u0435\u0442 \u0447\u043C\\lab4\\lab4\\lab3.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{52A6D204-E325-401F-827D-B2AF18F9A28D}|lab4\\lab4.pyproj|solutionrelative:lab4\\lab3.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{52A6D204-E325-401F-827D-B2AF18F9A28D}|lab4\\lab4.pyproj|C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043F\u0440\u0435\u0434\u043C\u0435\u0442 \u0447\u043C\\lab4\\lab4\\\u043C\u0430\u043A\u0441\u0438\u043C.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{52A6D204-E325-401F-827D-B2AF18F9A28D}|lab4\\lab4.pyproj|solutionrelative:lab4\\\u043C\u0430\u043A\u0441\u0438\u043C.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52A6D204-E325-401F-827D-B2AF18F9A28D}|lab4\\lab4.pyproj|C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043F\u0440\u0435\u0434\u043C\u0435\u0442 \u0447\u043C\\lab4\\lab4\\lab5.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{52A6D204-E325-401F-827D-B2AF18F9A28D}|lab4\\lab4.pyproj|solutionrelative:lab4\\lab5.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{52A6D204-E325-401F-827D-B2AF18F9A28D}|lab4\\lab4.pyproj|C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043F\u0440\u0435\u0434\u043C\u0435\u0442 \u0447\u043C\\lab4\\lab4\\lab4.py||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{52A6D204-E325-401F-827D-B2AF18F9A28D}|lab4\\lab4.pyproj|solutionrelative:lab4\\lab4.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52A6D204-E325-401F-827D-B2AF18F9A28D}|lab4\\lab4.pyproj|C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043F\u0440\u0435\u0434\u043C\u0435\u0442 \u0447\u043C\\lab4\\lab4\\lab3.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{52A6D204-E325-401F-827D-B2AF18F9A28D}|lab4\\lab4.pyproj|solutionrelative:lab4\\lab3.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,20 +34,44 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "\u043C\u0430\u043A\u0441\u0438\u043C.py",
+              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043F\u0440\u0435\u0434\u043C\u0435\u0442 \u0447\u043C\\lab4\\lab4\\\u043C\u0430\u043A\u0441\u0438\u043C.py",
+              "RelativeDocumentMoniker": "lab4\\\u043C\u0430\u043A\u0441\u0438\u043C.py",
+              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043F\u0440\u0435\u0434\u043C\u0435\u0442 \u0447\u043C\\lab4\\lab4\\\u043C\u0430\u043A\u0441\u0438\u043C.py",
+              "RelativeToolTip": "lab4\\\u043C\u0430\u043A\u0441\u0438\u043C.py",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAACcAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-03-29T07:26:59.589Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "lab5.py",
+              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043F\u0440\u0435\u0434\u043C\u0435\u0442 \u0447\u043C\\lab4\\lab4\\lab5.py",
+              "RelativeDocumentMoniker": "lab4\\lab5.py",
+              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043F\u0440\u0435\u0434\u043C\u0435\u0442 \u0447\u043C\\lab4\\lab4\\lab5.py",
+              "RelativeToolTip": "lab4\\lab5.py",
+              "ViewState": "AQIAABUAAAAAAAAAAAAcwDcAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2025-03-29T07:13:30.405Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "lab4.py",
               "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043F\u0440\u0435\u0434\u043C\u0435\u0442 \u0447\u043C\\lab4\\lab4\\lab4.py",
               "RelativeDocumentMoniker": "lab4\\lab4.py",
               "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043F\u0440\u0435\u0434\u043C\u0435\u0442 \u0447\u043C\\lab4\\lab4\\lab4.py",
               "RelativeToolTip": "lab4\\lab4.py",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAeAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2025-03-21T07:59:27.553Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-21T07:59:27.553Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "lab3.py",
               "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043F\u0440\u0435\u0434\u043C\u0435\u0442 \u0447\u043C\\lab4\\lab4\\lab3.py",
               "RelativeDocumentMoniker": "lab4\\lab3.py",
@@ -47,8 +79,7 @@
               "RelativeToolTip": "lab4\\lab3.py",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2025-03-21T07:53:00.095Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-21T07:53:00.095Z"
             }
           ]
         }

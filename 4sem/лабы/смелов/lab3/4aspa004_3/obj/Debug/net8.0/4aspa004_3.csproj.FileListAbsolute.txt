@@ -31,3 +31,4 @@ C:\Users\леха\Desktop\2 курс\4sem\лабы\смелов\lab3\4aspa004_3\
 C:\Users\леха\Desktop\2 курс\4sem\лабы\смелов\lab3\4aspa004_3\obj\Debug\net8.0\4aspa004_3.pdb
 C:\Users\леха\Desktop\2 курс\4sem\лабы\смелов\lab3\4aspa004_3\obj\Debug\net8.0\4aspa004_3.genruntimeconfig.cache
 C:\Users\леха\Desktop\2 курс\4sem\лабы\смелов\lab3\4aspa004_3\obj\Debug\net8.0\ref\4aspa004_3.dll
+C:\Users\леха\Desktop\2 курс\4sem\лабы\смелов\lab3\4aspa004_3\bin\Debug\net8.0\Celebrities.json

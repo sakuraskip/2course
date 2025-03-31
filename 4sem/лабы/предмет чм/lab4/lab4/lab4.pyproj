@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>52a6d204-e325-401f-827d-b2af18f9a28d</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>lab3.py</StartupFile>
+    <StartupFile>максим.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -23,6 +23,8 @@
   <ItemGroup>
     <Compile Include="lab3.py" />
     <Compile Include="lab4.py" />
+    <Compile Include="lab5.py" />
+    <Compile Include="максим.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

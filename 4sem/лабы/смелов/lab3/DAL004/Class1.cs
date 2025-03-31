@@ -50,7 +50,7 @@ namespace DAL004
                 var newceleb = new Celebrity(newid, celebrity.Firstname, celebrity.Surname, celebrity.PhotoPath);
                 changeCounter++;
                 _celebrities.Add(newceleb);
-                return celebrity.Id;
+                return newid;
             }
             return 0;
         }

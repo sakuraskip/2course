@@ -21,7 +21,7 @@ function Counter()
 
   function increment()
   {
-    setState(num=>num+1);
+    setState(num+1);
   }
   function reset()
   {

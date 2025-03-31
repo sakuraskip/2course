@@ -1,4 +1,3 @@
-C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\MainWindow.g.cs
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\App.g.cs
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\lab4_MarkupCompile.cache
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\lab4_MarkupCompile.lref
@@ -7,7 +6,6 @@ C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\bin\Debug\ne
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\bin\Debug\net8.0-windows\lab4.runtimeconfig.json
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\bin\Debug\net8.0-windows\lab4.dll
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\bin\Debug\net8.0-windows\lab4.pdb
-C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\MainWindow.baml
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\lab4.g.resources
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\lab4.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\lab4.AssemblyInfoInputs.cache
@@ -19,3 +17,12 @@ C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\ne
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\lab4.pdb
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\lab4.genruntimeconfig.cache
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\ref\lab4.dll
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\loginpage.g.cs
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\loginpage.baml
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\lab4.csproj.AssemblyReference.cache
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\ItemsList.g.cs
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\ItemsList.baml
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\lab4.csproj.Up2Date
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\ShipDetails.g.cs
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\ShipDetails.baml
