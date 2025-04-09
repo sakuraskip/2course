@@ -8,6 +8,10 @@ using Newtonsoft.Json;
 
 namespace lab4
 {
+    public class Request
+    {
+
+    }
     public class Ship
     {
         public int id {  get; set; }

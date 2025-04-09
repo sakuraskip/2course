@@ -18,14 +18,24 @@ namespace lab4
     /// <summary>
     /// Логика взаимодействия для ShipDetails.xaml
     /// </summary>
-    public partial class ShipDetails : Page
+    public partial class ShipDetails : Window
     {
-        public ShipDetails()
+        public ShipDetails(Ship detailship)
         {
-            
             InitializeComponent();
+            Cursor customCursor = new Cursor("C:\\Users\\леха\\Desktop\\2_aero_busy.ani");
+            this.Cursor = customCursor;
+            DataContext = detailship;
             
-            
+            price_textblock.Text += detailship.Price;
+            price_textblock.Text.Append('$');
+            avaliable_textblock.Text += detailship.avaliable;
+        }
+
+        private void rent_button(object sender, RoutedEventArgs e)
+        {
+            lab4.userControls.requestToBook reqWindow = new userControls.requestToBook();
+            reqWindow.ShowDialog();
         }
     }
 }

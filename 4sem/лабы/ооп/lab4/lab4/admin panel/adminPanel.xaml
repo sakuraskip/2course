@@ -1,0 +1,36 @@
+﻿<Window x:Class="lab4.adminPanel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab4"
+        mc:Ignorable="d"
+        Title="Admin Panel" Height="450" Width="800">
+    <Grid>
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <ItemsControl x:Name="ShipList">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border BorderBrush="Gray" BorderThickness="1" Margin="5" Padding="10">
+                            <StackPanel Width="200" Orientation="Vertical">
+                                <Image Source="{Binding Photopath}" MaxHeight="150" Stretch="UniformToFill" />
+                                <TextBlock Text="{Binding Name}" FontSize="18" />
+                                <TextBlock Text="{Binding  Price}" FontSize="18" />
+
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                    <Button Content="{DynamicResource Edit}" Width="85" Margin="5" Click="EditButton_Click" FontSize="12"/>
+                                    <Button Content="{DynamicResource Delete}" Width="85" Margin="5" Click="DeleteButton_Click" FontSize="12"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+    </Grid>
+</Window>

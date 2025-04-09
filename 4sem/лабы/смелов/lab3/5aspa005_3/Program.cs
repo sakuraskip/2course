@@ -25,7 +25,7 @@ namespace _5aspa005_3
 
 
 
-            app.MapDelete("/A/{x:int:min(1)}-{y:int:min(1)}", (HttpContext context, [FromRoute] int? x, [FromRoute] int? y) => Results.Ok(new { path = context.Request.Path.Value, x = x, y = y }));
+            app.MapDelete("/A/{x:int:min(1)}-{y:int:max(100)}", (HttpContext context, [FromRoute] int? x, [FromRoute] int? y) => Results.Ok(new { path = context.Request.Path.Value, x = x, y = y }));
            
 
             //B

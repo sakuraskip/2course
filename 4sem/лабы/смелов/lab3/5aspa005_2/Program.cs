@@ -12,7 +12,7 @@ namespace _5aspa005_1
             public async ValueTask<object?> InvokeAsync(EndpointFilterInvocationContext context, EndpointFilterDelegate next)
             {
                 var celebrity = context.GetArgument<Celebrity>(0);
-                Console.WriteLine(celebrity.ToString());
+                
                 if (celebrity == null)
                 {
                     return Results.Problem("celebrity не может быть пустым", statusCode: 500);

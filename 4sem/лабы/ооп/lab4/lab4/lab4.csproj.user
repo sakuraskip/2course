@@ -7,6 +7,15 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="admin panel\AddShipWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="admin panel\adminPanel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="admin panel\editShipWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="ItemsList.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -16,8 +25,20 @@
     <Compile Update="ShipDetails.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="userControls\requestToBook.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="admin panel\AddShipWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="admin panel\adminPanel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="admin panel\editShipWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="ItemsList.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -25,6 +46,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ShipDetails.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="userControls\requestToBook.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

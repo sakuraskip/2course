@@ -11,7 +11,7 @@ def divided_differences(x, y):
     for j in range(1, n):
         print("line", j)
         for i in range(n - j):
-            table[i][j] = (table[i+1][j-1] - table[i][j-1])
+            table[i][j] = (table[i+1][j-1] - table[i][j-1])/(x[i+j]-x[i])
             print(table[i][j])
     print("\n\n\n\n\n")
     return table

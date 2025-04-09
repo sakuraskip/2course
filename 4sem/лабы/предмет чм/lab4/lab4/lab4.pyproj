@@ -23,6 +23,8 @@
   <ItemGroup>
     <Compile Include="lab3.py" />
     <Compile Include="lab4.py" />
+    <Compile Include="lab5-2.py" />
+    <Compile Include="lab5-3.py" />
     <Compile Include="lab5.py" />
     <Compile Include="максим.py" />
   </ItemGroup>

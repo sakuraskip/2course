@@ -1,0 +1,33 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=System.Runtime">
+    <sys:String x:Key="Name">Ship Name: </sys:String>
+    <sys:String x:Key="Description">Description: </sys:String>
+    <sys:String x:Key="Price">Price: </sys:String>
+    <sys:String x:Key="ImagePath">ImagePath:</sys:String>
+    <sys:String x:Key="ChooseFile">Choose file</sys:String>
+    <sys:String x:Key="Add">Add</sys:String>
+    <sys:String x:Key="PriceFormat">Price: {0} $</sys:String>
+    <sys:String x:Key="Edit">Edit</sys:String>
+    <sys:String x:Key="Delete">Delete</sys:String>
+    <sys:String x:Key="Save">Save</sys:String>
+    <sys:String x:Key="SelectRentalDate">Select rental date:</sys:String>
+    <sys:String x:Key="PhoneNumber">Phone number:</sys:String>
+    <sys:String x:Key="EmailAddress">Email address:</sys:String>
+    <sys:String x:Key="ConfirmButton">Confirm</sys:String>
+    <sys:String x:Key="GoToYachts">Go to Yachts</sys:String>
+    <sys:String x:Key="SearchByName">Search by Name</sys:String>
+    <sys:String x:Key="PriceRange">Price Range</sys:String>
+    <sys:String x:Key="AddShip">Add Ship</sys:String>
+    <sys:String x:Key="AdminPanel">Admin Panel</sys:String>
+    <sys:String x:Key="Password">Password</sys:String>
+    <sys:String x:Key="Register">Register</sys:String>
+    <sys:String x:Key="Login">Login</sys:String>
+    <sys:String x:Key="Availability">Availability:</sys:String>
+    <sys:String x:Key="SubmitRequest">Submit Request</sys:String>
+    <sys:String x:Key="LoginTitle">Log in or register</sys:String>
+ <sys:String x:Key="ChangeLanguage">Change Language</sys:String>
+    <sys:String x:Key="UserName">Username</sys:String>
+
+
+
+</ResourceDictionary>

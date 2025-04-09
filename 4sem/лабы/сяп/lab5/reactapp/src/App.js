@@ -8,7 +8,6 @@ function App() {
     </div>
   );
 }
-
 function Button({title,onClick,disabled})
 {
   return (<button onClick={onClick} disabled = {disabled}>{title}</button>);

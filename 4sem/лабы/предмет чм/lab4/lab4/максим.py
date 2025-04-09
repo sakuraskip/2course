@@ -11,7 +11,7 @@ def divided_differences(x, y):
     for j in range(1, n):
         print("line", j)
         for i in range(n - j):
-            table[i][j] = (table[i+1][j-1] - table[i][j-1])
+            table[i][j] = (table[i+1][j-1] - table[i][j-1])/(x[i+j]-x[i])
             print(table[i][j])
     print("\n\n\n\n\n")
     return table
@@ -43,8 +43,8 @@ def newton_backward(x_data, y_data):
     return expand(poly)
 
 # Пример данных
-x_data = [10, 11,12,13]
-y_data = [-0.00054, -0.00075, -0.00031,0.00019]
+x_data = [-1,0,1,2,3,4]
+y_data = [-0.14,0.756,-0.14,0,-0.958,-0.536]
 
 
 # Первая формула Ньютона

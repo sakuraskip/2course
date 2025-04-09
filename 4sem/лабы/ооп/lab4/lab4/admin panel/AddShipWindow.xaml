@@ -1,0 +1,29 @@
+﻿<Window x:Class="lab4.AddShipWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:lab4"
+        Title="" Height="520" Width="500">
+    <Window.CommandBindings>
+        <CommandBinding Command="{x:Static local:AddShipWindow.AddShipCommand}" Executed="AddShipCommand_Executed"/>
+        <CommandBinding Command="{x:Static local:AddShipWindow.SelectFileCommand}" Executed="SelectFileCommand_Executed"/>
+    </Window.CommandBindings>
+    <Grid Margin="20">
+        <StackPanel>
+            <TextBlock Text="{DynamicResource Name}" FontSize="16"/>
+            <TextBox x:Name="NameTextBox" Margin="0,0,0,10"/>
+
+            <TextBlock Text= "{DynamicResource Description}" FontSize="16"/>
+            <TextBox x:Name="DescriptionTextBox" Margin="0,0,0,10" AcceptsReturn="True" Height="100"/>
+
+            <TextBlock Text= "{DynamicResource Price}" FontSize="16"/>
+            <TextBox x:Name="PriceTextBox" Margin="0,0,0,10"/>
+
+            <TextBlock Text="{DynamicResource ImagePath}" FontSize="16"/>
+            <TextBox x:Name="PhotopathTextBox" Margin="0,0,0,10" IsReadOnly="True"/>
+            <Button Content="{DynamicResource ChooseFile}" Command="{x:Static local:AddShipWindow.SelectFileCommand}" Width="100" HorizontalAlignment="Left" Margin="0,0,0,10"/>
+
+            <Image x:Name="ImagePreview" Height="100" Margin="0,0,0,10"/>
+            <Button Content= "{DynamicResource Add}" Command="{x:Static local:AddShipWindow.AddShipCommand}" Width="100" HorizontalAlignment="Right"/>
+        </StackPanel>
+    </Grid>
+</Window>
