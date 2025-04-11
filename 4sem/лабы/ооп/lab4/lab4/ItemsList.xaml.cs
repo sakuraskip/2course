@@ -35,8 +35,9 @@ namespace lab4
                 admin_addship.Visibility = Visibility.Hidden;
                 admin_adminpanel.Visibility = Visibility.Hidden;
             }
-            Cursor customCursor = new Cursor("C:\\Users\\леха\\Desktop\\2_aero_busy.ani");
+            Cursor customCursor = new Cursor("C:\\Users\\леха\\Desktop\\2_aero_busy.ani",true);
             this.Cursor = customCursor;
+            
             CommandBindings.Add(new CommandBinding(AddShipCommand, addShip_Button));
             CommandBindings.Add(new CommandBinding(AdminPanelCommand, AdminPanelButton_Click));
             Items.ships = ShipList.LoadFromJson(path);

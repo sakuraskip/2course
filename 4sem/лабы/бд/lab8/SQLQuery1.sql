@@ -1,4 +1,5 @@
 --task1
+drop view [Преподаватель]
 CREATE VIEW [Преподаватель] AS --запускать отдельно от всего
 SELECT 
     t.TEACHER AS [код], 

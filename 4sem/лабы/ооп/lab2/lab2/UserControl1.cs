@@ -132,6 +132,7 @@ namespace lab2
                 errorLabel.Text = validationResults[0].ErrorMessage;
                 return false;
             }
+
            
             progressBar1.Value = 20;
            

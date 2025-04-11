@@ -122,6 +122,12 @@ function Calculator()
       if(result!== null && result!== undefined)
       {
         setDisplay(null);
+        if(result.toString() == "Infinity")
+        {
+          updateHistory(history.concat(`${display} = ${result}`))
+          alert("деление на ноль!!!")
+          return
+        }
         setDisplay(result.toString());
         updateHistory(history.concat(`${display} = ${result}`))
       }
