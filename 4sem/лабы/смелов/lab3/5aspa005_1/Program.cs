@@ -68,8 +68,10 @@ namespace _5aspa005_1
                    {
                        return Results.Problem("celebrity не может быть пустым", statusCode: 500);
                    }
-                   string filepath = Path.Combine(DAL004.Repository.basepath2, Path.GetFileName(celebrity.PhotoPath));
-
+                   Console.WriteLine(celebrity.PhotoPath);
+                   string filepath2 = DAL004.Repository.basepath2 + "\\Photo";
+                   string filepath = Path.Combine(filepath2, Path.GetFileName(celebrity.PhotoPath));
+                   Console.WriteLine(filepath);
                    if (!File.Exists(filepath))
                    {
                        context.HttpContext.Response.Headers.Append("x-celebrity", $"notfound({Path.GetFileName(celebrity.PhotoPath)})");
