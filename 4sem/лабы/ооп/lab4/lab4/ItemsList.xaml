@@ -7,7 +7,23 @@
         mc:Ignorable="d"
    
         Title="" Height="700" Width="1000">
-
+    <Window.Resources>
+        <Style TargetType="Button" x:Key="AdminAddShipButtonStyle">
+            <Setter Property="Background"  Value="#007ACC"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Style.Triggers>
+                <MultiDataTrigger>
+                    <MultiDataTrigger.Conditions>
+                        <Condition Binding="{Binding Text, ElementName=filterName_textbox}" Value=""/>
+                        <Condition Binding="{Binding Text, ElementName=minPrice_textbox}" Value=""/>
+                        <Condition Binding="{Binding Text, ElementName=maxprice_textbox}" Value=""/>
+                    </MultiDataTrigger.Conditions>
+                    <Setter Property="Background" Value="LightSeaGreen"/>
+                    <Setter Property="Foreground" Value="White"/>
+                </MultiDataTrigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
     <Window.CommandBindings>
         <CommandBinding Command="{x:Static local:ItemsList.AddShipCommand}" Executed="addShip_Button"/>
         <CommandBinding Command="{x:Static local:ItemsList.AdminPanelCommand}" Executed="AdminPanelButton_Click"/>
@@ -67,7 +83,7 @@
             </StackPanel>
         </StackPanel>
 
-        <Button x:Name="admin_addship" Grid.Row="1" Content="{DynamicResource AddShip}" Height="50" FontSize="18" VerticalAlignment="Bottom" Margin="0 0 0 90" Command="{x:Static local:ItemsList.AddShipCommand}"/>
+        <Button x:Name="admin_addship" Style="{StaticResource AdminAddShipButtonStyle}" Grid.Row="1" Content="{DynamicResource AddShip}" Height="50" FontSize="18" VerticalAlignment="Bottom" Margin="0 0 0 90" Command="{x:Static local:ItemsList.AddShipCommand}"/>
         <Button x:Name="admin_adminpanel" Grid.Row="1" Content="{DynamicResource AdminPanel}" Height="50" Command="{x:Static local:ItemsList.AdminPanelCommand}" FontSize="16" VerticalAlignment="Bottom" Margin="0 0 0 10"/>
     </Grid>
 </Window>

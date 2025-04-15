@@ -28,6 +28,9 @@
     <Compile Update="userControls\requestToBook.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="userControls\userpage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="admin panel\AddShipWindow.xaml">
@@ -49,6 +52,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="userControls\requestToBook.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="userControls\userpage.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

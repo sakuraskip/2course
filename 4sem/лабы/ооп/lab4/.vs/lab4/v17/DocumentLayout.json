@@ -3,8 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E8BEC744-BD73-468E-9CA6-66ACA7535395}|lab4\\lab4.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\usercontrols\\userpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E8BEC744-BD73-468E-9CA6-66ACA7535395}|lab4\\lab4.csproj|solutionrelative:lab4\\usercontrols\\userpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8BEC744-BD73-468E-9CA6-66ACA7535395}|lab4\\lab4.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\itemslist.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E8BEC744-BD73-468E-9CA6-66ACA7535395}|lab4\\lab4.csproj|solutionrelative:lab4\\itemslist.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E8BEC744-BD73-468E-9CA6-66ACA7535395}|lab4\\lab4.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\itemslist.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E8BEC744-BD73-468E-9CA6-66ACA7535395}|lab4\\lab4.csproj|solutionrelative:lab4\\itemslist.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8BEC744-BD73-468E-9CA6-66ACA7535395}|lab4\\lab4.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E8BEC744-BD73-468E-9CA6-66ACA7535395}|lab4\\lab4.csproj|solutionrelative:lab4\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8BEC744-BD73-468E-9CA6-66ACA7535395}|lab4\\lab4.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\admin panel\\addshipwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E8BEC744-BD73-468E-9CA6-66ACA7535395}|lab4\\lab4.csproj|solutionrelative:lab4\\admin panel\\addshipwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8BEC744-BD73-468E-9CA6-66ACA7535395}|lab4\\lab4.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\admin panel\\addshipwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8BEC744-BD73-468E-9CA6-66ACA7535395}|lab4\\lab4.csproj|solutionrelative:lab4\\admin panel\\addshipwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8BEC744-BD73-468E-9CA6-66ACA7535395}|lab4\\lab4.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\shipdetails.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8BEC744-BD73-468E-9CA6-66ACA7535395}|lab4\\lab4.csproj|solutionrelative:lab4\\shipdetails.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E8BEC744-BD73-468E-9CA6-66ACA7535395}|lab4\\lab4.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,24 +39,8 @@
       "RelativeMoniker": "D:0:0:{E8BEC744-BD73-468E-9CA6-66ACA7535395}|lab4\\lab4.csproj|solutionrelative:lab4\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8BEC744-BD73-468E-9CA6-66ACA7535395}|lab4\\lab4.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\admin panel\\addshipwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8BEC744-BD73-468E-9CA6-66ACA7535395}|lab4\\lab4.csproj|solutionrelative:lab4\\admin panel\\addshipwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8BEC744-BD73-468E-9CA6-66ACA7535395}|lab4\\lab4.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\admin panel\\addshipwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{E8BEC744-BD73-468E-9CA6-66ACA7535395}|lab4\\lab4.csproj|solutionrelative:lab4\\admin panel\\addshipwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E8BEC744-BD73-468E-9CA6-66ACA7535395}|lab4\\lab4.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\admin panel\\adminpanel.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{E8BEC744-BD73-468E-9CA6-66ACA7535395}|lab4\\lab4.csproj|solutionrelative:lab4\\admin panel\\adminpanel.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8BEC744-BD73-468E-9CA6-66ACA7535395}|lab4\\lab4.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\shipdetails.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8BEC744-BD73-468E-9CA6-66ACA7535395}|lab4\\lab4.csproj|solutionrelative:lab4\\shipdetails.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8BEC744-BD73-468E-9CA6-66ACA7535395}|lab4\\lab4.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\dictionary\\strings.ru.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{E8BEC744-BD73-468E-9CA6-66ACA7535395}|lab4\\lab4.csproj|solutionrelative:lab4\\dictionary\\strings.ru.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E8BEC744-BD73-468E-9CA6-66ACA7535395}|lab4\\lab4.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\dictionary\\strings.en.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -49,14 +57,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E8BEC744-BD73-468E-9CA6-66ACA7535395}|lab4\\lab4.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\shipdetails.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{E8BEC744-BD73-468E-9CA6-66ACA7535395}|lab4\\lab4.csproj|solutionrelative:lab4\\shipdetails.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8BEC744-BD73-468E-9CA6-66ACA7535395}|lab4\\lab4.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\itemslist.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{E8BEC744-BD73-468E-9CA6-66ACA7535395}|lab4\\lab4.csproj|solutionrelative:lab4\\itemslist.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8BEC744-BD73-468E-9CA6-66ACA7535395}|lab4\\lab4.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{E8BEC744-BD73-468E-9CA6-66ACA7535395}|lab4\\lab4.csproj|solutionrelative:lab4\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E8BEC744-BD73-468E-9CA6-66ACA7535395}|lab4\\lab4.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\lab4.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
@@ -78,7 +78,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -86,125 +86,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AddShipWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\admin panel\\AddShipWindow.xaml.cs",
-              "RelativeDocumentMoniker": "lab4\\admin panel\\AddShipWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\admin panel\\AddShipWindow.xaml.cs",
-              "RelativeToolTip": "lab4\\admin panel\\AddShipWindow.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T13:23:31.384Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ShipDetails.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\ShipDetails.xaml.cs",
-              "RelativeDocumentMoniker": "lab4\\ShipDetails.xaml.cs",
-              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\ShipDetails.xaml.cs",
-              "RelativeToolTip": "lab4\\ShipDetails.xaml.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABwAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T12:44:54.264Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "loginpage.xaml",
-              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\loginpage.xaml",
-              "RelativeDocumentMoniker": "lab4\\loginpage.xaml",
-              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\loginpage.xaml",
-              "RelativeToolTip": "lab4\\loginpage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-06T19:23:40.001Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "loginpage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\loginpage.xaml.cs",
-              "RelativeDocumentMoniker": "lab4\\loginpage.xaml.cs",
-              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\loginpage.xaml.cs",
-              "RelativeToolTip": "lab4\\loginpage.xaml.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAAAwB8AAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T20:44:50.656Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ItemsList.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\ItemsList.xaml.cs",
-              "RelativeDocumentMoniker": "lab4\\ItemsList.xaml.cs",
-              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\ItemsList.xaml.cs",
-              "RelativeToolTip": "lab4\\ItemsList.xaml.cs",
-              "ViewState": "AQIAABcAAAAAAAAAAAAvwCUAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T21:29:54.195Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "requestToBook.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\userControls\\requestToBook.xaml.cs",
-              "RelativeDocumentMoniker": "lab4\\userControls\\requestToBook.xaml.cs",
-              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\userControls\\requestToBook.xaml.cs",
-              "RelativeToolTip": "lab4\\userControls\\requestToBook.xaml.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAQwCYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T13:20:39.314Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "strings.ru.xaml",
-              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\dictionary\\strings.ru.xaml",
-              "RelativeDocumentMoniker": "lab4\\dictionary\\strings.ru.xaml",
-              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\dictionary\\strings.ru.xaml",
-              "RelativeToolTip": "lab4\\dictionary\\strings.ru.xaml",
+              "Title": "userpage.xaml",
+              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\userControls\\userpage.xaml",
+              "RelativeDocumentMoniker": "lab4\\userControls\\userpage.xaml",
+              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\userControls\\userpage.xaml",
+              "RelativeToolTip": "lab4\\userControls\\userpage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-07T13:22:14.502Z",
+              "WhenOpened": "2025-04-13T20:32:36.389Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "strings.en.xaml",
-              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\dictionary\\strings.en.xaml",
-              "RelativeDocumentMoniker": "lab4\\dictionary\\strings.en.xaml",
-              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\dictionary\\strings.en.xaml",
-              "RelativeToolTip": "lab4\\dictionary\\strings.en.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-07T13:22:18.523Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "adminPanel.xaml",
-              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\admin panel\\adminPanel.xaml",
-              "RelativeDocumentMoniker": "lab4\\admin panel\\adminPanel.xaml",
-              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\admin panel\\adminPanel.xaml",
-              "RelativeToolTip": "lab4\\admin panel\\adminPanel.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-06T21:50:42.501Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "adminPanel.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\admin panel\\adminPanel.xaml.cs",
-              "RelativeDocumentMoniker": "lab4\\admin panel\\adminPanel.xaml.cs",
-              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\admin panel\\adminPanel.xaml.cs",
-              "RelativeToolTip": "lab4\\admin panel\\adminPanel.xaml.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAAwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T21:50:41.614Z"
             },
             {
               "$type": "Document",
@@ -215,22 +105,62 @@
               "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\admin panel\\AddShipWindow.xaml",
               "RelativeToolTip": "lab4\\admin panel\\AddShipWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-06T19:39:49.769Z"
+              "WhenOpened": "2025-04-06T19:39:49.769Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ShipDetails.xaml",
-              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\ShipDetails.xaml",
-              "RelativeDocumentMoniker": "lab4\\ShipDetails.xaml",
-              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\ShipDetails.xaml",
-              "RelativeToolTip": "lab4\\ShipDetails.xaml",
+              "DocumentIndex": 2,
+              "Title": "ItemsList.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\ItemsList.xaml.cs",
+              "RelativeDocumentMoniker": "lab4\\ItemsList.xaml.cs",
+              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\ItemsList.xaml.cs",
+              "RelativeToolTip": "lab4\\ItemsList.xaml.cs",
+              "ViewState": "AQIAADkAAAAAAAAAAAAMwEoAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T21:29:54.195Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "loginpage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\loginpage.xaml.cs",
+              "RelativeDocumentMoniker": "lab4\\loginpage.xaml.cs",
+              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\loginpage.xaml.cs",
+              "RelativeToolTip": "lab4\\loginpage.xaml.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAAwB8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T20:44:50.656Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AddShipWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\admin panel\\AddShipWindow.xaml.cs",
+              "RelativeDocumentMoniker": "lab4\\admin panel\\AddShipWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\admin panel\\AddShipWindow.xaml.cs",
+              "RelativeToolTip": "lab4\\admin panel\\AddShipWindow.xaml.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAAADMAAABNAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T13:23:31.384Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ItemsList.xaml",
+              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\ItemsList.xaml",
+              "RelativeDocumentMoniker": "lab4\\ItemsList.xaml",
+              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\ItemsList.xaml",
+              "RelativeToolTip": "lab4\\ItemsList.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-06T19:26:53.665Z"
+              "WhenOpened": "2025-04-06T18:20:18.385Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 3,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\App.xaml",
               "RelativeDocumentMoniker": "lab4\\App.xaml",
@@ -242,14 +172,85 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ItemsList.xaml",
-              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\ItemsList.xaml",
-              "RelativeDocumentMoniker": "lab4\\ItemsList.xaml",
-              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\ItemsList.xaml",
-              "RelativeToolTip": "lab4\\ItemsList.xaml",
+              "DocumentIndex": 11,
+              "Title": "requestToBook.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\userControls\\requestToBook.xaml.cs",
+              "RelativeDocumentMoniker": "lab4\\userControls\\requestToBook.xaml.cs",
+              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\userControls\\requestToBook.xaml.cs",
+              "RelativeToolTip": "lab4\\userControls\\requestToBook.xaml.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAQwCYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T13:20:39.314Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ShipDetails.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\ShipDetails.xaml.cs",
+              "RelativeDocumentMoniker": "lab4\\ShipDetails.xaml.cs",
+              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\ShipDetails.xaml.cs",
+              "RelativeToolTip": "lab4\\ShipDetails.xaml.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABwAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T12:44:54.264Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "loginpage.xaml",
+              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\loginpage.xaml",
+              "RelativeDocumentMoniker": "lab4\\loginpage.xaml",
+              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\loginpage.xaml",
+              "RelativeToolTip": "lab4\\loginpage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-06T18:20:18.385Z"
+              "WhenOpened": "2025-04-06T19:23:40.001Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "strings.en.xaml",
+              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\dictionary\\strings.en.xaml",
+              "RelativeDocumentMoniker": "lab4\\dictionary\\strings.en.xaml",
+              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\dictionary\\strings.en.xaml",
+              "RelativeToolTip": "lab4\\dictionary\\strings.en.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-07T13:22:18.523Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "adminPanel.xaml",
+              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\admin panel\\adminPanel.xaml",
+              "RelativeDocumentMoniker": "lab4\\admin panel\\adminPanel.xaml",
+              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\admin panel\\adminPanel.xaml",
+              "RelativeToolTip": "lab4\\admin panel\\adminPanel.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-06T21:50:42.501Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "adminPanel.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\admin panel\\adminPanel.xaml.cs",
+              "RelativeDocumentMoniker": "lab4\\admin panel\\adminPanel.xaml.cs",
+              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\admin panel\\adminPanel.xaml.cs",
+              "RelativeToolTip": "lab4\\admin panel\\adminPanel.xaml.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAAwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T21:50:41.614Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ShipDetails.xaml",
+              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\ShipDetails.xaml",
+              "RelativeDocumentMoniker": "lab4\\ShipDetails.xaml",
+              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u043E\u043E\u043F\\lab4\\lab4\\ShipDetails.xaml",
+              "RelativeToolTip": "lab4\\ShipDetails.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-06T19:26:53.665Z"
             },
             {
               "$type": "Document",
