@@ -2832,6 +2832,7 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "3DAL_Celebrity_MSSQL >= 1.0.0",
+      "DAL_Celebrity >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 9.0.4",
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.4"
     ]
@@ -2866,6 +2867,9 @@
           "projectReferences": {
             "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\смелов\\lab6\\DAL_Celebrity\\3DAL_Celebrity_MSSQL\\3DAL_Celebrity_MSSQL.csproj": {
               "projectPath": "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\смелов\\lab6\\DAL_Celebrity\\3DAL_Celebrity_MSSQL\\3DAL_Celebrity_MSSQL.csproj"
+            },
+            "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\смелов\\lab6\\DAL_Celebrity\\DAL_Celebrity\\DAL_Celebrity.csproj": {
+              "projectPath": "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\смелов\\lab6\\DAL_Celebrity\\DAL_Celebrity\\DAL_Celebrity.csproj"
             }
           }
         }

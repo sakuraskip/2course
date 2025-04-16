@@ -9,6 +9,7 @@
       "MSSQL_TEST/1.0.0": {
         "dependencies": {
           "3DAL_Celebrity_MSSQL": "1.0.0",
+          "DAL_Celebrity": "1.0.0",
           "Microsoft.EntityFrameworkCore": "9.0.4",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.4"
         },

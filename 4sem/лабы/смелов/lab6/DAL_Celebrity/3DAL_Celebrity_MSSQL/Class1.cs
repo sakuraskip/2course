@@ -55,73 +55,66 @@ namespace _3DAL_Celebrity_MSSQL
     {
         Context context;
 
-        public Repository() { this.context = new Context(); } 
+        public Repository() { this.context = new Context(); }
         public Repository(string connectionstring) { this.context = new Context(connectionstring); }
         public static IRepository Create() { return new Repository(); }
-        public static IRepository Create(string connectstring) {  return new Repository(connectstring); }
+        public static IRepository Create(string connectstring) { return new Repository(connectstring); }
         public bool addCelebrity(Celebrity celebrity)
         {
-          try
-            {
-                if(celebrity.Id == 0 || celebrity.Id == null)
-                {
-                    Counter.getCOunter(this.context.celebrities.Count());
-                    celebrity.Id = Counter.GETCOunter()+1;
-                    Counter.INCREase();
-                    this.context.celebrities.Add(celebrity);
-                }
-               
-            }
-            catch (Exception ex)
+
+            if(celebrity == null)
             {
                 return false;
             }
-            return true;
+         
+              
+                this.context.celebrities.Add(celebrity);
+                this.context.SaveChanges();
+                return true;
         }
+
+    
+        
 
         public bool addLifeevent(Lifeevent lifeevent)
         {
-           try
-            {
-                this.context.Lifeevents.Add(lifeevent);
-            }
-            catch(Exception ex)
+          if(lifeevent == null)
             {
                 return false;
             }
+          this.context.Lifeevents.Add(lifeevent);
+            this.context.SaveChanges();
             return true;
 
         }
 
         public bool delCelebrityById(int id)
         {
-            try
+            var celebrity = getCelebrityById(id);
+            if (celebrity != null)
             {
-                this.context.celebrities.Remove(getCelebrityById(id));
+                this.context.celebrities.Remove(celebrity);
+                this.context.SaveChanges(); 
+                return true;
             }
-            catch (Exception ex)
-            {
-                return false;
-            }
-            return true;
+            return false;
         }
 
         public bool delLifeeventById(int id)
         {
-            try
+            var lifeevent = getLifeeventById(id);
+            if (lifeevent != null)
             {
-                this.context.Lifeevents.Remove(getLifeeventById(id));
+                this.context.Lifeevents.Remove(lifeevent);
+                this.context.SaveChanges(); // Сохраняем изменения в базе данных
+                return true;
             }
-            catch (Exception ex)
-            {
-                return false;
-            }
-            return true;
+            return false;
         }
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            return;
         }
 
         public List<Celebrity> getAllCelebrities()
@@ -147,21 +140,29 @@ namespace _3DAL_Celebrity_MSSQL
 
         public Celebrity? GetCelebrityByLifeeventId(int lifeeventid)
         {
-            int? celebid = getLifeeventById(lifeeventid).CelebrityId;
-            var celeb = this.context.celebrities.FirstOrDefault(c => c.Id == celebid);
+            var lifeevent = getLifeeventById(lifeeventid);
+            if(lifeevent != null)
+            {
+                int celebid = lifeevent.CelebrityId;
+                var celeb = this.context.celebrities.FirstOrDefault(c => c.Id == celebid);
 
-            return celeb; 
+                return celeb;
+            }
+            return null;
+          
+          
         }
 
         public int GetCelebrityIdByName(string name)
         {
-            var list = this.context.celebrities.ToList();
+            if(string.IsNullOrEmpty(name))
+            {
+                return 0;
+            }
             var celeb = this.context.celebrities.FirstOrDefault(c => c.FullName.Contains(name));
             if (celeb!=null)
             {
                 return celeb.Id;
-                
-              
             }
             return 0;
 
@@ -180,44 +181,29 @@ namespace _3DAL_Celebrity_MSSQL
 
         public bool updCelebrity(int id, Celebrity celebrity)
         {
-
-           var oldCeleb = this.context.celebrities.FirstOrDefault(celebrity => celebrity.Id == id);
-            if (oldCeleb!=null)
+            var oldCeleb = this.context.celebrities.FirstOrDefault(c => c.Id == id);
+            if (oldCeleb != null)
             {
-                int newid = celebrity.Id;
-                if (celebrity.Id == 0)
-                {
-                    newid = this.context.celebrities.Count() + 1;
-                }
-                var newceleb = new Celebrity();
-                newceleb.Id = newid;
-                newceleb.FullName = celebrity.FullName;
-                newceleb.Nationality = celebrity.Nationality;
-                newceleb.ReqPhotoPath = celebrity.ReqPhotoPath;
-                this.context.celebrities.Add(newceleb);
+                oldCeleb.FullName = celebrity.FullName;
+                oldCeleb.Nationality = celebrity.Nationality;
+                oldCeleb.ReqPhotoPath = celebrity.ReqPhotoPath;
+
+                this.context.SaveChanges();
                 return true;
             }
             return false;
-        
         }
 
-        public bool updLifeevent(int id, Lifeevent lifeevent
-            )
+        public bool updLifeevent(int id, Lifeevent lifeevent)
         {
             var oldLifeevent = this.context.Lifeevents.FirstOrDefault(l => l.Id == id);
-            if ((oldLifeevent!=null))
+            if (oldLifeevent != null)
             {
-                int newid = lifeevent.Id;
-                if (lifeevent.Id == 0)
-                {
-                    newid = this.context.Lifeevents.Count() + 1;
-                }
-                var newceleb = new Lifeevent();
-                newceleb.Id = newid;
-                newceleb.Description = lifeevent.Description;
-                newceleb.Date = lifeevent.Date;
-                newceleb.CelebrityId = lifeevent.CelebrityId;
-                this.context.Lifeevents.Add(newceleb);
+                oldLifeevent.Description = lifeevent.Description;
+                oldLifeevent.Date = lifeevent.Date;
+                oldLifeevent.CelebrityId = lifeevent.CelebrityId;
+
+                this.context.SaveChanges();
                 return true;
             }
             return false;

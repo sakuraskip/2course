@@ -177,6 +177,9 @@
             "projectReferences": {
               "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\смелов\\lab6\\DAL_Celebrity\\3DAL_Celebrity_MSSQL\\3DAL_Celebrity_MSSQL.csproj": {
                 "projectPath": "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\смелов\\lab6\\DAL_Celebrity\\3DAL_Celebrity_MSSQL\\3DAL_Celebrity_MSSQL.csproj"
+              },
+              "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\смелов\\lab6\\DAL_Celebrity\\DAL_Celebrity\\DAL_Celebrity.csproj": {
+                "projectPath": "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\смелов\\lab6\\DAL_Celebrity\\DAL_Celebrity\\DAL_Celebrity.csproj"
               }
             }
           }

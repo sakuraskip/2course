@@ -1,5 +1,5 @@
-﻿using _3DAL_Celebrity_MSSQL;
-
+﻿using DAL_Celebrity;
+using _3DAL_Celebrity_MSSQL;
 namespace MSSQL_TEST
 {
     internal class Program
@@ -44,6 +44,7 @@ namespace MSSQL_TEST
                     if (repo.addCelebrity(c)) Console.WriteLine($"OK addcelebrity: {printC(c)}");
                     else Console.WriteLine($"error add celebrity: {printC(c)}");
                 }
+                
                 {
                     Console.WriteLine("del celebrity");
                     {
@@ -80,13 +81,21 @@ namespace MSSQL_TEST
                         {
                             Lifeevent l = new Lifeevent
                             {
-                                Id = 22,
                                 CelebrityId = id,
-                                Date = new DateTime(1927, 18, 4),
+                                Date = new DateTime(1927, 4, 18),
                                 Description = "рождение",
                                 ReqPhotoPath = null
                             };
+                            Lifeevent l2 = new Lifeevent
+                            {
+                                CelebrityId = id,
+                                Date = new DateTime(1928, 4, 12),
+                                Description = "год после рождения",
+                                ReqPhotoPath = null
+                            };
+                            
                             repo.addLifeevent(l);
+                            repo.addLifeevent(l2);
                         }
                         else Console.WriteLine("error getcelebrityById");
                     }
@@ -94,7 +103,7 @@ namespace MSSQL_TEST
                 {
                     Console.WriteLine("del lifeevent ");
                     {
-                        int id = 22;
+                        int id = 21;
                         if (repo.delLifeeventById(id)) Console.WriteLine($"OK: dellifeevent: {id}");
                         else Console.WriteLine("error getcelebrityById");
                     }
