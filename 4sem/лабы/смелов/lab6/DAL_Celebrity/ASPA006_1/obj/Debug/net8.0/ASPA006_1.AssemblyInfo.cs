@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("DAL_Celebrity")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("ASPA006_1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2bdd87cb0d3d351ec1e764370e0353b94376eb1a")]
-[assembly: System.Reflection.AssemblyProductAttribute("DAL_Celebrity")]
-[assembly: System.Reflection.AssemblyTitleAttribute("DAL_Celebrity")]
+[assembly: System.Reflection.AssemblyProductAttribute("ASPA006_1")]
+[assembly: System.Reflection.AssemblyTitleAttribute("ASPA006_1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Создано классом WriteCodeFragment MSBuild.

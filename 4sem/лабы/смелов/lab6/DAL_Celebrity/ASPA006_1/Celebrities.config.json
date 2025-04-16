@@ -1,0 +1,6 @@
+{
+  "Celebrities": {
+    "PhotosFolder": "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\смелов\\lab6\\DAL_Celebrity\\ASPA006_1\\Photos\\",
+    "ConnectionString": "Data source = leksus\\SQLEXPRESS; Initial Catalog = Celebrities;TrustServerCertificate=Yes;Integrated Security=True;"
+  }
+}
