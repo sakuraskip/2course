@@ -39,3 +39,7 @@ C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\ne
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\lab4.pdb
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\lab4.genruntimeconfig.cache
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\ref\lab4.dll
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\userControls\editUserData.g.cs
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\userControls\userpage.g.cs
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\userControls\editUserData.baml
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\userControls\userpage.baml

@@ -11,6 +11,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="RestSharp" Version="112.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\3DAL_Celebrity_MSSQL\3DAL_Celebrity_MSSQL.csproj" />
     <ProjectReference Include="..\DAL_Celebrity\DAL_Celebrity.csproj" />
   </ItemGroup>

@@ -73,3 +73,4 @@ C:\Users\леха\Desktop\2 курс\4sem\лабы\смелов\lab6\DAL_Celebri
 C:\Users\леха\Desktop\2 курс\4sem\лабы\смелов\lab6\DAL_Celebrity\MSSQL_TEST\obj\Debug\net8.0\MSSQL_TEST.pdb
 C:\Users\леха\Desktop\2 курс\4sem\лабы\смелов\lab6\DAL_Celebrity\MSSQL_TEST\obj\Debug\net8.0\MSSQL_TEST.genruntimeconfig.cache
 C:\Users\леха\Desktop\2 курс\4sem\лабы\смелов\lab6\DAL_Celebrity\MSSQL_TEST\obj\Debug\net8.0\ref\MSSQL_TEST.dll
+C:\Users\леха\Desktop\2 курс\4sem\лабы\смелов\lab6\DAL_Celebrity\MSSQL_TEST\bin\Debug\net8.0\RestSharp.dll

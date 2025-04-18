@@ -33,7 +33,7 @@ namespace _3DAL_Celebrity_MSSQL
         public string FullName { get; set; }
         public string Nationality { get; set; }
         public string? ReqPhotoPath { get; set; }
-        public virtual bool Update(Celebrity celebrity)
+        public  bool Update(Celebrity celebrity)
         {
             return true;
         }
@@ -46,7 +46,7 @@ namespace _3DAL_Celebrity_MSSQL
         public DateTime? Date { set; get; }
         public string Description { set; get; }
         public string? ReqPhotoPath { set; get; }
-        public virtual bool Update(Lifeevent lifeevent)
+        public  bool Update(Lifeevent lifeevent)
         {
             return true;
         }
@@ -230,7 +230,9 @@ namespace _3DAL_Celebrity_MSSQL
         {
             if (this.ConnectionString is null) this.ConnectionString = @"Data source = leksus\SQLEXPRESS; Initial Catalog = Celebrities;"+
                     @"TrustServerCertificate=True";
-            optionsBuilder.UseSqlServer(this.ConnectionString).EnableSensitiveDataLogging();
+            optionsBuilder.UseSqlServer(this.ConnectionString, sqlOptions =>
+            sqlOptions.EnableRetryOnFailure()).EnableSensitiveDataLogging();
+
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
