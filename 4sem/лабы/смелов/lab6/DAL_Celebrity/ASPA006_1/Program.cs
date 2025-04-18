@@ -22,8 +22,9 @@ namespace ASPA006_1
                 CelebrityConfig config = p.GetRequiredService<IOptions<CelebrityConfig>>().Value;
                 return new Repository(config.connectionString);
             });
+            
             var app = builder.Build();
-
+            app.UseStaticFiles();
             var celebrities = app.MapGroup("/api/Celebrities");
             app.UseExceptionHandler("/Error");
             celebrities.MapGet("/", (IRepository repo) => Results.Ok(repo.getAllCelebrities())); // все

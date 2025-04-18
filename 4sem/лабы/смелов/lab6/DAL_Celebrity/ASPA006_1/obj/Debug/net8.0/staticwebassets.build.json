@@ -1,11 +1,58 @@
 {
   "Version": 1,
-  "Hash": "Wa9DUlIHrZM60fjNO+jTc7wFOUkAiHtCRtsF1hEC2QM=",
+  "Hash": "dURpR7uHjY9gOjbDPihFyCHNQnsUYCvitBpH+GyONtY=",
   "Source": "ASPA006_1",
   "BasePath": "_content/ASPA006_1",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "ASPA006_1\\wwwroot",
+      "Source": "ASPA006_1",
+      "ContentRoot": "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\смелов\\lab6\\DAL_Celebrity\\ASPA006_1\\wwwroot\\",
+      "BasePath": "_content/ASPA006_1",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\смелов\\lab6\\DAL_Celebrity\\ASPA006_1\\wwwroot\\index.html",
+      "SourceId": "ASPA006_1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\смелов\\lab6\\DAL_Celebrity\\ASPA006_1\\wwwroot\\",
+      "BasePath": "_content/ASPA006_1",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\смелов\\lab6\\DAL_Celebrity\\ASPA006_1\\wwwroot\\index.js",
+      "SourceId": "ASPA006_1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\смелов\\lab6\\DAL_Celebrity\\ASPA006_1\\wwwroot\\",
+      "BasePath": "_content/ASPA006_1",
+      "RelativePath": "index.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.js"
+    }
+  ]
 }

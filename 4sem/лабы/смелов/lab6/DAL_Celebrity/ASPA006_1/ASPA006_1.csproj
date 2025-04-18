@@ -11,6 +11,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\index.html" />
+    <None Include="wwwroot\index.js" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="RestSharp" Version="112.1.0" />
   </ItemGroup>
 
