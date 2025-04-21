@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,11 +10,50 @@ namespace lab4
 {
   public  class User:INotifyPropertyChanged
     {
-        public string Role { get => Role; set { Role = value; OnPropertyChanged(nameof(Role)); } }
-        public string username { get => username; set { username = value; OnPropertyChanged(nameof(username)); } }
-        public string password { get => password; set { password = value; OnPropertyChanged(nameof(password)); } }
+        private string role;
+        private string username;
+        private string password;
+        private string profilePicturePath;
 
-        public string profilePicturePath { get => profilePicturePath; set { profilePicturePath = value; OnPropertyChanged(nameof(profilePicturePath)); } }
+        public string Role
+        {
+            get => role; 
+            set
+            {
+                role = value;
+                OnPropertyChanged(nameof(Role));
+            }
+        }
+
+        public string Username
+        {
+            get => username; 
+            set
+            {
+                username = value;
+                OnPropertyChanged(nameof(Username));
+            }
+        }
+
+        public string Password
+        {
+            get => password; 
+            set
+            {
+                password = value;
+                OnPropertyChanged(nameof(Password));
+            }
+        }
+
+        public string ProfilePicturePath
+        {
+            get => profilePicturePath; 
+            set
+            {
+                profilePicturePath = value;
+                OnPropertyChanged(nameof(ProfilePicturePath));
+            }
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -36,7 +76,7 @@ namespace lab4
                 this.password = password;
             }
 
-            this.profilePicturePath = "/Resources/defaultAvatar.jpg";
+            this.profilePicturePath = @"C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\Resources\defaultAvatar.jpg";
         }
     }
 }

@@ -10,6 +10,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="userControls\ef9f71677e03d6d279b79b6016b2a654.gif" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="themes\AristocraticTheme.xaml" />
+    <Page Remove="themes\DarkTheme.xaml" />
+    <Page Remove="themes\WhiteTheme.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="pics\123.ico" />
   </ItemGroup>
 
@@ -19,6 +29,13 @@
 
   <ItemGroup>
     <Folder Include="commands\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="themes\AristocraticTheme.xaml" />
+    <Resource Include="themes\DarkTheme.xaml" />
+    <Resource Include="themes\WhiteTheme.xaml" />
+    <Resource Include="Resources\ef9f71677e03d6d279b79b6016b2a654.gif" />
   </ItemGroup>
 
   <ItemGroup>

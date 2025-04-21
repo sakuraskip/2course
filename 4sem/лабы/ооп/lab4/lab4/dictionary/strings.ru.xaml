@@ -5,6 +5,7 @@
     <sys:String x:Key="Name">Название Судна</sys:String>
     <sys:String x:Key="Description">Описание:</sys:String>
     <sys:String x:Key="Price">Цена:</sys:String>
+
     <sys:String x:Key="ImagePath">Путь к изображению:</sys:String>
     <sys:String x:Key="ChooseFile">Выбрать файл</sys:String>
     <sys:String x:Key="Add">Добавить</sys:String>
@@ -30,4 +31,15 @@
     <sys:String x:Key="ChangeLanguage">Сменить язык</sys:String>
     <sys:String x:Key="UserName">Имя</sys:String>
 
+    <!-- userpage-->
+    <sys:String x:Key="CancelButton">Отмена</sys:String>
+    <sys:String x:Key="BackToCatalogButton">Вернуться в каталог</sys:String>
+    <sys:String x:Key="ChangeThemeButton">Сменить тему</sys:String>
+    <sys:String x:Key="FromString">С</sys:String>
+    <sys:String x:Key="ToString">По</sys:String>
+    <sys:String x:Key="RentNumber">Аренда №</sys:String>
+    <sys:String x:Key="PriceString">Цена:</sys:String>
+    <sys:String x:Key="RentStatusActive">Активная</sys:String>
+    <sys:String x:Key="RentStatusCompleted">Завершена</sys:String>
+    <sys:String x:Key="RentStatusPending">В ожидании</sys:String>
 </ResourceDictionary>

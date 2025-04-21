@@ -6,11 +6,14 @@
     <Application.Resources>
      
         <ResourceDictionary>
+            
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="dictionary/strings.en.xaml"/>
                 <ResourceDictionary Source="dictionary/strings.ru.xaml"/>
+                <ResourceDictionary Source="themes/WhiteTheme.xaml"/>
+
             </ResourceDictionary.MergedDictionaries>
-            <Style TargetType="Button">
+            <!--<Style TargetType="Button">
                 <Setter Property="Background" Value="#007ACC"/>
                 <Setter Property="Foreground" Value="White"/>
                 <Setter Property="BorderBrush" Value="Transparent"/>
@@ -21,7 +24,7 @@
                 <Setter Property="Foreground" Value="Black"/>
                 <Setter Property="BorderBrush" Value="#007ACC"/>
                 <Setter Property="BorderThickness" Value="1"/>
-            </Style>
+            </Style>-->
         </ResourceDictionary>
         
     </Application.Resources>

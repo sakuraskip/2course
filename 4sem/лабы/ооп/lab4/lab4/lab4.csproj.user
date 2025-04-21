@@ -28,6 +28,9 @@
     <Compile Update="userControls\editUserData.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="userControls\header.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="userControls\requestToBook.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -55,6 +58,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="userControls\editUserData.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="userControls\header.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="userControls\requestToBook.xaml">

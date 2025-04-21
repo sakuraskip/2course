@@ -22,11 +22,12 @@ namespace lab4.userControls
     {
         private User ourUser {  get; set; }
         public string profilePicBuffer { get; set; }
-        public editUserData(User user)
+        public editUserData(User user,string profilepic)
         {
             InitializeComponent();
-            ourUser = user;
+            this.ourUser = user;
             DataContext = ourUser;
+            this.profilePicBuffer  = profilepic;
         }
 
         private void ProfileImage_MouseDown(object sender, MouseButtonEventArgs e)
@@ -37,7 +38,7 @@ namespace lab4.userControls
             if (openFileDialog.ShowDialog() == true)
             {
                 string sourcePath = openFileDialog.FileName;
-                profilePicBuffer = sourcePath;
+                this.profilePicBuffer = sourcePath;
                 ProfileImage.Source = new BitmapImage(new Uri(sourcePath));
             }
         }
@@ -54,14 +55,14 @@ namespace lab4.userControls
                 Error_TextBlock.Text = "Заполните логин корректно";
                 return;
             }
-            if (PasswordBox.Password != ourUser.password)
+            if (PasswordBox.Password != ourUser.Password)
             {
                 Error_TextBlock.Text = "Неверный пароль";
                 return;
             }
-            ourUser.username = NameTextBox.Text;
-           ourUser.profilePicturePath = profilePicBuffer;
-            
+            ourUser.Username = NameTextBox.Text;
+           ourUser.ProfilePicturePath = profilePicBuffer;
+            this.Close();
         }
         public User returnUserData()
         {

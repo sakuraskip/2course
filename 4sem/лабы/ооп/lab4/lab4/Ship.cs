@@ -8,6 +8,17 @@ using Newtonsoft.Json;
 
 namespace lab4
 {
+    public struct ActionItem
+    {
+        public string Action { get; set; }
+        public Ship Ship { get; set; }
+
+        public ActionItem(string action, Ship ship)
+        {
+            Action = action;
+            Ship = ship;
+        }
+    }
     public class Request
     {
 
@@ -40,6 +51,7 @@ namespace lab4
         static string _filepath = "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\ооп\\lab4\\lab4\\ships.json";
         [JsonProperty("ship")]
         public List<Ship> ships  = new List<Ship>();
+        
         public static List<Ship> LoadFromJson(string filepath)
         {
             if (File.Exists(filepath))
@@ -63,6 +75,7 @@ namespace lab4
             string json = JsonConvert.SerializeObject(list.ships,Formatting.Indented);
             File.WriteAllText(_filepath, json);
         }
+      
     }
    
 }

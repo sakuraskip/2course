@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:lab4"
         mc:Ignorable="d"
-   
+            Background="{DynamicResource BackgroundColor}"
+
         Title="" Height="700" Width="1000">
     <Window.Resources>
         <Style TargetType="Button" x:Key="AdminAddShipButtonStyle">
@@ -28,18 +29,21 @@
         <CommandBinding Command="{x:Static local:ItemsList.AddShipCommand}" Executed="addShip_Button"/>
         <CommandBinding Command="{x:Static local:ItemsList.AdminPanelCommand}" Executed="AdminPanelButton_Click"/>
     </Window.CommandBindings>
+    
+    <Grid x:Name="maingrid">
 
-    <Grid Background="White" ShowGridLines="True">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.25*" MinWidth="200"></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="1*"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
+      
 
-        <ScrollViewer Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" VerticalScrollBarVisibility="Auto">
+        <ScrollViewer Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" VerticalScrollBarVisibility="Auto">
             <ItemsControl x:Name="shipsControl">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
@@ -69,9 +73,9 @@
             </ItemsControl>
         </ScrollViewer>
 
-        <Frame x:Name="MainFrame" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" />
+        <Frame x:Name="MainFrame" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" />
 
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+        <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center">
             <Button x:Name="goToYachts" Content="{DynamicResource GoToYachts}" Height="50" Margin="0 50 0 50" FontSize="18"></Button>
             <TextBlock Text="{DynamicResource SearchByName}" FontSize="20" Margin="0 0 0 10"/>
             <TextBox x:Name="filterName_textbox" Height="30" FontSize="20" Margin="0 0 0 20" TextWrapping="Wrap" TextChanged="TextBox_TextChanged"></TextBox>
@@ -83,7 +87,8 @@
             </StackPanel>
         </StackPanel>
 
-        <Button x:Name="admin_addship" Style="{StaticResource AdminAddShipButtonStyle}" Grid.Row="1" Content="{DynamicResource AddShip}" Height="50" FontSize="18" VerticalAlignment="Bottom" Margin="0 0 0 90" Command="{x:Static local:ItemsList.AddShipCommand}"/>
-        <Button x:Name="admin_adminpanel" Grid.Row="1" Content="{DynamicResource AdminPanel}" Height="50" Command="{x:Static local:ItemsList.AdminPanelCommand}" FontSize="16" VerticalAlignment="Bottom" Margin="0 0 0 10"/>
+        <Button x:Name="admin_addship" Style="{StaticResource AdminAddShipButtonStyle}" Grid.Row="2" Content="{DynamicResource AddShip}" Height="50" FontSize="18" VerticalAlignment="Bottom" Margin="0 0 0 170" Command="{x:Static local:ItemsList.AddShipCommand}"/>
+        <Button x:Name="admin_adminpanel" Grid.Row="2" Content="{DynamicResource AdminPanel}" Height="50" Command="{x:Static local:ItemsList.AdminPanelCommand}" FontSize="16" VerticalAlignment="Bottom" Margin="0 0 0 90"/>
+        <Button x:Name="usercabinet_button" Click="usercabinet_button_Click" Grid.Row="2" Height="50" FontSize="18" VerticalAlignment="Bottom"></Button>
     </Grid>
 </Window>

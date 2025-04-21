@@ -5,10 +5,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
         xmlns:local="clr-namespace:lab4"
         mc:Ignorable="d" 
-        d:DesignHeight="700" d:DesignWidth="900"
+        d:DesignHeight="700" d:DesignWidth="900"         Background="{DynamicResource BackgroundColor}"
+
         Title="" Height="700" Width="900">
 
-    <Grid Background="White">
+    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.4*"/>
             <ColumnDefinition/>
@@ -49,6 +50,5 @@
 
             </Grid>
         </StackPanel>
-        <Button Grid.Column="0" Grid.Row="2" Content="{DynamicResource ChangeLanguage}" FontSize="22" VerticalAlignment="Bottom" Height="50" MinWidth="90" MaxWidth="200" HorizontalAlignment="Stretch" Margin="5" Click="ChangeLanguageButton_Click"/>
     </Grid>
 </Window>

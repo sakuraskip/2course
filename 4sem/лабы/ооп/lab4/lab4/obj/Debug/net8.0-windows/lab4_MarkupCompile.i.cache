@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\App.xaml
-11213379364
+12326863328
 1-532924199
-171044270519
+19982930603
 1991057761127
-admin panel\AddShipWindow.xaml;admin panel\adminPanel.xaml;admin panel\editShipWindow.xaml;dictionary\strings.en.xaml;dictionary\strings.ru.xaml;ItemsList.xaml;loginpage.xaml;ShipDetails.xaml;userControls\editUserData.xaml;userControls\requestToBook.xaml;userControls\userpage.xaml;
+admin panel\AddShipWindow.xaml;admin panel\adminPanel.xaml;admin panel\editShipWindow.xaml;dictionary\strings.en.xaml;dictionary\strings.ru.xaml;ItemsList.xaml;loginpage.xaml;ShipDetails.xaml;userControls\editUserData.xaml;userControls\header.xaml;userControls\requestToBook.xaml;userControls\userpage.xaml;
 
 True
 

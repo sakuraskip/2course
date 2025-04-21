@@ -22,87 +22,233 @@ namespace ASPA006_1
                 CelebrityConfig config = p.GetRequiredService<IOptions<CelebrityConfig>>().Value;
                 return new Repository(config.connectionString);
             });
-            
+
             var app = builder.Build();
             app.UseStaticFiles();
             var celebrities = app.MapGroup("/api/Celebrities");
             app.UseExceptionHandler("/Error");
-            celebrities.MapGet("/", (IRepository repo) => Results.Ok(repo.getAllCelebrities())); // все
-            celebrities.MapGet("/{id:int:min(1)}", (IRepository repo, int id) => // по айди
+
+            celebrities.MapGet("/", (IRepository repo) =>
             {
-                return Results.Ok(repo.getCelebrityById(id));
+                try
+                {
+                    return Results.Ok(repo.getAllCelebrities());
+                }
+                catch (Exception ex)
+                {
+                    throw new SaveException(ex.Message);
+                }
             });
-            celebrities.MapGet("/Lifeevents/{id:int:min(1)}", (IRepository repo, int id) => // по айди события
+
+            celebrities.MapGet("/{id:int:min(1)}", (IRepository repo, int id) =>
             {
-                var lifeevent = repo.GetCelebrityByLifeeventId(id);
-                return Results.Ok(lifeevent);
+                try
+                {
+                    var celebrity = repo.getCelebrityById(id);
+                    if (celebrity == null) throw new FoundByIdException($"Celebrity with id {id} not found.");
+                    return Results.Ok(celebrity);
+                }
+                catch (Exception ex)
+                {
+                    throw new FoundByIdException(ex.Message);
+                }
             });
+
+            celebrities.MapGet("/Lifeevents/{id:int:min(1)}", (IRepository repo, int id) =>
+            {
+                try
+                {
+                    var lifeevent = repo.GetCelebrityByLifeeventId(id);
+                    if (lifeevent == null) throw new FoundByIdException("Lifeevent not found.");
+                    return Results.Ok(lifeevent);
+                }
+                catch (Exception ex)
+                {
+                    throw new FoundByIdException(ex.Message);
+                }
+            });
+
             celebrities.MapDelete("/{id:int:min(1)}", (IRepository repo, int id) =>
             {
-                repo.delCelebrityById(id);
-                return Results.Ok();
+                try
+                {
+                    if (!repo.delCelebrityById(id)) throw new DeleteCelebrityException($"Delete error for id: {id}");
+                    return Results.Ok();
+                }
+                catch (Exception ex)
+                {
+                    throw new DeleteCelebrityException(ex.Message);
+                }
             });
+
             celebrities.MapPost("/", (IRepository repo, Celebrity celebrity) =>
             {
-                repo.addCelebrity(celebrity);
-                return Results.Ok(); 
+                try
+                {
+                    repo.addCelebrity(celebrity);
+                    return Results.Ok();
+                }
+                catch (Exception ex)
+                {
+                    throw new AddCelebrityException(ex.Message);
+                }
             });
+
             celebrities.MapPut("/{id:int:min(1)}", (IRepository repo, int id, Celebrity celebrity) =>
             {
-                repo.updCelebrity(id, celebrity);
-                return Results.Ok();
+                try
+                {
+                    repo.updCelebrity(id, celebrity);
+                    return Results.Ok();
+                }
+                catch (Exception ex)
+                {
+                    throw new UpdateCelebrityException(ex.Message);
+                }
             });
+
             celebrities.MapGet("/photo/{fname}", async (IOptions<CelebrityConfig> iconfig, HttpContext context, string fname) =>
             {
-                string photopath = iconfig.Value.PhotosFolder;
-                if(photopath== null)
+                try
                 {
-                    return Results.NotFound();
-                }
-                string filepath = Path.Combine(photopath, fname);
+                    string photopath = iconfig.Value.PhotosFolder;
+                    if (photopath == null) throw new Exception("Photo path is null.");
 
-                if (!File.Exists(filepath))
-                {
-                    return Results.NotFound();
+                    string filepath = Path.Combine(photopath, fname);
+                    if (!File.Exists(filepath)) throw new Exception($"File '{fname}' not found.");
+
+                    var filebytes = await File.ReadAllBytesAsync(filepath);
+                    var contentType = "image/jpg";
+                    return Results.File(filebytes, contentType, fname);
                 }
-                var filebytes = await File.ReadAllBytesAsync(filepath);
-                var contentType = "image/jpg";
-                return Results.File(filebytes, contentType, fname);
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
             });
 
             var lifeevents = app.MapGroup("/api/Lifeevents");
-            lifeevents.MapGet("/", (IRepository repo) => Results.Ok(repo.getAllLifeevents())); 
+            lifeevents.MapGet("/", (IRepository repo) =>
+            {
+                try
+                {
+                    return Results.Ok(repo.getAllLifeevents());
+                }
+                catch (Exception ex)
+                {
+                    throw new SaveException(ex.Message);
+                }
+            });
+
             lifeevents.MapGet("/{id:int:min(1)}", (IRepository repo, int id) =>
             {
-                var lifeevent = repo.getLifeeventById(id);
-                return Results.Ok(lifeevent);
+                try
+                {
+                    var lifeevent = repo.getLifeeventById(id);
+                    if (lifeevent == null) throw new FoundByIdException($"Lifeevent with id {id} not found.");
+                    return Results.Ok(lifeevent);
+                }
+                catch (Exception ex)
+                {
+                    throw new FoundByIdException(ex.Message);
+                }
             });
+
             lifeevents.MapGet("/Celebrities/{id:int:min(1)}", (IRepository repo, int id) =>
             {
-                var lifeeventsList = repo.GetLifeeventsByCelebrityId(id);
-                return Results.Ok(lifeeventsList);
+                try
+                {
+                    var lifeeventsList = repo.GetLifeeventsByCelebrityId(id);
+                    return Results.Ok(lifeeventsList);
+                }
+                catch (Exception ex)
+                {
+                    throw new FoundByIdException(ex.Message);
+                }
             });
+
             lifeevents.MapDelete("/{id:int:min(1)}", (IRepository repo, int id) =>
             {
-                repo.delLifeeventById(id);
-                return Results.Ok();
+                try
+                {
+                    if (!repo.delLifeeventById(id)) throw new DeleteCelebrityException($"Delete error for Lifeevent id: {id}");
+                    return Results.Ok();
+                }
+                catch (Exception ex)
+                {
+                    throw new DeleteCelebrityException(ex.Message);
+                }
             });
+
             lifeevents.MapPost("/", (IRepository repo, Lifeevent lifeevent) =>
             {
-                repo.addLifeevent(lifeevent);
-                return Results.Ok(); 
+                try
+                {
+                    repo.addLifeevent(lifeevent);
+                    return Results.Ok();
+                }
+                catch (Exception ex)
+                {
+                    throw new SaveException(ex.Message);
+                }
             });
+
             lifeevents.MapPut("/{id:int:min(1)}", (IRepository repo, int id, Lifeevent lifeevent) =>
             {
-                repo.updLifeevent(id, lifeevent);
-                return Results.Ok();
+                try
+                {
+                    repo.updLifeevent(id, lifeevent);
+                    return Results.Ok();
+                }
+                catch (Exception ex)
+                {
+                    throw new UpdateCelebrityException(ex.Message);
+                }
             });
+
             app.Map("/Error", (HttpContext ctx) =>
             {
                 Exception? ex = ctx.Features.Get<IExceptionHandlerFeature>()?.Error;
-                return Results.Ok(new { message = ex?.Message });
+                IResult rc = Results.Problem(detail: ex?.Message, instance: app.Environment.EnvironmentName, title: "aspa004", statusCode: 500);
+
+                if (ex != null)
+                {
+                    if (ex is UpdateCelebrityException) rc = Results.NotFound(ex.Message);
+                    if (ex is DeleteCelebrityException) rc = Results.NotFound(ex.Message);
+                    if (ex is FoundByIdException) rc = Results.NotFound(ex.Message);
+                    if (ex is BadHttpRequestException) rc = Results.BadRequest(ex.Message);
+                    if (ex is SaveException) rc = Results.Problem(title: "aspa004/savechanges", detail: ex.Message, instance: app.Environment.EnvironmentName, statusCode: 500);
+                    if (ex is AddCelebrityException) rc = Results.Problem(title: "aspa004/addcelebrity", detail: ex.Message, instance: app.Environment.EnvironmentName, statusCode: 500);
+                }
+                return rc;
             });
+
             app.Run();
         }
+    }
+
+    public class FoundByIdException : Exception
+    {
+        public FoundByIdException(string message) : base($"found by id: {message}") { }
+    }
+
+    public class SaveException : Exception
+    {
+        public SaveException(string message) : base($"savechanges error: {message}") { }
+    }
+
+    public class AddCelebrityException : Exception
+    {
+        public AddCelebrityException(string message) : base($"addcelebrityException error: {message}") { }
+    }
+
+    public class DeleteCelebrityException : Exception
+    {
+        public DeleteCelebrityException(string message) : base($"DeleteCelebrityException error: {message}") { }
+    }
+
+    public class UpdateCelebrityException : Exception
+    {
+        public UpdateCelebrityException(string message) : base($"UpdateCelebrityException error: {message}") { }
     }
 }

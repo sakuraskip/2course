@@ -27,6 +27,19 @@
     <sys:String x:Key="LoginTitle">Log in or register</sys:String>
  <sys:String x:Key="ChangeLanguage">Change Language</sys:String>
     <sys:String x:Key="UserName">Username</sys:String>
+    <!-- userpage-->
+    <sys:String x:Key="CancelButton">Cancel</sys:String>
+    <sys:String x:Key="BackToCatalogButton">Back to catalog</sys:String>
+    <sys:String x:Key="ChangeThemeButton">Change theme</sys:String>
+    <sys:String x:Key="FromString">From</sys:String>
+    <sys:String x:Key="ToString">To</sys:String>
+    <sys:String x:Key="RentNumber">Rent </sys:String>
+    <sys:String x:Key="PriceString">Price:</sys:String>
+    <sys:String x:Key="RentStatusActive">Active</sys:String>
+    <sys:String x:Key="RentStatusCompleted">Completed</sys:String>
+    <sys:String x:Key="RentStatusPending">Pending</sys:String>
+
+
 
 
 

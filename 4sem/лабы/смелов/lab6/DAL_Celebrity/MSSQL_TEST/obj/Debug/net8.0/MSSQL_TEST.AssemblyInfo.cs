@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MSSQL_TEST")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+50968269eed3776d52cbe795a043e9cb22d23825")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+92064db02d64c0d79be269c8c2c4eb438035dc45")]
 [assembly: System.Reflection.AssemblyProductAttribute("MSSQL_TEST")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MSSQL_TEST")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

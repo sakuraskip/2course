@@ -28,36 +28,7 @@ namespace lab4
           
         }
 
-        private void ChangeLanguageButton_Click(object sender, RoutedEventArgs e)
-        {
-            string test = Thread.CurrentThread.CurrentUICulture.ThreeLetterWindowsLanguageName;
-            if (Thread.CurrentThread.CurrentUICulture.ThreeLetterWindowsLanguageName == "ENU")
-            {
-                Thread.CurrentThread.CurrentCulture = new CultureInfo("ru");
-                Thread.CurrentThread.CurrentUICulture = new CultureInfo("ru");
-                Application.Current.Resources.MergedDictionaries.Clear();
-                Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary
-                {
-                    Source = new Uri("dictionary/strings.ru.xaml", UriKind.Relative)
-                });
-             
-               
-                
-            }
-            else if (Thread.CurrentThread.CurrentUICulture.ThreeLetterWindowsLanguageName == "RUS")
-            {
-                Thread.CurrentThread.CurrentCulture = new CultureInfo("en");
-                Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
-                Application.Current.Resources.MergedDictionaries.Clear();
-                Application.Current.Resources.MergedDictionaries.Add(new ResourceDictionary
-                {
-                    Source = new Uri("dictionary/strings.en.xaml", UriKind.Relative)
-                });
        
-            }
-            this.InitializeComponent();
-
-        }
 
         private void login_button(object sender, RoutedEventArgs e)
         {

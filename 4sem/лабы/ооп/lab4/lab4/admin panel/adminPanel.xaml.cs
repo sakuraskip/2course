@@ -19,13 +19,13 @@ namespace lab4
     /// </summary>
     public partial class adminPanel : Window
     {
-        List<Ship> adminShips;
+       ShipList adminShips  = new ShipList();
         public adminPanel(List<Ship> ships)
         {
             InitializeComponent();
             Cursor customCursor = new Cursor("C:\\Users\\леха\\Desktop\\2_aero_busy.ani");
             this.Cursor = customCursor;
-            adminShips = ships;
+            adminShips.ships = ships;
             ShipList.ItemsSource = ships;
         }
         public void EditButton_Click(object sender, RoutedEventArgs e)
@@ -37,23 +37,23 @@ namespace lab4
                 if(edit.ShowDialog() == true)
                 {
                     ShipList.ItemsSource = null;
-                    ShipList.ItemsSource = adminShips;
+                    ShipList.ItemsSource = adminShips.ships;
                 }
             }
         }
         public void DeleteButton_Click(object sender, RoutedEventArgs e)// cделать глобальное удаление плностью из файла
-        {
+        { //дать возможность undo и redo
             var button = sender as Button;
             if (button.DataContext != null)
             {
                adminShips.Remove(button.DataContext as Ship);
                 ShipList.ItemsSource = null;
-                ShipList.ItemsSource = adminShips;
+                ShipList.ItemsSource = adminShips.ships;
             }
         }
         public List<Ship> refreshShipList()
         {
-            return adminShips;
+            return adminShips.ships;
         }
 
     }
