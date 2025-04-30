@@ -4,9 +4,13 @@
   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
   xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
         xmlns:local="clr-namespace:lab4.userControls"
+        xmlns:vm="clr-namespace:lab4.ViewModels"
         mc:Ignorable="d"
          Background="{DynamicResource BackgroundColor}"
         Title="userpage" Height="600" Width="900">
+    <Window.DataContext>
+        <vm:UserPageViewModel/>
+    </Window.DataContext>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.3*"/>
@@ -18,14 +22,14 @@
         </Grid.RowDefinitions>
 
         <StackPanel   Margin="20" Grid.Row="0" Grid.RowSpan="2">
-            <Image Source="{Binding ProfilePicturePath}" x:Name="profileImage" Width="100" Height="100" Margin="0,10,0,10" />
+            <Image Source="{Binding OurUser.ProfilePicturePath}" x:Name="profileImage" Width="100" Height="100" Margin="0,10,0,10" />
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="0.1*"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock x:Name="usernameTextBlock" HorizontalAlignment="Center" Text="{Binding Username}" FontSize="14" FontWeight="Bold" Margin="0,0,0,30" />
-                <Button HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Height="15" Width="15" Margin="0,3,0,0" Click="editProfileClick">
+                <TextBlock x:Name="usernameTextBlock" HorizontalAlignment="Center" Text="{Binding OurUser.Username}" FontSize="14" FontWeight="Bold" Margin="0,0,0,30" />
+                <Button HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Height="15" Width="15" Margin="0,3,0,0" Command="{Binding EditProfileCommand}">
                     <Button.Background>
                         <ImageBrush ImageSource="C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\Resources\editIcon.jpg" TileMode="None"/>
                     </Button.Background>
@@ -34,10 +38,10 @@
           
          
         </StackPanel>
-        <Button Click="BackToCatalog" Content="{DynamicResource BackToCatalogButton}" Grid.Row="1" Height="30" Margin="20" VerticalAlignment="Top"></Button>
+        <Button Command="{Binding BackToCatalogCommand}" Content="{DynamicResource BackToCatalogButton}" Grid.Row="1" Height="30" Margin="20" VerticalAlignment="Top"></Button>
         <StackPanel Grid.Row="1"  Margin="20"  VerticalAlignment="Bottom">
-            <Button Content="{DynamicResource ChangeLanguage}" Height="30" Margin="0,0,0,20" Click="ChangeLanguage"/>
-            <Button Content="{DynamicResource ChangeThemeButton}" Height="30" Margin="0,0,0,10" Click="ChangeTheme"/>
+            <Button Content="{DynamicResource ChangeLanguage}" Height="30" Margin="0,0,0,20" Command="{Binding  ChangeLanguageCommand}"/>
+            <Button Content="{DynamicResource ChangeThemeButton}" Height="30" Margin="0,0,0,10" Command="{Binding  ChangeThemeCommand}"/>
         </StackPanel>
         <ScrollViewer Grid.RowSpan="2" Grid.Column="1" VerticalScrollBarVisibility="Auto">
             <StackPanel>
@@ -60,7 +64,7 @@
                         </StackPanel>
                         <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="3" Text="{DynamicResource RentStatusActive}" FontSize="16" />
                         <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="4" Text="{DynamicResource PriceString}" FontSize="16" />
-                        <Button HorizontalAlignment="Left" Grid.Column="5" Content="{DynamicResource CancelButton}" Width="80"  Height="30"/>
+                        <Button Command="{Binding CancelRentCommand}" HorizontalAlignment="Left" Grid.Column="5" Content="{DynamicResource CancelButton}" Width="80"  Height="30"/>
                     </Grid>
                 </Border>
             

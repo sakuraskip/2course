@@ -1,4 +1,5 @@
-﻿using System;
+﻿using lab4.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,33 +20,14 @@ namespace lab4
     /// </summary>
     public partial class editShipWindow : Window
     {
-        private Ship editShip;
-        public editShipWindow(Ship ship) //  сделать глобальное редактирование, с записью в файл
+        public ShipModel edited => (DataContext as EditShipViewModel).EditedShip;
+
+        public editShipWindow(ShipModel ship)
         {
             InitializeComponent();
-            this.editShip = ship;
-            NameTextBox.Text = ship.Name;
-            DescriptionTextBox.Text = ship.Description;
-            PriceTextBox.Text = ship.Price.ToString();
-
-            if(!string.IsNullOrEmpty(ship.Photopath))
-            {
-                ShipImage.Source = new BitmapImage(new Uri(ship.Photopath, UriKind.RelativeOrAbsolute));
-            }
-
-        }
-
-        private void SaveButton_Click(object sender, RoutedEventArgs e)
-        {
-            editShip.Name = NameTextBox.Text;
-            editShip.Description = DescriptionTextBox.Text;
-
-            if(int.TryParse(PriceTextBox.Text, out int price))
-            {
-                editShip.Price = price;
-            }
-            this.DialogResult = true;
-            this.Close();
+            var model = new EditShipViewModel(ship);
+            model.CloseAction = () => this.Close();
+            DataContext = model;
         }
     }
 }

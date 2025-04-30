@@ -4,10 +4,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
         xmlns:local="clr-namespace:lab4"
+        xmlns:vm="clr-namespace:lab4.ViewModels"
         mc:Ignorable="d" 
         d:DesignHeight="700" d:DesignWidth="900"         Background="{DynamicResource BackgroundColor}"
 
         Title="" Height="700" Width="900">
+    <Window.DataContext>
+        <vm:LoginViewModel/>
+    </Window.DataContext>
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -34,9 +38,9 @@
                 </Grid.RowDefinitions>
 
                 <TextBlock Grid.Row="0" Text="{DynamicResource UserName}" FontSize="30" Margin="0 20 0 20"></TextBlock>
-                <TextBox x:Name="username_text" Grid.Row="1" MinHeight="40" Margin="0 0 0 0" FontSize="20"></TextBox>
+                <TextBox Text="{Binding Username,UpdateSourceTrigger=PropertyChanged}" x:Name="username_text" Grid.Row="1" MinHeight="40" Margin="0 0 0 0" FontSize="20"></TextBox>
                 <TextBlock Grid.Row="2" Text="{DynamicResource Password}" FontSize="30"></TextBlock>
-                <TextBox x:Name="password_text" Grid.Row="3" MinHeight="40" Margin="0 20 0 50" FontSize="20" ></TextBox>
+                <TextBox Text="{Binding Password,UpdateSourceTrigger=PropertyChanged}" x:Name="password_text" Grid.Row="3" MinHeight="40" Margin="0 20 0 50" FontSize="20" ></TextBox>
 
                 <Grid Grid.Row="4">
                     <Grid.ColumnDefinitions>
@@ -44,8 +48,8 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
 
-                    <Button x:Name="registerbutton" Grid.Column="0" Content="{DynamicResource Register}" FontSize="25" VerticalAlignment="Bottom" Height="75" MinWidth="100" MaxWidth="200" HorizontalAlignment="Stretch" Margin="5" Click="login_button"/>
-                    <Button Grid.Column="1" Content="{DynamicResource Login}" FontSize="25" VerticalAlignment="Bottom" Height="75" MinWidth="100" MaxWidth="200" HorizontalAlignment="Stretch" Margin="5" Click="login_button"/>
+                    <Button Command="{Binding LoginCommand}" x:Name="registerbutton" Grid.Column="0" Content="{DynamicResource Register}" FontSize="25" VerticalAlignment="Bottom" Height="75" MinWidth="100" MaxWidth="200" HorizontalAlignment="Stretch" Margin="5" />
+                    <Button Command="{Binding LoginCommand}" Grid.Column="1" Content="{DynamicResource Login}" FontSize="25" VerticalAlignment="Bottom" Height="75" MinWidth="100" MaxWidth="200" HorizontalAlignment="Stretch" Margin="5" />
                 </Grid>
 
             </Grid>

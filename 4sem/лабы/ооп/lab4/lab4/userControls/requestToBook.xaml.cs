@@ -1,4 +1,5 @@
-﻿using System;
+﻿using lab4.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,20 +20,14 @@ namespace lab4.userControls
     /// </summary>
     public partial class requestToBook : Window
     {
-        public static readonly RoutedUICommand ConfirmCommand = new RoutedUICommand("Подтвердить", "ConfirmCommand", typeof(requestToBook));
         public requestToBook()
         {
             InitializeComponent();
-            CommandBindings.Add(new CommandBinding(ConfirmCommand, ConfirmButton_Executed));
+            var model = new RequestToBookViewModel();
+            model.CloseAction = () => this.Close();
+            DataContext = model;
         }
 
-        private async void ConfirmButton_Executed(object sender, ExecutedRoutedEventArgs e)
-        {
-            // Валидация полей
-            confirmbutton.Content = "Обработка...";
-            await Task.Delay(2000);
-            MessageBox.Show("Заявка принята");
-            this.Close();
-        }
+        
     }
 }

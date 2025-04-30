@@ -4,18 +4,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
         xmlns:local="clr-namespace:lab4"
+        xmlns:vm="clr-namespace:lab4.ViewModels"
         mc:Ignorable="d" 
         d:DesignHeight="600" d:DesignWidth="800"
         Height="600" Width="800"
                  Background="{DynamicResource BackgroundColor}"
 
         Title="ShipDetails">
+    <Window.DataContext>
+        <vm:ShipDetailsModel/>
+    </Window.DataContext>
     <Window.Resources>
         <DataTemplate x:Key="ShipTemplate">
             <StackPanel>
-                <Image Height="Auto" MaxHeight="400" Source="{Binding Photopath}" Stretch="Uniform"
+                <Image Height="Auto" MaxHeight="400" Source="{Binding Ship.ImagePath}" Stretch="Uniform"
                        HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="20"/>
-                <TextBlock x:Name="fart" Text="{Binding Description}" TextWrapping="Wrap" FontSize="24" Width="auto" MaxWidth="750" Margin="10"
+                <TextBlock x:Name="fart" Text="{Binding Ship.Description}" TextWrapping="Wrap" FontSize="24" Width="auto" MaxWidth="750" Margin="10"
                            HorizontalAlignment="Stretch"/>
             </StackPanel>
         </DataTemplate>
@@ -45,7 +49,7 @@
             </Grid.RowDefinitions>
             <TextBlock x:Name="price_textblock" Grid.Row="0" Text="{DynamicResource Price}" FontSize="24"/>
             <TextBlock x:Name="avaliable_textblock" Grid.Row="1" Text="{DynamicResource Availability}" FontSize="24"/>
-            <Button Grid.Column="1" Grid.RowSpan="2" MaxWidth="200" Height="50" Content="{DynamicResource SubmitRequest}" FontSize="24" HorizontalAlignment="Stretch" Click="rent_button"/>
+            <Button Grid.Column="1" Grid.RowSpan="2" MaxWidth="200" Height="50" Content="{DynamicResource SubmitRequest}" FontSize="24" HorizontalAlignment="Stretch" Command="{Binding RentCommand}"/>
         </Grid>
     </Grid>
 </Window>

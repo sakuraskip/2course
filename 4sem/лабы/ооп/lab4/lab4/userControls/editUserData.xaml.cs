@@ -12,7 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
+using lab4.ViewModels;
 namespace lab4.userControls
 {
     /// <summary>
@@ -20,53 +20,28 @@ namespace lab4.userControls
     /// </summary>
     public partial class editUserData : Window
     {
-        private User ourUser {  get; set; }
-        public string profilePicBuffer { get; set; }
-        public editUserData(User user,string profilepic)
+        public editUserData(UserModel user,string profilepic)
         {
             InitializeComponent();
-            this.ourUser = user;
-            DataContext = ourUser;
-            this.profilePicBuffer  = profilepic;
-        }
 
-        private void ProfileImage_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Title = "Выберите изображение";
-            openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
-            if (openFileDialog.ShowDialog() == true)
+            EditUserDataViewModel model = new EditUserDataViewModel(user,profilepic);
+            if(model.CloseAction==null)
             {
-                string sourcePath = openFileDialog.FileName;
-                this.profilePicBuffer = sourcePath;
-                ProfileImage.Source = new BitmapImage(new Uri(sourcePath));
+                model.CloseAction = new Action(() => this.Close());
             }
+            DataContext = model;
         }
-
-        private void CancelButton_Click(object sender, RoutedEventArgs e)
+        private void PasswordBox_PassChanged(object sender, RoutedEventArgs e)
         {
-            this.Close();
-        }
-        private void SaveButton_Click(object sender, RoutedEventArgs e)
-        {
-            Error_TextBlock.Text = "";
-            if (string.IsNullOrEmpty(NameTextBox.Text))
+            if(this.DataContext!=null)
             {
-                Error_TextBlock.Text = "Заполните логин корректно";
-                return;
+                ((EditUserDataViewModel)this.DataContext).PasswordBuffer = ((PasswordBox)sender).Password;
             }
-            if (PasswordBox.Password != ourUser.Password)
-            {
-                Error_TextBlock.Text = "Неверный пароль";
-                return;
-            }
-            ourUser.Username = NameTextBox.Text;
-           ourUser.ProfilePicturePath = profilePicBuffer;
-            this.Close();
-        }
-        public User returnUserData()
-        {
-            return ourUser;
         }
     }
+
+   
 }
+
+
+

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using lab4.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Collections.ObjectModel;
+
 
 namespace lab4
 {
@@ -19,42 +22,20 @@ namespace lab4
     /// </summary>
     public partial class adminPanel : Window
     {
-       ShipList adminShips  = new ShipList();
-        public adminPanel(List<Ship> ships)
+        public adminPanel(List<ShipModel> shipModels)
         {
             InitializeComponent();
+
             Cursor customCursor = new Cursor("C:\\Users\\леха\\Desktop\\2_aero_busy.ani");
             this.Cursor = customCursor;
-            adminShips.ships = ships;
-            ShipList.ItemsSource = ships;
-        }
-        public void EditButton_Click(object sender, RoutedEventArgs e)
-        {
-            var button = sender as Button;
-            if(button != null && button.DataContext != null)
-            {
-                editShipWindow edit = new editShipWindow(button.DataContext as Ship);
-                if(edit.ShowDialog() == true)
-                {
-                    ShipList.ItemsSource = null;
-                    ShipList.ItemsSource = adminShips.ships;
-                }
-            }
-        }
-        public void DeleteButton_Click(object sender, RoutedEventArgs e)// cделать глобальное удаление плностью из файла
-        { //дать возможность undo и redo
-            var button = sender as Button;
-            if (button.DataContext != null)
-            {
-               adminShips.Remove(button.DataContext as Ship);
-                ShipList.ItemsSource = null;
-                ShipList.ItemsSource = adminShips.ships;
-            }
-        }
-        public List<Ship> refreshShipList()
-        {
-            return adminShips.ships;
-        }
 
+            var model = new AdminPanelViewModel(shipModels);
+
+            DataContext = model;
+        }
+        public ObservableCollection<ShipModel> refreshShipList()
+        {
+            return (DataContext as AdminPanelViewModel).GetUpdatedShips();
+        }
     }
 }

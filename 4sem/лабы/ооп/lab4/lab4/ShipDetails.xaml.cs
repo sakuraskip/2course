@@ -1,4 +1,5 @@
-﻿using System;
+﻿using lab4.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,22 +21,21 @@ namespace lab4
     /// </summary>
     public partial class ShipDetails : Window
     {
-        public ShipDetails(Ship detailship)
+        public ShipDetails(ShipModel detailship)
         {
             InitializeComponent();
             Cursor customCursor = new Cursor("C:\\Users\\леха\\Desktop\\2_aero_busy.ani");
-            this.Cursor = customCursor;
-            DataContext = detailship;
-            
-            price_textblock.Text += detailship.Price;
-            price_textblock.Text.Append('$');
-            avaliable_textblock.Text += detailship.avaliable;
+            Cursor = customCursor;
+
+            ShipDetailsModel model = new ShipDetailsModel(detailship);
+            DataContext = model;
+            if(model.CloseAction == null)
+            {
+                model.CloseAction = new Action(()=>this.Close());
+            }
+           
         }
 
-        private void rent_button(object sender, RoutedEventArgs e)
-        {
-            lab4.userControls.requestToBook reqWindow = new userControls.requestToBook();
-            reqWindow.ShowDialog();
-        }
+       
     }
 }

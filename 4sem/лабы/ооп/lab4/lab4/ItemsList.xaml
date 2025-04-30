@@ -4,68 +4,61 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:lab4"
+        xmlns:vm="clr-namespace:lab4.ViewModels"
+        xmlns:control="clr-namespace:lab4.userControls"
+        xmlns:behaviors="http://schemas.microsoft.com/xaml/behaviors"
         mc:Ignorable="d"
-            Background="{DynamicResource BackgroundColor}"
-
+        Background="{DynamicResource BackgroundColor}"
         Title="" Height="700" Width="1000">
+
+    <Window.DataContext>
+        <vm:ItemsListViewModel/>
+    </Window.DataContext>
+
     <Window.Resources>
         <Style TargetType="Button" x:Key="AdminAddShipButtonStyle">
-            <Setter Property="Background"  Value="#007ACC"/>
+            <Setter Property="Background" Value="#007ACC"/>
             <Setter Property="Foreground" Value="White"/>
-            <Style.Triggers>
-                <MultiDataTrigger>
-                    <MultiDataTrigger.Conditions>
-                        <Condition Binding="{Binding Text, ElementName=filterName_textbox}" Value=""/>
-                        <Condition Binding="{Binding Text, ElementName=minPrice_textbox}" Value=""/>
-                        <Condition Binding="{Binding Text, ElementName=maxprice_textbox}" Value=""/>
-                    </MultiDataTrigger.Conditions>
-                    <Setter Property="Background" Value="LightSeaGreen"/>
-                    <Setter Property="Foreground" Value="White"/>
-                </MultiDataTrigger>
-            </Style.Triggers>
         </Style>
+        <local:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
     </Window.Resources>
-    <Window.CommandBindings>
-        <CommandBinding Command="{x:Static local:ItemsList.AddShipCommand}" Executed="addShip_Button"/>
-        <CommandBinding Command="{x:Static local:ItemsList.AdminPanelCommand}" Executed="AdminPanelButton_Click"/>
-    </Window.CommandBindings>
-    
-    <Grid x:Name="maingrid">
 
+    <Grid x:Name="maingrid">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0.25*" MinWidth="200"></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="0.25*" MinWidth="200"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
-            <RowDefinition Height="1*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-      
+        <control:HeaderPanel Grid.Column="0" Grid.ColumnSpan="2"/>
 
         <ScrollViewer Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" VerticalScrollBarVisibility="Auto">
-            <ItemsControl x:Name="shipsControl">
+            <ItemsControl ItemsSource="{Binding Ships}" x:Name="shipsControl">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
-                        <WrapPanel Orientation="Horizontal"></WrapPanel>
+                        <WrapPanel Orientation="Horizontal"/>
                     </ItemsPanelTemplate>
                 </ItemsControl.ItemsPanel>
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <Border BorderBrush="Blue" BorderThickness="1" CornerRadius="5" Margin="10" MouseLeftButtonDown="Border_MouseLeftButtonDown">
+                        <Border x:Name="eventborder" BorderBrush="Blue" BorderThickness="1" CornerRadius="5" Margin="10" >
+                            <Border.InputBindings>
+                                <MouseBinding MouseAction="LeftClick"
+                                              Command="{Binding DataContext.ShipDetailsCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                              CommandParameter="{Binding}"/>
+                            </Border.InputBindings>
                             <Grid MinWidth="200" Width="350" ShowGridLines="True">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition></ColumnDefinition>
-                                </Grid.ColumnDefinitions>
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="0.8*"></RowDefinition>
-                                    <RowDefinition></RowDefinition>
-                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition Height="0.8*"/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
                                 </Grid.RowDefinitions>
-                                <Image Source="{Binding Photopath}" Grid.Row="0" MaxWidth="700" MaxHeight="250" Stretch="UniformToFill" 
-                                       HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
-                                <TextBlock Text="{Binding Name}" FontSize="20" Grid.Row="1" HorizontalAlignment="Left" />
-                                <TextBlock Text="{Binding Price}" FontSize="20" Grid.Row="2" HorizontalAlignment="Left" />
+                                <Image Source="{Binding ImagePath}" Grid.Row="0" MaxWidth="700" MaxHeight="250" Stretch="UniformToFill"/>
+                                <TextBlock Text="{Binding Name}" FontSize="20" Grid.Row="1" HorizontalAlignment="Left"/>
+                                <TextBlock Text="{Binding Price}" FontSize="20" Grid.Row="2" HorizontalAlignment="Left"/>
                             </Grid>
                         </Border>
                     </DataTemplate>
@@ -73,22 +66,23 @@
             </ItemsControl>
         </ScrollViewer>
 
-        <Frame x:Name="MainFrame" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" />
+        <Frame x:Name="MainFrame" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
 
         <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center">
-            <Button x:Name="goToYachts" Content="{DynamicResource GoToYachts}" Height="50" Margin="0 50 0 50" FontSize="18"></Button>
+            <Button x:Name="goToYachts" Content="{DynamicResource GoToYachts}" Height="50" Margin="0 50 0 50" FontSize="18"/>
             <TextBlock Text="{DynamicResource SearchByName}" FontSize="20" Margin="0 0 0 10"/>
-            <TextBox x:Name="filterName_textbox" Height="30" FontSize="20" Margin="0 0 0 20" TextWrapping="Wrap" TextChanged="TextBox_TextChanged"></TextBox>
-            <TextBlock Text="{DynamicResource PriceRange}" FontSize="20" Margin="0 0 0 20"></TextBlock>
+            <TextBox x:Name="filterName_textbox" Height="30" FontSize="20" Margin="0 0 0 20" TextWrapping="Wrap" Text="{Binding FilterName, UpdateSourceTrigger=PropertyChanged}"/>
+            <TextBlock Text="{DynamicResource PriceRange}" FontSize="20" Margin="0 0 0 20"/>
             <StackPanel Orientation="Horizontal">
-                <TextBox x:Name="minPrice_textbox" Width="75" Height="30" HorizontalAlignment="Left" FontSize="20" TextChanged="TextBox_TextChanged_1"></TextBox>
-                <Separator MaxWidth="80" Width="40" Visibility="Hidden"></Separator>
-                <TextBox x:Name="maxprice_textbox" Width="75" Height="30" HorizontalAlignment="Right" FontSize="20" TextChanged="TextBox_TextChanged_1"></TextBox>
+                <TextBox Text="{Binding MinPrice, UpdateSourceTrigger=PropertyChanged}" x:Name="minPrice_textbox" Width="75" Height="30" FontSize="20"/>
+                <Separator MaxWidth="80" Width="40" Visibility="Hidden"/>
+                <TextBox Text="{Binding MaxPrice, UpdateSourceTrigger=PropertyChanged}" x:Name="maxprice_textbox" Width="75" Height="30" FontSize="20"/>
             </StackPanel>
         </StackPanel>
 
-        <Button x:Name="admin_addship" Style="{StaticResource AdminAddShipButtonStyle}" Grid.Row="2" Content="{DynamicResource AddShip}" Height="50" FontSize="18" VerticalAlignment="Bottom" Margin="0 0 0 170" Command="{x:Static local:ItemsList.AddShipCommand}"/>
-        <Button x:Name="admin_adminpanel" Grid.Row="2" Content="{DynamicResource AdminPanel}" Height="50" Command="{x:Static local:ItemsList.AdminPanelCommand}" FontSize="16" VerticalAlignment="Bottom" Margin="0 0 0 90"/>
-        <Button x:Name="usercabinet_button" Click="usercabinet_button_Click" Grid.Row="2" Height="50" FontSize="18" VerticalAlignment="Bottom"></Button>
+        <Button x:Name="admin_addship" Command="{Binding AddShipCommand}" Visibility="{Binding IsAdmin, Converter={StaticResource BoolToVisibilityConverter}}" Style="{StaticResource AdminAddShipButtonStyle}" Grid.Row="2" Content="{DynamicResource AddShip}" Height="50" FontSize="18" VerticalAlignment="Bottom" Margin="0 0 0 170"/>
+        <Button x:Name="admin_adminpanel" Command="{Binding AdminPanelCommand}" Visibility="{Binding IsAdmin, Converter={StaticResource BoolToVisibilityConverter}}" Grid.Row="2" Content="{DynamicResource AdminPanel}" Height="50" FontSize="16" VerticalAlignment="Bottom" Margin="0 0 0 90"/>
+        <!--<Button x:Name="usercabinet_button" Command="{Binding UserProfileCommand}" Grid.Row="2" Height="50" FontSize="18" Content="Личный кабинет" VerticalAlignment="Bottom"/>-->
+       <!-- удалить--> <Button x:Name="usercabinet_button" Command="vm:ItemsListViewModel.UserProfileCommand" Grid.Row="2" Height="50" FontSize="18" Content="Личный кабинет" VerticalAlignment="Bottom"/>
     </Grid>
 </Window>

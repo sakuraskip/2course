@@ -1,4 +1,5 @@
-﻿using System;
+﻿using lab4.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,37 +21,46 @@ namespace lab4.userControls
     /// </summary>
     public partial class HeaderPanel : UserControl
     {
-        ItemsList catalog {  get; set; }
-        User user { get; set; }
-        public HeaderPanel(ItemsList list,User user1)
+        public static readonly RoutedEvent CustomButtonClickEvent =
+            EventManager.RegisterRoutedEvent("CustomButtonClick", RoutingStrategy.Bubble, typeof(RoutedEventHandler), typeof(HeaderPanel));//удалить
+        public event RoutedEventHandler CustomButtonClick
+        {
+            add { AddHandler(CustomButtonClickEvent, value); }
+            remove { RemoveHandler(CustomButtonClickEvent, value); }
+        }//удалить
+        private void OnCustomButtonClick()
+        {
+            RoutedEventArgs args = new RoutedEventArgs(CustomButtonClickEvent);
+            RaiseEvent(args);
+        }//удалить
+        public static readonly RoutedEvent CustomButtonTunnelEvent =
+    EventManager.RegisterRoutedEvent("CustomButtonTunnel", RoutingStrategy.Tunnel, typeof(RoutedEventHandler), typeof(HeaderPanel));
+
+        public event RoutedEventHandler CustomButtonTunnel
+        {
+            add { AddHandler(CustomButtonTunnelEvent, value); }
+            remove { RemoveHandler(CustomButtonTunnelEvent, value); }
+        }
+
+        // Вызов туннелируемого события
+        private void OnCustomButtonTunnel()
+        {
+            RoutedEventArgs args = new RoutedEventArgs(CustomButtonTunnelEvent);
+            RaiseEvent(args); // Туннелирование события
+        }
+        private void CustomButton_Click(object sender, RoutedEventArgs e)
+        {
+            OnCustomButtonClick();
+            OnCustomButtonTunnel();
+        }//удадить
+        public HeaderPanel(ItemsListViewModel list,UserModel user1)
         {
             InitializeComponent();
-            catalog = list;
-            user = user1;
+            var model = new HeaderViewModel(list, user1);
+            DataContext = model;
         }
+        public HeaderPanel() { }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            catalog.Undo();
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            catalog.Redo();
-
-        }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
-        private void Button_Click_3(object sender, RoutedEventArgs e)
-        {
-            Window parent = Window.GetWindow(this);
-            userpage newwindow = new userpage(user);
-            parent.Close();
-            newwindow.Show();
-        }
+        
     }
 }
