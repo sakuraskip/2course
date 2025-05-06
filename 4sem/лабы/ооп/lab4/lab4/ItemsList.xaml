@@ -69,7 +69,7 @@
         <Frame x:Name="MainFrame" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
 
         <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center">
-            <Button x:Name="goToYachts" Content="{DynamicResource GoToYachts}" Height="50" Margin="0 50 0 50" FontSize="18"/>
+            <Button x:Name="goToYachts" Content="{DynamicResource GoToYachts}" Height="50" Margin="0 30 0 50" FontSize="18"/>
             <TextBlock Text="{DynamicResource SearchByName}" FontSize="20" Margin="0 0 0 10"/>
             <TextBox x:Name="filterName_textbox" Height="30" FontSize="20" Margin="0 0 0 20" TextWrapping="Wrap" Text="{Binding FilterName, UpdateSourceTrigger=PropertyChanged}"/>
             <TextBlock Text="{DynamicResource PriceRange}" FontSize="20" Margin="0 0 0 20"/>

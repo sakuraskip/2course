@@ -156,6 +156,7 @@ namespace lab4.ViewModels
             }
             var newShip = (addShipWindow.DataContext as AddShipWindowViewModel).NewShip;
             Ships.Add(newShip);
+            allships.Add(newShip);
             _addedShips.Push(newShip);
             _lastAction = "Add";
             _redoStack.Clear();
@@ -180,6 +181,7 @@ namespace lab4.ViewModels
 
         private void OpenShipDetails(ShipModel ship)
         {
+           
             if (ship != null)
             {
                 var shipDetails = new ShipDetails(ship);

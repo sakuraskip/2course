@@ -1,0 +1,7 @@
+{
+  "Celebrities": {
+    "PhotosRequestPath": "/Photos",
+    "PhotosFolder": "C:\\norus\\Photos\\",
+    "ConnectionString": "Data source = leksus\\SQLEXPRESS; Initial Catalog = Celebrities;TrustServerCertificate=Yes;Integrated Security=True;"
+  }
+}

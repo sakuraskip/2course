@@ -44,11 +44,11 @@ namespace lab4
 
         private void HeaderPanel_CustomButtonClick(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Custom button clicked!");
+            MessageBox.Show("Custom button clicked! direct");
         }
         private void HeaderPanel_CustomButtonTunnel(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Tunneling event received! (Tunnel Event)");
+            MessageBox.Show("Tunneling event sender: " + sender);
         }
         public void OpenUserProfile(object sender, ExecutedRoutedEventArgs e)//сменить на private
         {

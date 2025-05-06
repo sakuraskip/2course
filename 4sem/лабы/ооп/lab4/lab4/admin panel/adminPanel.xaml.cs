@@ -29,7 +29,7 @@ namespace lab4
             Cursor customCursor = new Cursor("C:\\Users\\леха\\Desktop\\2_aero_busy.ani");
             this.Cursor = customCursor;
 
-            var model = new AdminPanelViewModel(shipModels);
+            var model = new AdminPanelViewModel();
 
             DataContext = model;
         }

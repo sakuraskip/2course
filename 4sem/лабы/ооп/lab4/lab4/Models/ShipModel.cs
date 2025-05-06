@@ -21,9 +21,124 @@ namespace lab4
             Ship = ship;
         }
     }
-    public class Request
+    public class Request:INotifyPropertyChanged
     {
+        private int _id;
+        private int _shipId;
+        private int _userId;
+        private DateTime _startDate;
+        private DateTime _endDate;
+        private string _status;
+        private int _cost;
 
+        public Request(int id, int shipId, int userId, DateTime startDate, DateTime endDate, string status, int cost)
+        {
+            Id = id;
+            ShipId = shipId;
+            UserId = userId;
+            StartDate = startDate;
+            EndDate = endDate;
+            Status = status;
+            Cost = cost;
+         
+        }
+
+        public int Id
+        {
+            get => _id;
+            set
+            {
+                if (_id != value)
+                {
+                    _id = value;
+                    OnPropertyChanged(nameof(Id));
+                }
+            }
+        }
+
+        public int ShipId
+        {
+            get => _shipId;
+            set
+            {
+                if (_shipId != value)
+                {
+                    _shipId = value;
+                    OnPropertyChanged(nameof(ShipId));
+                }
+            }
+        }
+
+        public int UserId
+        {
+            get => _userId;
+            set
+            {
+                if (_userId != value)
+                {
+                    _userId = value;
+                    OnPropertyChanged(nameof(UserId));
+                }
+            }
+        }
+
+        public DateTime StartDate
+        {
+            get => _startDate;
+            set
+            {
+                if (_startDate != value)
+                {
+                    _startDate = value;
+                    OnPropertyChanged(nameof(StartDate));
+                }
+            }
+        }
+
+        public DateTime EndDate
+        {
+            get => _endDate;
+            set
+            {
+                if (_endDate != value)
+                {
+                    _endDate = value;
+                    OnPropertyChanged(nameof(EndDate));
+                }
+            }
+        }
+
+        public string Status
+        {
+            get => _status;
+            set
+            {
+                if (_status != value)
+                {
+                    _status = value;
+                    OnPropertyChanged(nameof(Status));
+                }
+            }
+        }
+
+        public int Cost
+        {
+            get => _cost;
+            set
+            {
+                if (_cost != value)
+                {
+                    _cost = value;
+                    OnPropertyChanged(nameof(Cost));
+                }
+            }
+        }
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
     public class ShipModel:INotifyPropertyChanged
     {

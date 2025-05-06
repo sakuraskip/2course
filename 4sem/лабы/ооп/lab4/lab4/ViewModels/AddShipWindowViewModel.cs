@@ -56,6 +56,7 @@ namespace lab4.ViewModels
         public ICommand SelectFileCommand { get; }
 
         public Action CloseAction { get; set; }
+
         public AddShipWindowViewModel(int shipListLength, string shipType)
         {
             _shipListLength = shipListLength;

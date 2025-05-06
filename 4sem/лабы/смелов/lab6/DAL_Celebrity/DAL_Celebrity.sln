@@ -11,6 +11,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSSQL_TEST", "MSSQL_TEST\MS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASPA006_1", "ASPA006_1\ASPA006_1.csproj", "{F65FDC7D-25D6-4804-B03A-E3614F80B42B}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab7", "..\..\lab7\lab7\lab7.csproj", "{2D331F40-52CE-4323-B9E2-6C02C46F78CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webApi_DLL", "webApi_DLL\webApi_DLL.csproj", "{701220F3-AAA8-47C8-B62F-33D77FFD5699}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{F65FDC7D-25D6-4804-B03A-E3614F80B42B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F65FDC7D-25D6-4804-B03A-E3614F80B42B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F65FDC7D-25D6-4804-B03A-E3614F80B42B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D331F40-52CE-4323-B9E2-6C02C46F78CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D331F40-52CE-4323-B9E2-6C02C46F78CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D331F40-52CE-4323-B9E2-6C02C46F78CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D331F40-52CE-4323-B9E2-6C02C46F78CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{701220F3-AAA8-47C8-B62F-33D77FFD5699}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{701220F3-AAA8-47C8-B62F-33D77FFD5699}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{701220F3-AAA8-47C8-B62F-33D77FFD5699}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{701220F3-AAA8-47C8-B62F-33D77FFD5699}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

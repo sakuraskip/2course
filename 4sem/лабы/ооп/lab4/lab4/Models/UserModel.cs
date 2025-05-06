@@ -14,7 +14,17 @@ namespace lab4
         private string username;
         private string password;
         private string profilePicturePath;
+        private int _id;
 
+        public int Id
+        {
+            get => _id;
+            set
+            {
+                _id = value;
+                OnPropertyChanged(nameof(Role));
+            }
+        }
         public string Role
         {
             get => role; 
@@ -61,7 +71,26 @@ namespace lab4
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-        public UserModel(string username,string password)
+        public UserModel(int id,string username,string password,string role = "user")
+        {
+            if (username == "admin" && password == "admin")
+            {
+                this.Id = id;
+                this.Role = "admin";
+                this.username = "admin";
+                this.password = "admin";
+            }
+            else
+            {
+                this.Id = id;
+                this.Role = role;
+                this.username = username;
+                this.password = password;
+            }
+
+            this.profilePicturePath = @"C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\Resources\defaultAvatar.jpg";
+        }
+        public UserModel(string username, string password, string role = "user")
         {
             if (username == "admin" && password == "admin")
             {
@@ -71,7 +100,7 @@ namespace lab4
             }
             else
             {
-                this.Role = "user";
+                this.Role = role;
                 this.username = username;
                 this.password = password;
             }

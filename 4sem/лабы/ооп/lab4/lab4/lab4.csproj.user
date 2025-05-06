@@ -13,7 +13,13 @@
     <Compile Update="admin panel\adminPanel.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="admin panel\EditRentalWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="admin panel\editShipWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="admin panel\EditUserWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="ItemsList.xaml.cs">
@@ -45,7 +51,13 @@
     <Page Update="admin panel\adminPanel.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="admin panel\EditRentalWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="admin panel\editShipWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="admin panel\EditUserWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ItemsList.xaml">
