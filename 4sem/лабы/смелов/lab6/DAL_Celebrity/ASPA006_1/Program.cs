@@ -19,10 +19,13 @@ namespace ASPA006_1
             builder.Services.Configure<CelebrityConfig>(builder.Configuration.GetSection("Celebrities"));
             builder.Services.AddScoped<IRepository, Repository>((IServiceProvider p) =>
             {
+
                 CelebrityConfig config = p.GetRequiredService<IOptions<CelebrityConfig>>().Value;
+                Console.WriteLine(p.GetRequiredService<IOptions<CelebrityConfig>>().Value);
+                Console.WriteLine("alo");
                 return new Repository(config.connectionString);
             });
-
+            
             var app = builder.Build();
             app.UseStaticFiles();
             var celebrities = app.MapGroup("/api/Celebrities");
@@ -77,7 +80,7 @@ namespace ASPA006_1
                 }
                 catch (Exception ex)
                 {
-                    throw new DeleteCelebrityException(ex.Message);
+                    return Results.NotFound(ex.Message);
                 }
             });
 

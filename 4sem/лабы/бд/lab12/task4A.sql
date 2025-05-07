@@ -8,6 +8,6 @@ begin transaction
  STUDENT where STUDENT.NAME like '%андрюха%';
 
  select @@spid,'update FACULTY' 'результат',FACULTY.FACULTY_NAME,
- FACULTY from FACULTY where FACULTY_NAME like '%авто%';
+ FACULTY from FACULTY where FACULTY_NAME like '%трак%';
  commit;
  -------------t2-------------

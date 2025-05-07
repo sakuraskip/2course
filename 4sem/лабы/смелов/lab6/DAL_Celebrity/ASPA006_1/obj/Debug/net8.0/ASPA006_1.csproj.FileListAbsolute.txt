@@ -87,3 +87,4 @@ C:\Users\леха\Desktop\2 курс\4sem\лабы\смелов\lab6\DAL_Celebri
 C:\Users\леха\Desktop\2 курс\4sem\лабы\смелов\lab6\DAL_Celebrity\ASPA006_1\obj\Debug\net8.0\ref\ASPA006_1.dll
 C:\Users\леха\Desktop\2 курс\4sem\лабы\смелов\lab6\DAL_Celebrity\ASPA006_1\bin\Debug\net8.0\RestSharp.dll
 C:\Users\леха\Desktop\2 курс\4sem\лабы\смелов\lab6\DAL_Celebrity\ASPA006_1\bin\Debug\net8.0\ASPA006_1.staticwebassets.runtime.json
+C:\Users\леха\Desktop\2 курс\4sem\лабы\смелов\lab6\DAL_Celebrity\ASPA006_1\bin\Debug\net8.0\libman.json

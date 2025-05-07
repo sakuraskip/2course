@@ -58,7 +58,7 @@ namespace _3DAL_Celebrity_MSSQL
         public Repository() { this.context = new Context(); }
         public Repository(string connectionstring) { this.context = new Context(connectionstring); }
         public static IRepository Create() { return new Repository(); }
-        public static IRepository Create(string connectstring) { return new Repository(connectstring); }
+        public static IRepository Create(string connectstring) { Console.WriteLine(connectstring + "ada"); return new Repository(connectstring); }
         public bool addCelebrity(Celebrity celebrity)
         {
 
