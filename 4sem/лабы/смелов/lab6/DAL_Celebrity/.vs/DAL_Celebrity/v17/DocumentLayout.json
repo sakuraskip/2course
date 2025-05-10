@@ -63,7 +63,7 @@
               "RelativeDocumentMoniker": "ASPA006_1\\app.http",
               "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u0441\u043C\u0435\u043B\u043E\u0432\\lab6\\DAL_Celebrity\\ASPA006_1\\app.http",
               "RelativeToolTip": "ASPA006_1\\app.http",
-              "ViewState": "AQIAACkAAAAAAAAAAADwvwAAAAAAAAAA",
+              "ViewState": "AQIAACkAAAAAAAAAAAAwwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
               "WhenOpened": "2025-05-07T13:46:30.375Z",
               "EditorCaption": ""
@@ -90,8 +90,7 @@
               "RelativeToolTip": "ASPA006_1\\Program.cs",
               "ViewState": "AQIAALUAAAAAAAAAAAAuwMIAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T23:33:36.357Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-05T23:33:36.357Z"
             },
             {
               "$type": "Document",
@@ -103,8 +102,7 @@
               "RelativeToolTip": "DAL_Celebrity\\Class1.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAAA9wBAAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T23:33:32.049Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-05T23:33:32.049Z"
             },
             {
               "$type": "Document",
@@ -116,8 +114,7 @@
               "RelativeToolTip": "3DAL_Celebrity_MSSQL\\Class1.cs",
               "ViewState": "AQIAADAAAAAAAAAAAAAmwDcAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T23:32:57.815Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-05T23:32:57.815Z"
             },
             {
               "$type": "Document",
@@ -141,8 +138,7 @@
               "RelativeToolTip": "webApi_DLL\\Celebrities.config.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-05T22:43:51.998Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-05T22:43:51.998Z"
             },
             {
               "$type": "Document",
@@ -154,8 +150,7 @@
               "RelativeToolTip": "webApi_DLL\\CelebritiesConfig.cs",
               "ViewState": "AQIAABMAAAAAAAAAAAAzwBYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T22:11:25.456Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-05T22:11:25.456Z"
             },
             {
               "$type": "Document",

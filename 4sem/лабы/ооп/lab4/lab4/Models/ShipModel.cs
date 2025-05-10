@@ -149,7 +149,13 @@ namespace lab4
         private string _shipType;
         private int _price;
         private string _availability;
+        private double _rating;
 
+        public double Rating
+        {
+            get => _rating;
+            set { _rating = value; OnPropertyChanged(); }
+        }
         public int Id
         {
             get => _id;

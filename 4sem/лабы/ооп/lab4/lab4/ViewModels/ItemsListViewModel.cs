@@ -184,7 +184,7 @@ namespace lab4.ViewModels
            
             if (ship != null)
             {
-                var shipDetails = new ShipDetails(ship);
+                var shipDetails = new ShipDetails(ship,_currentUser);
                 shipDetails.ShowDialog();
             }
 

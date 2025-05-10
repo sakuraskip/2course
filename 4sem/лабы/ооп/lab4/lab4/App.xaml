@@ -11,9 +11,10 @@
                 <ResourceDictionary Source="dictionary/strings.en.xaml"/>
                 <ResourceDictionary Source="dictionary/strings.ru.xaml"/>
                 <ResourceDictionary Source="themes/WhiteTheme.xaml"/>
-
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                
             </ResourceDictionary.MergedDictionaries>
-           
+            <local:RatingConverter x:Key="RatingConverter"/>
         </ResourceDictionary>
         
     </Application.Resources>

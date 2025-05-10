@@ -11,3 +11,118 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.taskContainer {
+  border:0px;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  width:500px;
+  background: lightpink;
+  border-radius: 8px;
+}
+
+.aaa {
+  text-align: center;
+  color: whitesmoke;
+}
+
+.taskName {
+  width: 79%;
+  display: flex;
+  margin: auto;
+  margin-bottom: 4%;
+  height: 30px;
+  border: 0px;
+  border-radius: 3px;
+}
+
+.buttonAdd {
+  width: 80%;
+  border: 0;
+  padding: 2%;
+  border-radius: 3px;
+  background: whitesmoke;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  margin: auto;
+  margin-bottom: 4%;
+  text-align: center; 
+  color: lightpink;
+}
+
+.buttonSave {
+  width: 80%;
+  border: 0;
+  padding: 2%;
+  border-radius: 3px;
+  background: whitesmoke;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  margin: auto;
+  margin-bottom: 4%;
+  text-align: center; 
+  color: lightpink;
+}
+
+.taskList {
+  margin: auto;
+  width: 80%;
+  list-style-type: none;
+  padding-left:0;
+  margin-bottom: 4%;
+}
+.taskList li {
+  list-style-type: none;
+  
+}
+
+.taskText {
+  border:0px;
+display: flex;
+flex-direction: row;
+justify-content: space-between; 
+align-items: center; 
+background-color: whitesmoke;
+border-radius: 3px;
+margin-bottom: 2%;
+color: pink;
+height:50px;
+padding: 5px 10px 5px 10px;
+max-width: 400px;
+word-wrap: break-word;
+}
+.buttonEdit{
+  height:90%;
+  display: flex;
+  border: 0;
+  padding: 2%;
+  border-radius: 3px;
+  background: lightpink;
+  display: flex;
+  text-align: center; 
+  color:white;
+  font-style:italic;
+  font-size: 16px;
+}
+.buttonDelete
+{
+    height:90%;
+    display: flex;
+    border: 0;
+    padding: 2%;
+    border-radius: 3px;
+    background: lightpink;
+    display: flex;
+    text-align: center; 
+    color:white;
+    font-style:italic;
+    font-size: 16px;
+  
+}
+
+.undoredo button{
+  margin: 2%;
+}

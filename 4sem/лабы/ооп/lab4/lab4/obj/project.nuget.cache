@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "14NJ1dKyMfg=",
+  "dgSpecHash": "+OIOL+vIvYw=",
   "success": true,
   "projectFilePath": "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\ооп\\lab4\\lab4\\lab4.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\леха\\.nuget\\packages\\materialdesigncolors\\5.2.2-ci991\\materialdesigncolors.5.2.2-ci991.nupkg.sha512",
+    "C:\\Users\\леха\\.nuget\\packages\\materialdesignthemes\\5.2.2-ci991\\materialdesignthemes.5.2.2-ci991.nupkg.sha512",
     "C:\\Users\\леха\\.nuget\\packages\\microsoft.entityframeworkcore\\9.0.4\\microsoft.entityframeworkcore.9.0.4.nupkg.sha512",
     "C:\\Users\\леха\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\9.0.4\\microsoft.entityframeworkcore.abstractions.9.0.4.nupkg.sha512",
     "C:\\Users\\леха\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\9.0.4\\microsoft.entityframeworkcore.analyzers.9.0.4.nupkg.sha512",

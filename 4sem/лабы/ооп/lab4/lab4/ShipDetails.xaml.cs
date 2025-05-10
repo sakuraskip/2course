@@ -21,13 +21,13 @@ namespace lab4
     /// </summary>
     public partial class ShipDetails : Window
     {
-        public ShipDetails(ShipModel detailship)
+        public ShipDetails(ShipModel detailship,UserModel user)
         {
             InitializeComponent();
             Cursor customCursor = new Cursor("C:\\Users\\леха\\Desktop\\2_aero_busy.ani");
             Cursor = customCursor;
 
-            ShipDetailsModel model = new ShipDetailsModel(detailship);
+            ShipDetailsModel model = new ShipDetailsModel(detailship,user);
             DataContext = model;
             if(model.CloseAction == null)
             {

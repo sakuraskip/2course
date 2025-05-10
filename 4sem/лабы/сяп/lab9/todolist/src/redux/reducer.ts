@@ -1,4 +1,3 @@
-// reducers/todoReducer.js
 
 import { ADD_TASK, TOGGLE_TASK, EDIT_TASK, DELETE_TASK } from "./actions";
 
@@ -29,7 +28,7 @@ const todoReducer = (state = initialState, action:any): Istate => {
         case TOGGLE_TASK: {
             const updatedTasklist: task[] = [];
             state.tasklist.forEach(task => {
-                if (task.id === action.payload) {
+                if (task.id === action.info) {
                     updatedTasklist.push({ ...task, completed: !task.completed });
                 } else {
                     updatedTasklist.push(task);
@@ -44,8 +43,9 @@ const todoReducer = (state = initialState, action:any): Istate => {
         case EDIT_TASK: {
             const updatedTasklist: task[] = [];
             state.tasklist.forEach(task => {
-                if (task.id === action.payload.id) {
-                    updatedTasklist.push({ ...task, text: action.payload.text });
+                if (task.id === action.info.id) {
+                    updatedTasklist.push({ ...task, text: action.info.task });
+                    console.log(action);
                 } else {
                     updatedTasklist.push(task);
                 }
@@ -57,7 +57,7 @@ const todoReducer = (state = initialState, action:any): Istate => {
         }
 
         case DELETE_TASK: {
-            const updatedTasklist = state.tasklist.filter(task => task.id !== action.payload);
+            const updatedTasklist = state.tasklist.filter(task => task.id !== action.info);
             return {
                 ...state,
                 tasklist: updatedTasklist,

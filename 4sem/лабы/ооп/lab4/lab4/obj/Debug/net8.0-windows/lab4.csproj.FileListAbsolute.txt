@@ -1,13 +1,15 @@
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\lab4.csproj.AssemblyReference.cache
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\dictionary\strings.en.baml
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\dictionary\strings.ru.baml
-C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\userControls\header.baml
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\admin panel\AddShipWindow.g.cs
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\admin panel\adminPanel.g.cs
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\admin panel\EditRentalWindow.g.cs
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\admin panel\editShipWindow.g.cs
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\admin panel\EditUserWindow.g.cs
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\ItemsList.g.cs
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\loginpage.g.cs
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\ShipDetails.g.cs
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\userControls\AddReviewWindow.g.cs
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\userControls\editUserData.g.cs
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\userControls\header.g.cs
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\userControls\requestToBook.g.cs
@@ -23,15 +25,39 @@ C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\bin\Debug\ne
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\bin\Debug\net8.0-windows\lab4.runtimeconfig.json
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\bin\Debug\net8.0-windows\lab4.dll
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\bin\Debug\net8.0-windows\lab4.pdb
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\bin\Debug\net8.0-windows\MaterialDesignColors.dll
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\bin\Debug\net8.0-windows\MaterialDesignThemes.Wpf.dll
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.dll
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.dll
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\bin\Debug\net8.0-windows\Microsoft.Xaml.Behaviors.dll
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\bin\Debug\net8.0-windows\System.Data.SqlClient.dll
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\bin\Debug\net8.0-windows\System.Diagnostics.DiagnosticSource.dll
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\bin\Debug\net8.0-windows\runtimes\unix\lib\net8.0\System.Data.SqlClient.dll
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Data.SqlClient.dll
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\App.baml
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\admin panel\AddShipWindow.baml
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\admin panel\adminPanel.baml
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\admin panel\EditRentalWindow.baml
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\admin panel\editShipWindow.baml
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\admin panel\EditUserWindow.baml
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\ItemsList.baml
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\loginpage.baml
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\ShipDetails.baml
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\userControls\AddReviewWindow.baml
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\userControls\editUserData.baml
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\userControls\header.baml
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\userControls\requestToBook.baml
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\userControls\userpage.baml
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\lab4.g.resources
@@ -46,14 +72,3 @@ C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\ne
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\lab4.pdb
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\lab4.genruntimeconfig.cache
 C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\ref\lab4.dll
-C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\bin\Debug\net8.0-windows\Microsoft.Xaml.Behaviors.dll
-C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\bin\Debug\net8.0-windows\System.Data.SqlClient.dll
-C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
-C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
-C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
-C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\bin\Debug\net8.0-windows\runtimes\unix\lib\net8.0\System.Data.SqlClient.dll
-C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Data.SqlClient.dll
-C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\admin panel\EditRentalWindow.g.cs
-C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\admin panel\EditUserWindow.g.cs
-C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\admin panel\EditRentalWindow.baml
-C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\net8.0-windows\admin panel\EditUserWindow.baml

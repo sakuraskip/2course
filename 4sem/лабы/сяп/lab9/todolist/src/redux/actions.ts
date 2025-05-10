@@ -12,7 +12,7 @@ export const toggleTask = (id:number)=>
 {
     return {type:TOGGLE_TASK,info:id}
 }
-export const editTask = (task:string,id:number)=>
+export const editTask = (id:number,task:string)=>
 {
     return {type:EDIT_TASK,info:{task,id}}
 }

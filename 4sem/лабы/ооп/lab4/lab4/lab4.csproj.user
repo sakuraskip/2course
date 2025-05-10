@@ -31,6 +31,9 @@
     <Compile Update="ShipDetails.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="userControls\AddReviewWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="userControls\editUserData.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -67,6 +70,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ShipDetails.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="userControls\AddReviewWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="userControls\editUserData.xaml">

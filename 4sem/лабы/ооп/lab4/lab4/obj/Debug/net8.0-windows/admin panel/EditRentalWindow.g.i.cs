@@ -54,7 +54,7 @@ namespace lab4.admin_panel {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/lab4;V1.0.0.0;component/admin%20panel/editrentalwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/lab4;component/admin%20panel/editrentalwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\admin panel\EditRentalWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

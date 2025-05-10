@@ -22,6 +22,22 @@ namespace lab4
             throw new NotImplementedException();
         }
     }
+    public class RatingConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            if (value is int rating)
+                return rating - 1; 
+            return 2; 
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            if (value is int index)
+                return index + 1; 
+            return 3; 
+        }
+    }
     public static class Funcs
     {
         public static string ChangeTheme(string theme)

@@ -3,53 +3,159 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:m ="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:lab4"
         xmlns:vm="clr-namespace:lab4.ViewModels"
         mc:Ignorable="d" 
-        d:DesignHeight="600" d:DesignWidth="800"
-        Height="600" Width="800"
-                 Background="{DynamicResource BackgroundColor}"
+        d:DesignHeight="800" d:DesignWidth="900"
+        Height="800" Width="900"
+        Background="{DynamicResource BackgroundColor}"
+        Title="Ship Details"
+        WindowStartupLocation="CenterScreen">
 
-        Title="ShipDetails">
     <Window.DataContext>
         <vm:ShipDetailsModel/>
     </Window.DataContext>
+
     <Window.Resources>
         <DataTemplate x:Key="ShipTemplate">
             <StackPanel>
-                <Image Height="Auto" MaxHeight="400" Source="{Binding Ship.ImagePath}" Stretch="Uniform"
-                       HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="20"/>
-                <TextBlock x:Name="fart" Text="{Binding Ship.Description}" TextWrapping="Wrap" FontSize="24" Width="auto" MaxWidth="750" Margin="10"
-                           HorizontalAlignment="Stretch"/>
+                <Border CornerRadius="10" Background="White" Margin="20,10" 
+                        Padding="5" BorderBrush="#DDDDDD" BorderThickness="1">
+                    <Image Height="Auto" MaxHeight="300" Source="{Binding Ship.ImagePath}" 
+                           Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                </Border>
+
+                <TextBlock Text="{Binding Ship.Description}" TextWrapping="Wrap" 
+                           FontSize="18" MaxWidth="800" Margin="20,10"
+                           TextAlignment="Justify" LineHeight="26"/>
             </StackPanel>
         </DataTemplate>
+
+        <DataTemplate x:Key="ReviewTemplate">
+            <Border CornerRadius="8" Background="#FFF5F5F5" Margin="0,5" Padding="10"
+                    BorderBrush="#EEEEEE" BorderThickness="1">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                        <TextBlock Text="{Binding Username}" FontWeight="Bold" FontSize="16"/>
+                        <StackPanel Orientation="Horizontal" Margin="10,0,0,0">
+                            <TextBlock Text="{Binding Rating}" FontSize="16" FontWeight="SemiBold"
+                               Foreground="#FF9800"/>
+                            <Path Data="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+                          Fill="#FF9800" Stretch="Uniform" Width="16" Height="16" Margin="5,0,0,0"
+                          ToolTip="Рейтинг"/>
+                        </StackPanel>
+                    </StackPanel>
+                    <TextBlock Text="{Binding Comment}" TextWrapping="Wrap" Margin="0,5,0,0"
+                              FontSize="14"/>
+                </StackPanel>
+            </Border>
+        </DataTemplate>
+
+
+        <Style TargetType="TextBlock">
+         
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
 
        
     </Window.Resources>
 
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="0.3*"/>
-            <RowDefinition Height="0.25*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Grid.Row="0" Grid.RowSpan="2">
+        <TextBlock Grid.Row="0" Text="{Binding Ship.Name}" FontSize="23" FontWeight="Bold"
+                   HorizontalAlignment="Center" Foreground="#333333" VerticalAlignment="Top"/>
+
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Padding="0,0,5,0">
             <ContentControl Content="{Binding}" ContentTemplate="{StaticResource ShipTemplate}"/>
         </ScrollViewer>
 
-        <Grid Grid.Row="2" Background="LightGray">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="0.9*"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <TextBlock x:Name="price_textblock" Grid.Row="0" Text="{DynamicResource Price}" FontSize="24"/>
-            <TextBlock x:Name="avaliable_textblock" Grid.Row="1" Text="{DynamicResource Availability}" FontSize="24"/>
-            <Button Grid.Column="1" Grid.RowSpan="2" MaxWidth="200" Height="50" Content="{DynamicResource SubmitRequest}" FontSize="24" HorizontalAlignment="Stretch" Command="{Binding RentCommand}"/>
-        </Grid>
+        <Border Grid.Row="2" Background="#F8F9FA" CornerRadius="8" Margin="20,10" Padding="15"
+                BorderBrush="#E0E0E0" BorderThickness="1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" Orientation="Horizontal">
+                    <Path Data="M12,2L15.09,8.26L22,9.27L17,14.14L18.18,21.02L12,17.77L5.82,21.02L7,14.14L2,9.27L8.91,8.26L12,2Z" 
+                          Fill="#FFC107" Stretch="Uniform" Width="20" Height="20" Margin="0,0,5,0"/>
+                    <TextBlock Text="{Binding AverageRating, StringFormat={}{0:F2}}" FontSize="18"/>
+                    <TextBlock Text="/5" FontSize="18" Foreground="#666666" Margin="2,0,0,0"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Orientation="Horizontal">
+                    <Path Data="M12,3L2,12H5V20H11V14H13V20H19V12H22L12,3Z" 
+                          Fill="#4285F4" Stretch="Uniform" Width="20" Height="20" Margin="0,0,5,0"/>
+                    <TextBlock Text="{Binding Ship.ShipType}" FontSize="18"/>
+                </StackPanel>
+
+               
+            </Grid>
+        </Border>
+
+        <Border Grid.Row="3" Background="White" Margin="20,0" CornerRadius="8"
+                BorderBrush="#E0E0E0" BorderThickness="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Stretch">
+                    <TextBlock Text="Отзывы" FontSize="20" FontWeight="Bold" 
+                           Margin="15,10" Foreground="#333333"/>
+                   
+                </StackPanel>
+                <Button Grid.Column="2" Content="Добавить отзыв" 
+         Command="{Binding OpenAddReviewCommand}"
+                        Width="150" HorizontalAlignment="Right" FontSize="16"
+       />
+
+                <ScrollViewer Grid.ColumnSpan="2" Grid.Row="1" VerticalScrollBarVisibility="Auto" Padding="15,0,15,15">
+                    <ItemsControl ItemsSource="{Binding Reviews}" 
+                                 ItemTemplate="{StaticResource ReviewTemplate}">
+                        <ItemsControl.ItemContainerStyle>
+                            <Style TargetType="ContentPresenter">
+                                <Setter Property="Margin" Value="0,0,0,10"/>
+                            </Style>
+                        </ItemsControl.ItemContainerStyle>
+                    </ItemsControl>
+                </ScrollViewer>
+            </Grid>
+        </Border>
+
+        
+        <Border Grid.Row="4" Background="#F1F3F4" Padding="20">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="{Binding Ship.Price, StringFormat='Цена: {0:C}'}" 
+                               FontSize="20" FontWeight="SemiBold"/>
+                    <TextBlock Text="{Binding Ship.Availability, StringFormat='Доступность: {0}'}" 
+                               FontSize="18" Foreground="#666666"/>
+                </StackPanel>
+
+                <Button Grid.Column="1" Content="Забронировать" 
+                        Command="{Binding RentCommand}" Width="200" Height="50"
+                        HorizontalAlignment="Right" FontSize="18"/>
+            </Grid>
+        </Border>
     </Grid>
 </Window>
