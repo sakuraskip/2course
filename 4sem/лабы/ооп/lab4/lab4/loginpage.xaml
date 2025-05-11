@@ -38,7 +38,7 @@
                 </Grid.RowDefinitions>
 
                 <TextBlock Grid.Row="0" Text="{DynamicResource UserName}" FontSize="30" Margin="0 20 0 20"></TextBlock>
-                <TextBox Text="{Binding Username,UpdateSourceTrigger=PropertyChanged}" x:Name="username_text" Grid.Row="1" MinHeight="40" Margin="0 0 0 0" FontSize="20"></TextBox>
+                <TextBox Text="{Binding Login,UpdateSourceTrigger=PropertyChanged}" x:Name="username_text" Grid.Row="1" MinHeight="40" Margin="0 0 0 0" FontSize="20"></TextBox>
                 <TextBlock Grid.Row="2" Text="{DynamicResource Password}" FontSize="30"></TextBlock>
                 <TextBox Text="{Binding Password,UpdateSourceTrigger=PropertyChanged}" x:Name="password_text" Grid.Row="3" MinHeight="40" Margin="0 20 0 50" FontSize="20" ></TextBox>
 
@@ -48,7 +48,7 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
 
-                    <Button Command="{Binding LoginCommand}" x:Name="registerbutton" Grid.Column="0" Content="{DynamicResource Register}" FontSize="25" VerticalAlignment="Bottom" Height="75" MinWidth="100" MaxWidth="200" HorizontalAlignment="Stretch" Margin="5" />
+                    <Button Command="{Binding RegisterCommand}" x:Name="registerbutton" Grid.Column="0" Content="{DynamicResource Register}" FontSize="25" VerticalAlignment="Bottom" Height="75" MinWidth="100" MaxWidth="200" HorizontalAlignment="Stretch" Margin="5" />
                     <Button Command="{Binding LoginCommand}" Grid.Column="1" Content="{DynamicResource Login}" FontSize="25" VerticalAlignment="Bottom" Height="75" MinWidth="100" MaxWidth="200" HorizontalAlignment="Stretch" Margin="5" />
                 </Grid>
 

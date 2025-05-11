@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
-
+using lab4.userControls;
 namespace lab4.ViewModels
 {
     public class ShipDetailsModel:INotifyPropertyChanged
@@ -20,6 +20,8 @@ namespace lab4.ViewModels
         private ObservableCollection<Review> _reviews;
         private double _averageRating;
         private UserModel _user;
+
+
 
         public ShipModel Ship
         {
@@ -73,7 +75,7 @@ namespace lab4.ViewModels
         public ICommand CloseCommand { get; }
         public ICommand OpenAddReviewCommand { get; }
 
-        public ShipDetailsModel(ShipModel ship,UserModel user)
+        public ShipDetailsModel(ShipModel ship,UserModel user,ObservableCollection<Review> reviews)
         {
             Ship = ship;
             _user = user;
@@ -81,7 +83,7 @@ namespace lab4.ViewModels
             CloseCommand = new RelayCommand(CloseAction);
             Reviews = new ObservableCollection<Review>();
             OpenAddReviewCommand = new RelayCommand(AddReview);
-            LoadReviews();
+            LoadReviews(reviews);
           
         }
         public ShipDetailsModel()
@@ -103,41 +105,28 @@ namespace lab4.ViewModels
 
             AverageRating = Reviews.Average(r => r.Rating);
         }
-        private void LoadReviews()
+        private void LoadReviews(ObservableCollection<Review>  reviews)
         {
-          
-            Reviews.Add(new Review
-            {
-                Id = 1,
-                UserId = 101,
-                Username = "Alex Johnson",
-                Comment = "Great ship with amazing facilities! The crew was very professional.",
-                Rating = 5,
-                
-            });
-
-            Reviews.Add(new Review
-            {
-                Id = 2,
-                UserId = 102,
-                Username = "Maria Smith",
-                Comment = "Good experience overall, but the food could be better.",
-                Rating = 4,
-            });
+            var filteredReviews = reviews.Where(r => r.ShipId == _ship.Id);
+            Reviews = new ObservableCollection<Review>(filteredReviews);
 
             CalculateAverageRating();
         }
         private void AddReview()
         {
            
-            var addReviewWindow = new userControls.AddReviewWindow(_user);
+            var addReviewWindow = new AddReviewWindow(_user,Ship);
             addReviewWindow.ShowDialog();
             
-                Review newReview = (addReviewWindow.DataContext as AddReviewViewModel).GetReview();
+                Review? newReview = (addReviewWindow.DataContext as AddReviewViewModel).GetReview();
+            if(newReview!=null)
+            {
                 newReview.Id = Reviews.Count + 1;
                 newReview.ShipId = _ship.Id;
-               Reviews.Add(newReview);
+                Reviews.Add(newReview);
                 CalculateAverageRating();
+            }
+                
             
         }
         private void Rent()

@@ -19,12 +19,16 @@ namespace lab4.userControls
     /// </summary>
     public partial class AddReviewWindow : Window
     {
-        public AddReviewWindow(UserModel user)
+        public AddReviewWindow(UserModel user,ShipModel ship)
         {
             InitializeComponent();
-            var model = new ViewModels.AddReviewViewModel(user);
-            model.CloseAction = new Action(() => this.Close());
+            var model = new AddReviewViewModel(user,ship);
             DataContext = model;
+            if (model.CloseAction == null)
+            {
+                model.CloseAction = new Action(() => this.Close());
+            }
+            
         }
     }
 }

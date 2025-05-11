@@ -14,6 +14,7 @@ namespace lab4
         private string username;
         private string password;
         private string profilePicturePath;
+        private string login;
         private int _id;
 
         public int Id
@@ -32,6 +33,15 @@ namespace lab4
             {
                 role = value;
                 OnPropertyChanged(nameof(Role));
+            }
+        }
+        public string Login
+        {
+            get => login;
+            set
+            {
+                login = value;
+                OnPropertyChanged(nameof(Login));
             }
         }
 
@@ -71,38 +81,43 @@ namespace lab4
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-        public UserModel(int id,string username,string password,string role = "user")
+        
+        public UserModel(int id, string username,string login, string password, string role = "user",string profilepic = @"C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\Resources\defaultAvatar.jpg")
         {
             if (username == "admin" && password == "admin")
             {
                 this.Id = id;
                 this.Role = "admin";
-                this.username = "admin";
-                this.password = "admin";
+                this.Login = login;
+                this.Username = "admin";
+                this.Password = "admin";
+                this.ProfilePicturePath = profilepic;
             }
             else
             {
                 this.Id = id;
                 this.Role = role;
-                this.username = username;
-                this.password = password;
+                this.Login = login;
+                this.Username = username;
+                this.Password = password;
+                this.ProfilePicturePath = profilepic;
             }
-
-            this.profilePicturePath = @"C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\Resources\defaultAvatar.jpg";
         }
-        public UserModel(string username, string password, string role = "user")
+        public UserModel(string username, string login,string password, string role = "user")
         {
             if (username == "admin" && password == "admin")
             {
                 this.Role = "admin";
-                this.username = "admin";
-                this.password = "admin";
+                this.Login = login;
+                this.Username = "admin";
+                this.Password = "admin";
             }
             else
             {
+                this.Login = login;
                 this.Role = role;
-                this.username = username;
-                this.password = password;
+                this.Username = username;
+                this.Password = password;
             }
 
             this.profilePicturePath = @"C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\Resources\defaultAvatar.jpg";

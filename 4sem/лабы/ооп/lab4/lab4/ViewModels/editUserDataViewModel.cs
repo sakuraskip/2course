@@ -116,7 +116,7 @@ namespace lab4.ViewModels
         {
             ErrorMessage = "";
 
-            if (string.IsNullOrEmpty(User.Username))
+            if (string.IsNullOrEmpty(Username))
             {
                 ErrorMessage = "Заполните логин корректно";
                 return;

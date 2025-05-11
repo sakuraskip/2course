@@ -1,8 +1,11 @@
-﻿using lab4.userControls;
+﻿using lab4.Models;
+using lab4.userControls;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -18,7 +21,10 @@ namespace lab4.ViewModels
         private ObservableCollection<ShipModel> _ships;
         private string _filterName;
 
-        private List<ShipModel> allships =  ShipListModel.LoadFromJson(ShipListModel._filepath);
+        private List<ShipModel> allships;
+        private string connectionString = ConfigurationManager.ConnectionStrings[1].ConnectionString;
+
+        private ObservableCollection<Review> _reviews;
 
         public static readonly DependencyProperty MinPriceProperty = //удалить это после 7 лабы
            DependencyProperty.Register(
@@ -138,15 +144,86 @@ namespace lab4.ViewModels
         public ItemsListViewModel(UserModel user)
         {
             _currentUser = user;
-            Ships = new ObservableCollection<ShipModel>(ShipListModel.LoadFromJson(ShipListModel._filepath));
-
+           
             AddShipCommand = new RelayCommand(AddShip);
             AdminPanelCommand = new RelayCommand(OpenAdminPanel);
             //UserProfileCommand = new RelayCommand(OpenUserProfile);
             ShipDetailsCommand = new RelayCommand<ShipModel>(OpenShipDetails);
             UndoCommand = new RelayCommand(Undo, CanUndo);
             RedoCommand = new RelayCommand(Redo, CanRedo);
+            LoadShips();
+            LoadReviews();
+            allships = Ships.ToList();
+
         }
+        private void LoadReviews()
+        {
+            try
+            {
+                using (var connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    using (var command = new SqlCommand("SELECT * FROM Reviews", connection))
+                    {
+                        using (var reader = command.ExecuteReader())
+                        {
+                            var reviews = new ObservableCollection<Review>();
+                            while (reader.Read())
+                            {
+                                reviews.Add(new Review(
+                                    id: reader.GetInt32(reader.GetOrdinal("Id")),
+                                    userId: reader.GetInt32(reader.GetOrdinal("UserId")),
+                                    username: reader["Username"].ToString(),
+                                    shipId: reader.GetInt32(reader.GetOrdinal("ShipId")),
+                                    comment: reader["Comment"].ToString(),
+                                    rating: reader.GetInt32(reader.GetOrdinal("Rating"))));
+                            }
+                            _reviews = reviews;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading ships: {ex.Message}");
+                throw;
+            }
+        }
+        private  void LoadShips()
+        {
+            try
+            {
+                using (var connection = new SqlConnection(connectionString))
+                {
+                     connection.Open();
+                    using (var command = new SqlCommand("SELECT * FROM ShipModel", connection))
+                    {
+                        using (var reader =  command.ExecuteReader())
+                        {
+                            var ships = new ObservableCollection<ShipModel>();
+                            while (reader.Read())
+                            {
+                                ships.Add(new ShipModel(
+                                    id: reader.GetInt32(reader.GetOrdinal("Id")),
+                                    name: reader["Name"].ToString(),
+                                    description: reader["Description"].ToString(),
+                                    price: reader.GetInt32(reader.GetOrdinal("Price")),
+                                    availability: reader["Availability"].ToString(),
+                                    imagePath: reader["ImagePath"].ToString(),
+                                    shipType: reader["ShipType"].ToString()));
+                            }
+                            Ships = ships;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading ships: {ex.Message}");
+                throw;
+            }
+        }
+
         private void AddShip()
         {
             var addShipWindow = new AddShipWindow(Ships.Count, "тест");
@@ -184,7 +261,7 @@ namespace lab4.ViewModels
            
             if (ship != null)
             {
-                var shipDetails = new ShipDetails(ship,_currentUser);
+                var shipDetails = new ShipDetails(ship,_currentUser,_reviews);
                 shipDetails.ShowDialog();
             }
 

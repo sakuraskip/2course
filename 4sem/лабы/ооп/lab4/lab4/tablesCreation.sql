@@ -32,6 +32,14 @@ CREATE TABLE Rental (
     FOREIGN KEY (ShipId) REFERENCES ShipModel(Id) ON DELETE CASCADE,
     FOREIGN KEY (UserId) REFERENCES UserModel(Id) ON DELETE CASCADE
 );
+CREATE TABLE Reviews (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    ShipId INT foreign key references ShipModel(Id) NOT NULL,
+    UserId INT foreign key references UserModel(Id) NOT NULL,
+    Username NVARCHAR(100),
+    Comment NVARCHAR(MAX),
+    Rating INT NOT NULL CHECK (Rating >= 1 AND Rating <= 5)  
+);
 select * from Rental
 select * from ShipModel
 select * from UserModel

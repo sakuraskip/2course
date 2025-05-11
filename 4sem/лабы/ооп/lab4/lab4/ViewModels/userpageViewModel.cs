@@ -53,10 +53,10 @@ namespace lab4.ViewModels
         private void EditProfile()
         {
             var editUserData = new editUserData(OurUser, OurUser.ProfilePicturePath);
-            if (editUserData.ShowDialog() == true)
-            {
+            editUserData.ShowDialog();
+            
                 OurUser = (editUserData.DataContext as  EditUserDataViewModel).ReturnUserData();
-            }
+            
         }
 
         private void ChangeLanguage()//добавить в funcs

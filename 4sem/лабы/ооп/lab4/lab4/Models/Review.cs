@@ -88,7 +88,15 @@ namespace lab4.Models
                 }
             }
         }
-        public Review(int id, int userId, string username, string comment, int rating,int shipId)
+        public Review( int userId, string username, string comment, int rating,int shipId)
+        {
+            UserId = userId;
+            Username = username;
+            Comment = comment;
+            Rating = rating;
+            ShipId = shipId;
+        }
+        public Review(int id,int userId, string username, string comment, int rating, int shipId)
         {
             Id = id;
             UserId = userId;

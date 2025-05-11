@@ -1,6 +1,8 @@
-﻿using lab4.ViewModels;
+﻿using lab4.Models;
+using lab4.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,13 +23,13 @@ namespace lab4
     /// </summary>
     public partial class ShipDetails : Window
     {
-        public ShipDetails(ShipModel detailship,UserModel user)
+        public ShipDetails(ShipModel detailship,UserModel user,ObservableCollection<Review>reviews)
         {
             InitializeComponent();
             Cursor customCursor = new Cursor("C:\\Users\\леха\\Desktop\\2_aero_busy.ani");
             Cursor = customCursor;
 
-            ShipDetailsModel model = new ShipDetailsModel(detailship,user);
+            ShipDetailsModel model = new ShipDetailsModel(detailship,user,reviews);
             DataContext = model;
             if(model.CloseAction == null)
             {

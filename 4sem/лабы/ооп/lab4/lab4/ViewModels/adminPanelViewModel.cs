@@ -162,7 +162,8 @@ namespace lab4.ViewModels
                             {
                                 users.Add(new UserModel(
                                     id: (int)reader["Id"],
-                                    username: reader["Login"].ToString(),
+                                    username: reader["Username"].ToString(),
+                                    login: reader["Login"].ToString(),
                                     role: reader["Role"].ToString(),
                                     password: reader["password"].ToString()));
                             }
