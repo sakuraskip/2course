@@ -63,14 +63,13 @@ namespace lab4.adminViewModels
                         try
                         {
                             using (var command = new SqlCommand(
-                                "UPDATE Rental SET ShipId = @ShipId,UserId = @UserId, StartDate = @StartDate,EndDate = @EndDate, Status = @Status, Cost = @Cost WHERE Id = @Id",
+                                "UPDATE Rental SET ShipId = @ShipId,UserId = @UserId, RentDate = @RentDate, Status = @Status, Cost = @Cost WHERE Id = @Id",
                                 connection,
                                 transaction))
                             {
                                 command.Parameters.AddWithValue("@ShipId", Rental.ShipId);
                                 command.Parameters.AddWithValue("@UserId", Rental.UserId);
-                                command.Parameters.AddWithValue("@StartDate", Rental.StartDate);
-                                command.Parameters.AddWithValue("@EndDate", Rental.EndDate);
+                                command.Parameters.AddWithValue("@RentDate", Rental.Date);
                                 command.Parameters.AddWithValue("@Status", Rental.Status);
                                 command.Parameters.AddWithValue("@Cost", Rental.Cost);
                                 command.Parameters.AddWithValue("@Id", Rental.Id);

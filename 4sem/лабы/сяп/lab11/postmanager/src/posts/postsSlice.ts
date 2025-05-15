@@ -1,5 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { create } from "domain";
+import { fetchPosts,createPost,deletePost,updatePost } from "./postsAPI";
 
 export interface Post
 {
@@ -16,11 +17,15 @@ export interface NewPost
 }
 interface Istate
 {
-    Posts:Post[]
+    Posts:Post[],
+    loading:boolean,
+    error:boolean;
 }
 const initialState:Istate=
 {
     Posts:[],
+    loading:false,
+    error:false
 }
 const postsSlice = createSlice(
     {
@@ -28,10 +33,40 @@ const postsSlice = createSlice(
         initialState,
         reducers:
         {
-            DisplayPosts:()=>
+        },
+        extraReducers:(builder)=>
+        {
+            builder.addCase(fetchPosts.pending,(state)=>
             {
+                state.loading = true;
                 
-            }
+            })
+            .addCase(fetchPosts.rejected,(state)=>
+            {
+                state.loading = false;
+                state.error = true;
+            })
+            .addCase(fetchPosts.fulfilled, (state,action:PayloadAction<Post[]>)=>
+            {
+                state.loading = false;
+                state.Posts = action.payload;
+            })
+            .addCase(createPost.fulfilled,(state,action:PayloadAction<Post>)=>
+            {
+                state.Posts.push(action.payload)
+            })
+            .addCase(updatePost.fulfilled,(state,action:PayloadAction<Post>)=>
+            {
+                let index = state.Posts.findIndex(p=>p.id === action.payload.id);
+                state.Posts[index] = action.payload;
+            })
+            .addCase(deletePost.fulfilled,(state,action:PayloadAction<number>)=>
+            {
+               state.Posts = state.Posts.filter(p=>p.id !== action.payload)
+            })
+
         }
+        
     }
 )
+export default postsSlice.reducer;

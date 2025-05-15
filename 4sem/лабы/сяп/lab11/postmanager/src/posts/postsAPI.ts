@@ -1,54 +1,27 @@
 import { convertToObject } from "typescript";
 import {Post,NewPost} from './postsSlice'
-const POSTS:string = 'https://jsonplaceholder.typicode.com/posts/'
-const axios  = require('axios');
+import { createAsyncThunk } from "@reduxjs/toolkit";
+import axios from 'axios';
 
-export async function fetchPosts()
+const POSTS:string = 'https://jsonplaceholder.typicode.com/posts/'
+
+export const fetchPosts = createAsyncThunk<Post[]>('posts/fetchPosts',async ()=>
 {
-    try
-    {
-        const response:Post[] = await axios.get(POSTS);
-        return response;
-    }
-    catch(error)
-    {
-        console.error(error)
-    }
-}
-export async function createPost(newpost:NewPost)
+    const response = await axios.get(POSTS);
+    return response.data;
+});
+export const createPost = createAsyncThunk<Post,NewPost>('posts/createPost',async(newpost)=>
 {
-    try
-    {
-       const response:Post =  await axios.post(POSTS,newpost);
-       return response;
-       
-    }
-    catch(error)
-    {
-        console.error(error);
-    }
-}
-export async function updatePost(post:Post)
+    const response = await axios.post(POSTS,newpost);
+    return response.data;
+})
+export const updatePost = createAsyncThunk<Post,Post>('posts/updatePosts',async (post)=>
 {
-    try
-    {
-        const responce:Post = await axios.put(POSTS+post.id);
-        return responce;
-    }
-    catch(error)
-    {
-        console.error(error)
-    }
-}
-export async function deletePost(id:number)
+    const response = await axios.put(`${POSTS}${post.id}`,post);
+    return response.data;
+});
+export const deletePost = createAsyncThunk<number,number>('posts/deletePosts',async (id)=>
 {
-    try
-    {
-        await axios.delete(POSTS+id);
-        return
-    }
-    catch(error)
-    {
-        console.error(error);
-    }
-}
+    await axios.delete(`${POSTS}${id}`);
+    return id;
+});

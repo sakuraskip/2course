@@ -35,7 +35,7 @@ namespace lab4
             Grid.SetColumnSpan(panel, 2);
             panel.CustomButtonClick += HeaderPanel_CustomButtonClick;
             panel.CustomButtonTunnel += HeaderPanel_CustomButtonTunnel;
-            maingrid.Children.Add(panel);
+           
             CommandBindings.Add(new CommandBinding(ItemsListViewModel.UserProfileCommand, OpenUserProfile));
          
         }

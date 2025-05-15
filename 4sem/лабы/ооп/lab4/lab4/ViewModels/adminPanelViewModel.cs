@@ -197,10 +197,14 @@ namespace lab4.ViewModels
                                     id: (int)reader["Id"],
                                     shipId: (int)reader["ShipId"],
                                     userId: (int)reader["UserId"],
-                                    startDate: (DateTime)reader["StartDate"],
-                                    endDate: (DateTime)reader["EndDate"],
+                                    date: reader.GetDateTime(reader.GetOrdinal("RentDate")),
                                     status: reader["Status"].ToString(),
+                                    imagePath: reader["ImagePath"].ToString(),
+                                    shipname: reader["ShipName"].ToString(),
                                     cost: (int)reader["Cost"]));
+                                   
+                                    
+
                             }
                             Requests = requests;
                         }

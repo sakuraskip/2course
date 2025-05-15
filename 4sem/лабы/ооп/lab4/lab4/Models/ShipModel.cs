@@ -26,23 +26,61 @@ namespace lab4
         private int _id;
         private int _shipId;
         private int _userId;
-        private DateTime _startDate;
-        private DateTime _endDate;
+        private DateTime _date;
         private string _status;
         private int _cost;
+        private string _priceString;
+        private string _imagePath;
+        private string _shipname;
+        public string shipName
+        {
+            get => _shipname;
+            set
+            {
+                _shipname = value;
+                OnPropertyChanged(shipName);
+            }
+        }
+        public string imagePath
+        {
+            get => _imagePath;
+            set
+            {
+                _imagePath = value;
+                OnPropertyChanged(_imagePath);
+            }
+        }
+        public string priceString
+        {
+            get => _priceString;
+            set
+            {
+                _priceString = value;
+                OnPropertyChanged(priceString);
+            }
+        }
 
-        public Request(int id, int shipId, int userId, DateTime startDate, DateTime endDate, string status, int cost)
+        public Request(int id, int shipId, int userId, DateTime date, string status, int cost,string imagePath,string shipname)
         {
             Id = id;
             ShipId = shipId;
             UserId = userId;
-            StartDate = startDate;
-            EndDate = endDate;
+            Date = date;
             Status = status;
             Cost = cost;
-         
+            priceString = $"${cost}";
+         this.imagePath = imagePath;
+            this.shipName = shipname;
         }
-
+        public DateTime Date
+        {
+            get=> _date;
+            set
+            {
+                _date = value;
+                OnPropertyChanged(nameof(Date));
+            }
+        }
         public int Id
         {
             get => _id;
@@ -82,31 +120,7 @@ namespace lab4
             }
         }
 
-        public DateTime StartDate
-        {
-            get => _startDate;
-            set
-            {
-                if (_startDate != value)
-                {
-                    _startDate = value;
-                    OnPropertyChanged(nameof(StartDate));
-                }
-            }
-        }
-
-        public DateTime EndDate
-        {
-            get => _endDate;
-            set
-            {
-                if (_endDate != value)
-                {
-                    _endDate = value;
-                    OnPropertyChanged(nameof(EndDate));
-                }
-            }
-        }
+       
 
         public string Status
         {

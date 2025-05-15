@@ -56,7 +56,7 @@ namespace lab4.ViewModels
                 {
                     UserModel newuser = new UserModel(Login,Login, Password);
                     _user = newuser;
-                    SaveToDb();
+                    SaveToDb(_user);
                     _users.Add(_user);
 
                     MessageBox.Show("Аккаунт успешно зарегистрирован.  Введите данные и нажмите кнопку Войти");
@@ -97,60 +97,50 @@ namespace lab4.ViewModels
                 MessageBox.Show("Поля логина и пароля не должны быть пустыми");
             }
         }
-        private void LoadUsers()
+        private async Task LoadUsers()
         {
-            try
+            using (var connection = new SqlConnection(_connectionString))
             {
-                using (var connection = new SqlConnection(_connectionString))
+                await connection.OpenAsync();
+
+                var command = new SqlCommand("SELECT * FROM UserModel", connection);
+
+                using (var reader = await command.ExecuteReaderAsync())
                 {
-                    connection.Open();
-                    using (var command = new SqlCommand("SELECT * FROM UserModel", connection))
-                    {
-                        using (var reader = command.ExecuteReader())
-                        {
-                            var users = new ObservableCollection<UserModel>();
-                            while (reader.Read())
-                            {
-                                users.Add(new UserModel(
-                                    id: reader.GetInt32(reader.GetOrdinal("Id")),
-                                    username: reader["Username"].ToString(),
-                                    login: reader["Login"].ToString(),
-                                    password: reader["Password"].ToString(),
-                                    role: reader["Role"].ToString(),
-                                    profilepic: reader["ProfilePicture"].ToString()));
-                            }
-                            _users = users;
-                        }
+                    _users = new ObservableCollection<UserModel>();
+
+                    while (await reader.ReadAsync())
+                    { 
+                        _users.Add(new UserModel
+                        (
+                            id: reader.GetInt32(reader.GetOrdinal("Id")),
+                            username: reader["Username"].ToString(),
+                            login: reader["Login"].ToString(),
+                            password: reader["Password"].ToString(),
+                            role: reader["Role"].ToString(),
+                            profilepic:reader["ProfilePicture"].ToString()
+                        )
+                        );
                     }
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error loading accounts: {ex.Message}");
-                throw;
             }
         }
-        private void SaveToDb()
-        {
-            try
-            {
-                using (var connection = new SqlConnection(_connectionString))
-                {
-                    connection.Open();
-                    using (var command = new SqlCommand("Insert into UserModel values (@Role,@Login,@Username,@Password,@ProfilePicture)", connection))
-                    {
-                        command.Parameters.AddWithValue("@Role", _user.Role);
-                        command.Parameters.AddWithValue("@Login", _user.Login);
-                        command.Parameters.AddWithValue("@Username", _user.Username);
-                        command.Parameters.AddWithValue("@Password", _user.Password);
-                        command.Parameters.AddWithValue("@ProfilePicture", _user.ProfilePicturePath);
 
-                        command.ExecuteNonQuery();
-                    }
-                }
-            }catch(Exception ex)
+        private async Task SaveToDb(UserModel user)
+        {
+            using (var connection = new SqlConnection(_connectionString))
             {
-                MessageBox.Show("error saving account to db: " + ex.Message);
+                await connection.OpenAsync();
+
+                var command = new SqlCommand("INSERT INTO UserModel VALUES (@Role, @Login, @Username, @Password,@ProfilePicture)", connection);
+        
+        command.Parameters.AddWithValue("@Role", user.Role);
+                command.Parameters.AddWithValue("@Login", user.Login);
+                command.Parameters.AddWithValue("@Username", user.Username);
+                command.Parameters.AddWithValue("@Password", user.Password);
+                command.Parameters.AddWithValue("@ProfilePicture", user.ProfilePicturePath);
+
+                await command.ExecuteNonQueryAsync();
             }
         }
         private void ClearUsername()

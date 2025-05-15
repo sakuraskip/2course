@@ -16,6 +16,7 @@ namespace lab4.Models
         private string _username;
         private string _comment;
         private int _rating;
+       
         public int Id
         {
             get => _id;

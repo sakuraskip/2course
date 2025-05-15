@@ -6,83 +6,172 @@
         xmlns:local="clr-namespace:lab4"
         xmlns:vm="clr-namespace:lab4.ViewModels"
         xmlns:control="clr-namespace:lab4.userControls"
-        xmlns:behaviors="http://schemas.microsoft.com/xaml/behaviors"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Background="{DynamicResource BackgroundColor}"
-        Title="" Height="700" Width="1000">
+        Background="#FFF5F5F7"
+        Title="Морские путешествия" 
+        Height="800" Width="1200"
+        WindowStartupLocation="CenterScreen"
+        FontFamily="Segoe UI">
 
     <Window.DataContext>
         <vm:ItemsListViewModel/>
     </Window.DataContext>
 
     <Window.Resources>
-        <Style TargetType="Button" x:Key="AdminAddShipButtonStyle">
-            <Setter Property="Background" Value="#007ACC"/>
+        <!-- Стили -->
+        <Style TargetType="Button" x:Key="ModernButton">
+            <Setter Property="Background" Value="#4285F4"/>
             <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Padding" Value="15,8"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect BlurRadius="10" ShadowDepth="2" Opacity="0.2"/>
+                </Setter.Value>
+            </Setter>
         </Style>
+
+        <Style TargetType="TextBox" x:Key="ModernTextBox">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="#DDDDDD"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="FontSize" Value="16"/>
+            
+        </Style>
+
+        <Style TargetType="TextBlock" x:Key="SectionHeader">
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Foreground" Value="#333333"/>
+            <Setter Property="Margin" Value="0,0,0,10"/>
+        </Style>
+
         <local:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+
+        <!-- Шаблон карточки корабля -->
+        <DataTemplate x:Key="ShipCardTemplate">
+            <Border BorderBrush="#E0E0E0" BorderThickness="1" CornerRadius="12" 
+                    Margin="15" Background="White" 
+                    >
+                <Border.InputBindings>
+                    <MouseBinding MouseAction="LeftClick"
+                                Command="{Binding DataContext.ShipDetailsCommand, 
+                                        RelativeSource={RelativeSource AncestorType=Window}}"
+                                CommandParameter="{Binding}"/>
+                </Border.InputBindings>
+                <Grid Width="300" Height="350">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="200"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Изображение -->
+                    <Border Grid.Row="0" CornerRadius="12,12,0,0" ClipToBounds="True">
+                        <Image Source="{Binding ImagePath}" Stretch="UniformToFill"/>
+                    </Border>
+
+                    <!-- Информация -->
+                    <StackPanel Grid.Row="1">
+                        <TextBlock Text="{Binding Name}" FontSize="20" FontWeight="Bold" 
+                                   TextWrapping="Wrap" Margin="0,0,0,5"/>
+                        <TextBlock Text="{Binding ShortDescription}" FontSize="14" 
+                                   Foreground="#666666" TextWrapping="Wrap"/>
+                    </StackPanel>
+
+                    <!-- Цена -->
+                    <Border Grid.Row="2" Background="#F8F9FA" CornerRadius="0,0,12,12" 
+                            Padding="15" BorderThickness="0,1,0,0" BorderBrush="#EEEEEE">
+                        <TextBlock Text="{Binding Price, StringFormat='Цена: {0:C}'}" 
+                                   FontSize="18" FontWeight="SemiBold" 
+                                   HorizontalAlignment="Right"/>
+                    </Border>
+                </Grid>
+            </Border>
+        </DataTemplate>
+
+        <!-- Эффект тени для карточек -->
+        <DropShadowEffect x:Key="CardShadow" BlurRadius="15" ShadowDepth="3" Opacity="0.1"/>
     </Window.Resources>
 
-    <Grid x:Name="maingrid">
+    <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0.25*" MinWidth="200"/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <control:HeaderPanel Grid.Column="0" Grid.ColumnSpan="2"/>
 
-        <ScrollViewer Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" VerticalScrollBarVisibility="Auto">
-            <ItemsControl ItemsSource="{Binding Ships}" x:Name="shipsControl">
-                <ItemsControl.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <WrapPanel Orientation="Horizontal"/>
-                    </ItemsPanelTemplate>
-                </ItemsControl.ItemsPanel>
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <Border x:Name="eventborder" BorderBrush="Blue" BorderThickness="1" CornerRadius="5" Margin="10" >
-                            <Border.InputBindings>
-                                <MouseBinding MouseAction="LeftClick"
-                                              Command="{Binding DataContext.ShipDetailsCommand, RelativeSource={RelativeSource AncestorType=Window}}"
-                                              CommandParameter="{Binding}"/>
-                            </Border.InputBindings>
-                            <Grid MinWidth="200" Width="350" ShowGridLines="True">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="0.8*"/>
-                                    <RowDefinition/>
-                                    <RowDefinition/>
-                                </Grid.RowDefinitions>
-                                <Image Source="{Binding ImagePath}" Grid.Row="0" MaxWidth="700" MaxHeight="250" Stretch="UniformToFill"/>
-                                <TextBlock Text="{Binding Name}" FontSize="20" Grid.Row="1" HorizontalAlignment="Left"/>
-                                <TextBlock Text="{Binding Price}" FontSize="20" Grid.Row="2" HorizontalAlignment="Left"/>
-                            </Grid>
-                        </Border>
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
-        </ScrollViewer>
+        <!-- Боковая панель -->
+        <Border Grid.Column="0" Background="#FFFFFF" BorderBrush="#EEEEEE" BorderThickness="0,0,1,0">
+            <StackPanel Margin="20">
+                <!-- Заголовок -->
+                <TextBlock Text="Фильтры" FontSize="22" FontWeight="Bold" Margin="0,0,0,20"/>
 
-        <Frame x:Name="MainFrame" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
+                <!-- Поиск по названию -->
+                <TextBlock Text="Поиск по названию" Style="{StaticResource SectionHeader}"/>
+                <TextBox Style="{StaticResource ModernTextBox}" 
+                         Text="{Binding FilterName, UpdateSourceTrigger=PropertyChanged}"
+                         Margin="0,0,0,20"/>
 
-        <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center">
-            <Button x:Name="goToYachts" Content="{DynamicResource GoToYachts}" Height="50" Margin="0 30 0 50" FontSize="18"/>
-            <TextBlock Text="{DynamicResource SearchByName}" FontSize="20" Margin="0 0 0 10"/>
-            <TextBox x:Name="filterName_textbox" Height="30" FontSize="20" Margin="0 0 0 20" TextWrapping="Wrap" Text="{Binding FilterName, UpdateSourceTrigger=PropertyChanged}"/>
-            <TextBlock Text="{DynamicResource PriceRange}" FontSize="20" Margin="0 0 0 20"/>
-            <StackPanel Orientation="Horizontal">
-                <TextBox Text="{Binding MinPrice, UpdateSourceTrigger=PropertyChanged}" x:Name="minPrice_textbox" Width="75" Height="30" FontSize="20"/>
-                <Separator MaxWidth="80" Width="40" Visibility="Hidden"/>
-                <TextBox Text="{Binding MaxPrice, UpdateSourceTrigger=PropertyChanged}" x:Name="maxprice_textbox" Width="75" Height="30" FontSize="20"/>
+                <!-- Диапазон цен -->
+                <TextBlock Text="Диапазон цен" Style="{StaticResource SectionHeader}"/>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                    <TextBox Style="{StaticResource ModernTextBox}" Width="100"
+                             Text="{Binding MinPrice, UpdateSourceTrigger=PropertyChanged}"
+                             materialDesign:HintAssist.Hint="От"/>
+                    <TextBlock Text="—" Margin="10,0" VerticalAlignment="Center"/>
+                    <TextBox Style="{StaticResource ModernTextBox}" Width="100"
+                             Text="{Binding MaxPrice, UpdateSourceTrigger=PropertyChanged}"
+                             materialDesign:HintAssist.Hint="До"/>
+                </StackPanel>
+
+                <!-- Кнопки категорий -->
+                <Button Content="Все яхты" Style="{StaticResource ModernButton}" 
+                        Margin="0,0,0,15" Command="{Binding ShowAllShipsCommand}"/>
+
+                <!-- Админ-панель -->
+                <StackPanel Visibility="{Binding IsAdmin, Converter={StaticResource BoolToVisibilityConverter}}"
+                            Margin="0,30,0,0">
+                    <TextBlock Text="Администрирование" Style="{StaticResource SectionHeader}"/>
+                    <Button Content="Добавить судно" Style="{StaticResource ModernButton}" 
+                            Command="{Binding AddShipCommand}" Margin="0,0,0,10"/>
+                    <Button Content="Панель управления" Style="{StaticResource ModernButton}" 
+                            Command="{Binding AdminPanelCommand}"/>
+                </StackPanel>
+
+                <!-- Личный кабинет -->
+                <Button Content="Личный кабинет" Style="{StaticResource ModernButton}" 
+                        Margin="0,30,0,0" Command="{Binding UserProfileCommand}"/>
             </StackPanel>
-        </StackPanel>
+        </Border>
 
-        <Button x:Name="admin_addship" Command="{Binding AddShipCommand}" Visibility="{Binding IsAdmin, Converter={StaticResource BoolToVisibilityConverter}}" Style="{StaticResource AdminAddShipButtonStyle}" Grid.Row="2" Content="{DynamicResource AddShip}" Height="50" FontSize="18" VerticalAlignment="Bottom" Margin="0 0 0 170"/>
-        <Button x:Name="admin_adminpanel" Command="{Binding AdminPanelCommand}" Visibility="{Binding IsAdmin, Converter={StaticResource BoolToVisibilityConverter}}" Grid.Row="2" Content="{DynamicResource AdminPanel}" Height="50" FontSize="16" VerticalAlignment="Bottom" Margin="0 0 0 90"/>
-        <!--<Button x:Name="usercabinet_button" Command="{Binding UserProfileCommand}" Grid.Row="2" Height="50" FontSize="18" Content="Личный кабинет" VerticalAlignment="Bottom"/>-->
-       <!-- удалить--> <Button x:Name="usercabinet_button" Command="vm:ItemsListViewModel.UserProfileCommand" Grid.Row="2" Height="50" FontSize="18" Content="Личный кабинет" VerticalAlignment="Bottom"/>
+        <!-- Основное содержимое -->
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- Заголовок -->
+            <Border Grid.Row="0" Background="#4285F4" Padding="20">
+                <TextBlock Text="Доступные суда" FontSize="24" Foreground="White" 
+                           FontWeight="Bold" HorizontalAlignment="Center"/>
+            </Border>
+
+            <!-- Список кораблей -->
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Padding="20">
+                <ItemsControl ItemsSource="{Binding Ships}" 
+                             ItemTemplate="{StaticResource ShipCardTemplate}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Orientation="Horizontal"/>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                </ItemsControl>
+            </ScrollViewer>
+        </Grid>
     </Grid>
 </Window>

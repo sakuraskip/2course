@@ -9,6 +9,9 @@ using System.Windows.Input;
 using System.Windows;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Collections.ObjectModel;
+using System.Configuration;
+using System.Data.SqlClient;
 
 namespace lab4.ViewModels
 {
@@ -16,12 +19,15 @@ namespace lab4.ViewModels
     {
         private UserModel _ourUser;
         private string _currentTheme = "White";
+        private ObservableCollection<Request> _rentals;
         public ICommand EditProfileCommand { get; }
         public ICommand ChangeLanguageCommand { get; }
         public ICommand ChangeThemeCommand { get; }
         public ICommand BackToCatalogCommand { get; }
 
         public ICommand CancelRentCommand { get; }
+
+        private string _connectionString = ConfigurationManager.ConnectionStrings[1].ConnectionString;
 
         public UserPageViewModel(UserModel user)
         {
@@ -31,6 +37,7 @@ namespace lab4.ViewModels
             ChangeThemeCommand = new RelayCommand(ChangeTheme);
             BackToCatalogCommand = new RelayCommand(BackToCatalog);
             CancelRentCommand = new RelayCommand(CancelRent);
+            LoadRentals();
         }
         public UserPageViewModel()
         {
@@ -39,7 +46,49 @@ namespace lab4.ViewModels
             ChangeThemeCommand = new RelayCommand(ChangeTheme);
             BackToCatalogCommand = new RelayCommand(BackToCatalog);
         }
+        private void LoadRentals()
+        {
+            using(var connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+                var command = new SqlCommand("Select * from Rental where UserId = @UserId", connection);
+                
+                command.Parameters.AddWithValue("@UserId",OurUser.Id);
+                using (var reader = command.ExecuteReader())
+                {
+                    Rentals = new ObservableCollection<Request>();
+                    while (reader.Read())
+                    {
+                        Rentals.Add(new Request
+                            (
+                            id: reader.GetInt32(reader.GetOrdinal("Id")),
+                            shipId:reader.GetInt32(reader.GetOrdinal("shipId")),
+                            userId:reader.GetInt32(reader.GetOrdinal("userId")),
+                            date:reader.GetDateTime(reader.GetOrdinal("RentDate")),
+                            status: reader["Status"].ToString(),
+                            cost:reader.GetInt32(reader.GetOrdinal("Cost")),
+                            
+                            imagePath: reader["ImagePath"].ToString(),
+                            shipname: reader["ShipName"].ToString()
 
+
+                            ));
+                    }
+
+                }
+                
+
+            }
+        }
+        public ObservableCollection<Request> Rentals
+        {
+            get => _rentals;
+            set
+            {
+                _rentals = value;
+                OnPropertyChanged();
+            }
+        }
         public UserModel OurUser
         {
             get => _ourUser;
