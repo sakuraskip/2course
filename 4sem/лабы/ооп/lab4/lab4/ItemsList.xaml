@@ -52,7 +52,6 @@
 
         <local:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
 
-        <!-- Шаблон карточки корабля -->
         <DataTemplate x:Key="ShipCardTemplate">
             <Border BorderBrush="#E0E0E0" BorderThickness="1" CornerRadius="12" 
                     Margin="15" Background="White" 
@@ -70,12 +69,10 @@
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
 
-                    <!-- Изображение -->
                     <Border Grid.Row="0" CornerRadius="12,12,0,0" ClipToBounds="True">
                         <Image Source="{Binding ImagePath}" Stretch="UniformToFill"/>
                     </Border>
 
-                    <!-- Информация -->
                     <StackPanel Grid.Row="1">
                         <TextBlock Text="{Binding Name}" FontSize="20" FontWeight="Bold" 
                                    TextWrapping="Wrap" Margin="0,0,0,5"/>
@@ -83,7 +80,6 @@
                                    Foreground="#666666" TextWrapping="Wrap"/>
                     </StackPanel>
 
-                    <!-- Цена -->
                     <Border Grid.Row="2" Background="#F8F9FA" CornerRadius="0,0,12,12" 
                             Padding="15" BorderThickness="0,1,0,0" BorderBrush="#EEEEEE">
                         <TextBlock Text="{Binding Price, StringFormat='Цена: {0:C}'}" 
@@ -94,7 +90,6 @@
             </Border>
         </DataTemplate>
 
-        <!-- Эффект тени для карточек -->
         <DropShadowEffect x:Key="CardShadow" BlurRadius="15" ShadowDepth="3" Opacity="0.1"/>
     </Window.Resources>
 
@@ -104,19 +99,15 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <!-- Боковая панель -->
         <Border Grid.Column="0" Background="#FFFFFF" BorderBrush="#EEEEEE" BorderThickness="0,0,1,0">
             <StackPanel Margin="20">
-                <!-- Заголовок -->
                 <TextBlock Text="Фильтры" FontSize="22" FontWeight="Bold" Margin="0,0,0,20"/>
 
-                <!-- Поиск по названию -->
                 <TextBlock Text="Поиск по названию" Style="{StaticResource SectionHeader}"/>
                 <TextBox Style="{StaticResource ModernTextBox}" 
                          Text="{Binding FilterName, UpdateSourceTrigger=PropertyChanged}"
                          Margin="0,0,0,20"/>
 
-                <!-- Диапазон цен -->
                 <TextBlock Text="Диапазон цен" Style="{StaticResource SectionHeader}"/>
                 <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
                     <TextBox Style="{StaticResource ModernTextBox}" Width="100"
@@ -128,11 +119,9 @@
                              materialDesign:HintAssist.Hint="До"/>
                 </StackPanel>
 
-                <!-- Кнопки категорий -->
                 <Button Content="Все яхты" Style="{StaticResource ModernButton}" 
                         Margin="0,0,0,15" Command="{Binding ShowAllShipsCommand}"/>
 
-                <!-- Админ-панель -->
                 <StackPanel Visibility="{Binding IsAdmin, Converter={StaticResource BoolToVisibilityConverter}}"
                             Margin="0,30,0,0">
                     <TextBlock Text="Администрирование" Style="{StaticResource SectionHeader}"/>
@@ -142,7 +131,6 @@
                             Command="{Binding AdminPanelCommand}"/>
                 </StackPanel>
 
-                <!-- Личный кабинет -->
                 <Button Content="Личный кабинет" Style="{StaticResource ModernButton}" 
                         Margin="0,30,0,0" Command="{Binding UserProfileCommand}"/>
             </StackPanel>

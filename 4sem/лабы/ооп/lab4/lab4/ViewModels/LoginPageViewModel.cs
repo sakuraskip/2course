@@ -1,4 +1,5 @@
-﻿using System;
+﻿using lab4.userControls;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
@@ -40,6 +41,8 @@ namespace lab4.ViewModels
         public ICommand RegisterCommand { get; }
         public ICommand ClearUsernameCommand { get; }
 
+        public Action CloseAction { get; set; }
+
         public LoginViewModel()
         {
             LoginCommand = new RelayCommand(SignIn);
@@ -49,25 +52,29 @@ namespace lab4.ViewModels
         }
         private void Register()
         {
-            if (!string.IsNullOrEmpty(Login) && !string.IsNullOrEmpty(Password))
-            {
-                UserModel? DbUser = _users.Where(u => u.Login == Login).FirstOrDefault();
-                if (DbUser == null)
-                {
-                    UserModel newuser = new UserModel(Login,Login, Password);
-                    _user = newuser;
-                    SaveToDb(_user);
-                    _users.Add(_user);
+            var registerpage = new registerPage();
+            registerpage.Show();
+            CloseAction?.Invoke();
+            
+            //if (!string.IsNullOrEmpty(Login) && !string.IsNullOrEmpty(Password))
+            //{
+            //    UserModel? DbUser = _users.Where(u => u.Login == Login).FirstOrDefault();
+            //    if (DbUser == null)
+            //    {
+            //        UserModel newuser = new UserModel(Login,Login, Password);
+            //        _user = newuser;
+            //        SaveToDb(_user);
+            //        _users.Add(_user);
 
-                    MessageBox.Show("Аккаунт успешно зарегистрирован.  Введите данные и нажмите кнопку Войти");
-                }
-                else MessageBox.Show("Пользователь с таким логином уже существует");
+            //        MessageBox.Show("Аккаунт успешно зарегистрирован.  Введите данные и нажмите кнопку Войти");
+            //    }
+            //    else MessageBox.Show("Пользователь с таким логином уже существует");
 
-            }
-            else
-            {
-                MessageBox.Show("Поля логина и пароля не должны быть пустыми");
-            }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Поля логина и пароля не должны быть пустыми");
+            //}
 
         }
         private void SignIn()
@@ -83,7 +90,7 @@ namespace lab4.ViewModels
                         var mainWindow = new ItemsList(_user);
                         mainWindow.Show();
 
-                        Application.Current.Windows[0]?.Close();
+                        CloseAction?.Invoke();
                     }
                     else
                     {
@@ -126,23 +133,7 @@ namespace lab4.ViewModels
             }
         }
 
-        private async Task SaveToDb(UserModel user)
-        {
-            using (var connection = new SqlConnection(_connectionString))
-            {
-                await connection.OpenAsync();
-
-                var command = new SqlCommand("INSERT INTO UserModel VALUES (@Role, @Login, @Username, @Password,@ProfilePicture)", connection);
         
-        command.Parameters.AddWithValue("@Role", user.Role);
-                command.Parameters.AddWithValue("@Login", user.Login);
-                command.Parameters.AddWithValue("@Username", user.Username);
-                command.Parameters.AddWithValue("@Password", user.Password);
-                command.Parameters.AddWithValue("@ProfilePicture", user.ProfilePicturePath);
-
-                await command.ExecuteNonQueryAsync();
-            }
-        }
         private void ClearUsername()
         {
             Login = string.Empty;

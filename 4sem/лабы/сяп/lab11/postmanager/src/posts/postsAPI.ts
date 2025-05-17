@@ -20,7 +20,7 @@ export const updatePost = createAsyncThunk<Post,Post>('posts/updatePosts',async 
     const response = await axios.put(`${POSTS}${post.id}`,post);
     return response.data;
 });
-export const deletePost = createAsyncThunk<number,number>('posts/deletePosts',async (id)=>
+export const deletePost = createAsyncThunk<number,number>('posts/deletePost',async (id)=>
 {
     await axios.delete(`${POSTS}${id}`);
     return id;

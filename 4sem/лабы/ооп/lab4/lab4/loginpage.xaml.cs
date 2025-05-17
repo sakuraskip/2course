@@ -2,6 +2,7 @@
 using System;
 using System.Text.RegularExpressions;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace lab4
 {
@@ -11,9 +12,17 @@ namespace lab4
         public loginpage()
         {
             InitializeComponent();
-            DataContext = new LoginViewModel();
+            var model = new LoginViewModel();
+            model.CloseAction = () => { this.Close(); };
+            DataContext = model;
         }
 
-       
+        private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            if (this.DataContext != null)
+            {
+                ((LoginViewModel)this.DataContext).Password = ((PasswordBox)sender).Password;
+            }
+        }
     }
 }

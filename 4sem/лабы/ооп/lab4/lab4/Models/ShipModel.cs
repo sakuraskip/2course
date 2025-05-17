@@ -32,6 +32,10 @@ namespace lab4
         private string _priceString;
         private string _imagePath;
         private string _shipname;
+        public bool CanBeCancelled =>
+        Status != "Ожидание отмены" &&
+        Status != "Отменено" &&
+        Status != "Завершено" && Status!="Активно";
         public string shipName
         {
             get => _shipname;

@@ -20,10 +20,10 @@ namespace lab4.userControls
     /// </summary>
     public partial class requestToBook : Window
     {
-        public requestToBook()
+        public requestToBook(ShipModel ship,UserModel user)
         {
             InitializeComponent();
-            var model = new RequestToBookViewModel();
+            var model = new RequestToBookViewModel(ship,user);
             model.CloseAction = () => this.Close();
             DataContext = model;
         }

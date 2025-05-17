@@ -8,18 +8,23 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Windows;
 using System.Xml.Linq;
+using System.Data.SqlClient;
+using System.Configuration;
 
 namespace lab4.ViewModels
 {
     public class RequestToBookViewModel:INotifyPropertyChanged
-    { 
-    private DateTime _rentalDate = DateTime.Now;
+    {
+        private ShipModel ship;
+        private UserModel user;
+        private DateTime _rentalDate = DateTime.Today;
     private string _phoneNumber;
     private string _name;
     private string _email;
     private string _buttonContent;
+        public static string connectionString = ConfigurationManager.ConnectionStrings[1].ConnectionString;
 
-    public DateTime RentalDate
+        public DateTime RentalDate
     {
         get => _rentalDate;
         set
@@ -79,21 +84,76 @@ namespace lab4.ViewModels
         ButtonContent = (string)Application.Current.FindResource("ConfirmButton");
         ConfirmCommand = new RelayCommand(ConfirmRent);
     }
-
-    private bool CanConfirm()
+        public RequestToBookViewModel(ShipModel ship,UserModel user)
+        {
+            this.ship = ship;
+            this.user  = user;
+            ButtonContent = (string)Application.Current.FindResource("ConfirmButton");
+            ConfirmCommand = new RelayCommand(ConfirmRent);
+        }
+        private bool CanConfirm()
     {
         return 
                !string.IsNullOrWhiteSpace(PhoneNumber) &&
                !string.IsNullOrWhiteSpace(Name) &&
                !string.IsNullOrWhiteSpace(Email) &&
-               RentalDate > DateTime.Now;
+               RentalDate >= DateTime.Today;
     }
     private async void ConfirmRent()
         {
-            if(CanConfirm())
+            if(!CanConfirm())
             {
-                await Task.Delay(1000);
-                CloseAction.Invoke();
+                MessageBox.Show("Заполните все поля корректно");
+                return;
+            }
+            try
+            {
+                using (var connection = new SqlConnection(connectionString))
+                {
+                    await connection.OpenAsync();
+                    using (var command = new SqlCommand("select count(*) from Rental where ShipId = @ShipId and RentDate = @RentDate " +
+                        "and status not in ('Отменено')",connection))
+                    {
+                        command.Parameters.AddWithValue("@ShipId", ship.Id);
+                        command.Parameters.AddWithValue("@RentDate", RentalDate.Date);
+                        int rentalAmount = (int)await command.ExecuteScalarAsync();
+                        if(rentalAmount > 0)
+                        {
+                            MessageBox.Show("Судно уже забронировано на эту дату");
+                            return;
+                        }
+                    }
+                    using (var command = new SqlCommand(
+                        "insert into Rental (ShipId,UserId,Status,Cost,ImagePath,RentDate,ShipName) " +
+                        " values (@ShipId,@UserId,@Status,@Cost,@ImagePath,@RentDate,@ShipName)" +
+                        " SELECT SCOPE_IDENTITY();", connection))
+                    {
+                        string buff;
+                        if (RentalDate.Date == DateTime.Today)
+                        {
+                            buff = "Активно";
+                        }
+                        else buff = "Подтверждено";
+
+                        command.Parameters.AddWithValue("@ShipId", ship.Id);
+                        command.Parameters.AddWithValue("@UserId", user.Id);
+                        command.Parameters.AddWithValue("@Status", buff);
+                        command.Parameters.AddWithValue("@Cost", ship.Price);
+                        command.Parameters.AddWithValue("@ImagePath", ship.ImagePath);
+                        command.Parameters.AddWithValue("@RentDate", _rentalDate.Date);
+                        command.Parameters.AddWithValue("@ShipName", ship.Name);
+
+
+                        await command.ExecuteNonQueryAsync();
+
+                    }
+                    MessageBox.Show("Заявка успешно оформлена");
+                    CloseAction?.Invoke();
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("error confirming rent " + ex.Message);
             }
         }
   

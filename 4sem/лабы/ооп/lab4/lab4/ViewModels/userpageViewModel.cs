@@ -36,7 +36,7 @@ namespace lab4.ViewModels
             ChangeLanguageCommand = new RelayCommand(ChangeLanguage);
             ChangeThemeCommand = new RelayCommand(ChangeTheme);
             BackToCatalogCommand = new RelayCommand(BackToCatalog);
-            CancelRentCommand = new RelayCommand(CancelRent);
+            CancelRentCommand = new RelayCommand<Request>(CancelRent);
             LoadRentals();
         }
         public UserPageViewModel()
@@ -155,9 +155,40 @@ namespace lab4.ViewModels
             Application.Current.Windows.OfType<userpage>().First().Close();
         }
 
-        private void CancelRent()
+        private async void CancelRent(Request rental)
         {
-            return;
+            if (MessageBox.Show(
+        $"Вы действительно хотите отменить аренду '{rental.shipName}'?\nДата аренды: {rental.Date.ToShortDateString()}",
+        "Запрос на отмену аренды",
+        MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+                try
+                {
+                    using (var connection = new SqlConnection(_connectionString))
+                    {
+                        await connection.OpenAsync();
+                        using (var command = new SqlCommand(
+                            "insert into CancelledRentals (userId,rentalId,status) values (@userId,@rentalId,'Ожидание отмены')",connection))
+                        {
+                            command.Parameters.AddWithValue("@userId", _ourUser.Id);
+                            command.Parameters.AddWithValue("@rentalId", rental.Id);
+                            await command.ExecuteNonQueryAsync();
+
+                        }
+                        using (var command = new SqlCommand("update Rental set status = 'Ожидание отмены' where Id = @Id",connection))
+                        {
+                            command.Parameters.AddWithValue("@Id", rental.Id);
+                            await command.ExecuteNonQueryAsync();
+                        }
+                    }
+                        LoadRentals();
+                        
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("cancel rent error: " + ex.Message);
+                }
+            }
         }
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)

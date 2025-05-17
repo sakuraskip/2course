@@ -2,7 +2,36 @@
   "version": 3,
   "targets": {
     "net8.0-windows7.0": {
-      "MaterialDesignColors/5.2.2-ci991": {
+      "LiveCharts/0.9.7": {
+        "type": "package",
+        "compile": {
+          "lib/net45/LiveCharts.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/LiveCharts.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "LiveCharts.Wpf/0.9.7": {
+        "type": "package",
+        "dependencies": {
+          "LiveCharts": "0.9.7"
+        },
+        "compile": {
+          "lib/net45/LiveCharts.Wpf.dll": {
+            "related": ".pdb;.XML"
+          }
+        },
+        "runtime": {
+          "lib/net45/LiveCharts.Wpf.dll": {
+            "related": ".pdb;.XML"
+          }
+        }
+      },
+      "MaterialDesignColors/5.2.1": {
         "type": "package",
         "compile": {
           "lib/net8.0/MaterialDesignColors.dll": {
@@ -15,19 +44,18 @@
           }
         }
       },
-      "MaterialDesignThemes/5.2.2-ci991": {
+      "MaterialDesignThemes/3.2.0": {
         "type": "package",
         "dependencies": {
-          "MaterialDesignColors": "5.2.2-ci991",
-          "Microsoft.Xaml.Behaviors.Wpf": "1.1.39"
+          "MaterialDesignColors": "[1.2.7, 2.0.0)"
         },
         "compile": {
-          "lib/net8.0/MaterialDesignThemes.Wpf.dll": {
+          "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.dll": {
             "related": ".pdb;.xml"
           }
         },
         "runtime": {
-          "lib/net8.0/MaterialDesignThemes.Wpf.dll": {
+          "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.dll": {
             "related": ".pdb;.xml"
           }
         },
@@ -339,10 +367,50 @@
     }
   },
   "libraries": {
-    "MaterialDesignColors/5.2.2-ci991": {
-      "sha512": "tVlI2MPUN9i7yfE36AXWRED6EnSUAcg5tMGVUd7SKx7e72EEiJn+xend54Qx0AWTZKZp0lXKeAghOBQSwjTQWw==",
+    "LiveCharts/0.9.7": {
+      "sha512": "p4xyBrUaNNfkWZSNsIle0r51cyVyFg0Yi0uBRZM5GQtdFiA/7guZHlffFyNUILIdux10Ch2hUaJpcZENVU9aaQ==",
       "type": "package",
-      "path": "materialdesigncolors/5.2.2-ci991",
+      "path": "livecharts/0.9.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/LiveCharts.dll",
+        "lib/net40/LiveCharts.pdb",
+        "lib/net40/LiveCharts.xml",
+        "lib/net45/LiveCharts.dll",
+        "lib/net45/LiveCharts.pdb",
+        "lib/net45/LiveCharts.xml",
+        "lib/portable-net45+win8+wp8/LiveCharts.XML",
+        "lib/portable-net45+win8+wp8/LiveCharts.dll",
+        "lib/portable-net45+win8+wp8/LiveCharts.pdb",
+        "livecharts.0.9.7.nupkg.sha512",
+        "livecharts.nuspec",
+        "readme.txt"
+      ]
+    },
+    "LiveCharts.Wpf/0.9.7": {
+      "sha512": "lv6YZoK0B4yWykMq5b9grZXtIbTj+OWu4sVN9GDpdgV6zffu64m4d5CW8KSjfSl9rB8VU649x1NZvhoU67hCDg==",
+      "type": "package",
+      "path": "livecharts.wpf/0.9.7",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/LiveCharts.Wpf.XML",
+        "lib/net40/LiveCharts.Wpf.dll",
+        "lib/net40/LiveCharts.Wpf.pdb",
+        "lib/net45/LiveCharts.Wpf.XML",
+        "lib/net45/LiveCharts.Wpf.dll",
+        "lib/net45/LiveCharts.Wpf.pdb",
+        "livecharts.wpf.0.9.7.nupkg.sha512",
+        "livecharts.wpf.nuspec",
+        "tools/install.ps1"
+      ]
+    },
+    "MaterialDesignColors/5.2.1": {
+      "sha512": "D0HW6E2/kzsnEWCh1KDG/K09Fpkvs9mR3n91Y8YSOsEAoQmGZbVAj58ssyAxGTiIPj2zB4ZVnwxkizwO35/v8A==",
+      "type": "package",
+      "path": "materialdesigncolors/5.2.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -354,14 +422,14 @@
         "lib/net6.0/MaterialDesignColors.pdb",
         "lib/net8.0/MaterialDesignColors.dll",
         "lib/net8.0/MaterialDesignColors.pdb",
-        "materialdesigncolors.5.2.2-ci991.nupkg.sha512",
+        "materialdesigncolors.5.2.1.nupkg.sha512",
         "materialdesigncolors.nuspec"
       ]
     },
-    "MaterialDesignThemes/5.2.2-ci991": {
-      "sha512": "wTqXDkb5QnmnaZ1GyPWwkrmLUH8yOfRhjq0kKzOb58XFCPs5ECALLbwiDtOa+4QFjbkPBPKZ17VuliTWnYH30A==",
+    "MaterialDesignThemes/3.2.0": {
+      "sha512": "aOZQShQuV7sCWOwO98dYz1S4stmIWDBH+Q6KoR3wDiDyuG7twoGnBDzQBhrxuS16I3GQiG5nfvUjEJFVc/zdKg==",
       "type": "package",
-      "path": "materialdesignthemes/5.2.2-ci991",
+      "path": "materialdesignthemes/3.2.0",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -385,18 +453,14 @@
         "build/Resources/Roboto/RobotoCondensed-Light.ttf",
         "build/Resources/Roboto/RobotoCondensed-LightItalic.ttf",
         "build/Resources/Roboto/RobotoCondensed-Regular.ttf",
-        "docs/README.md",
         "images/MaterialDesignThemes.Icon.png",
-        "lib/net462/MaterialDesignThemes.Wpf.dll",
-        "lib/net462/MaterialDesignThemes.Wpf.pdb",
-        "lib/net462/MaterialDesignThemes.Wpf.xml",
-        "lib/net6.0/MaterialDesignThemes.Wpf.dll",
-        "lib/net6.0/MaterialDesignThemes.Wpf.pdb",
-        "lib/net6.0/MaterialDesignThemes.Wpf.xml",
-        "lib/net8.0/MaterialDesignThemes.Wpf.dll",
-        "lib/net8.0/MaterialDesignThemes.Wpf.pdb",
-        "lib/net8.0/MaterialDesignThemes.Wpf.xml",
-        "materialdesignthemes.5.2.2-ci991.nupkg.sha512",
+        "lib/net45/MaterialDesignThemes.Wpf.dll",
+        "lib/net45/MaterialDesignThemes.Wpf.pdb",
+        "lib/net45/MaterialDesignThemes.Wpf.xml",
+        "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.dll",
+        "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.pdb",
+        "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.xml",
+        "materialdesignthemes.3.2.0.nupkg.sha512",
         "materialdesignthemes.nuspec",
         "tools/VisualStudioToolsManifest.xml"
       ]
@@ -914,7 +978,9 @@
   },
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
-      "MaterialDesignThemes >= 5.2.2-ci991",
+      "LiveCharts.Wpf >= 0.9.7",
+      "MaterialDesignColors >= 5.2.1",
+      "MaterialDesignThemes >= 3.2.0",
       "Microsoft.EntityFrameworkCore >= 9.0.4",
       "Microsoft.Xaml.Behaviors.Wpf >= 1.1.135",
       "Newtonsoft.Json >= 13.0.3",
@@ -966,9 +1032,17 @@
       "net8.0-windows7.0": {
         "targetAlias": "net8.0-windows",
         "dependencies": {
+          "LiveCharts.Wpf": {
+            "target": "Package",
+            "version": "[0.9.7, )"
+          },
+          "MaterialDesignColors": {
+            "target": "Package",
+            "version": "[5.2.1, )"
+          },
           "MaterialDesignThemes": {
             "target": "Package",
-            "version": "[5.2.2-ci991, )"
+            "version": "[3.2.0, )"
           },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
@@ -1009,5 +1083,37 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1608",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Версия обнаруженного пакета нарушает ограничение зависимости: MaterialDesignThemes 3.2.0 требуется MaterialDesignColors (>= 1.2.7 && < 2.0.0), но в результате разрешения получена версия MaterialDesignColors 5.2.1.",
+      "libraryId": "MaterialDesignColors",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Пакет \"LiveCharts 0.9.7\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\", а не целевой платформы проекта \"net8.0-windows7.0\". Этот пакет может быть не полностью совместим с вашим проектом.",
+      "libraryId": "LiveCharts",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Пакет \"LiveCharts.Wpf 0.9.7\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\", а не целевой платформы проекта \"net8.0-windows7.0\". Этот пакет может быть не полностью совместим с вашим проектом.",
+      "libraryId": "LiveCharts.Wpf",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    }
+  ]
 }

@@ -131,7 +131,7 @@ namespace lab4.ViewModels
         }
         private void Rent()
         {
-            var reqWindow = new userControls.requestToBook();
+            var reqWindow = new userControls.requestToBook(Ship,_user);
             reqWindow.ShowDialog();
         }
 

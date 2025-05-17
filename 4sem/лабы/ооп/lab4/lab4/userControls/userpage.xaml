@@ -5,6 +5,8 @@
   xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
         xmlns:local="clr-namespace:lab4.userControls"
         xmlns:vm="clr-namespace:lab4.ViewModels"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
         mc:Ignorable="d"
          Background="{DynamicResource BackgroundColor}"
         Title="userpage" Height="600" Width="900">
@@ -60,7 +62,7 @@
                                     <TextBlock VerticalAlignment="Center" FontSize="16" Text="{Binding Date}" />
                                     <TextBlock VerticalAlignment="Center" FontSize="16" Text="{Binding Status}" />
                                     <TextBlock VerticalAlignment="Center" FontSize="16" Text="{Binding priceString}" />
-                                    <Button Command="{Binding DataContext.CancelRentCommand, RelativeSource={RelativeSource AncestorType=Window}}" Content="{DynamicResource CancelButton}" Width="80" Height="30" />
+                                    <Button Command="{Binding DataContext.CancelRentCommand, RelativeSource={RelativeSource AncestorType=Window}}" CommandParameter="{Binding}" IsEnabled="{Binding CanBeCancelled}" Content="{DynamicResource CancelButton}" Width="80" Height="30" />
                                 </StackPanel>
                             </Border>
                         </DataTemplate>

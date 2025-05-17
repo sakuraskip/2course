@@ -9,6 +9,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\lab6\DAL_Celebrity\3DAL_Celebrity_MSSQL\3DAL_Celebrity_MSSQL.csproj" />
     <ProjectReference Include="..\..\lab6\DAL_Celebrity\DAL_Celebrity\DAL_Celebrity.csproj" />
+    <ProjectReference Include="..\..\lab6\DAL_Celebrity\webApi_DLL\webApi_DLL.csproj" />
   </ItemGroup>
 
 </Project>

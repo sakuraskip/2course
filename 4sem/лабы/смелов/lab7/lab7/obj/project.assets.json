@@ -1047,6 +1047,22 @@
         "runtime": {
           "bin/placeholder/DAL_Celebrity.dll": {}
         }
+      },
+      "webApi_DLL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "3DAL_Celebrity_MSSQL": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/webApi_DLL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/webApi_DLL.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -2867,12 +2883,18 @@
       "type": "project",
       "path": "../../lab6/DAL_Celebrity/DAL_Celebrity/DAL_Celebrity.csproj",
       "msbuildProject": "../../lab6/DAL_Celebrity/DAL_Celebrity/DAL_Celebrity.csproj"
+    },
+    "webApi_DLL/1.0.0": {
+      "type": "project",
+      "path": "../../lab6/DAL_Celebrity/webApi_DLL/webApi_DLL.csproj",
+      "msbuildProject": "../../lab6/DAL_Celebrity/webApi_DLL/webApi_DLL.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "3DAL_Celebrity_MSSQL >= 1.0.0",
-      "DAL_Celebrity >= 1.0.0"
+      "DAL_Celebrity >= 1.0.0",
+      "webApi_DLL >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2908,6 +2930,9 @@
             },
             "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\смелов\\lab6\\DAL_Celebrity\\DAL_Celebrity\\DAL_Celebrity.csproj": {
               "projectPath": "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\смелов\\lab6\\DAL_Celebrity\\DAL_Celebrity\\DAL_Celebrity.csproj"
+            },
+            "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\смелов\\lab6\\DAL_Celebrity\\webApi_DLL\\webApi_DLL.csproj": {
+              "projectPath": "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\смелов\\lab6\\DAL_Celebrity\\webApi_DLL\\webApi_DLL.csproj"
             }
           }
         }

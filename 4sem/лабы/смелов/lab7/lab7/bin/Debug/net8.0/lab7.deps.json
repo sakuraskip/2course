@@ -9,7 +9,8 @@
       "lab7/1.0.0": {
         "dependencies": {
           "3DAL_Celebrity_MSSQL": "1.0.0",
-          "DAL_Celebrity": "1.0.0"
+          "DAL_Celebrity": "1.0.0",
+          "webApi_DLL": "1.0.0"
         },
         "runtime": {
           "lab7.dll": {}
@@ -643,6 +644,14 @@
         "runtime": {
           "DAL_Celebrity.dll": {}
         }
+      },
+      "webApi_DLL/1.0.0": {
+        "dependencies": {
+          "3DAL_Celebrity_MSSQL": "1.0.0"
+        },
+        "runtime": {
+          "webApi_DLL.dll": {}
+        }
       }
     }
   },
@@ -1057,6 +1066,11 @@
       "sha512": ""
     },
     "DAL_Celebrity/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "webApi_DLL/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -39,6 +39,9 @@ CREATE TABLE Reviews (
     Comment NVARCHAR(MAX),
     Rating INT NOT NULL CHECK (Rating >= 1 AND Rating <= 5)  
 );
-select * from Rental
-select * from ShipModel
-select * from UserModel
+
+create table CancelledRentals(
+id int primary key identity(1,1),
+userId int foreign key references UserModel(id),
+rentalId int foreign key references Rental(id),
+status varchar(50))

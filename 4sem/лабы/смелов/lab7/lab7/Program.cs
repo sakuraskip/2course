@@ -1,4 +1,6 @@
 using _3DAL_Celebrity_MSSQL;
+using Microsoft.Extensions.Options;
+using webApi_DLL;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace lab7
@@ -10,7 +12,6 @@ namespace lab7
             var builder = WebApplication.CreateBuilder(args);
 
             string connectionString = "Data source = leksus\\SQLEXPRESS; Initial Catalog = Celebrities; TrustServerCertificate = Yes; Integrated Security = True;";
-            // Add services to the container.
             builder.Services.AddScoped<IRepository, Repository>((IServiceProvider p) => new Repository(connectionString));
             builder.Services.AddRazorPages(p =>
             {
@@ -41,8 +42,13 @@ namespace lab7
 
             app.UseAuthorization();
 
+            app.UseANCErrorHandler("ANC27X");
             app.MapRazorPages();
-
+            app.MapCelebrities();
+            // API Lifeevents
+            app.MapLifeevents();
+            // API для фотографий
+            app.MapPhotoCelebrities(null);
             app.Run();
         }
     }

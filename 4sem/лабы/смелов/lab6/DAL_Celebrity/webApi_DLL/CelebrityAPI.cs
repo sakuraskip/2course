@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using static webApi_DLL.ErrorHandler;
 namespace webApi_DLL
 {
     public static class CelebrityAPI
@@ -23,19 +23,19 @@ namespace webApi_DLL
             celebrities.MapGet("/{id:int:min(1)}", (IRepository repo, int id) =>
             {
                 Celebrity? celebrity = repo.getCelebrityById(id);
-                //if (celebrities == null) throw new ANC25Exception(status: 404, code: 404001, detail: $"Celebrity id= {id}");
+                if (celebrities == null) throw new ANC25Exception(status: 404, code: "404001", detail: $"Celebrity id= {id}");
                 return Results.Ok(celebrity);
             });
             celebrities.MapGet("/Lifeevents/{id:int:min(1)}", (IRepository repo, int id) =>
             {
                 Celebrity? celebrity = repo.GetCelebrityByLifeeventId(id);
-                //if (celebrities == null) throw new ANC25Exception(status: 404, code: 404001, detail: $"Celebrity id= {id}");
+                if (celebrities == null) throw new ANC25Exception(status: 404, code: "404001", detail: $"Celebrity id= {id}");
                 return Results.Ok(celebrity);
             });
             celebrities.MapDelete("/{id:int:min(1)}", (IRepository repo, int id) =>
             {
                 Celebrity? celebrity = repo.getCelebrityById(id);
-                //if (celebrities == null) throw new ANC25Exception(status: 404, code: 404001, detail: $"Celebrity id= {id}");
+                if (celebrities == null) throw new ANC25Exception(status: 404, code: "404001", detail: $"Celebrity id= {id}");
                 repo.delCelebrityById(id);
                 return Results.Ok();
             });
@@ -125,8 +125,8 @@ namespace webApi_DLL
             lifeevents.MapPost("/", (IRepository repo, Lifeevent lifevent) =>
             {
                 Celebrity? c = repo.getCelebrityById(lifevent.CelebrityId);
-                //if (c == null) throw new ANC25Exception(status: 404, code: 404001, detail: $"Celebrity id= {id}");
-                if (!repo.addLifeevent(lifevent)) ; //throw new ANC25Exception(status: 500, code: 500005, detail: $"addlifeevent()");
+                if (c == null) throw new ANC25Exception(status: 404, code: "404001",detail: "404002:Lifeevent");
+                if (!repo.addLifeevent(lifevent)) throw new ANC25Exception(status: 500, code: "500005", detail: $"addlifeevent()");
                 return Results.Ok(lifevent);
             });
             return lifeevents.MapPut("/{id:int:min(1)}", (IRepository repo, int id, Lifeevent lifevent) =>

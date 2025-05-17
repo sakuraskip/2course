@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASPA006_1", "ASPA006_1\ASPA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab7", "..\..\lab7\lab7\lab7.csproj", "{2D331F40-52CE-4323-B9E2-6C02C46F78CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webApi_DLL", "webApi_DLL\webApi_DLL.csproj", "{701220F3-AAA8-47C8-B62F-33D77FFD5699}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "webApi_DLL", "webApi_DLL\webApi_DLL.csproj", "{701220F3-AAA8-47C8-B62F-33D77FFD5699}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

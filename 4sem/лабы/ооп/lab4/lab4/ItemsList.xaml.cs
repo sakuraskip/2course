@@ -36,7 +36,6 @@ namespace lab4
             panel.CustomButtonClick += HeaderPanel_CustomButtonClick;
             panel.CustomButtonTunnel += HeaderPanel_CustomButtonTunnel;
            
-            CommandBindings.Add(new CommandBinding(ItemsListViewModel.UserProfileCommand, OpenUserProfile));
          
         }
 

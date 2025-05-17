@@ -1,3 +1,5 @@
+'use strict'
+
 import React, { useState } from "react";
 import { useSelector, useDispatch, Provider } from "react-redux";
 import { addTask, toggleTask, editTask, deleteTask } from "./redux/actions";

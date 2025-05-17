@@ -126,8 +126,7 @@ namespace lab4.ViewModels
         public bool IsAdmin => _currentUser?.Role == "admin";
         public ICommand AddShipCommand { get; }
         public ICommand AdminPanelCommand { get; }
-        public static  readonly RoutedUICommand UserProfileCommand = new RoutedUICommand(
-            "UserProfileCommand", "UserProfileCommand", typeof(ItemsListViewModel));//изменить
+        public ICommand UserProfileCommand { get; }
         public ICommand ShipDetailsCommand { get; }
         public ICommand UndoCommand { get; }
         public ICommand RedoCommand { get; }
@@ -147,7 +146,7 @@ namespace lab4.ViewModels
            
             AddShipCommand = new RelayCommand(AddShip);
             AdminPanelCommand = new RelayCommand(OpenAdminPanel);
-            //UserProfileCommand = new RelayCommand(OpenUserProfile);
+            UserProfileCommand = new RelayCommand(OpenUserProfile);
             ShipDetailsCommand = new RelayCommand<ShipModel>(OpenShipDetails);
             UndoCommand = new RelayCommand(Undo, CanUndo);
             RedoCommand = new RelayCommand(Redo, CanRedo);
@@ -249,12 +248,12 @@ namespace lab4.ViewModels
         }
        
 
-        //public void OpenUserProfile()//сменить на private
-        //{
-        //    var userPage = new userpage(_currentUser);
-        //    Application.Current.Windows.OfType<ItemsList>().FirstOrDefault()?.Close();
-        //    userPage.Show();
-        //}
+        private void OpenUserProfile()//сменить на private
+        {
+            var userPage = new userpage(_currentUser);
+            Application.Current.Windows.OfType<ItemsList>().FirstOrDefault()?.Close();
+             userPage.Show();
+        }
 
         private void OpenShipDetails(ShipModel ship)
         {

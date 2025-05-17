@@ -62,10 +62,7 @@ namespace lab4.ViewModels
         {
             if((!string.IsNullOrWhiteSpace(Comment)) && Rating!=0)
             {
-                int testid = 1;//убрать)
-                               //Review = new Review(_user.Id,_user.Username, Comment,Rating,_currentShip.Id);
-                Review = new Review(testid, _user.Username, Comment, Rating, _currentShip.Id);
-
+                               Review = new Review(_user.Id,_user.Username, Comment,Rating,_currentShip.Id);
                 if (SaveToDatabase(Review))
                 {
                     MessageBox.Show("Отзыв сохранен!");

@@ -51,6 +51,7 @@ const PostItem: React.FC<IPostProp>  = ({ppost})=>
     const dispath = useDispatch<Dispatch>();
     const [editing,setEditing] = useState(false);
     const [fetching,setFetching]  = useState(false);
+    
     const UpdatePost =  async(post:{title:string,body:string})=>
     {
         setFetching(true);
