@@ -7,11 +7,10 @@
         xmlns:vm="clr-namespace:lab4.ViewModels"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="Редактирование судна" 
+        Title="{DynamicResource Title_EditShipWindow}" 
         Height="820" 
         Width="800"
-        WindowStartupLocation="CenterScreen"
-      >
+        WindowStartupLocation="CenterScreen">
 
     <Window.DataContext>
         <vm:EditShipViewModel/>
@@ -39,64 +38,61 @@
                             BorderThickness="1">
                         <Image Source="{Binding ShipImage}" Stretch="Uniform" 
                                HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                       
                     </Border>
 
                     <Button Command="{Binding ChangeImageCommand}"
-                            Content="Изменить изображение"
+                            Content="{DynamicResource Button_ChangeImage}"
                             Width="220"
                             HorizontalAlignment="Left"
                             Margin="0,0,0,20"/>
-                    <TextBlock Text="Название"/>
+                    <TextBlock Text="{DynamicResource TextBlock_Name}"/>
                     <TextBox Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}"
-                             materialDesign:HintAssist.Hint="Название судна"/>
-                    <TextBlock Text="Краткое описание"/>
+                             materialDesign:HintAssist.Hint="{DynamicResource Hint_ShipName}"/>
+                    <TextBlock Text="{DynamicResource TextBlock_ShortDescription}"/>
 
                     <TextBox Text="{Binding ShortDescription, UpdateSourceTrigger=PropertyChanged}"
-                             materialDesign:HintAssist.Hint="Краткое описание (до 200 символов)"
+                             materialDesign:HintAssist.Hint="{DynamicResource Hint_ShortDescription}"
                              MaxLength="200"
                              Height="60"
                              TextWrapping="Wrap"
                              AcceptsReturn="True"/>
-                    <TextBlock Text="Полное описание"/>
+                    <TextBlock Text="{DynamicResource TextBlock_Description}"/>
 
                     <TextBox Text="{Binding Description, UpdateSourceTrigger=PropertyChanged}"
-                             materialDesign:HintAssist.Hint="Полное описание"
+                             materialDesign:HintAssist.Hint="{DynamicResource Hint_Description}"
                              Height="120"
                              TextWrapping="Wrap"
                              AcceptsReturn="True"
                              VerticalScrollBarVisibility="Auto"/>
-                    <TextBlock Text="Тип судна"/>
+                    <TextBlock Text="{DynamicResource TextBlock_ShipType}"/>
 
-                    <TextBox Text="{Binding ShipType,UpdateSourceTrigger=PropertyChanged}"
-                              materialDesign:HintAssist.Hint="Тип судна"
-                             />
-                    <TextBlock Text="Цена"/>
+                    <TextBox Text="{Binding ShipType, UpdateSourceTrigger=PropertyChanged}"
+                             materialDesign:HintAssist.Hint="{DynamicResource Hint_ShipType}"/>
+                    <TextBlock Text="{DynamicResource TextBlock_Price}"/>
 
                     <TextBox Text="{Binding Price, UpdateSourceTrigger=PropertyChanged}"
-                             materialDesign:HintAssist.Hint="Цена"
+                             materialDesign:HintAssist.Hint="{DynamicResource Hint_Price}"
                              materialDesign:TextFieldAssist.PrefixText="$"/>
-                    <TextBlock Text="Статус доступности"/>
+                    <TextBlock Text="{DynamicResource TextBlock_Availability}"/>
 
                     <TextBox Text="{Binding Availability}"
-                              materialDesign:HintAssist.Hint="Статус доступности"/>
+                             materialDesign:HintAssist.Hint="{DynamicResource Hint_Availability}"/>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
                         <Button Command="{Binding CancelCommand}" 
                                 Background="LightGray"
                                 Foreground="Black"
-                                Content="Отмена" 
+                                Content="{DynamicResource Button_Cancel}" 
                                 Width="120"/>
 
                         <Button Command="{Binding SaveCommand}" 
-                                Content="Сохранить" 
+                                Content="{DynamicResource Button_Save}" 
                                 Width="120"/>
                     </StackPanel>
 
                     <TextBlock Text="{Binding ErrorMessage}"
                                Foreground="Red"
                                TextWrapping="Wrap"
-                               Margin="0,10,0,0"
-                               />
+                               Margin="0,10,0,0"/>
                 </StackPanel>
             </ScrollViewer>
         </materialDesign:Card>

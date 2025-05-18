@@ -7,7 +7,7 @@
         xmlns:vm="clr-namespace:lab4.adminViewModels"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="Редактирование аренды" Height="500" Width="600"
+        Title="{DynamicResource Title_EditRentalWindow}" Height="500" Width="600"
         WindowStartupLocation="CenterScreen">
 
     <Window.DataContext>
@@ -26,9 +26,6 @@
             <Setter Property="Margin" Value="0,5,0,15"/>
             <Setter Property="FontSize" Value="14"/>
         </Style>
-        <Style TargetType="ComboBox">
-            
-        </Style>
 
         <Style TargetType="TextBlock">
             <Setter Property="Margin" Value="0,15,0,5"/>
@@ -41,43 +38,43 @@
         <materialDesign:Card UniformCornerRadius="5" Padding="15">
             <ScrollViewer VerticalScrollBarVisibility="Auto">
                 <StackPanel>
-                    <TextBlock Text="{Binding Rental.Id, StringFormat='ID аренды: {0}'}" 
+                    <TextBlock Text="{Binding Rental.Id, StringFormat=ID : {0}}" 
                                Foreground="Gray" FontStyle="Italic"/>
 
                     <TextBox Text="{Binding Rental.shipName, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
-                             IsReadOnly="True"/>
+                             IsReadOnly="True"
+                             materialDesign:HintAssist.Hint="{DynamicResource TextBlock_ShipName}"/>
 
                     <TextBox Text="{Binding Rental.ShipId, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
-                             materialDesign:HintAssist.Hint="ID судна"/>
+                             materialDesign:HintAssist.Hint="{DynamicResource TextBlock_ShipId}"/>
 
                     <TextBox Text="{Binding Rental.UserId, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
-                             materialDesign:HintAssist.Hint="ID пользователя"/>
+                             materialDesign:HintAssist.Hint="{DynamicResource TextBlock_UserId}"/>
 
                     <DatePicker SelectedDate="{Binding Rental.Date, UpdateSourceTrigger=PropertyChanged}"
-                                materialDesign:HintAssist.Hint="Дата аренды"/>
+                                materialDesign:HintAssist.Hint="{DynamicResource TextBlock_Date}"/>
 
                     <ComboBox SelectedValue="{Binding Rental.Status, UpdateSourceTrigger=PropertyChanged}"
-                               SelectedValuePath="Tag"
-                              materialDesign:HintAssist.Hint="Статус аренды"
+                              SelectedValuePath="Tag"
+                              materialDesign:HintAssist.Hint="{DynamicResource TextBlock_Status}"
                               Margin="0,5,0,15">
-                        <ComboBoxItem Content="Активна" Tag="Активно"/>
-                        <ComboBoxItem Content="Завершена" Tag="Завершено"/>
-                        <ComboBoxItem Content="Отменена" Tag="Отменено"/>
-                        <ComboBoxItem Content="Ожидание отмены" Tag="Ожидание отмены"/>
-                        <ComboBoxItem Content="Подтверждена" Tag="Подтверждено"/>
-
+                        <ComboBoxItem Content="{DynamicResource ComboBox_Status_Active}" Tag="Активно"/>
+                        <ComboBoxItem Content="{DynamicResource ComboBox_Status_Completed}" Tag="Завершено"/>
+                        <ComboBoxItem Content="{DynamicResource ComboBox_Status_Canceled}" Tag="Отменено"/>
+                        <ComboBoxItem Content="{DynamicResource ComboBox_Status_PendingCancel}" Tag="Ожидание отмены"/>
+                        <ComboBoxItem Content="{DynamicResource ComboBox_Status_Confirmed}" Tag="Подтверждено"/>
                     </ComboBox>
 
                     <TextBox Text="{Binding Rental.Cost, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
-                             materialDesign:HintAssist.Hint="Стоимость"/>
+                             materialDesign:HintAssist.Hint="{DynamicResource TextBlock_Price}"/>
 
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
                         <Button Command="{Binding CloseCommand}" 
-                                Content="Отмена" 
+                                Content="{DynamicResource Button_Cancel}" 
                                 Width="130"/>
 
                         <Button Command="{Binding SaveCommand}" 
-                                Content="Сохранить" 
+                                Content="{DynamicResource Button_Save}" 
                                 Width="130"/>
                     </StackPanel>
 

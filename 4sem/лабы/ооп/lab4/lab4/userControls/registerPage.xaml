@@ -7,7 +7,7 @@
         xmlns:vm="clr-namespace:lab4.ViewModels"
         xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="Регистрация" Height="700" Width="900"
+        Title="{DynamicResource Title_RegisterPage}" Height="700" Width="900"
         WindowStartupLocation="CenterScreen">
 
     <Window.DataContext>
@@ -42,55 +42,50 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        
-
         <md:Card Grid.Row="1" Margin="50" UniformCornerRadius="6" Padding="40"
                  Background="White"
                  BorderBrush="{StaticResource OceanBlue}" BorderThickness="0 0 0 3">
             <ScrollViewer VerticalScrollBarVisibility="Auto">
                 <StackPanel>
-                    <TextBlock Text="Регистрация" 
+                    <TextBlock Text="{DynamicResource Title_RegisterPage}" 
                                Style="{StaticResource MaterialDesignHeadline4TextBlock}"
                                Foreground="{StaticResource OceanBlue}"
                                HorizontalAlignment="Center" Margin="0,0,0,30"/>
 
                     <TextBox Text="{Binding Login, UpdateSourceTrigger=PropertyChanged}"
-                             md:HintAssist.Hint="Логин"/>
+                             md:HintAssist.Hint="{DynamicResource Hint_Login}"/>
 
                     <TextBox Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}"
-                             md:HintAssist.Hint="Имя пользователя"
+                             md:HintAssist.Hint="{DynamicResource Hint_Username}"
                              Margin="0,10,0,10"/>
 
                     <PasswordBox 
                         PasswordChanged="PasswordBox_PasswordChanged"
-                                 md:HintAssist.Hint="Пароль"
-                                 Margin="0,10,0,10"/>
+                        md:HintAssist.Hint="{DynamicResource Hint_Password}"
+                        Margin="0,10,0,10"/>
 
                     <PasswordBox 
                         PasswordChanged="PasswordBox_PasswordChanged_1"
-                                 md:HintAssist.Hint="Подтвердите пароль"
-                                 Margin="0,10,0,20"/>
+                        md:HintAssist.Hint="{DynamicResource Hint_ConfirmPassword}"
+                        Margin="0,10,0,20"/>
 
                     <Button Command="{Binding RegisterCommand}"
-                            Content="Зарегистрироваться"
-                           />
+                            Content="{DynamicResource Button_Register}"/>
 
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
-                        <TextBlock Text="Уже есть аккаунт?" 
+                        <TextBlock Text="{DynamicResource TextBlock_AlreadyHaveAccount}" 
                                    VerticalAlignment="Center"
                                    Margin="0,0,5,0"/>
                         <TextBlock>
                             <Hyperlink Command="{Binding NavigateToLoginCommand}"
                                        Foreground="{StaticResource OceanBlue}"
                                        TextDecorations="None">
-                                Войти
+                                <TextBlock Text="{DynamicResource Hyperlink_LoginText}"/>
                             </Hyperlink>
                         </TextBlock>
                     </StackPanel>
                 </StackPanel>
             </ScrollViewer>
         </md:Card>
-
-        
     </Grid>
 </Window>

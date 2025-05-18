@@ -94,8 +94,8 @@
                             </StackPanel>
 
                             <TextBlock Grid.Column="1" 
-                               Text="{Binding Price, StringFormat='Цена: {0:C}'}" 
-                               FontSize="18" FontWeight="SemiBold"/>
+               Text="{Binding Price, StringFormat={} {0:F2}}" 
+               FontSize="18" FontWeight="SemiBold"/>
                         </Grid>
                     </Border>
                 </Grid>
@@ -113,38 +113,38 @@
 
         <Border Grid.Column="0" Background="#FFFFFF" BorderBrush="#EEEEEE" BorderThickness="0,0,1,0">
             <StackPanel Margin="20">
-                <TextBlock Text="Фильтры" FontSize="22" FontWeight="Bold" Margin="0,0,0,20"/>
+                <TextBlock Text="{DynamicResource FiltersTitle}" FontSize="22" FontWeight="Bold" Margin="0,0,0,20"/>
 
-                <TextBlock Text="Поиск по названию" Style="{StaticResource SectionHeader}"/>
+                <TextBlock Text="{DynamicResource SearchByName}" Style="{StaticResource SectionHeader}"/>
                 <TextBox Style="{StaticResource ModernTextBox}" 
                          Text="{Binding FilterName, UpdateSourceTrigger=PropertyChanged}"
                          Margin="0,0,0,20"/>
 
-                <TextBlock Text="Диапазон цен" Style="{StaticResource SectionHeader}"/>
+                <TextBlock Text="{DynamicResource PriceRange}" Style="{StaticResource SectionHeader}"/>
                 <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
                     <TextBox Style="{StaticResource ModernTextBox}" Width="100"
-                             Text="{Binding MinPrice, UpdateSourceTrigger=PropertyChanged}"
-                             materialDesign:HintAssist.Hint="От"/>
+                 Text="{Binding MinPrice, UpdateSourceTrigger=PropertyChanged}"
+                 materialDesign:HintAssist.Hint="{DynamicResource PriceFrom}"/>
                     <TextBlock Text="—" Margin="10,0" VerticalAlignment="Center"/>
                     <TextBox Style="{StaticResource ModernTextBox}" Width="100"
-                             Text="{Binding MaxPrice, UpdateSourceTrigger=PropertyChanged}"
-                             materialDesign:HintAssist.Hint="До"/>
+                 Text="{Binding MaxPrice, UpdateSourceTrigger=PropertyChanged}"
+                 materialDesign:HintAssist.Hint="{DynamicResource PriceTo}"/>
                 </StackPanel>
 
-                <Button Content="Все яхты" Style="{StaticResource ModernButton}" 
-                        Margin="0,0,0,15" Command="{Binding ShowAllShipsCommand}"/>
+                <Button Content="{DynamicResource AllBoats}" Style="{StaticResource ModernButton}" 
+            Margin="0,0,0,15" Command="{Binding ShowAllShipsCommand}"/>
 
                 <StackPanel Visibility="{Binding IsAdmin, Converter={StaticResource BoolToVisibilityConverter}}"
-                            Margin="0,30,0,0">
-                    <TextBlock Text="Администрирование" Style="{StaticResource SectionHeader}"/>
-                    <Button Content="Добавить судно" Style="{StaticResource ModernButton}" 
-                            Command="{Binding AddShipCommand}" Margin="0,0,0,10"/>
-                    <Button Content="Панель управления" Style="{StaticResource ModernButton}" 
-                            Command="{Binding AdminPanelCommand}"/>
+                Margin="0,30,0,0">
+                    <TextBlock Text="{DynamicResource AdminSection}" Style="{StaticResource SectionHeader}"/>
+                    <Button Content="{DynamicResource AddBoat}" Style="{StaticResource ModernButton}" 
+                Command="{Binding AddShipCommand}" Margin="0,0,0,10"/>
+                    <Button Content="{DynamicResource AdminPanel}" Style="{StaticResource ModernButton}" 
+                Command="{Binding AdminPanelCommand}"/>
                 </StackPanel>
 
-                <Button Content="Личный кабинет" Style="{StaticResource ModernButton}" 
-                        Margin="0,30,0,0" Command="{Binding UserProfileCommand}"/>
+                <Button Content="{DynamicResource UserProfile}" Style="{StaticResource ModernButton}" 
+            Margin="0,30,0,0" Command="{Binding UserProfileCommand}"/>
             </StackPanel>
         </Border>
 
@@ -155,8 +155,8 @@
             </Grid.RowDefinitions>
 
             <Border Grid.Row="0" Background="#4285F4" Padding="20">
-                <TextBlock Text="Доступные катера" FontSize="24" Foreground="White" 
-                           FontWeight="Bold" HorizontalAlignment="Center"/>
+                <TextBlock Text="{DynamicResource AvailableBoats}" FontSize="24" Foreground="White" 
+                   FontWeight="Bold" HorizontalAlignment="Center"/>
             </Border>
 
             <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Padding="20">

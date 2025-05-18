@@ -7,7 +7,7 @@
         xmlns:vm="clr-namespace:lab4.ViewModels"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="Добавить отзыв" 
+        Title="{DynamicResource Title_AddReviewWindow}" 
         Height="300" Width="400"
         WindowStartupLocation="CenterOwner"
         ResizeMode="NoResize">
@@ -23,29 +23,29 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Text="Ваш отзыв" FontSize="18" FontWeight="Bold" Margin="0,0,0,10"/>
+        <TextBlock Text="{DynamicResource TextBlock_YourReview}" FontSize="18" FontWeight="Bold" Margin="0,0,0,10"/>
 
         <TextBox Grid.Row="1" Text="{Binding Comment}" 
                  AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"
                  MaxLength="500" FontSize="14" Padding="5"/>
 
         <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,15,0,0">
-            <TextBlock Text="Оценка:" VerticalAlignment="Center" Margin="0,0,10,0"/>
+            <TextBlock Text="{DynamicResource TextBlock_Rating}" VerticalAlignment="Center" Margin="0,0,10,0"/>
             <ComboBox SelectedValue="{Binding Rating}" 
                       SelectedValuePath="Tag"
-          Width="100" HorizontalAlignment="Left">
-                <ComboBoxItem Content="1 ★" Tag="1"/>
-                <ComboBoxItem Content="2 ★★" Tag="2"/>
-                <ComboBoxItem Content="3 ★★★" Tag="3"/>
-                <ComboBoxItem Content="4 ★★★★" Tag="4"/>
-                <ComboBoxItem Content="5 ★★★★★" Tag="5"/>
+                      Width="100" HorizontalAlignment="Left">
+                <ComboBoxItem Content="{DynamicResource ComboBox_Rating_1}" Tag="1"/>
+                <ComboBoxItem Content="{DynamicResource ComboBox_Rating_2}" Tag="2"/>
+                <ComboBoxItem Content="{DynamicResource ComboBox_Rating_3}" Tag="3"/>
+                <ComboBoxItem Content="{DynamicResource ComboBox_Rating_4}" Tag="4"/>
+                <ComboBoxItem Content="{DynamicResource ComboBox_Rating_5}" Tag="5"/>
             </ComboBox>
         </StackPanel>
 
         <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
-            <Button Content="Отмена" Command="{Binding CancelCommand}" 
+            <Button Content="{DynamicResource Button_Cancel}" Command="{Binding CancelCommand}" 
                     Width="120" />
-            <Button Content="Отправить" Command="{Binding SubmitCommand}" 
+            <Button Content="{DynamicResource Button_Submit}" Command="{Binding SubmitCommand}" 
                     Width="120" />
         </StackPanel>
     </Grid>

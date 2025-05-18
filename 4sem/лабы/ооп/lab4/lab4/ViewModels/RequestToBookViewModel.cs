@@ -81,14 +81,12 @@ namespace lab4.ViewModels
 
     public RequestToBookViewModel()
     {
-        ButtonContent = (string)Application.Current.FindResource("ConfirmButton");
         ConfirmCommand = new RelayCommand(ConfirmRent);
     }
         public RequestToBookViewModel(ShipModel ship,UserModel user)
         {
             this.ship = ship;
             this.user  = user;
-            ButtonContent = (string)Application.Current.FindResource("ConfirmButton");
             ConfirmCommand = new RelayCommand(ConfirmRent);
         }
         private bool CanConfirm()
