@@ -78,10 +78,17 @@ namespace lab4.ViewModels
             UserModel? DbUser = _users.Where(u => u.Login == Login).FirstOrDefault();
             if (DbUser == null)
             {
-                UserModel newuser = new UserModel(Login, Login, Password);
+                UserModel newuser = new UserModel(Username, Login, Password);
                 _user = newuser;
                 SaveToDb(_user);
                 _users.Add(_user);
+                MessageBox.Show("вы успешно зарегистрированы.");
+                Task.Delay(1000);
+                NavigateToLogin();
+            }
+            else
+            {
+                MessageBox.Show("пользователь с таким логином уже существует");
             }
         }
 

@@ -20,7 +20,7 @@ namespace lab4
     /// </summary>
     public partial class editShipWindow : Window
     {
-        public ShipModel edited => (DataContext as EditShipViewModel).EditedShip;
+        public ShipModel edited => (DataContext as EditShipViewModel).OriginalShip;
 
         public editShipWindow(ShipModel ship)
         {

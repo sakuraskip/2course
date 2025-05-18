@@ -14,6 +14,7 @@ namespace lab4.adminViewModels
     {
         private Request _rental;
         private readonly string _connectionString;
+        private string _errorMessage;
 
         public Request Rental
         {
@@ -24,7 +25,15 @@ namespace lab4.adminViewModels
                 OnPropertyChanged();
             }
         }
-
+        public string ErrorMessage
+        {
+            get => _errorMessage;
+            set
+            {
+                _errorMessage = value;
+                OnPropertyChanged();
+            }
+        }
         public ICommand SaveCommand { get; }
         public ICommand CloseCommand { get; }
 
@@ -52,51 +61,68 @@ namespace lab4.adminViewModels
 
         private void Save()
         {
-            try
+            if (CanSaveRental())
             {
-                using (var connection = new SqlConnection(_connectionString))
+                try
                 {
-                    connection.Open();
-
-                    using (var transaction = connection.BeginTransaction())
+                    using (var connection = new SqlConnection(_connectionString))
                     {
-                        try
+                        connection.Open();
+
+                        using (var transaction = connection.BeginTransaction())
                         {
-                            using (var command = new SqlCommand(
-                                "UPDATE Rental SET ShipId = @ShipId,UserId = @UserId, RentDate = @RentDate, Status = @Status, Cost = @Cost WHERE Id = @Id",
-                                connection,
-                                transaction))
+                            try
                             {
-                                command.Parameters.AddWithValue("@ShipId", Rental.ShipId);
-                                command.Parameters.AddWithValue("@UserId", Rental.UserId);
-                                command.Parameters.AddWithValue("@RentDate", Rental.Date);
-                                command.Parameters.AddWithValue("@Status", Rental.Status);
-                                command.Parameters.AddWithValue("@Cost", Rental.Cost);
-                                command.Parameters.AddWithValue("@Id", Rental.Id);
+                                using (var command = new SqlCommand(
+                                    "UPDATE Rental SET ShipId = @ShipId,UserId = @UserId, RentDate = @RentDate, Status = @Status, Cost = @Cost WHERE Id = @Id",
+                                    connection,
+                                    transaction))
+                                {
+                                    command.Parameters.AddWithValue("@ShipId", Rental.ShipId);
+                                    command.Parameters.AddWithValue("@UserId", Rental.UserId);
+                                    command.Parameters.AddWithValue("@RentDate", Rental.Date);
+                                    command.Parameters.AddWithValue("@Status", Rental.Status);
+                                    command.Parameters.AddWithValue("@Cost", Rental.Cost);
+                                    command.Parameters.AddWithValue("@Id", Rental.Id);
 
-                               command.ExecuteNonQuery();
+                                    command.ExecuteNonQuery();
 
-                                
+
+                                }
+                                transaction.Commit();
+                                MessageBox.Show("Данные аренды успешно сохранены.");
+                                CloseWindow();
                             }
-                            transaction.Commit();
-                            MessageBox.Show("Данные аренды успешно сохранены.");
-                            CloseWindow();
-                        }
-                        catch (Exception ex)
-                        {
-                            transaction.Rollback();
-                            MessageBox.Show($"Ошибка при сохранении аренды: {ex.Message}");
+                            catch (Exception ex)
+                            {
+                                transaction.Rollback();
+                                MessageBox.Show($"Ошибка при сохранении аренды: {ex.Message}");
+                            }
                         }
                     }
                 }
+
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"ошибка save(): {ex.Message}");
+                }
             }
-            
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show($"ошибка save(): {ex.Message}");
+                ErrorMessage = "Ошибка в введенных изменениях";
             }
         }
-
+        private bool CanSaveRental()
+        {
+            ErrorMessage = string.Empty;
+            return 
+                   Rental.ShipId > 0 &&
+                   Rental.UserId > 0 &&
+                   Rental.Date != default &&
+                   !string.IsNullOrWhiteSpace(Rental.Status) &&
+                   Rental.Cost > 0;
+        }
         private void CloseWindow()
         {
             Application.Current.Windows.OfType<EditRentalWindow>().FirstOrDefault()?.Close();

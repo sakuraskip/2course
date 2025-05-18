@@ -168,6 +168,7 @@ namespace lab4
         private int _price;
         private string _availability;
         private double _rating;
+        private string _shortDescritpion;
 
         public double Rating
         {
@@ -184,6 +185,11 @@ namespace lab4
         {
             get => _name;
             set { _name = value; OnPropertyChanged(); }
+        }
+        public string ShortDescription
+        {
+            get => _shortDescritpion;
+            set { _shortDescritpion = value; OnPropertyChanged(); }
         }
 
         public string Description
@@ -217,7 +223,7 @@ namespace lab4
         }
 
         public ShipModel(int id, string name, string description, int price,
-                        string availability, string imagePath, string shipType)
+                        string availability, string imagePath, string shipType,string shortdesc)
         {
             Id = id;
             Name = name;
@@ -226,6 +232,7 @@ namespace lab4
             Availability = availability;
             ImagePath = imagePath;
             ShipType = shipType;
+            ShortDescription = shortdesc;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -21,7 +23,15 @@ namespace lab4.ViewModels
         private BitmapImage _imagePreview;
         private readonly int _shipListLength;
         private readonly string _shipType;
+        private string _shortDescription = " ";
 
+        private string _connectionString = ConfigurationManager.ConnectionStrings[1].ConnectionString;
+
+        public string ShortDescription
+        {
+            get => _shortDescription;
+            set { _shortDescription = value; OnPropertyChanged(); }
+        }
         public string Name
         {
             get => _name;
@@ -81,16 +91,43 @@ namespace lab4.ViewModels
                 return;
             }
 
-            NewShip = new ShipModel(
-                _shipListLength + 1,
-                Name,
-                Description,
-                priceValue,
-                "Модель в наличии",
-                ImagePath,
-                _shipType);
+            try
+            {
+                using (var connection = new SqlConnection(_connectionString))
+                {
+                    connection.Open();
+                    using (var command = new SqlCommand("Insert into ShipModel" +
+                        " (Name, Description, Price, Availability, ImagePath, ShipType, ShortDescription)" +
+                        "VALUES (@Name, @Description, @Price, @Availability, @ImagePath, @ShipType, @ShortDescription); SELECT SCOPE_IDENTITY();", connection))
+                    {
+                        command.Parameters.AddWithValue("@Name", Name);
+                        command.Parameters.AddWithValue("@Description", Description);
+                        command.Parameters.AddWithValue("@Price", priceValue);
+                        command.Parameters.AddWithValue("@Availability", "Модель в наличии");
+                        command.Parameters.AddWithValue("@ImagePath", ImagePath);
+                        command.Parameters.AddWithValue("@ShipType", _shipType);
+                        command.Parameters.AddWithValue("@ShortDescription", ShortDescription);
 
-            CloseAction?.Invoke();
+                        int newId = Convert.ToInt32(command.ExecuteScalar());
+
+                        NewShip = new ShipModel(
+                newId,
+               Name,
+               Description,
+               priceValue,
+               "Модель в наличии",
+               ImagePath,
+               _shipType, _shortDescription);
+                        MessageBox.Show("корабль добавлен в базу данных");
+                    }
+                }
+                CloseAction?.Invoke();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
         private void SelectFile()
         {

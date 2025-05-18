@@ -5,24 +5,100 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:lab4"
         xmlns:vm="clr-namespace:lab4.ViewModels"
-        mc:Ignorable="d"         Background="{DynamicResource BackgroundColor}"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Редактирование судна" 
+        Height="820" 
+        Width="800"
+        WindowStartupLocation="CenterScreen"
+      >
 
-        Title="" Height="450" Width="600">
     <Window.DataContext>
         <vm:EditShipViewModel/>
     </Window.DataContext>
-    <Grid>
-        <ScrollViewer VerticalScrollBarVisibility="Auto">
-            <StackPanel Margin="10">
-                <Image Source="{Binding ShipImage}" x:Name="ShipImage" Height="200" Stretch="Uniform" Margin="0 0 0 10"/>
-                <TextBlock Text="{DynamicResource Name}" FontSize="14"/>
-                <TextBox Text="{Binding Name,UpdateSourceTrigger=PropertyChanged}" x:Name="NameTextBox" FontSize="14" Margin="0,0,0,10"/>
-                <TextBlock Text="{DynamicResource Description}" FontSize="14"/>
-                <TextBox Text="{Binding Description,UpdateSourceTrigger=PropertyChanged}" x:Name="DescriptionTextBox" FontSize="14" Height="100" TextWrapping="Wrap" AcceptsReturn="True" Margin="0,0,0,10"/>
-                <TextBlock Text="{DynamicResource Price}" FontSize="14"/>
-                <TextBox Text="{Binding Price,UpdateSourceTrigger=PropertyChanged}" x:Name="PriceTextBox" FontSize="14" Margin="0,0,0,10"/>
-                <Button Command="{Binding SaveCommand}" Content="{DynamicResource Save}"  Margin="0,10,0,0"/>
-            </StackPanel>
-        </ScrollViewer>
+
+    <Window.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="0,5,0,15"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="materialDesign:HintAssist.Hint" Value="{Binding}"/>
+        </Style>
+
+        <Style TargetType="ComboBox">
+            <Setter Property="Margin" Value="0,5,0,15"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="15">
+        <materialDesign:Card UniformCornerRadius="5" Padding="15">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <StackPanel>
+                    <Border CornerRadius="5" Height="200" Margin="0,0,0,15" Width="400"
+                            BorderBrush="{DynamicResource MaterialDesignDivider}"
+                            BorderThickness="1">
+                        <Image Source="{Binding ShipImage}" Stretch="Uniform" 
+                               HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                       
+                    </Border>
+
+                    <Button Command="{Binding ChangeImageCommand}"
+                            Content="Изменить изображение"
+                            Width="220"
+                            HorizontalAlignment="Left"
+                            Margin="0,0,0,20"/>
+                    <TextBlock Text="Название"/>
+                    <TextBox Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}"
+                             materialDesign:HintAssist.Hint="Название судна"/>
+                    <TextBlock Text="Краткое описание"/>
+
+                    <TextBox Text="{Binding ShortDescription, UpdateSourceTrigger=PropertyChanged}"
+                             materialDesign:HintAssist.Hint="Краткое описание (до 200 символов)"
+                             MaxLength="200"
+                             Height="60"
+                             TextWrapping="Wrap"
+                             AcceptsReturn="True"/>
+                    <TextBlock Text="Полное описание"/>
+
+                    <TextBox Text="{Binding Description, UpdateSourceTrigger=PropertyChanged}"
+                             materialDesign:HintAssist.Hint="Полное описание"
+                             Height="120"
+                             TextWrapping="Wrap"
+                             AcceptsReturn="True"
+                             VerticalScrollBarVisibility="Auto"/>
+                    <TextBlock Text="Тип судна"/>
+
+                    <TextBox Text="{Binding ShipType,UpdateSourceTrigger=PropertyChanged}"
+                              materialDesign:HintAssist.Hint="Тип судна"
+                             />
+                    <TextBlock Text="Цена"/>
+
+                    <TextBox Text="{Binding Price, UpdateSourceTrigger=PropertyChanged}"
+                             materialDesign:HintAssist.Hint="Цена"
+                             materialDesign:TextFieldAssist.PrefixText="$"/>
+                    <TextBlock Text="Статус доступности"/>
+
+                    <TextBox Text="{Binding Availability}"
+                              materialDesign:HintAssist.Hint="Статус доступности"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
+                        <Button Command="{Binding CancelCommand}" 
+                                Background="LightGray"
+                                Foreground="Black"
+                                Content="Отмена" 
+                                Width="120"/>
+
+                        <Button Command="{Binding SaveCommand}" 
+                                Content="Сохранить" 
+                                Width="120"/>
+                    </StackPanel>
+
+                    <TextBlock Text="{Binding ErrorMessage}"
+                               Foreground="Red"
+                               TextWrapping="Wrap"
+                               Margin="0,10,0,0"
+                               />
+                </StackPanel>
+            </ScrollViewer>
+        </materialDesign:Card>
     </Grid>
 </Window>

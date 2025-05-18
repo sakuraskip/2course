@@ -26,21 +26,8 @@
             <Setter Property="md:HintAssist.Foreground" Value="{StaticResource OceanBlue}"/>
         </Style>
 
-        <Style TargetType="Button" BasedOn="{StaticResource MaterialDesignRaisedButton}">
-            <Setter Property="Background" Value="{StaticResource OceanBlue}"/>
-            <Setter Property="Foreground" Value="White"/>
-            <Setter Property="Height" Value="50"/>
-            <Setter Property="FontSize" Value="18"/>
-            <Setter Property="Margin" Value="0,0,0,20"/>
-        </Style>
-
-        <Style x:Key="WaveStyle" TargetType="Path">
-            <Setter Property="Stretch" Value="Fill"/>
-            <Setter Property="Height" Value="30"/>
-            <Setter Property="Fill" Value="{StaticResource OceanBlue}"/>
-            <Setter Property="Opacity" Value="0.1"/>
-            <Setter Property="HorizontalAlignment" Value="Stretch"/>
-        </Style>
+       
+        
     </Window.Resources>
 
     <Grid Background="{StaticResource LightWave}">
@@ -52,8 +39,7 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <!--<Path Grid.Row="0" Style="{StaticResource WaveStyle}"
-              Data="M0,20 Q100,0 200,20 T400,20 T600,20 T800,20 T900,20 L900,0 L0,0 Z"/>-->
+      
 
         <Grid Grid.Row="1" Grid.RowSpan="3">
             <Grid.ColumnDefinitions>
@@ -103,7 +89,6 @@
             </md:Card>
         </Grid>
 
-        <!--<Path Grid.Row="4" Style="{StaticResource WaveStyle}"
-              Data="M0,0 Q100,20 200,0 T400,0 T600,0 T800,0 T900,0 L900,20 L0,20 Z"/>-->
+      
     </Grid>
 </Window>

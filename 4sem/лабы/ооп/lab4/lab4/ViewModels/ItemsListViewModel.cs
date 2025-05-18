@@ -209,7 +209,9 @@ namespace lab4.ViewModels
                                     price: reader.GetInt32(reader.GetOrdinal("Price")),
                                     availability: reader["Availability"].ToString(),
                                     imagePath: reader["ImagePath"].ToString(),
-                                    shipType: reader["ShipType"].ToString()));
+                                    shipType: reader["ShipType"].ToString(),
+                                    shortdesc: reader["ShortDescription"].ToString()));
+                                    
                             }
                             Ships = ships;
                         }
@@ -225,17 +227,21 @@ namespace lab4.ViewModels
 
         private void AddShip()
         {
-            var addShipWindow = new AddShipWindow(Ships.Count, "тест");
+            var addShipWindow = new AddShipWindow(Ships.Count, "уникальный");
             if(addShipWindow.ShowDialog() == true)
             {
               
             }
             var newShip = (addShipWindow.DataContext as AddShipWindowViewModel).NewShip;
-            Ships.Add(newShip);
-            allships.Add(newShip);
-            _addedShips.Push(newShip);
-            _lastAction = "Add";
-            _redoStack.Clear();
+            if (newShip != null)
+            {
+                Ships.Add(newShip);
+                allships.Add(newShip);
+                _addedShips.Push(newShip);
+                _lastAction = "Add";
+                _redoStack.Clear();
+            }
+           
         }
         private void OpenAdminPanel()
         {

@@ -18,7 +18,7 @@ CREATE TABLE UserModel (
     Login VARCHAR(100) NOT NULL UNIQUE,
 	Username VARCHAR(100) NOT NULL,
     Password VARCHAR(100) NOT NULL,
-    ProfilePicture varbinary(max)
+    ProfilePicture varchar(1000)
 );
 
 CREATE TABLE Rental (

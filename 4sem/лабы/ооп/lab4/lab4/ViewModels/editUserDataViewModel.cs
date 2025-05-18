@@ -9,6 +9,10 @@ using Microsoft.Win32;
 using lab4.ViewModels;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Data.SqlClient;
+using System.Configuration;
+using System.Security.Policy;
+using System.Windows;
 namespace lab4.ViewModels
 {
     public class EditUserDataViewModel:INotifyPropertyChanged
@@ -20,6 +24,8 @@ namespace lab4.ViewModels
         private BitmapImage _profileImage;
         private string _passwordBuffer;
         private string _username;
+        private string _connectionString = ConfigurationManager.ConnectionStrings[1].ConnectionString;
+
 
         public event Action<UserModel> UserChanged;
         
@@ -121,15 +127,49 @@ namespace lab4.ViewModels
                 ErrorMessage = "Заполните логин корректно";
                 return;
             }
+            if(Username.Length>15)
+            {
+                ErrorMessage = "Имя пользователя превышает 15 символов";
+                return;
+            }
             if(PasswordBuffer!= User.Password)
             {
                 ErrorMessage = "Введен неверный пароль";
                 return;
             }
-            User.Username = Username;
-            User.ProfilePicturePath = ProfilePicBuffer;
+            try
+            {
+                using (var connection = new SqlConnection(_connectionString))
+                {
+                    connection.Open();
+                    using (var command = new SqlCommand("update UserModel set Username = @Username, ProfilePicture = " +
+                   "@ProfilePicture where Id = @Id", connection))
+                    {
+                        command.Parameters.AddWithValue("@Username", Username);
+                        command.Parameters.AddWithValue("@ProfilePicture", ProfilePicBuffer);
+                        command.Parameters.AddWithValue("@Id", User.Id);
 
-            CloseAction?.Invoke();
+                        int rows = command.ExecuteNonQuery();
+                        if(rows !=0)
+                        {
+                            User.Username = Username;
+                            User.ProfilePicturePath = ProfilePicBuffer;
+                            CloseAction?.Invoke();
+                        }
+                        else
+                        {
+                            MessageBox.Show("save user to db failed");
+                        }
+                    }
+                }
+               
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("void save: " +  ex.Message);
+            }
+            
+
            
         }
         

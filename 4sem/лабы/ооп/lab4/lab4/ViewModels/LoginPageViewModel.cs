@@ -55,27 +55,6 @@ namespace lab4.ViewModels
             var registerpage = new registerPage();
             registerpage.Show();
             CloseAction?.Invoke();
-            
-            //if (!string.IsNullOrEmpty(Login) && !string.IsNullOrEmpty(Password))
-            //{
-            //    UserModel? DbUser = _users.Where(u => u.Login == Login).FirstOrDefault();
-            //    if (DbUser == null)
-            //    {
-            //        UserModel newuser = new UserModel(Login,Login, Password);
-            //        _user = newuser;
-            //        SaveToDb(_user);
-            //        _users.Add(_user);
-
-            //        MessageBox.Show("Аккаунт успешно зарегистрирован.  Введите данные и нажмите кнопку Войти");
-            //    }
-            //    else MessageBox.Show("Пользователь с таким логином уже существует");
-
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Поля логина и пароля не должны быть пустыми");
-            //}
-
         }
         private void SignIn()
         {

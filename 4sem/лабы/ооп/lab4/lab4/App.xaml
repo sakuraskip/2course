@@ -16,6 +16,8 @@
                 <ResourceDictionary Source="themes/WhiteTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
             <local:RatingConverter x:Key="RatingConverter"/>
+            <local:EmptyToVisibilityConverter x:Key="EmptyToVisibilityConverter"/>
+            <local:StatusToBrushConverter x:Key="StatusToBrushConverter"/>
         </ResourceDictionary>
         
     </Application.Resources>

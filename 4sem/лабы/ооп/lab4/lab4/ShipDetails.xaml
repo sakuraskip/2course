@@ -18,6 +18,10 @@
     </Window.DataContext>
 
     <Window.Resources>
+        <Style TargetType="DatePicker">
+            <Setter Property="Margin" Value="0,5,0,15"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
         <DataTemplate x:Key="ShipTemplate">
             <StackPanel>
                 <Border CornerRadius="10" Background="White" Margin="20,10" 
@@ -66,7 +70,7 @@
             <RowDefinition Height="50"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="150"/>
+            <RowDefinition Height="180"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
@@ -138,7 +142,7 @@
         </Border>
 
         
-        <Border Grid.Row="4" Background="#F1F3F4" Padding="20">
+        <Border Grid.Row="4" Background="#F1F3F4" Padding="20,20,20,0" Height="90">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>

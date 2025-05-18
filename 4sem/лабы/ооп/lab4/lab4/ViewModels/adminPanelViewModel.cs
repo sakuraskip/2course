@@ -254,7 +254,7 @@ namespace lab4.ViewModels
                         {
                             if (await reader.ReadAsync())
                             {
-                                MostPopularShip = $"{reader["Name"]} ({reader["RentalCount"]} rentals)";
+                                MostPopularShip = $"{reader["Name"]} ({reader["RentalCount"]} аренд(ы))";
                             }
                             else
                             {
@@ -390,7 +390,8 @@ namespace lab4.ViewModels
                                     price: reader.GetInt32(reader.GetOrdinal("Price")),
                                     availability: reader["Availability"].ToString(),
                                     imagePath: reader["ImagePath"].ToString(),
-                                    shipType: reader["ShipType"].ToString()));
+                                    shipType: reader["ShipType"].ToString(),
+                                    shortdesc: reader["ShortDescription"].ToString()));
                             }
                             Ships = ships;
                         }

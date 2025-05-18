@@ -9,8 +9,8 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Background="#FFF5F5F7"
-        Title="Морские путешествия" 
-        Height="800" Width="1200"
+        Title="Главная страница" 
+        Height="800" Width="1050"
         WindowStartupLocation="CenterScreen"
         FontFamily="Segoe UI">
 
@@ -19,7 +19,6 @@
     </Window.DataContext>
 
     <Window.Resources>
-        <!-- Стили -->
         <Style TargetType="Button" x:Key="ModernButton">
             <Setter Property="Background" Value="#4285F4"/>
             <Setter Property="Foreground" Value="White"/>
@@ -54,13 +53,12 @@
 
         <DataTemplate x:Key="ShipCardTemplate">
             <Border BorderBrush="#E0E0E0" BorderThickness="1" CornerRadius="12" 
-                    Margin="15" Background="White" 
-                    >
+            Margin="15" Background="White">
                 <Border.InputBindings>
                     <MouseBinding MouseAction="LeftClick"
-                                Command="{Binding DataContext.ShipDetailsCommand, 
-                                        RelativeSource={RelativeSource AncestorType=Window}}"
-                                CommandParameter="{Binding}"/>
+                        Command="{Binding DataContext.ShipDetailsCommand, 
+                                RelativeSource={RelativeSource AncestorType=Window}}"
+                        CommandParameter="{Binding}"/>
                 </Border.InputBindings>
                 <Grid Width="300" Height="350">
                     <Grid.RowDefinitions>
@@ -75,16 +73,30 @@
 
                     <StackPanel Grid.Row="1">
                         <TextBlock Text="{Binding Name}" FontSize="20" FontWeight="Bold" 
-                                   TextWrapping="Wrap" Margin="0,0,0,5"/>
+                           TextWrapping="Wrap" Margin="0,0,0,5"/>
                         <TextBlock Text="{Binding ShortDescription}" FontSize="14" 
-                                   Foreground="#666666" TextWrapping="Wrap"/>
+                           Foreground="#666666" TextWrapping="Wrap"/>
                     </StackPanel>
 
                     <Border Grid.Row="2" Background="#F8F9FA" CornerRadius="0,0,12,12" 
-                            Padding="15" BorderThickness="0,1,0,0" BorderBrush="#EEEEEE">
-                        <TextBlock Text="{Binding Price, StringFormat='Цена: {0:C}'}" 
-                                   FontSize="18" FontWeight="SemiBold" 
-                                   HorizontalAlignment="Right"/>
+                    Padding="15" BorderThickness="0,1,0,0" BorderBrush="#EEEEEE">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <materialDesign:PackIcon Kind="Star" Width="16" Height="16" 
+                                               Foreground="#FFC107" Margin="0,0,5,0"/>
+                                <TextBlock Text="{Binding Rating, StringFormat={}{0:F2}}" FontSize="18"/>
+                                <TextBlock Text="/5" FontSize="18" Foreground="#666666" Margin="2,0,0,0"/>
+                            </StackPanel>
+
+                            <TextBlock Grid.Column="1" 
+                               Text="{Binding Price, StringFormat='Цена: {0:C}'}" 
+                               FontSize="18" FontWeight="SemiBold"/>
+                        </Grid>
                     </Border>
                 </Grid>
             </Border>
@@ -136,20 +148,17 @@
             </StackPanel>
         </Border>
 
-        <!-- Основное содержимое -->
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <!-- Заголовок -->
             <Border Grid.Row="0" Background="#4285F4" Padding="20">
-                <TextBlock Text="Доступные суда" FontSize="24" Foreground="White" 
+                <TextBlock Text="Доступные катера" FontSize="24" Foreground="White" 
                            FontWeight="Bold" HorizontalAlignment="Center"/>
             </Border>
 
-            <!-- Список кораблей -->
             <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Padding="20">
                 <ItemsControl ItemsSource="{Binding Ships}" 
                              ItemTemplate="{StaticResource ShipCardTemplate}">

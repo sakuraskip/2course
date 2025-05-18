@@ -9,7 +9,7 @@
         mc:Ignorable="d"
                  Background="{DynamicResource BackgroundColor}"
 
-        Title="editUserData" Height="430" Width="350">
+        Title="editUserData" Height="480" Width="350">
     <Window.DataContext>
         <vm:EditUserDataViewModel></vm:EditUserDataViewModel>
     </Window.DataContext>
@@ -25,17 +25,17 @@
             </Image>
 
 
-            <TextBlock Text="Имя:" FontSize="14" />
+            <TextBlock Text="Новое имя пользователя:" FontSize="14" />
             <TextBox Text="{Binding Username}" x:Name="NameTextBox" Width="Auto" Margin="0,0,0,20"/>
 
             <TextBlock Text="Подтвердите пароль:" FontSize="14" />
             <PasswordBox PasswordChanged="PasswordBox_PassChanged"  x:Name="PasswordBox" Width="Auto" Margin="0,0,0,20"/>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button Content="Сохранить" Width="80" Margin="0,0,10,0" Command="{Binding SaveCommand}"/>
-                <Button Content="Отмена" Width="80" Command="{Binding CloseCommand}" />
+                <Button Content="Сохранить" Width="120" Command="{Binding SaveCommand}"/>
+                <Button Content="Отмена" Width="120"  Command="{Binding CloseCommand}" />
             </StackPanel>
-            <TextBlock Text="{Binding ErrorMessage}" x:Name="Error_TextBlock" Margin="0,10,0,0">
+            <TextBlock Foreground="Red" Text="{Binding ErrorMessage}" x:Name="Error_TextBlock" Margin="0,10,0,0">
                 
             </TextBlock>
         </StackPanel>

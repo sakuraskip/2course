@@ -24,7 +24,7 @@
             <Button x:Name="confirmbutton" FontSize="16" 
         Content="{DynamicResource ConfirmButton}" 
         Command="{Binding ConfirmCommand}" 
-        Width="100" Height="40" HorizontalAlignment="Center"/>
+        Width="150" Height="40" HorizontalAlignment="Center"/>
         </StackPanel>
     </Grid>
 </Window>
