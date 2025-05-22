@@ -72,7 +72,7 @@ namespace lab4
             Date = date;
             Status = status;
             Cost = cost;
-            priceString = $"${cost}";
+            priceString = $"{cost} BYN";
          this.imagePath = imagePath;
             this.shipName = shipname;
         }
@@ -169,7 +169,18 @@ namespace lab4
         private string _availability;
         private double _rating;
         private string _shortDescritpion;
-
+        private string _filterType;
+        private string _priceString;
+        public string PriceString
+        {
+            get => _priceString;
+            set { _priceString = value; OnPropertyChanged(); }
+        }
+        public string FilterType
+        {
+            get => _filterType;
+            set { _filterType = value; OnPropertyChanged(); }
+        }
         public double Rating
         {
             get => _rating;
@@ -221,9 +232,9 @@ namespace lab4
             get => _availability;
             set { _availability = value; OnPropertyChanged(); }
         }
-
+        
         public ShipModel(int id, string name, string description, int price,
-                        string availability, string imagePath, string shipType,string shortdesc)
+                        string availability, string imagePath, string shipType,string shortdesc,string filterType,double rating)
         {
             Id = id;
             Name = name;
@@ -233,6 +244,9 @@ namespace lab4
             ImagePath = imagePath;
             ShipType = shipType;
             ShortDescription = shortdesc;
+            FilterType = filterType;
+            PriceString = $"{price} BYN";
+            Rating = rating;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

@@ -22,11 +22,20 @@ namespace lab4.ViewModels
         private string _imagePath;
         private BitmapImage _imagePreview;
         private readonly int _shipListLength;
-        private readonly string _shipType;
+        private string _shipType;
         private string _shortDescription = " ";
+        public bool IsNameValid { get; set; } = true;
+        public bool IsPriceValid { get; set; } = true;
+        public bool IsDescValid { get; set; } = true;
+        public bool IsImageValid { get; set; } = true;
 
         private string _connectionString = ConfigurationManager.ConnectionStrings[1].ConnectionString;
 
+        public string ShipType
+        {
+            get => _shipType;
+            set { _shipType = value; OnPropertyChanged(); }
+        }
         public string ShortDescription
         {
             get => _shortDescription;
@@ -70,7 +79,6 @@ namespace lab4.ViewModels
         public AddShipWindowViewModel(int shipListLength, string shipType)
         {
             _shipListLength = shipListLength;
-            _shipType = shipType;
 
             AddShipCommand = new RelayCommand(AddShip);
             SelectFileCommand = new RelayCommand(SelectFile);
@@ -82,14 +90,43 @@ namespace lab4.ViewModels
         }
         private void AddShip()
         {
-            if (string.IsNullOrWhiteSpace(Name) ||
-                string.IsNullOrWhiteSpace(Description) ||
-                !int.TryParse(Price, out int priceValue) ||
-                string.IsNullOrWhiteSpace(ImagePath))
+            ResetValidation();
+            bool isValid = true;
+
+            if (string.IsNullOrWhiteSpace(Name))
             {
-                MessageBox.Show("Неверно заполнены поля");
+                IsNameValid = false;
+                isValid = false;
+            }
+
+            if (!int.TryParse(Price, out int price) || price <= 0)
+            {
+                IsPriceValid = false;
+                isValid = false;
+            }
+
+            if (string.IsNullOrWhiteSpace(Description))
+            {
+                IsDescValid = false;
+                isValid = false;
+            }
+
+            if (string.IsNullOrWhiteSpace(ImagePath))
+            {
+                IsImageValid = false;
+                isValid = false;
+            }
+            if (!isValid)
+            {
+                OnPropertyChanged(nameof(IsNameValid));
+                OnPropertyChanged(nameof(IsPriceValid));
+                OnPropertyChanged(nameof(IsDescValid));
+                OnPropertyChanged(nameof(IsImageValid));
+                MessageBox.Show("Заполните все поля корректно");
                 return;
             }
+
+
 
             try
             {
@@ -97,16 +134,18 @@ namespace lab4.ViewModels
                 {
                     connection.Open();
                     using (var command = new SqlCommand("Insert into ShipModel" +
-                        " (Name, Description, Price, Availability, ImagePath, ShipType, ShortDescription)" +
-                        "VALUES (@Name, @Description, @Price, @Availability, @ImagePath, @ShipType, @ShortDescription); SELECT SCOPE_IDENTITY();", connection))
+                        " (Name, Description, Price, Availability, ImagePath, ShipType, ShortDescription,FilterType,Rating)" +
+                        "VALUES (@Name, @Description, @Price, @Availability, @ImagePath, @ShipType, @ShortDescription,@FilterType,@Rating); SELECT SCOPE_IDENTITY();", connection))
                     {
                         command.Parameters.AddWithValue("@Name", Name);
                         command.Parameters.AddWithValue("@Description", Description);
-                        command.Parameters.AddWithValue("@Price", priceValue);
+                        command.Parameters.AddWithValue("@Price", price);
                         command.Parameters.AddWithValue("@Availability", "Модель в наличии");
                         command.Parameters.AddWithValue("@ImagePath", ImagePath);
                         command.Parameters.AddWithValue("@ShipType", _shipType);
                         command.Parameters.AddWithValue("@ShortDescription", ShortDescription);
+                        command.Parameters.AddWithValue("@FilterType", ShipType);
+                        command.Parameters.AddWithValue("@Rating", 4.64);
 
                         int newId = Convert.ToInt32(command.ExecuteScalar());
 
@@ -114,11 +153,11 @@ namespace lab4.ViewModels
                 newId,
                Name,
                Description,
-               priceValue,
+               price,
                "Модель в наличии",
                ImagePath,
-               _shipType, _shortDescription);
-                        MessageBox.Show("корабль добавлен в базу данных");
+               _shipType, _shortDescription,ShipType,4);
+                        MessageBox.Show("судно добавлено в базу данных");
                     }
                 }
                 CloseAction?.Invoke();
@@ -128,6 +167,13 @@ namespace lab4.ViewModels
                 MessageBox.Show(ex.Message);
             }
 
+        }
+        private void ResetValidation()
+        {
+            IsNameValid = true;
+            IsPriceValid = true;
+            IsDescValid = true;
+            IsImageValid = true;
         }
         private void SelectFile()
         {

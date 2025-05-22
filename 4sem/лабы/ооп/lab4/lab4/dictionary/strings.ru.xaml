@@ -84,7 +84,7 @@
     <sys:String x:Key="CancelRent">Отменить</sys:String>
     <sys:String x:Key="EditProfileTooltip">Редактировать профиль</sys:String>
     <sys:String x:Key="MainWindowTitle">Главная страница</sys:String>
-    <sys:String x:Key="AvailableBoats">Доступные катера</sys:String>
+    <sys:String x:Key="AvailableBoats">Доступные судна</sys:String>
     <sys:String x:Key="PriceFormat">Цена: {0:C}</sys:String>
     <sys:String x:Key="RatingFormat">{0:F2}/5</sys:String>
     <sys:String x:Key="FiltersTitle">Фильтры</sys:String>
@@ -92,10 +92,36 @@
     <sys:String x:Key="PriceRange">Диапазон цен</sys:String>
     <sys:String x:Key="PriceFrom">От</sys:String>
     <sys:String x:Key="PriceTo">До</sys:String>
-    <sys:String x:Key="AllBoats">Все яхты</sys:String>
+    <sys:String x:Key="AllBoats">Все катера</sys:String>
     <sys:String x:Key="AdminSection">Администрирование</sys:String>
     <sys:String x:Key="AddBoat">Добавить судно</sys:String>
     <sys:String x:Key="AdminPanel">Панель управления</sys:String>
     <sys:String x:Key="UserProfile">Личный кабинет</sys:String>
+    <sys:String x:Key="Title_ShipDetails">Детали судна</sys:String>
+    <sys:String x:Key="TextBlock_RatingOutOf">/5</sys:String>
+    <sys:String x:Key="ToolTip_ShipType">Тип судна</sys:String>
+    <sys:String x:Key="ReviewsTitle">Отзывы</sys:String>
+    <sys:String x:Key="AddReviewButton">Добавить отзыв</sys:String>
+    <sys:String x:Key="AvailabilityFormat">Доступность: {0}</sys:String>
+    <sys:String x:Key="RentButton">Забронировать</sys:String>
+    <sys:String x:Key="AllYachts">Все яхты</sys:String>
+    <sys:String x:Key="Tab_Statistics">Статистика</sys:String>
+    <sys:String x:Key="TextBlock_OverallStatistics">Общая статистика</sys:String>
+    <sys:String x:Key="TextBlock_TotalRevenue">Общий заработок:</sys:String>
+    <sys:String x:Key="TextBlock_TotalRentals">Общее кол-во аренд:</sys:String>
+    <sys:String x:Key="TextBlock_MostPopularShip">Самое популярное судно:</sys:String>
+    <sys:String x:Key="TextBlock_PopularShips">Наиболее популярные судна</sys:String>
+    <sys:String x:Key="PerDaySuffix">/день</sys:String>
+    <sys:String x:Key="ShowAllBoats">Показать все катера</sys:String>
+    <sys:String x:Key="ShowAllYachts">Показать все яхты</sys:String>
+    <sys:String x:Key="SydnoType">Тип судна</sys:String>
+    <sys:String x:Key="FilterAll">Все</sys:String>
+    <sys:String x:Key="FilterBoats">Катера</sys:String>
+    <sys:String x:Key="FilterYachts">Яхты</sys:String>
+    <sys:String x:Key="LoginPageText">Вход</sys:String>
+    <sys:String x:Key="RequestToBookName">Ваше имя</sys:String>
+    <sys:String x:Key="ExitButton">Выход</sys:String>
+
+
 
 </ResourceDictionary>

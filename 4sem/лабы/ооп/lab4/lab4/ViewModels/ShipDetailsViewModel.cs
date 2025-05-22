@@ -92,7 +92,7 @@ namespace lab4.ViewModels
         }
         private void UpdateDisplayTexts()   
         {
-            PriceText = $"Price: {Ship.Price}$";
+            PriceText = $"Price: {Ship.Price} BYN";
             AvailabilityText = Ship.Availability;
         }
         private void CalculateAverageRating()

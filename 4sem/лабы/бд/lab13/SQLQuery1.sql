@@ -55,7 +55,7 @@ if not exists(select * from SUBJECT where SUBJECT = @p)
 raiserror('ошибка',11,1)
 else
 begin
-declare curs cursor for select * from SUBJECT where SUBJECT.SUBJECT = @p;
+declare curs cursor for select SUBJECT.SUBJECT from SUBJECT where SUBJECT.SUBJECT = @p;
 open curs
 fetch curs into @line;
 while @@FETCH_STATUS =0
@@ -70,6 +70,7 @@ end
 end try
 begin catch
 	print 'ошибка в параметрах'
+	print ERROR_NUMBER()
 end catch;
 go
 execute SUBJECT_REPORT @p = 'КГ';

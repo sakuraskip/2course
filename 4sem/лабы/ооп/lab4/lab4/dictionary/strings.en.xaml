@@ -77,7 +77,7 @@
     <sys:String x:Key="CancelRent">Cancel</sys:String>
     <sys:String x:Key="EditProfileTooltip">Edit Profile</sys:String>
     <sys:String x:Key="MainWindowTitle">Main Page</sys:String>
-    <sys:String x:Key="AvailableBoats">Available Boats</sys:String>
+    <sys:String x:Key="AvailableBoats">Available Ships</sys:String>
     <sys:String x:Key="PriceFormat">Price: {0:C}</sys:String>
     <sys:String x:Key="RatingFormat">{0:F2}/5</sys:String>
     <sys:String x:Key="FiltersTitle">Filters</sys:String>
@@ -90,5 +90,30 @@
     <sys:String x:Key="AddBoat">Add boat</sys:String>
     <sys:String x:Key="AdminPanel">Control panel</sys:String>
     <sys:String x:Key="UserProfile">User profile</sys:String>
+    <sys:String x:Key="Title_ShipDetails">Ship Details</sys:String>
+    <sys:String x:Key="TextBlock_RatingOutOf">/5</sys:String>
+    <sys:String x:Key="ToolTip_ShipType">Ship Type</sys:String>
+    <sys:String x:Key="ReviewsTitle">Reviews</sys:String>
+    <sys:String x:Key="AddReviewButton">Add review</sys:String>
+    <sys:String x:Key="AvailabilityFormat">Availability: {0}</sys:String>
+    <sys:String x:Key="RentButton">Book now</sys:String>
+    <sys:String x:Key="AllYachts">All Yachts</sys:String>
+    <sys:String x:Key="Tab_Statistics">Statistics</sys:String>
+    <sys:String x:Key="TextBlock_OverallStatistics">Overall Statistics</sys:String>
+    <sys:String x:Key="TextBlock_TotalRevenue">Total Revenue:</sys:String>
+    <sys:String x:Key="TextBlock_TotalRentals">Total Rentals:</sys:String>
+    <sys:String x:Key="TextBlock_MostPopularShip">Most Popular Ship:</sys:String>
+    <sys:String x:Key="TextBlock_PopularShips">Most Popular Ships</sys:String>
+    <sys:String x:Key="PerDaySuffix">/day</sys:String>
+    <sys:String x:Key="ShowAllBoats">Show all boats</sys:String>
+    <sys:String x:Key="ShowAllYachts">Show all yachts</sys:String>
+    <sys:String x:Key="SydnoType">Boat type</sys:String>
+    <sys:String x:Key="FilterAll">All</sys:String>
+    <sys:String x:Key="FilterBoats">Boats</sys:String>
+    <sys:String x:Key="FilterYachts">Yachts</sys:String>
+    <sys:String x:Key="LoginPageText">Log in</sys:String>
+    <sys:String x:Key="RequestToBookName">Your name</sys:String>
+    <sys:String x:Key="ExitButton">Exit</sys:String>
+
 
 </ResourceDictionary>

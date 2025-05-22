@@ -27,33 +27,24 @@ namespace lab4
         public ItemsList(UserModel user)
         {
             InitializeComponent();
-            DataContext = new ItemsListViewModel(user);
-            HeaderPanel panel = new HeaderPanel(DataContext as ItemsListViewModel,user);
+            var model = new ItemsListViewModel(user);
+            model.CloseAction = () => { this.Close(); };
+            DataContext = model;
             Cursor customCursor = new Cursor("C:\\Users\\леха\\Desktop\\2_aero_busy.ani", true);
             this.Cursor = customCursor;
-            Grid.SetColumn(panel, 0);
-            Grid.SetColumnSpan(panel, 2);
-            panel.CustomButtonClick += HeaderPanel_CustomButtonClick;
-            panel.CustomButtonTunnel += HeaderPanel_CustomButtonTunnel;
+            
            
          
         }
 
 
 
-        private void HeaderPanel_CustomButtonClick(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Custom button clicked! direct");
-        }
-        private void HeaderPanel_CustomButtonTunnel(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Tunneling event sender: " + sender);
-        }
-        public void OpenUserProfile(object sender, ExecutedRoutedEventArgs e)//сменить на private
-        {
-            var userPage = new userpage((DataContext as ItemsListViewModel)._currentUser);
-            Application.Current.Windows.OfType<ItemsList>().FirstOrDefault()?.Close();
-            userPage.Show();
-        }
+        
+        //public void OpenUserProfile(object sender, ExecutedRoutedEventArgs e)//сменить на private
+        //{
+        //    var userPage = new userpage((DataContext as ItemsListViewModel)._currentUser);
+        //    Application.Current.Windows.OfType<ItemsList>().FirstOrDefault()?.Close();
+        //    userPage.Show();
+        //}
     }
 }

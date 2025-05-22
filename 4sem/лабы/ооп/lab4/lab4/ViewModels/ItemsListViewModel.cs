@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -25,6 +26,25 @@ namespace lab4.ViewModels
         private string connectionString = ConfigurationManager.ConnectionStrings[1].ConnectionString;
 
         private ObservableCollection<Review> _reviews;
+        private string _selectedFilterType = "Все";
+        public string SelectedFilterType
+        {
+            get => _selectedFilterType;
+            set
+            {
+                _selectedFilterType = value;
+                OnPropertyChanged();
+                ApplyFilters(); 
+            }
+        }
+        public IEnumerable<string> FilterTypes => new[]
+ {
+    (string)Application.Current.FindResource("FilterAll"),
+    (string)Application.Current.FindResource("FilterBoats"),
+    (string)Application.Current.FindResource("FilterYachts")
+};
+
+
 
         public static readonly DependencyProperty MinPriceProperty = //удалить это после 7 лабы
            DependencyProperty.Register(
@@ -58,7 +78,7 @@ namespace lab4.ViewModels
         private static void OnFilterPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             var vm = d as ItemsListViewModel;
-            vm?.FilterShips();
+            vm?.ApplyFilters();
         }//удалить
         private static object CoerceMinPrice(DependencyObject d, object baseValue)
         {
@@ -107,7 +127,7 @@ namespace lab4.ViewModels
         public string FilterName
         {
             get => _filterName;
-            set { _filterName = value; OnPropertyChanged(); FilterShips(); }
+            set { _filterName = value; OnPropertyChanged(); ApplyFilters(); }
         }
 
         public string MinPrice
@@ -130,11 +150,15 @@ namespace lab4.ViewModels
         public ICommand ShipDetailsCommand { get; }
         public ICommand UndoCommand { get; }
         public ICommand RedoCommand { get; }
+        public ICommand ShowAllYachtsCommand { get; }
+        public ICommand LogoutCommand { get; }
 
         private Stack<ShipModel> _addedShips = new Stack<ShipModel>();
         private Stack<ShipModel> _removedShips = new Stack<ShipModel>();
         private Stack<ActionItem> _redoStack = new Stack<ActionItem>();
         private string _lastAction;
+
+        public Action CloseAction { get; set; }
 
         public ItemsListViewModel()
         {
@@ -150,10 +174,60 @@ namespace lab4.ViewModels
             ShipDetailsCommand = new RelayCommand<ShipModel>(OpenShipDetails);
             UndoCommand = new RelayCommand(Undo, CanUndo);
             RedoCommand = new RelayCommand(Redo, CanRedo);
-            LoadShips();
+            LogoutCommand = new RelayCommand(Logout);
+            LoadAllShips(); 
             LoadReviews();
-            allships = Ships.ToList();
+            
 
+        }
+        private void Logout()
+        {
+
+            
+            var loginWindow = new loginpage(); 
+            loginWindow.Show();
+            CloseAction?.Invoke();
+
+        }
+        private async void LoadAllShips()
+        {
+            try
+            {
+                await Task.Run(() =>
+                {
+                    using (var connection = new SqlConnection(connectionString))
+                    {
+                        connection.Open();
+                        using (var command = new SqlCommand("SELECT * FROM ShipModel", connection))
+                        {
+                            var ships = new List<ShipModel>();
+                            using (var reader = command.ExecuteReader())
+                            {
+                                while (reader.Read())
+                                {
+                                    ships.Add(new ShipModel(
+                                   id: reader.GetInt32(reader.GetOrdinal("Id")),
+                                   name: reader["Name"].ToString(),
+                                   description: reader["Description"].ToString(),
+                                   price: reader.GetInt32(reader.GetOrdinal("Price")),
+                                   availability: reader["Availability"].ToString(),
+                                   imagePath: reader["ImagePath"].ToString(),
+                                   shipType: reader["ShipType"].ToString(),
+                                   shortdesc: reader["ShortDescription"].ToString(),
+                                   filterType: reader["FilterType"].ToString(),
+                                    rating: reader.GetDouble(reader.GetOrdinal("Rating"))));
+                                }
+                            }
+                                allships = ships;
+                            Ships = new ObservableCollection<ShipModel>(ships);
+                        }
+                    }
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка загрузки судов: {ex.Message}");
+            }
         }
         private void LoadReviews()
         {
@@ -188,42 +262,7 @@ namespace lab4.ViewModels
                 throw;
             }
         }
-        private  void LoadShips()
-        {
-            try
-            {
-                using (var connection = new SqlConnection(connectionString))
-                {
-                     connection.Open();
-                    using (var command = new SqlCommand("SELECT * FROM ShipModel", connection))
-                    {
-                        using (var reader =  command.ExecuteReader())
-                        {
-                            var ships = new ObservableCollection<ShipModel>();
-                            while (reader.Read())
-                            {
-                                ships.Add(new ShipModel(
-                                    id: reader.GetInt32(reader.GetOrdinal("Id")),
-                                    name: reader["Name"].ToString(),
-                                    description: reader["Description"].ToString(),
-                                    price: reader.GetInt32(reader.GetOrdinal("Price")),
-                                    availability: reader["Availability"].ToString(),
-                                    imagePath: reader["ImagePath"].ToString(),
-                                    shipType: reader["ShipType"].ToString(),
-                                    shortdesc: reader["ShortDescription"].ToString()));
-                                    
-                            }
-                            Ships = ships;
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error loading ships: {ex.Message}");
-                throw;
-            }
-        }
+       
 
         private void AddShip()
         {
@@ -246,10 +285,8 @@ namespace lab4.ViewModels
         private void OpenAdminPanel()
         {
             var adminPanel = new adminPanel(Ships.ToList());
-            if (adminPanel.ShowDialog() == true)
-            {
-              
-            }
+            adminPanel.ShowDialog();
+            
             Ships = new ObservableCollection<ShipModel>(adminPanel.refreshShipList());
         }
        
@@ -271,30 +308,29 @@ namespace lab4.ViewModels
             }
 
         }
-        private void FilterShips()
+        private void ApplyFilters()
         {
-          
+            if (allships == null) return;
 
-            int minPrice = 0;
-            int maxPrice = int.MaxValue;
-            if (!string.IsNullOrEmpty(MinPrice))
-                int.TryParse(MinPrice, out minPrice);
+            var filtered = allships.AsEnumerable();
 
-            if (!string.IsNullOrEmpty(MaxPrice))
-                int.TryParse(MaxPrice, out maxPrice);//вернуть проверку
+            if (SelectedFilterType == "Катера" || SelectedFilterType == "Boats")
+                filtered = filtered.Where(s => s.FilterType == "Катер");
+            else if (SelectedFilterType == "Яхты" || SelectedFilterType == "Yachts")
+                filtered = filtered.Where(s => s.FilterType == "Яхта");
 
-            if (maxPrice <= minPrice)
-            {
-                maxPrice = int.MaxValue;
-            }
-            var filtered = allships
-                .Where(s => string.IsNullOrEmpty(FilterName) || s.Name.ToLower().Contains(FilterName?.ToLower() ?? ""))
-                .Where(s => s.Price >= minPrice)
-                .Where(s => s.Price <= maxPrice)
-                .ToList();
+            if (!string.IsNullOrEmpty(MinPrice) && int.TryParse(MinPrice, out int minPrice))
+                filtered = filtered.Where(s => s.Price >= minPrice);
 
-            Ships = new ObservableCollection<ShipModel>(filtered);
+            if (!string.IsNullOrEmpty(MaxPrice) && int.TryParse(MaxPrice, out int maxPrice))
+                filtered = filtered.Where(s => s.Price <= maxPrice);
+
+            if (!string.IsNullOrEmpty(FilterName))
+                filtered = filtered.Where(s => s.Name.Contains(FilterName, StringComparison.OrdinalIgnoreCase));
+
+            Ships = new ObservableCollection<ShipModel>(filtered.ToList());
         }
+
         private bool CanUndo() => _lastAction != null;
         private bool CanRedo() => _redoStack.Count > 0;
         public void Redo()

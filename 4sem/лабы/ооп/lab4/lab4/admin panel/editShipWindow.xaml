@@ -72,7 +72,7 @@
 
                     <TextBox Text="{Binding Price, UpdateSourceTrigger=PropertyChanged}"
                              materialDesign:HintAssist.Hint="{DynamicResource Hint_Price}"
-                             materialDesign:TextFieldAssist.PrefixText="$"/>
+                             materialDesign:TextFieldAssist.PrefixText="BYN"/>
                     <TextBlock Text="{DynamicResource TextBlock_Availability}"/>
 
                     <TextBox Text="{Binding Availability}"

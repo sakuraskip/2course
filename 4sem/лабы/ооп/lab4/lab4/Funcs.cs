@@ -1,12 +1,16 @@
-﻿using System;
+﻿using Microsoft.Xaml.Behaviors;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Data;
+using System.Windows.Input;
 using System.Windows.Media;
+
 
 namespace lab4
 {
@@ -68,6 +72,61 @@ namespace lab4
             throw new NotImplementedException();
         }
     }
+    
+
+public class NumericInputBehavior : Behavior<TextBox>
+    {
+        protected override void OnAttached()
+        {
+            base.OnAttached();
+            AssociatedObject.PreviewTextInput += OnPreviewTextInput;
+            AssociatedObject.PreviewKeyDown += OnPreviewKeyDown;
+            DataObject.AddPastingHandler(AssociatedObject, OnPaste);
+        }
+
+        protected override void OnDetaching()
+        {
+            base.OnDetaching();
+            AssociatedObject.PreviewTextInput -= OnPreviewTextInput;
+            AssociatedObject.PreviewKeyDown -= OnPreviewKeyDown;
+            DataObject.RemovePastingHandler(AssociatedObject, OnPaste);
+        }
+
+        private void OnPreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            e.Handled = !IsTextAllowed(e.Text);
+        }
+
+        private void OnPreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Back || e.Key == Key.Delete || e.Key == Key.Tab)
+                return;
+
+            if ((e.Key >= Key.D0 && e.Key <= Key.D9) || (e.Key >= Key.NumPad0 && e.Key <= Key.NumPad9))
+                return;
+
+            e.Handled = true;
+        }
+
+        private void OnPaste(object sender, DataObjectPastingEventArgs e)
+        {
+            if (e.DataObject.GetDataPresent(typeof(string)))
+            {
+                string text = (string)e.DataObject.GetData(typeof(string));
+                if (!IsTextAllowed(text))
+                    e.CancelCommand();
+            }
+            else
+            {
+                e.CancelCommand();
+            }
+        }
+
+        private bool IsTextAllowed(string text)
+        {
+            return text.All(c => char.IsDigit(c));
+        }
+    }
     public static class Funcs
     {
         public static string ChangeTheme(string theme)
@@ -107,11 +166,7 @@ namespace lab4
 
                 Application.Current.Resources.MergedDictionaries.Add(newtheme);
 
-                foreach (Window window in Application.Current.Windows)
-                {
-                    window.InvalidateVisual();
-                }
-
+                
                 return returnbuff;
             }
             catch (Exception ex)

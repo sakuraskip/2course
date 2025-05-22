@@ -90,18 +90,37 @@ namespace lab4.ViewModels
             ConfirmCommand = new RelayCommand(ConfirmRent);
         }
         private bool CanConfirm()
-    {
-        return 
-               !string.IsNullOrWhiteSpace(PhoneNumber) &&
-               !string.IsNullOrWhiteSpace(Name) &&
-               !string.IsNullOrWhiteSpace(Email) &&
-               RentalDate >= DateTime.Today;
-    }
-    private async void ConfirmRent()
+        {
+            if (RentalDate < DateTime.Today)
+            {
+                MessageBox.Show("дата аренды не может быть в прошлом");
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(PhoneNumber) || !PhoneNumber.All(char.IsDigit) || PhoneNumber.Length < 7)
+            {
+                MessageBox.Show("введите корректный номер телефона ( 7 символов только цифры)");
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(Name) || Name.Length < 2)
+            {
+                MessageBox.Show("Введите корректное имя (2+символа)");
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(Email) || !Email.Contains('@') || !Email.Contains('.')) 
+            {
+                MessageBox.Show("Введите корректный email");
+                return false;
+            }
+
+            return true;
+        }
+        private async void ConfirmRent()
         {
             if(!CanConfirm())
             {
-                MessageBox.Show("Заполните все поля корректно");
                 return;
             }
             try

@@ -32,7 +32,17 @@ namespace lab4.ViewModels
         private decimal _totalRevenue;
         private int _totalRentals;
         private string _mostPopularShip;
+        private string _totalRevenueString;
 
+        public string TotalRevenueString
+        {
+            get => _totalRevenueString;
+            set
+            {
+                _totalRevenueString = value;
+                OnPropertyChanged();
+            }
+        }
         public decimal TotalRevenue
         {
             get => _totalRevenue;
@@ -235,6 +245,7 @@ namespace lab4.ViewModels
                     {
                         var result = await command.ExecuteScalarAsync();
                         TotalRevenue = result != DBNull.Value ? Convert.ToDecimal(result) : 0;
+                        TotalRevenueString = $"{TotalRevenue} BYN";
                     }
 
                     using (var command = new SqlCommand(
@@ -391,7 +402,10 @@ namespace lab4.ViewModels
                                     availability: reader["Availability"].ToString(),
                                     imagePath: reader["ImagePath"].ToString(),
                                     shipType: reader["ShipType"].ToString(),
-                                    shortdesc: reader["ShortDescription"].ToString()));
+                                    shortdesc: reader["ShortDescription"].ToString(),
+                                    filterType: reader["FilterType"].ToString(),
+                                    rating:reader.GetDouble(reader.GetOrdinal("Rating"))
+                                    ));
                             }
                             Ships = ships;
                         }

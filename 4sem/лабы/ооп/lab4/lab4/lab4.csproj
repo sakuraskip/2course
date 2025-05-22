@@ -34,10 +34,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="commands\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Resource Include="themes\AristocraticTheme.xaml" />
     <Resource Include="themes\DarkTheme.xaml" />
     <Resource Include="themes\WhiteTheme.xaml" />

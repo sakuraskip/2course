@@ -9,6 +9,8 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Background="#FFF5F5F7"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
         Title="Главная страница" 
         Height="800" Width="1050"
         WindowStartupLocation="CenterScreen"
@@ -32,7 +34,26 @@
                 </Setter.Value>
             </Setter>
         </Style>
-
+        <Style x:Key="MaterialFilterComboBox" TargetType="ComboBox" BasedOn="{StaticResource MaterialDesignComboBox}">
+            <Setter Property="Background" Value="#4285F4"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="#3367D6"/>
+            <Setter Property="Margin" Value="0,0,0,15"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="materialDesign:HintAssist.Hint" Value="Тип судна"/>
+            <Setter Property="materialDesign:HintAssist.Foreground" Value="White"/>
+            <Setter Property="materialDesign:TextFieldAssist.UnderlineBrush" Value="White"/>
+        </Style>
+        <Style x:Key="MaterialComboBoxItem" TargetType="ComboBoxItem" BasedOn="{StaticResource MaterialDesignComboBoxItemStyle}">
+            <Setter Property="Background" Value="#4285F4"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Style.Triggers>
+                <Trigger Property="IsHighlighted" Value="True">
+                    <Setter Property="Background" Value="#3367D6"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
         <Style TargetType="TextBox" x:Key="ModernTextBox">
             <Setter Property="Background" Value="White"/>
             <Setter Property="BorderBrush" Value="#DDDDDD"/>
@@ -93,9 +114,15 @@
                                 <TextBlock Text="/5" FontSize="18" Foreground="#666666" Margin="2,0,0,0"/>
                             </StackPanel>
 
-                            <TextBlock Grid.Column="1" 
-               Text="{Binding Price, StringFormat={} {0:F2}}" 
-               FontSize="18" FontWeight="SemiBold"/>
+                            <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+                                <TextBlock Text="{Binding PriceString}" 
+               FontSize="18" 
+               FontWeight="SemiBold"/>
+                                <TextBlock Text="{DynamicResource PerDaySuffix}"
+               FontSize="18" 
+               FontWeight="SemiBold"/>
+                            </StackPanel>
+
                         </Grid>
                     </Border>
                 </Grid>
@@ -112,40 +139,62 @@
         </Grid.ColumnDefinitions>
 
         <Border Grid.Column="0" Background="#FFFFFF" BorderBrush="#EEEEEE" BorderThickness="0,0,1,0">
-            <StackPanel Margin="20">
-                <TextBlock Text="{DynamicResource FiltersTitle}" FontSize="22" FontWeight="Bold" Margin="0,0,0,20"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <ScrollViewer Grid.Row="0" VerticalScrollBarVisibility="Auto">
+                    <StackPanel Margin="20">
+                        <TextBlock Text="{DynamicResource FiltersTitle}" FontSize="22" FontWeight="Bold" Margin="0,0,0,20"/>
 
-                <TextBlock Text="{DynamicResource SearchByName}" Style="{StaticResource SectionHeader}"/>
-                <TextBox Style="{StaticResource ModernTextBox}" 
+                        <TextBlock Text="{DynamicResource SearchByName}" Style="{StaticResource SectionHeader}"/>
+                        <TextBox Style="{StaticResource ModernTextBox}" 
                          Text="{Binding FilterName, UpdateSourceTrigger=PropertyChanged}"
                          Margin="0,0,0,20"/>
 
-                <TextBlock Text="{DynamicResource PriceRange}" Style="{StaticResource SectionHeader}"/>
-                <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
-                    <TextBox Style="{StaticResource ModernTextBox}" Width="100"
+                        <TextBlock Text="{DynamicResource PriceRange}" Style="{StaticResource SectionHeader}"/>
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                            <TextBox Style="{StaticResource ModernTextBox}" Width="100"
                  Text="{Binding MinPrice, UpdateSourceTrigger=PropertyChanged}"
-                 materialDesign:HintAssist.Hint="{DynamicResource PriceFrom}"/>
-                    <TextBlock Text="—" Margin="10,0" VerticalAlignment="Center"/>
-                    <TextBox Style="{StaticResource ModernTextBox}" Width="100"
+                 materialDesign:HintAssist.Hint="{DynamicResource PriceFrom}">
+                                <i:Interaction.Behaviors>
+                                    <local:NumericInputBehavior/>
+                                </i:Interaction.Behaviors>
+                            </TextBox>
+                            <TextBlock Text="—" Margin="10,0" VerticalAlignment="Center"/>
+                            <TextBox Style="{StaticResource ModernTextBox}" Width="100"
                  Text="{Binding MaxPrice, UpdateSourceTrigger=PropertyChanged}"
-                 materialDesign:HintAssist.Hint="{DynamicResource PriceTo}"/>
-                </StackPanel>
+                 materialDesign:HintAssist.Hint="{DynamicResource PriceTo}">
+                                <i:Interaction.Behaviors>
+                                    <local:NumericInputBehavior/>
+                                </i:Interaction.Behaviors>
+                            </TextBox>
+                        </StackPanel>
 
-                <Button Content="{DynamicResource AllBoats}" Style="{StaticResource ModernButton}" 
-            Margin="0,0,0,15" Command="{Binding ShowAllShipsCommand}"/>
+                        <TextBlock Text="{DynamicResource SydnoType}" Style="{StaticResource SectionHeader}"></TextBlock>
+                        <ComboBox ItemsSource="{Binding FilterTypes}" 
+          SelectedItem="{Binding SelectedFilterType}"
+          Style="{StaticResource MaterialFilterComboBox}"
+          ItemContainerStyle="{StaticResource MaterialComboBoxItem}"
+                          Padding="10" Width="259"/>
 
-                <StackPanel Visibility="{Binding IsAdmin, Converter={StaticResource BoolToVisibilityConverter}}"
+                        <StackPanel Visibility="{Binding IsAdmin, Converter={StaticResource BoolToVisibilityConverter}}"
                 Margin="0,30,0,0">
-                    <TextBlock Text="{DynamicResource AdminSection}" Style="{StaticResource SectionHeader}"/>
-                    <Button Content="{DynamicResource AddBoat}" Style="{StaticResource ModernButton}" 
+                            <TextBlock Text="{DynamicResource AdminSection}" Style="{StaticResource SectionHeader}"/>
+                            <Button Content="{DynamicResource AddBoat}" Style="{StaticResource ModernButton}" 
                 Command="{Binding AddShipCommand}" Margin="0,0,0,10"/>
-                    <Button Content="{DynamicResource AdminPanel}" Style="{StaticResource ModernButton}" 
+                            <Button Content="{DynamicResource AdminPanel}" Style="{StaticResource ModernButton}" 
                 Command="{Binding AdminPanelCommand}"/>
-                </StackPanel>
-
-                <Button Content="{DynamicResource UserProfile}" Style="{StaticResource ModernButton}" 
+                        </StackPanel>
+                    </StackPanel>
+                </ScrollViewer>
+                <StackPanel Margin="20" VerticalAlignment="Bottom">
+                    <Button Content="{DynamicResource UserProfile}" Style="{StaticResource ModernButton}" 
             Margin="0,30,0,0" Command="{Binding UserProfileCommand}"/>
-            </StackPanel>
+                    <Button VerticalAlignment="Bottom" Command="{Binding LogoutCommand}" Content="{DynamicResource ExitButton}" Style="{StaticResource ModernButton}"  Margin="0,30,0,0"/>
+                </StackPanel>
+            </Grid>
         </Border>
 
         <Grid Grid.Column="1">

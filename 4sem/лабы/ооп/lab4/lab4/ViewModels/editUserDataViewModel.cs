@@ -96,6 +96,7 @@ namespace lab4.ViewModels
             ChangeProfileImageCommand = new RelayCommand(ChangeProfileImage);
             SaveCommand = new RelayCommand(Save);
             CancelCommand = new RelayCommand(CloseAction);
+            Username = user.Username;
         }
         public EditUserDataViewModel()
         {

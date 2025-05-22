@@ -11,11 +11,28 @@
     </Window.DataContext>
 
     <Window.Resources>
-      
         
-       
+        <Style TargetType="TextBox" x:Key="ValidatingTextBox">
+            <Setter Property="Margin" Value="0,0,0,10"/>
+            <Setter Property="BorderBrush" Value="LightGray"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsNameValid}" Value="false">
+                    <Setter Property="BorderBrush" Value="Red"/>
+                    <Setter Property="ToolTip" Value="Это поле обязательно для заполнения"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="TextBox" x:Key="PriceTextBox" BasedOn="{StaticResource ValidatingTextBox}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsPriceValid}" Value="false">
+                    <Setter Property="BorderBrush" Value="Red"/>
+                    <Setter Property="ToolTip" Value="Введите корректную цену (число > 0)"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
 
-        <Style TargetType="Button">
+
+        <!--<Style TargetType="Button">
             <Style.Triggers>
                 <EventTrigger RoutedEvent="Button.MouseEnter">
                     <BeginStoryboard>
@@ -26,32 +43,39 @@
                     </BeginStoryboard>
                 </EventTrigger>
             </Style.Triggers>
-        </Style>
+        </Style>-->
 
-     
+
 
     </Window.Resources>
-
+    <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
     <Grid Margin="20">
         <StackPanel>
-            <TextBlock Text="{DynamicResource Name}" FontSize="16"/>
-            <TextBox Text="{Binding Name,UpdateSourceTrigger=PropertyChanged}" x:Name="NameTextBox" Margin="0,0,0,10"/>
+            <TextBlock Text="{DynamicResource TextBlock_ShipName}" FontSize="16"/>
+            <TextBox Style="{StaticResource ValidatingTextBox}" Text="{Binding Name,UpdateSourceTrigger=PropertyChanged}" x:Name="NameTextBox" Margin="0,0,0,10"/>
 
-            <TextBlock Text="{DynamicResource Description}" FontSize="16"/>
-            <TextBox  Text="{Binding Description,UpdateSourceTrigger=PropertyChanged}"  x:Name="DescriptionTextBox" Margin="0,0,0,10" AcceptsReturn="True" Height="90"/>
+            <TextBlock Text="{DynamicResource TextBlock_Description}" FontSize="16"/>
+            <TextBox Style="{StaticResource ValidatingTextBox}" Text="{Binding Description,UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" x:Name="DescriptionTextBox" Margin="0,0,0,10" AcceptsReturn="True" Height="90"/>
 
-            <TextBlock Text="{DynamicResource Price}" FontSize="16"/>
-            <TextBox Text="{Binding Price,UpdateSourceTrigger=PropertyChanged}" x:Name="PriceTextBox" Margin="0,0,0,10"/>
+            <TextBlock Text="{DynamicResource TextBlock_ShortDescription}" FontSize="16"/>
+            <TextBox Text="{Binding ShortDescription,UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,10" AcceptsReturn="true" Height="50"/>
+            
+            <TextBlock Text="{DynamicResource TextBlock_Price}" FontSize="16"/>
+            <TextBox Style="{StaticResource PriceTextBox}" Text="{Binding Price,UpdateSourceTrigger=PropertyChanged}" x:Name="PriceTextBox" Margin="0,0,0,10"/>
 
-            <TextBlock Text="{DynamicResource ImagePath}" FontSize="16"/>
+            <TextBlock Text="{DynamicResource TextBlock_ShipType}" FontSize="16"/>
+            <TextBox Text="{Binding ShipType,UpdateSourceTrigger=PropertyChanged}"/>
+
+            <TextBlock Text="{DynamicResource TextBlock_ImagePath}" FontSize="16"/>
             <TextBox Text="{Binding ImagePath,UpdateSourceTrigger=PropertyChanged}" x:Name="PhotopathTextBox" Margin="0,0,0,10" IsReadOnly="True"/>
-            <Button Content="{DynamicResource ChooseFile}" Command="{Binding SelectFileCommand}" Width="100" HorizontalAlignment="Left" Margin="0,0,0,10"/>
+            <Button Content="{DynamicResource Button_ChooseFile}" Command="{Binding SelectFileCommand}" Width="150" HorizontalAlignment="Left" Margin="0,0,0,10"/>
 
             <Border x:Name="ImageBorder" BorderThickness="0" BorderBrush="White">
                 <Image Source="{Binding ImagePreview}" x:Name="ImagePreview" Height="100" Margin="0,0,0,10"/>
             </Border>
 
-            <Button Content="{DynamicResource Add}" Command="{Binding  AddShipCommand}" Width="100" HorizontalAlignment="Right"/>
+            <Button Content="{DynamicResource Button_Add}" Command="{Binding  AddShipCommand}" Width="110" HorizontalAlignment="Right"/>
         </StackPanel>
     </Grid>
+    </ScrollViewer>
 </Window>

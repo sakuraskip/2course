@@ -10,8 +10,7 @@
         d:DesignHeight="800" d:DesignWidth="900"
         Height="800" Width="900"
         Background="{DynamicResource BackgroundColor}"
-        Title="Ship Details"
-        WindowStartupLocation="CenterScreen">
+Title="{DynamicResource Title_ShipDetails}"        WindowStartupLocation="CenterScreen">
 
     <Window.DataContext>
         <vm:ShipDetailsModel/>
@@ -74,8 +73,7 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0" Text="{Binding Ship.Name}" FontSize="23" FontWeight="Bold"
-                   HorizontalAlignment="Center" Foreground="#333333" VerticalAlignment="Top"/>
+        <TextBlock Text="{Binding Ship.Name}" FontSize="23" FontWeight="Bold" HorizontalAlignment="Center" Foreground="#333333" VerticalAlignment="Top"/>
 
         <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Padding="0,0,5,0">
             <ContentControl Content="{Binding}" ContentTemplate="{StaticResource ShipTemplate}"/>
@@ -94,12 +92,11 @@
                     <Path Data="M12,2L15.09,8.26L22,9.27L17,14.14L18.18,21.02L12,17.77L5.82,21.02L7,14.14L2,9.27L8.91,8.26L12,2Z" 
                           Fill="#FFC107" Stretch="Uniform" Width="20" Height="20" Margin="0,0,5,0"/>
                     <TextBlock Text="{Binding AverageRating, StringFormat={}{0:F2}}" FontSize="18"/>
-                    <TextBlock Text="/5" FontSize="18" Foreground="#666666" Margin="2,0,0,0"/>
+                    <TextBlock Text="{DynamicResource TextBlock_RatingOutOf}" FontSize="18" Foreground="#666666" Margin="2,0,0,0"/>
                 </StackPanel>
 
                 <StackPanel Grid.Column="1" Orientation="Horizontal">
-                    <Path Data="M12,3L2,12H5V20H11V14H13V20H19V12H22L12,3Z" 
-                          Fill="#4285F4" Stretch="Uniform" Width="20" Height="20" Margin="0,0,5,0"/>
+                    <Path Data="M12,3L2,12H5V20H11V14H13V20H19V12H22L12,3Z" Fill="#4285F4" Stretch="Uniform" Width="20" Height="20" Margin="0,0,5,0" ToolTip="{DynamicResource ToolTip_ShipType}"/>
                     <TextBlock Text="{Binding Ship.ShipType}" FontSize="18"/>
                 </StackPanel>
 
@@ -108,7 +105,7 @@
         </Border>
 
         <Border Grid.Row="3" Background="White" Margin="20,0" CornerRadius="8"
-                BorderBrush="#E0E0E0" BorderThickness="1">
+        BorderBrush="#E0E0E0" BorderThickness="1">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
@@ -118,19 +115,19 @@
                     <ColumnDefinition Width="auto"/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
+
                 <StackPanel Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Stretch">
-                    <TextBlock Text="Отзывы" FontSize="20" FontWeight="Bold" 
-                           Margin="15,10" Foreground="#333333"/>
-                   
+                    <TextBlock Text="{DynamicResource ReviewsTitle}" FontSize="20" FontWeight="Bold" 
+                   Margin="15,10" Foreground="#333333"/>
                 </StackPanel>
-                <Button Grid.Column="2" Content="Добавить отзыв" 
-         Command="{Binding OpenAddReviewCommand}"
-                        Width="150" HorizontalAlignment="Right" FontSize="16"
-       />
+
+                <Button Grid.Column="1" Content="{DynamicResource AddReviewButton}" 
+                Command="{Binding OpenAddReviewCommand}"
+                Width="150" HorizontalAlignment="Right" FontSize="16"/>
 
                 <ScrollViewer Grid.ColumnSpan="2" Grid.Row="1" VerticalScrollBarVisibility="Auto" Padding="15,0,15,15">
                     <ItemsControl ItemsSource="{Binding Reviews}" 
-                                 ItemTemplate="{StaticResource ReviewTemplate}">
+                         ItemTemplate="{StaticResource ReviewTemplate}">
                         <ItemsControl.ItemContainerStyle>
                             <Style TargetType="ContentPresenter">
                                 <Setter Property="Margin" Value="0,0,0,10"/>
@@ -141,7 +138,6 @@
             </Grid>
         </Border>
 
-        
         <Border Grid.Row="4" Background="#F1F3F4" Padding="20,20,20,0" Height="90">
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -150,15 +146,22 @@
                 </Grid.ColumnDefinitions>
 
                 <StackPanel Orientation="Vertical">
-                    <TextBlock Text="{Binding Ship.Price, StringFormat='Цена: {0:C}'}" 
-                               FontSize="20" FontWeight="SemiBold"/>
-                    <TextBlock Text="{Binding Ship.Availability, StringFormat='Доступность: {0}'}" 
-                               FontSize="18" Foreground="#666666"/>
+
+                    <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+                        <TextBlock Text="{Binding Ship.PriceString}" 
+           FontSize="20" 
+           FontWeight="SemiBold"/>
+                        <TextBlock Text="{DynamicResource PerDaySuffix}"
+               FontSize="18" 
+               FontWeight="SemiBold"/>
+                    </StackPanel>
+                    <TextBlock Text="{Binding Ship.Availability}" 
+                       FontSize="18" Foreground="#666666"/>
                 </StackPanel>
 
-                <Button Grid.Column="1" Content="Забронировать" 
-                        Command="{Binding RentCommand}" Width="200" Height="50"
-                        HorizontalAlignment="Right" FontSize="18"/>
+                <Button Grid.Column="1" Content="{DynamicResource RentButton}" 
+                Command="{Binding RentCommand}" Width="200" Height="50"
+                HorizontalAlignment="Right" FontSize="18"/>
             </Grid>
         </Border>
     </Grid>

@@ -95,9 +95,9 @@
             Content="{DynamicResource ChangeLanguage}"
             BorderBrush="{StaticResource OceanBlue}"/>
 
-                        <Button Command="{Binding ChangeThemeCommand}"
+                        <!--<Button Command="{Binding ChangeThemeCommand}"
             Content="{DynamicResource ChangeTheme}"
-            BorderBrush="{StaticResource OceanBlue}"/>
+            BorderBrush="{StaticResource OceanBlue}"/>-->
                     </StackPanel>
                 </Grid>
             </Border>
