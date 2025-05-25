@@ -42,10 +42,10 @@ go
 
 --task3
 declare @id char(20), @name char(50), @idgroup char(10);
-declare line cursor static for select IDSTUDENT,NAME,IDGROUP from STUDENT
+declare line cursor dynamic for select IDSTUDENT,NAME,IDGROUP from STUDENT
 open line
 print 'кол-во строк: ' + cast(@@cursor_rows as varchar(5));
-update STUDENT set NAME = name where idstudent %5 =0;
+update STUDENT set NAME = name+'1' where idstudent %5 =0;
 INSERT INTO STUDENT (IDGROUP, NAME, INFO, FOTO)
 VALUES (NULL, 'мишаня', NULL, NULL);
 fetch line into @id,@name,@idgroup

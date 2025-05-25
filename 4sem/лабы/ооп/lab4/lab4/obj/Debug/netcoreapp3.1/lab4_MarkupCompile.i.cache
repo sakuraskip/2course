@@ -1,0 +1,20 @@
+﻿lab4
+1.0.0.0
+
+winexe
+C#
+.cs
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\obj\Debug\netcoreapp3.1\
+lab4
+none
+false
+TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
+C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\App.xaml
+16996883955
+1-532924199
+45-1976303013
+1992091502580
+admin panel\AddShipWindow.xaml;admin panel\adminPanel.xaml;admin panel\EditRentalWindow.xaml;admin panel\editShipWindow.xaml;admin panel\EditUserWindow.xaml;dictionary\strings.en.xaml;dictionary\strings.ru.xaml;ItemsList.xaml;loginpage.xaml;ShipDetails.xaml;userControls\AddReviewWindow.xaml;userControls\editUserData.xaml;userControls\header.xaml;userControls\registerPage.xaml;userControls\requestToBook.xaml;userControls\userpage.xaml;
+
+True
+

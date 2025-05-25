@@ -1,0 +1,8 @@
+{
+  "Celebrities": {
+    "PhotosRequestPath": "/Photos",
+    "PhotosFolder": "C:\\norus\\Photos\\",
+    "ConnectionString": "Data source = leksus\\SQLEXPRESS; Initial Catalog = Celebrities;TrustServerCertificate=Yes;Integrated Security=True;",
+    "CountryCodesPath": "C:\\Users\\леха\\Desktop\\2 курс\\4sem\\лабы\\смелов\\lab6\\DAL_Celebrity\\aspa008\\CountryCodes\\countrycodes.json"
+  }
+}

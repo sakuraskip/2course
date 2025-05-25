@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <_ContentIncludedByDefault Remove="Celebrities.config.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\lab6\DAL_Celebrity\3DAL_Celebrity_MSSQL\3DAL_Celebrity_MSSQL.csproj" />
     <ProjectReference Include="..\..\lab6\DAL_Celebrity\DAL_Celebrity\DAL_Celebrity.csproj" />
     <ProjectReference Include="..\..\lab6\DAL_Celebrity\webApi_DLL\webApi_DLL.csproj" />

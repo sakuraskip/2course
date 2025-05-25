@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Identity.Client;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -119,8 +120,10 @@ namespace lab4
                 this.Username = username;
                 this.Password = password;
             }
-
+            
             this.profilePicturePath = @"C:\Users\леха\Desktop\2 курс\4sem\лабы\ооп\lab4\lab4\Resources\defaultAvatar.jpg";
         }
+        public UserModel()
+        { }
     }
 }

@@ -248,6 +248,10 @@ namespace lab4
             PriceString = $"{price} BYN";
             Rating = rating;
         }
+        public ShipModel()
+        {
+
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
 

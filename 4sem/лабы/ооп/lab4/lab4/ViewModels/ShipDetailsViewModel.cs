@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using lab4.userControls;
+using lab4.aEntity;
 namespace lab4.ViewModels
 {
     public class ShipDetailsModel:INotifyPropertyChanged
@@ -118,12 +119,20 @@ namespace lab4.ViewModels
             var addReviewWindow = new AddReviewWindow(_user,Ship);
             addReviewWindow.ShowDialog();
             
-                Review? newReview = (addReviewWindow.DataContext as AddReviewViewModel).GetReview();
+                ReviewEF? newReview = (addReviewWindow.DataContext as AddReviewViewModel).ReviewEFm;
+            var newReview1 = new Review
+            {
+                UserId = _user.Id,
+                Username = _user.Username,
+                Comment = newReview.Comment,
+                Rating = newReview.Rating,
+                ShipId = _ship.Id
+            };
             if(newReview!=null)
             {
-                newReview.Id = Reviews.Count + 1;
-                newReview.ShipId = _ship.Id;
-                Reviews.Add(newReview);
+                newReview1.Id = Reviews.Count + 1;
+                newReview1.ShipId = _ship.Id;
+                Reviews.Add(newReview1);
                 CalculateAverageRating();
             }
                 

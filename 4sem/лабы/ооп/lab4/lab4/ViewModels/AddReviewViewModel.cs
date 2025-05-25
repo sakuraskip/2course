@@ -1,27 +1,25 @@
-﻿using lab4.Models;
+﻿using lab4.aEntity;
+using lab4.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Configuration;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 
 namespace lab4.ViewModels
 {
-    public  class AddReviewViewModel:INotifyPropertyChanged
+    public class AddReviewViewModel : INotifyPropertyChanged
     {
-        private readonly string _connectionString = ConfigurationManager.ConnectionStrings[1].ConnectionString;
         private string _comment;
         private int _rating = 1;
-        private UserModel _user;
-        public Review Review = new Review();
-        public bool reviewSaved = false;
-        private ShipModel _currentShip;
+        private readonly UserModel _user;
+        private readonly ShipModel _currentShip;
+        private readonly appDBcontext _context = new appDBcontext();
+        public ReviewEF ReviewEFm { get; set; }
+        public bool ReviewSaved { get; private set; }
 
         public string Comment
         {
@@ -42,98 +40,90 @@ namespace lab4.ViewModels
                 OnPropertyChanged();
             }
         }
+
         public ICommand SubmitCommand { get; }
         public ICommand CancelCommand { get; }
 
         public Action CloseAction { get; set; }
 
-        public AddReviewViewModel(UserModel  user, ShipModel currentShip)
+        public AddReviewViewModel(UserModel user, ShipModel currentShip)
         {
-            this._user = user;
-            CancelCommand = new RelayCommand(CloseWindow);
-            SubmitCommand = new RelayCommand(SaveReview);
+            _user = user;
             _currentShip = currentShip;
+            SubmitCommand = new RelayCommand(async () => await SaveReviewAsync());
+            CancelCommand = new RelayCommand(CloseWindow);
         }
+
         public AddReviewViewModel()
         {
-          
+            SubmitCommand = new RelayCommand(async () => await SaveReviewAsync());
+            CancelCommand = new RelayCommand(CloseWindow);
         }
-        private void SaveReview()
+
+        private async Task SaveReviewAsync()
         {
-            if((!string.IsNullOrWhiteSpace(Comment)) && Rating!=0)
+            if (string.IsNullOrWhiteSpace(Comment) || Rating <= 0)
             {
-                               Review = new Review(_user.Id,_user.Username, Comment,Rating,_currentShip.Id);
-                if (SaveToDatabase(Review))
+                MessageBox.Show("Пожалуйста, заполните все поля корректно.");
+                return;
+            }
+
+            using (var transaction = await _context.Database.BeginTransactionAsync())
+            {
+                try
                 {
-                    MessageBox.Show("Отзыв сохранен!");
-                    reviewSaved = true;
+                    var reviewEF = new ReviewEF
+                    {
+                        UserId = _user.Id - 13,
+                        Username = _user.Username,
+                        Comment = Comment,
+                        Rating = Rating,
+                        ShipId = _currentShip.Id + 3
+                    };
+                    ReviewEFm = reviewEF;
+                    _context.Reviews.Add(reviewEF);
+                    await _context.SaveChangesAsync();
+
+                    await UpdateShipRatingAsync(_currentShip.Id);
+
+                    await transaction.CommitAsync();
+
+                    MessageBox.Show("Отзыв успешно сохранён!");
+                    ReviewSaved = true;
                     CloseAction?.Invoke();
+                }
+                catch (Exception ex)
+                {
+                    await transaction.RollbackAsync();
+                    MessageBox.Show($"Ошибка при сохранении отзыва: {ex.Message}");
                 }
             }
         }
-        private void CloseWindow()
-        {
-            reviewSaved = false;
-            if(CloseAction != null)
-            {
-                CloseAction.Invoke();
-            }
-            else
-            {
-                MessageBox.Show("chzx");
-            }
-        }
-        public Review? GetReview()
-        {
-            if(reviewSaved)
-            {
-                return Review;
-            }
-            return null;
-        }
-        private bool SaveToDatabase(Review review)
+
+        private async Task UpdateShipRatingAsync(int shipId)
         {
             try
             {
-                using (var connection = new SqlConnection(_connectionString))
+                var ship = await _context.Ships.FindAsync(shipId);
+                if (ship != null)
                 {
-                    connection.Open();
-
-                    using (var transaction = connection.BeginTransaction())
-                    {
-                        try
-                        {
-                            using (var command = new SqlCommand(
-                                "INSERT INTO Reviews (ShipId, UserId, Username, Comment, Rating) VALUES (@ShipId, @UserId, @Username, @Comment, @Rating)",
-                                connection,
-                                transaction))
-                            {
-                                command.Parameters.AddWithValue("@ShipId", review.ShipId);
-                                command.Parameters.AddWithValue("@UserId", review.UserId);
-                                command.Parameters.AddWithValue("@Username", review.Username);
-                                command.Parameters.AddWithValue("@Comment", review.Comment);
-                                command.Parameters.AddWithValue("@Rating", review.Rating);
-
-                                command.ExecuteNonQuery();
-                            }
-
-                            transaction.Commit();
-                            return true;
-                        }
-                        catch (Exception ex)
-                        {
-                            transaction.Rollback();
-                            MessageBox.Show($"Ошибка при сохранении отзыва: {ex.Message}");
-                            return false;
-                        }
-                    }
+                    ship.Rating = await _context.Reviews
+                        .Where(r => r.ShipId == shipId)
+                        .AverageAsync(r => r.Rating);
+                    await _context.SaveChangesAsync();
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"ошибка save(): {ex.Message}");
-                return false;
+                MessageBox.Show($"Ошибка при обновлении рейтинга: {ex.Message}");
+                throw; 
             }
+        }
+
+        private void CloseWindow()
+        {
+            ReviewSaved = false;
+            CloseAction?.Invoke();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
