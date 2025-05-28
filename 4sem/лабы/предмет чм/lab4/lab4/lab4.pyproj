@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>52a6d204-e325-401f-827d-b2af18f9a28d</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>максим.py</StartupFile>
+    <StartupFile>lab5.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>

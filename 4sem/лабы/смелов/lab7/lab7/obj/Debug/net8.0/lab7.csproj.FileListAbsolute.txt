@@ -92,3 +92,4 @@ C:\Users\леха\Desktop\2 курс\4sem\лабы\смелов\lab7\lab7\bin\De
 C:\Users\леха\Desktop\2 курс\4sem\лабы\смелов\lab7\lab7\obj\Debug\net8.0\lab7.csproj.Up2Date
 C:\Users\леха\Desktop\2 курс\4sem\лабы\смелов\lab7\lab7\bin\Debug\net8.0\webApi_DLL.dll
 C:\Users\леха\Desktop\2 курс\4sem\лабы\смелов\lab7\lab7\bin\Debug\net8.0\webApi_DLL.pdb
+C:\Users\леха\Desktop\2 курс\4sem\лабы\смелов\lab7\lab7\bin\Debug\net8.0\Celebrities.config.json

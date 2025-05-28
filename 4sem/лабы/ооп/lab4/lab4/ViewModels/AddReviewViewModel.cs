@@ -18,6 +18,7 @@ namespace lab4.ViewModels
         private readonly UserModel _user;
         private readonly ShipModel _currentShip;
         private readonly appDBcontext _context = new appDBcontext();
+        private Repository Repository = new Repository();
         public ReviewEF ReviewEFm { get; set; }
         public bool ReviewSaved { get; private set; }
 
@@ -81,9 +82,7 @@ namespace lab4.ViewModels
                         ShipId = _currentShip.Id + 3
                     };
                     ReviewEFm = reviewEF;
-                    _context.Reviews.Add(reviewEF);
-                    await _context.SaveChangesAsync();
-
+                    Repository.AddReview(reviewEF);
                     await UpdateShipRatingAsync(_currentShip.Id);
 
                     await transaction.CommitAsync();
@@ -104,7 +103,7 @@ namespace lab4.ViewModels
         {
             try
             {
-                var ship = await _context.Ships.FindAsync(shipId);
+                var ship = Repository.GetShip(shipId);
                 if (ship != null)
                 {
                     ship.Rating = await _context.Reviews

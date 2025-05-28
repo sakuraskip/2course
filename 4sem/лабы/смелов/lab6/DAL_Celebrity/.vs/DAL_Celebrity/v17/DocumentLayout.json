@@ -3,6 +3,38 @@
   "WorkspaceRootPath": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u0441\u043C\u0435\u043B\u043E\u0432\\lab6\\DAL_Celebrity\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2D331F40-52CE-4323-B9E2-6C02C46F78CA}|..\\..\\lab7\\lab7\\lab7.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u0441\u043C\u0435\u043B\u043E\u0432\\lab7\\lab7\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D331F40-52CE-4323-B9E2-6C02C46F78CA}|..\\..\\lab7\\lab7\\lab7.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u0441\u043C\u0435\u043B\u043E\u0432\\lab7\\lab7\\pages\\newcelebrity.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D331F40-52CE-4323-B9E2-6C02C46F78CA}|..\\..\\lab7\\lab7\\lab7.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u0441\u043C\u0435\u043B\u043E\u0432\\lab7\\lab7\\pages\\celebrities.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D331F40-52CE-4323-B9E2-6C02C46F78CA}|..\\..\\lab7\\lab7\\lab7.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u0441\u043C\u0435\u043B\u043E\u0432\\lab7\\lab7\\pages\\celebrity.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D331F40-52CE-4323-B9E2-6C02C46F78CA}|..\\..\\lab7\\lab7\\lab7.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u0441\u043C\u0435\u043B\u043E\u0432\\lab7\\lab7\\pages\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D331F40-52CE-4323-B9E2-6C02C46F78CA}|..\\..\\lab7\\lab7\\lab7.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u0441\u043C\u0435\u043B\u043E\u0432\\lab7\\lab7\\pages\\celebrities.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D331F40-52CE-4323-B9E2-6C02C46F78CA}|..\\..\\lab7\\lab7\\lab7.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u0441\u043C\u0435\u043B\u043E\u0432\\lab7\\lab7\\pages\\celebrity.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D331F40-52CE-4323-B9E2-6C02C46F78CA}|..\\..\\lab7\\lab7\\lab7.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u0441\u043C\u0435\u043B\u043E\u0432\\lab7\\lab7\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{251BFE28-5350-4B1B-AAFC-92FAE7963271}|aspa008\\aspa008.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u0441\u043C\u0435\u043B\u043E\u0432\\lab6\\dal_celebrity\\aspa008\\controllers\\celebritiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{251BFE28-5350-4B1B-AAFC-92FAE7963271}|aspa008\\aspa008.csproj|solutionrelative:aspa008\\controllers\\celebritiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{178D4B12-94EC-4C4F-A14C-CC438A92B29D}|DAL_Celebrity\\DAL_Celebrity.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u0441\u043C\u0435\u043B\u043E\u0432\\lab6\\dal_celebrity\\dal_celebrity\\dal_celebrity.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{178D4B12-94EC-4C4F-A14C-CC438A92B29D}|DAL_Celebrity\\DAL_Celebrity.csproj|solutionrelative:dal_celebrity\\dal_celebrity.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C2F6EE77-6819-4CBF-AB09-6FD4F2725FC1}|..\\..\\..\\..\\..\\..\\..\\Downloads\\Telegram Desktop\\ASPA008_1\\ASPA008_1.csproj|c:\\users\\\u043B\u0435\u0445\u0430\\downloads\\telegram desktop\\aspa008_1\\views\\celebrities\\confirmnewhumanform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
@@ -62,7 +94,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 17,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,7 +102,136 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u0441\u043C\u0435\u043B\u043E\u0432\\lab7\\lab7\\Pages\\Index.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\lab7\\lab7\\Pages\\Index.cshtml",
+              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u0441\u043C\u0435\u043B\u043E\u0432\\lab7\\lab7\\Pages\\Index.cshtml",
+              "RelativeToolTip": "..\\..\\lab7\\lab7\\Pages\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-27T22:47:48.696Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "newCelebrity.cshtml",
+              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u0441\u043C\u0435\u043B\u043E\u0432\\lab7\\lab7\\Pages\\newCelebrity.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\lab7\\lab7\\Pages\\newCelebrity.cshtml",
+              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u0441\u043C\u0435\u043B\u043E\u0432\\lab7\\lab7\\Pages\\newCelebrity.cshtml",
+              "RelativeToolTip": "..\\..\\lab7\\lab7\\Pages\\newCelebrity.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-27T22:47:41.557Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Celebrities.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u0441\u043C\u0435\u043B\u043E\u0432\\lab7\\lab7\\Pages\\Celebrities.cshtml.cs",
+              "RelativeDocumentMoniker": "..\\..\\lab7\\lab7\\Pages\\Celebrities.cshtml.cs",
+              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u0441\u043C\u0435\u043B\u043E\u0432\\lab7\\lab7\\Pages\\Celebrities.cshtml.cs",
+              "RelativeToolTip": "..\\..\\lab7\\lab7\\Pages\\Celebrities.cshtml.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T22:47:05.084Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Celebrity.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u0441\u043C\u0435\u043B\u043E\u0432\\lab7\\lab7\\Pages\\Celebrity.cshtml.cs",
+              "RelativeDocumentMoniker": "..\\..\\lab7\\lab7\\Pages\\Celebrity.cshtml.cs",
+              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u0441\u043C\u0435\u043B\u043E\u0432\\lab7\\lab7\\Pages\\Celebrity.cshtml.cs",
+              "RelativeToolTip": "..\\..\\lab7\\lab7\\Pages\\Celebrity.cshtml.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAkwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T22:46:53.3Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u0441\u043C\u0435\u043B\u043E\u0432\\lab7\\lab7\\Pages\\Error.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\lab7\\lab7\\Pages\\Error.cshtml",
+              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u0441\u043C\u0435\u043B\u043E\u0432\\lab7\\lab7\\Pages\\Error.cshtml",
+              "RelativeToolTip": "..\\..\\lab7\\lab7\\Pages\\Error.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-27T22:46:49.659Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Celebrity.cshtml",
+              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u0441\u043C\u0435\u043B\u043E\u0432\\lab7\\lab7\\Pages\\Celebrity.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\lab7\\lab7\\Pages\\Celebrity.cshtml",
+              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u0441\u043C\u0435\u043B\u043E\u0432\\lab7\\lab7\\Pages\\Celebrity.cshtml",
+              "RelativeToolTip": "..\\..\\lab7\\lab7\\Pages\\Celebrity.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-27T22:43:51.075Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Celebrities.cshtml",
+              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u0441\u043C\u0435\u043B\u043E\u0432\\lab7\\lab7\\Pages\\Celebrities.cshtml",
+              "RelativeDocumentMoniker": "..\\..\\lab7\\lab7\\Pages\\Celebrities.cshtml",
+              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u0441\u043C\u0435\u043B\u043E\u0432\\lab7\\lab7\\Pages\\Celebrities.cshtml",
+              "RelativeToolTip": "..\\..\\lab7\\lab7\\Pages\\Celebrities.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-27T22:43:45.894Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u0441\u043C\u0435\u043B\u043E\u0432\\lab7\\lab7\\Program.cs",
+              "RelativeDocumentMoniker": "..\\..\\lab7\\lab7\\Program.cs",
+              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u0441\u043C\u0435\u043B\u043E\u0432\\lab7\\lab7\\Program.cs",
+              "RelativeToolTip": "..\\..\\lab7\\lab7\\Program.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABEAAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T22:43:13.521Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "CelebritiesController.cs",
+              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u0441\u043C\u0435\u043B\u043E\u0432\\lab6\\DAL_Celebrity\\aspa008\\Controllers\\CelebritiesController.cs",
+              "RelativeDocumentMoniker": "aspa008\\Controllers\\CelebritiesController.cs",
+              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u0441\u043C\u0435\u043B\u043E\u0432\\lab6\\DAL_Celebrity\\aspa008\\Controllers\\CelebritiesController.cs",
+              "RelativeToolTip": "aspa008\\Controllers\\CelebritiesController.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAkwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T22:39:38.807Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DAL_Celebrity.csproj",
+              "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u0441\u043C\u0435\u043B\u043E\u0432\\lab6\\DAL_Celebrity\\DAL_Celebrity\\DAL_Celebrity.csproj",
+              "RelativeDocumentMoniker": "DAL_Celebrity\\DAL_Celebrity.csproj",
+              "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u0441\u043C\u0435\u043B\u043E\u0432\\lab6\\DAL_Celebrity\\DAL_Celebrity\\DAL_Celebrity.csproj",
+              "RelativeToolTip": "DAL_Celebrity\\DAL_Celebrity.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-05-27T22:38:52.084Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Downloads\\Telegram Desktop\\ASPA008_1\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Downloads\\Telegram Desktop\\ASPA008_1\\Views\\Home\\Index.cshtml",
@@ -82,7 +243,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 20,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Downloads\\Telegram Desktop\\ASPA008_1\\Program.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Downloads\\Telegram Desktop\\ASPA008_1\\Program.cs",
@@ -94,7 +255,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 21,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Downloads\\Telegram Desktop\\ASPA008_1\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Downloads\\Telegram Desktop\\ASPA008_1\\Views\\Shared\\_Layout.cshtml",
@@ -106,7 +267,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 22,
               "Title": "_ValidationScriptsPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Downloads\\Telegram Desktop\\ASPA008_1\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Downloads\\Telegram Desktop\\ASPA008_1\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
@@ -118,7 +279,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 23,
               "Title": "Error.cshtml",
               "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Downloads\\Telegram Desktop\\ASPA008_1\\Views\\Shared\\Error.cshtml",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Downloads\\Telegram Desktop\\ASPA008_1\\Views\\Shared\\Error.cshtml",
@@ -130,7 +291,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 24,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Downloads\\Telegram Desktop\\ASPA008_1\\Views\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Downloads\\Telegram Desktop\\ASPA008_1\\Views\\_ViewStart.cshtml",
@@ -142,7 +303,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 12,
               "Title": "CelebrityHelpers.cs",
               "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Downloads\\Telegram Desktop\\ASPA008_1\\Helpers\\CelebrityHelpers.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Downloads\\Telegram Desktop\\ASPA008_1\\Helpers\\CelebrityHelpers.cs",
@@ -154,7 +315,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 11,
               "Title": "IAsyncActionFilter.cs",
               "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Downloads\\Telegram Desktop\\ASPA008_1\\Filters\\IAsyncActionFilter.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Downloads\\Telegram Desktop\\ASPA008_1\\Filters\\IAsyncActionFilter.cs",
@@ -166,7 +327,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 15,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Downloads\\Telegram Desktop\\ASPA008_1\\Views\\Celebrities\\Index.cshtml",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Downloads\\Telegram Desktop\\ASPA008_1\\Views\\Celebrities\\Index.cshtml",
@@ -178,7 +339,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 25,
               "Title": "_InFormNewCelebrity.cshtml",
               "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Downloads\\Telegram Desktop\\ASPA008_1\\Views\\Celebrities\\_InFormNewCelebrity.cshtml",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Downloads\\Telegram Desktop\\ASPA008_1\\Views\\Celebrities\\_InFormNewCelebrity.cshtml",
@@ -190,7 +351,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 19,
               "Title": "_CelebritiesLayout.cshtml",
               "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Downloads\\Telegram Desktop\\ASPA008_1\\Views\\Celebrities\\_CelebritiesLayout.cshtml",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Downloads\\Telegram Desktop\\ASPA008_1\\Views\\Celebrities\\_CelebritiesLayout.cshtml",
@@ -202,7 +363,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 14,
               "Title": "Human.cshtml",
               "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Downloads\\Telegram Desktop\\ASPA008_1\\Views\\Celebrities\\Human.cshtml",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Downloads\\Telegram Desktop\\ASPA008_1\\Views\\Celebrities\\Human.cshtml",
@@ -214,7 +375,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 26,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u0441\u043C\u0435\u043B\u043E\u0432\\lab6\\DAL_Celebrity\\3DAL_Celebrity_MSSQL\\Class1.cs",
               "RelativeDocumentMoniker": "3DAL_Celebrity_MSSQL\\Class1.cs",
@@ -226,7 +387,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 16,
               "Title": "_form.cshtml",
               "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Downloads\\Telegram Desktop\\ASPA008_1\\Views\\Shared\\_form.cshtml",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Downloads\\Telegram Desktop\\ASPA008_1\\Views\\Shared\\_form.cshtml",
@@ -238,7 +399,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 17,
               "Title": "NewHumanForm.cshtml",
               "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Downloads\\Telegram Desktop\\ASPA008_1\\Views\\Celebrities\\NewHumanForm.cshtml",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Downloads\\Telegram Desktop\\ASPA008_1\\Views\\Celebrities\\NewHumanForm.cshtml",
@@ -250,7 +411,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 13,
               "Title": "CelebritiesController.cs",
               "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Downloads\\Telegram Desktop\\ASPA008_1\\Controllers\\CelebritiesController.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Downloads\\Telegram Desktop\\ASPA008_1\\Controllers\\CelebritiesController.cs",
@@ -262,7 +423,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 10,
               "Title": "ConfirmNewHumanForm.cshtml",
               "DocumentMoniker": "C:\\Users\\\u043B\u0435\u0445\u0430\\Downloads\\Telegram Desktop\\ASPA008_1\\Views\\Celebrities\\ConfirmNewHumanForm.cshtml",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Downloads\\Telegram Desktop\\ASPA008_1\\Views\\Celebrities\\ConfirmNewHumanForm.cshtml",
@@ -270,8 +431,7 @@
               "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Downloads\\Telegram Desktop\\ASPA008_1\\Views\\Celebrities\\ConfirmNewHumanForm.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-23T08:32:58.295Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-23T08:32:58.295Z"
             }
           ]
         }
