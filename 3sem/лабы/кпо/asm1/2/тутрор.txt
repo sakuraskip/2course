@@ -1,2 +1,0 @@
-ml /c main.asm
-link /SUBSYSTEM:WINDOWS /DEFAULTLIB:user32.lib main.obj

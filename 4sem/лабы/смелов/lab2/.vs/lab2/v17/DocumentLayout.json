@@ -84,7 +84,7 @@
               "RelativeDocumentMoniker": "lab2\\Program.cs",
               "ToolTip": "C:\\Users\\\u043B\u0435\u0445\u0430\\Desktop\\2 \u043A\u0443\u0440\u0441\\4sem\\\u043B\u0430\u0431\u044B\\\u0441\u043C\u0435\u043B\u043E\u0432\\lab2\\lab2\\Program.cs",
               "RelativeToolTip": "lab2\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAmAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-07T15:15:53.232Z",
               "EditorCaption": ""
@@ -99,8 +99,7 @@
               "RelativeToolTip": "lab2-3\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAADEAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T14:19:08.469Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-06T14:19:08.469Z"
             },
             {
               "$type": "Document",
@@ -112,8 +111,7 @@
               "RelativeToolTip": "lab2-2\\Program.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAABYAAABeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T15:52:05.868Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-21T15:52:05.868Z"
             }
           ]
         }
